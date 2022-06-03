@@ -964,7 +964,12 @@ aside {
 	}
 
 	/* INDEX */
-
+	.containerPrincipal {
+		margin: 1rem;
+		padding: 2rem 0.5rem;
+		border-radius: 1rem;
+	}
+	
 	.containerSectionIndex{
 		background-color: white;
 		margin: 0.5rem;
@@ -977,7 +982,7 @@ aside {
 	}
 
 	.containerSectionIndex img {
-		width: 16rem;
+		width: 20rem;
 		margin: 1rem 2rem;
 
 	}
@@ -986,8 +991,15 @@ aside {
 		padding: 1rem;
 		border-radius: 2rem;
 		width: 50rem;
-		height: 33rem;
-		font-size: smaller;
+		height: 17rem;
+	}
+
+	.containerSectionIndex-text p{
+		font-size: 11px;
+	}
+
+	.containerSectionIndex-text h3{
+		font-size: 18px;
 	}
 
 	.tags {
@@ -1002,7 +1014,7 @@ aside {
 		color: white;
 		padding: 0.1rem;
 		text-align: center;
-		font-size: x-small;
+		font-size:11px;
 		font-weight: bold;
 		border-radius: 20rem;
 
