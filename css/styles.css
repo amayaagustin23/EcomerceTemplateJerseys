@@ -79,11 +79,11 @@ body {
 }
 
 .navOp {
-	display: block;
-	color: #eeeeee;
-	text-align: center;
-	padding: 14px 16px;
-	text-decoration: none;
+	display: block !important;
+	color: #eeeeee !important;
+	text-align: center !important;
+	padding: 14px 16px !important;
+	text-decoration: none !important;
 }
 
 .menuBar {
@@ -154,7 +154,7 @@ body {
 	background-color: #eeeeee;
 	margin: 2rem;
 	padding: 4rem 2rem;
-	border-radius: 2rem;
+	border-radius: 1rem;
 }
 .carrouselContainer{
 	position: sticky;
@@ -210,7 +210,7 @@ form {
 	justify-content: center;
 	background-color: #eeeeee;
 	padding: 6rem 10rem;
-	border-radius: 2rem;
+	border-radius: 1rem;
 }
 
 form h2 {
@@ -251,7 +251,7 @@ button:active {
 .bodyContainerShop {
 	margin: 2rem 1rem;
 	padding: 3rem 0.5rem;
-	border-radius: 2rem;
+	border-radius: 1rem;
 	display: flex;
 	justify-content: center;
 	background-color: #eeeeee;
@@ -369,8 +369,8 @@ aside {
 	flex-wrap: wrap;
 	justify-content: center;
 	background-color: #eeeeee;
-	padding: 6rem 10rem;
-	border-radius: 2rem;
+	padding: 4rem 8rem;
+	border-radius: 1rem;
 }
 
 .valores ol {
@@ -412,7 +412,7 @@ aside {
 	margin: 2rem;
 	background-color: #eeeeee;
 	padding: 4rem;
-	border-radius: 2rem 5rem;
+	border-radius: 1rem;
 }
 
 .containerSection {
@@ -663,7 +663,7 @@ aside {
 	.bodyContainerShop {
 		margin: 2rem 1rem;
 		padding: 1rem 0.5rem;
-		border-radius: 2rem;
+		border-radius: 1rem;
 		display: grid;
 		justify-content: center;
 		background-color: #eeeeee;
@@ -724,7 +724,7 @@ aside {
 		margin: 2rem;
 		background-color: #eeeeee;
 		padding: 4rem;
-		border-radius: 2rem 5rem;
+		border-radius: 1rem;
 		font-size: medium;
 	}
 
@@ -874,8 +874,8 @@ aside {
 	.cont-menu nav a {
 		display: block;
 		text-decoration: none;
-		padding: 10px;
-		height: 10px;
+		padding: 14px 16px !important;
+		height: 15px !important;
 		color: #c7c7c7;
 		border-left: 5px solid transparent;
 		transition: all 400ms ease;
@@ -891,10 +891,11 @@ aside {
 	}
 
 	.navOp {
-		display: block;
-		color: #eeeeee;
-		text-align: center;
-		text-decoration: none;
+		display: block !important;
+		color: #eeeeee !important;
+		text-align: center !important;
+		padding: 14px 16px !important;
+		text-decoration: none !important;
 	}
 
 	.menuBar {
@@ -902,9 +903,9 @@ aside {
 	}
 
 	.navOp:hover {
-		background-color: #333;
-		color: #e6d5b8;
-		border-bottom: #e6d5b8 solid 5px;
+		background-color: #333 !important;
+		color: #e6d5b8 !important;
+		border-bottom: #e6d5b8 solid 5px !important;
 	}
 
 	#active {
@@ -1116,8 +1117,8 @@ aside {
 	.containerProduct {
 		margin: 2rem;
 		background-color: #eeeeee;
-		padding: 4rem;
-		border-radius: 2rem 5rem;
+		padding: 4rem 1rem;
+		border-radius: 1rem;
 		font-size: medium;
 	}
 
@@ -1135,7 +1136,7 @@ aside {
 	}
 
 	.imagenProduct img {
-		width: 240px;
+		width: 320px;
 	}
 
 	.containerProduct .contenedor {
