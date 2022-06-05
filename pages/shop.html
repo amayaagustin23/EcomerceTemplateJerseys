@@ -7,7 +7,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="../css/styles.css" />
   <!-- CSS only -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
   <link rel="stylesheet" href="../css/fontello.css" media="screen">
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -27,7 +28,8 @@
       <div class="btn-menu">
         <label class="icon-menu" for="btn-menu"></label>
       </div>
-      <a data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500" href="../index.html" title="Home"><img src="../image/logo.png" alt="Logo" width="100" /></a>
+      <a data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500" href="../index.html" title="Home"><img
+          src="../image/logo.png" alt="Logo" width="100" /></a>
       <div class="socials" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
         <img src="../image/socials/facebook.png" alt="facebook" width="32" />
         <img src="../image/socials/instagram.png" alt="instagram" width="32" />
@@ -51,8 +53,8 @@
           </div>
         </nav>
         <div>
-          <img class="groupIcon"  src="../image/icon/profile-user.png" width="32" alt="user" />
-          <img class="groupIcon"  src="../image/icon/shopping-cart.png" width="32" alt="cart" />
+          <img class="groupIcon" src="../image/icon/profile-user.png" width="32" alt="user" />
+          <img class="groupIcon" src="../image/icon/shopping-cart.png" width="32" alt="cart" />
         </div>
         <label class="icon-cancel-1" for="btn-menu"></label>
       </div>
@@ -74,69 +76,91 @@
         </div>
       </div>
       <div class="asideSection">
-        <h4>Genero</h4>
-        <div class="inputs">
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-            <label class="form-check-label" for="flexCheckDefault">Hombre</label>
+        <div class="accordion accordion-flush" id="accordionFlushExample">
+          <div class="accordion-item mt-2">
+            <h2 class="accordion-header" id="flush-headingOne">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                Generos
+              </button>
+            </h2>
+            <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+              data-bs-parent="#accordionFlushExample">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">Hombre</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">Mujer</label>
+              </div>
+            </div>
           </div>
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-            <label class="form-check-label" for="flexCheckDefault">Mujer</label>
+          <div class="accordion-item mt-2">
+            <h2 class="accordion-header" id="flush-headingTwo">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                Marcas
+              </button>
+            </h2>
+            <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
+              data-bs-parent="#accordionFlushExample">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">Adidas</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">Nike</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">Puma</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">Umbro</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">Under Armour</label>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-      <div class="asideSection">
-        <h4>Marcas</h4>
-        <div class="inputs">
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-            <label class="form-check-label" for="flexCheckDefault">Adidas</label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-            <label class="form-check-label" for="flexCheckDefault">Nike</label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-            <label class="form-check-label" for="flexCheckDefault">Puma</label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-            <label class="form-check-label" for="flexCheckDefault">Umbro</label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-            <label class="form-check-label" for="flexCheckDefault">Under Armour</label>
-          </div>
-        </div>
-      </div>
-      <div class="asideSection">
-        <h4>Talles</h4>
-        <div class="inputs">
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-            <label class="form-check-label" for="flexCheckDefault">S</label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-            <label class="form-check-label" for="flexCheckDefault">M</label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-            <label class="form-check-label" for="flexCheckDefault">L</label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-            <label class="form-check-label" for="flexCheckDefault">XL</label>
+          <div class="accordion-item mt-2">
+            <h2 class="accordion-header" id="flush-headingThree">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                Talles
+              </button>
+            </h2>
+            <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree"
+              data-bs-parent="#accordionFlushExample">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">S</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">M</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">L</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">XL</label>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </aside>
     <section>
       <h1>Tienda de camisetas</h1>
-      <div class="containerArticulos" >
-        <div class="articulo" data-aos="fade-right" >
+      <div class="containerArticulos">
+        <div class="articulo" data-aos="fade-right">
           <div class="imagen">
             <img src="../image/Camisetas de la tienda/Barcelona-Champions.jpg" alt="Barcelona-Champions"
               title="Barcelona-Champions">
@@ -188,13 +212,13 @@
             <img src="../image/Camisetas de la tienda/EstudiantesLP-2022.jpg" alt="EstudiantesLP-2021"
               title="EstudiantesLP-2021">
           </div>
-            <div class="textos">
-              <h3>Estudiantes de La Plata 2021</h3>
-              <p>$6.599</p>
-            </div>
-            <button class="buttonArticulo">Agregar al carrito</button>
+          <div class="textos">
+            <h3>Estudiantes de La Plata 2021</h3>
+            <p>$6.599</p>
+          </div>
+          <button class="buttonArticulo">Agregar al carrito</button>
         </div>
-          <div class="articulo" data-aos="fade-right">
+        <div class="articulo" data-aos="fade-right">
           <div class="imagen">
             <img src="../image/Camisetas de la tienda/Liverpool-21-22.jpg" alt="Liverpool-21-22"
               title="Liverpool-21-22">
@@ -247,7 +271,9 @@
     </div>
   </footer>
   <!-- JavaScript Bundle with Popper -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
+  </script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init();
