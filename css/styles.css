@@ -257,9 +257,7 @@ button:active {
 }
 
 /*-- SHOP CAMISETAS --*/
-#btn-filtros{
-	display: none;
-}
+
 .icon-cancel-1{
 	display: none;
 }
@@ -738,9 +736,7 @@ aside {
 		background-color: #eeeeee;
 	}
 
-	aside {
-		display: none;
-	}
+
 
 	#filtros {
 		display: block;
@@ -1167,10 +1163,7 @@ aside {
 		grid-template-columns: repeat(1, 1fr);
 		margin: auto;
 	}
-/* 
-	aside {
-		display: none;
-	} */
+
 
 	.articulo {
 		width: 12rem;
