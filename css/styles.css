@@ -149,6 +149,16 @@ body {
 }
 
 /*-- INDEX --*/
+
+.slide{
+	width: 1400px;
+	height: 700px;
+	margin: auto;
+}
+.carousel-item img{
+	width: 1400px;
+	height: 700px;
+}
 .containerPrincipal {
 	background-color: #eeeeee;
 	margin: 2rem;
@@ -569,7 +579,15 @@ aside {
 	}
 
 	/* INDEX */
-
+	.slide{
+		width: 600px;
+		height: 350px;
+		margin: auto;
+	}
+	.carousel-item img{
+		width: 600px;
+		height: 350px;
+	}
 	.containerIndex {
 		display: grid;
 		grid-gap: 25px;
@@ -991,6 +1009,17 @@ aside {
 	}
 
 	/* INDEX */
+
+	.slide{
+		width: 350px;
+		height: 200px;
+		margin: auto;
+	}
+	.carousel-item img{
+		width: 350px;
+		height: 200px;
+	}
+
 	.containerPrincipal {
 		margin: 1rem;
 		padding: 2rem 0.5rem;
