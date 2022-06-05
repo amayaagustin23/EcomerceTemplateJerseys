@@ -151,13 +151,13 @@ body {
 /*-- INDEX --*/
 
 .slide{
-	width: 1300px;
-	height: 700px;
+	max-width:1350px;
+	height: 600px;
 	margin: auto;
 }
 .carousel-item img{
-	width: 1300px;
-	height: 700px;
+	max-width:1350px;
+	height: 600px;
 }
 .containerPrincipal {
 	background-color: #eeeeee;
@@ -580,13 +580,13 @@ aside {
 
 	/* INDEX */
 	.slide{
-		width: 600px;
-		height: 350px;
+		max-width: 700px;
+		max-height: 400px;
 		margin: auto;
 	}
 	.carousel-item img{
-		width: 600px;
-		height: 350px;
+		max-width: 700px;
+		max-height: 400px;
 	}
 	.containerIndex {
 		display: grid;
@@ -1011,12 +1011,12 @@ aside {
 	/* INDEX */
 
 	.slide{
-		width: 350px;
+		max-width: 350px;
 		height: 200px;
 		margin: auto;
 	}
 	.carousel-item img{
-		width: 350px;
+		max-width: 350px;
 		height: 200px;
 	}
 
@@ -1038,7 +1038,7 @@ aside {
 	}
 
 	.containerSectionIndex img {
-		width: 20rem;
+		max-width: 20rem;
 		margin: 1rem 2rem;
 
 	}
