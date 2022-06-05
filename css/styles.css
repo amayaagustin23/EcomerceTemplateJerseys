@@ -499,6 +499,17 @@ aside {
 .descOp {
 	font-weight: bold;
 }
+.accordion-button{
+	background: #eeeeee !important;
+	color: #1b1a17 !important;
+	border: #1b1a17 1px solid !important;
+}
+.accordion-button:hover{
+	background: #1b1a17 !important;
+	color: #eeeeee !important;
+	border: #1b1a17 1px solid !important;
+}
+
 
 @media screen and (max-width: 1220px) {
 	.socials img {
