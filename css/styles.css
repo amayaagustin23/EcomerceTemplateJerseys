@@ -348,8 +348,7 @@ button:active {
 }
 
 aside {
-	max-width: 25rem;
-	margin-right: 1rem;
+	margin: 0 3rem ;
 }
 
 .search {
@@ -690,6 +689,9 @@ aside {
 	}
 
 	/*SHOP*/
+	section h1{
+		text-align: center;
+	}
 	#filtros:focus~aside {
 		display: block;
 		text-align: center;
