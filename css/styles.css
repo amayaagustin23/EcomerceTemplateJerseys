@@ -9,8 +9,8 @@ ol {
 
 html,
 body {
-	height: 100%;
-	background-color: #f0a500;
+	height: 100% ;
+	background-color: #f0a500 !important;
 	font-family: 'Montserrat', sans-serif;
 }
 
@@ -51,7 +51,6 @@ body {
 	grid-template-columns: 11fr 1fr;
 	justify-content: left;
 	background-color: #333;
-	padding: 0.2rem 0;
 	align-items: center;
 }
 
@@ -82,7 +81,7 @@ body {
 	display: block !important;
 	color: #eeeeee !important;
 	text-align: center !important;
-	padding: 14px 16px !important;
+	padding: 10px 16px !important;
 	text-decoration: none !important;
 }
 
@@ -93,7 +92,7 @@ body {
 .navOp:hover {
 	background-color: #1b1a17;
 	color: #e6d5b8;
-	border-bottom: #f0a500 0.2rem solid;
+	border-bottom: #e45826 0.2rem solid;
 }
 
 #active {
@@ -282,7 +281,7 @@ button:active {
 	transform-origin: bottom left;
 	transition: 120ms transform ease-in-out;
 	box-shadow: inset 1em 1em #e45826;
-	background-color: CanvasText;
+	background-color: #e45826;
 }
 
 
@@ -297,6 +296,8 @@ button:active {
 }
 
 .articulo {
+	height: 30rem;
+	width: 19rem;
 	margin: 1rem;
 	padding: 0.2rem;
 	border: 1px solid #e45826;
@@ -306,6 +307,7 @@ button:active {
 
 .textos {
 	margin-top: 0.4rem;
+	height: 7rem;
 }
 
 .articulo .imagen {
@@ -319,6 +321,10 @@ button:active {
 	width: 18rem;
 }
 
+.buttonArticulo {
+	width: 100%;
+	border-radius: 2rem !important;
+}
 .inputs {
 	justify-content: flex-start;
 	align-items: initial;
@@ -358,10 +364,15 @@ aside {
 	margin-top: 2rem;
 }
 
-.buttonArticulo {
-	width: 100%;
-}
 
+.page-link{
+	background-color: #333 !important;
+	color: #eeeeee !important;
+}
+.page-link:hover{
+	background-color: #f0a500 !important;
+	color: #333 !important;
+}
 /*-- ABOUT --*/
 
 .containerAbout {
@@ -408,6 +419,11 @@ aside {
 
 /*-- PRODUCT --*/
 
+.breadcrumb-item, .breadcrumb-item a{
+	list-style: none !important;
+	text-decoration: none;
+	color: #333 !important;
+}
 .containerProduct {
 	margin: 2rem;
 	background-color: #eeeeee;
@@ -445,6 +461,7 @@ aside {
 	background-color: #e6d5b8;
 	border: #e45826 1px solid;
 	color: #1b1a17;
+	border-radius: 2rem;
 }
 
 .talle:hover {
@@ -483,7 +500,7 @@ aside {
 	font-weight: bold;
 }
 
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 1220px) {
 	.socials img {
 		width: 32px;
 	}
@@ -659,7 +676,10 @@ aside {
 		grid-template-columns: repeat(2, 1fr);
 		margin: auto;
 	}
-
+	.containerArticulo{
+		display: block;
+		align-items: flex-end;
+	}
 	.bodyContainerShop {
 		margin: 2rem 1rem;
 		padding: 1rem 0.5rem;
@@ -691,7 +711,8 @@ aside {
 	}
 
 	.articulo {
-		width: 14rem;
+		width: 15rem;
+		height: 25rem;
 		margin: 0.2rem;
 		padding: 0.2rem;
 		border: 1px solid #e45826;
@@ -1089,6 +1110,7 @@ aside {
 
 	.articulo {
 		width: 12rem;
+		height: 22.5rem;
 		margin: auto;
 		padding: 0.2rem;
 		border: 1px solid #e45826;
@@ -1109,8 +1131,9 @@ aside {
 	.articulo .imagen img {
 		display: flex;
 		justify-content: center;
-		width: 12rem;
+		width: 11.5rem;
 	}
+
 
 	/*-- PRODUCT --*/
 	.containerProduct {
