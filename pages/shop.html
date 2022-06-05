@@ -62,10 +62,16 @@
     <button class="buttonArticulo" id="filtros">Filtros</button>
     <aside>
       <div class="search">
-        <input type="text">
-        <span>
-          <img src="../image/socials/search-dark.png" alt="searh" width="24px">
-        </span>
+        <div class="search-input">
+          <input type="text">
+          <span>
+            <img src="../image/socials/search-dark.png" alt="searh" width="24px">
+          </span>
+        </div>
+        <div class="close">
+          <input type="checkbox" id="btn-filtros">
+          <label class="icon-cancel-1" for="btn-filtros"></label>
+        </div>
       </div>
       <div class="asideSection">
         <h4>Genero</h4>
@@ -97,7 +103,7 @@
     <section>
       <h1>Tienda de camisetas</h1>
       <div class="containerArticulos" >
-        <div class="articulo" >
+        <div class="articulo" data-aos="fade-right" >
           <div class="imagen">
             <img src="../image/Camisetas de la tienda/Barcelona-Champions.jpg" alt="Barcelona-Champions"
               title="Barcelona-Champions">
@@ -108,7 +114,7 @@
           </div>
           <button class="buttonArticulo">Agregar al carrito</button>
         </div>
-        <div class="articulo">
+        <div class="articulo" data-aos="fade-right">
           <div class="imagen">
             <img src="../image/Camisetas de la tienda/Newell'sOldBoys-2022.jpg" alt="Newell'sOldBoys-2022"
               title="Newell'sOldBoys-2022">
@@ -119,7 +125,7 @@
           </div>
           <button class="buttonArticulo">Agregar al carrito</button>
         </div>
-        <div class="articulo">
+        <div class="articulo" data-aos="fade-right">
           <a href="../pages/product.html" class="aArticulo">
             <div class="imagen">
               <img src="../image/Camisetas de la tienda/River-2022.jpg" alt="River-2022" title="River-2022">
@@ -132,7 +138,7 @@
           </a>
         </div>
 
-        <div class="articulo">
+        <div class="articulo" data-aos="fade-right">
           <div class="imagen">
             <img src="../image/Camisetas de la tienda/AtleticoTucuman-2022.jpg" alt="AtleticoTucuman-2022"
               title="AtleticoTucuman-2022">
@@ -144,7 +150,7 @@
           <button class="buttonArticulo">Agregar al carrito</button>
         </div>
 
-        <div class="articulo">
+        <div class="articulo" data-aos="fade-right">
           <div class="imagen">
             <img src="../image/Camisetas de la tienda/EstudiantesLP-2022.jpg" alt="EstudiantesLP-2021"
               title="EstudiantesLP-2021">
@@ -155,7 +161,7 @@
             </div>
             <button class="buttonArticulo">Agregar al carrito</button>
         </div>
-          <div class="articulo">
+          <div class="articulo" data-aos="fade-right">
           <div class="imagen">
             <img src="../image/Camisetas de la tienda/Liverpool-21-22.jpg" alt="Liverpool-21-22"
               title="Liverpool-21-22">

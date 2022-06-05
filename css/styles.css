@@ -257,6 +257,12 @@ button:active {
 }
 
 /*-- SHOP CAMISETAS --*/
+#btn-filtros{
+	display: none;
+}
+.icon-cancel-1{
+	display: none;
+}
 .bodyContainerShop {
 	margin: 2rem 1rem;
 	padding: 3rem 0.5rem;
@@ -312,12 +318,19 @@ button:active {
 	grid-column: span 1;
 	grid-row: span 1;
 }
+.articulo:hover {
+	background-color: #333;
+	color: #eeeeee !important;
+}
 
 .textos {
 	margin-top: 0.4rem;
 	height: 7rem;
 }
 
+.textos:hover {
+	color: #eeeeee !important;
+}
 .articulo .imagen {
 	display: flex;
 	justify-content: center;
@@ -333,6 +346,10 @@ button:active {
 	width: 100%;
 	border-radius: 2rem !important;
 }
+
+
+
+
 .inputs {
 	justify-content: flex-start;
 	align-items: initial;
@@ -350,18 +367,19 @@ button:active {
 }
 
 aside {
-	width: 10rem;
+	width: 300px;
 	margin-right: 2rem;
 }
 
 .search {
-	display: flex;
-	align-items: center;
+	display: grid;
+	grid-template-columns: 4fr 1fr;
+
 }
 
 .search input {
+	width: 200px;
 	padding: 0.4rem 0.25rem;
-	width: 100%;
 	background: transparent;
 	color: #1b1a17;
 	font-size: 1rem;
@@ -691,6 +709,34 @@ aside {
 	}
 
 	/*SHOP*/
+	#filtros:focus~aside {
+		display: block;
+		text-align: center;
+		margin: auto;
+	}
+	.icon-cancel-1{
+		display: block;
+ 	}
+
+	 .search {
+		display: grid;
+
+		grid-template-columns: 4fr 1fr;
+		align-items: center;
+	}
+	
+	.search input {
+		width: 200px;
+		padding: 0.4rem 0.25rem;
+		background: transparent;
+		color: #1b1a17;
+		font-size: 1rem;
+		border-radius: 1rem;
+	}	
+	#filtros:focus~#btn-filtros {
+		display: block;
+		margin-left: 5rem;
+	}
 	.containerArticulos {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
@@ -732,7 +778,7 @@ aside {
 
 	.articulo {
 		width: 15rem;
-		height: 25rem;
+		height: 25.5rem;
 		margin: 0.2rem;
 		padding: 0.2rem;
 		border: 1px solid #e45826;
@@ -862,6 +908,7 @@ aside {
 		opacity: 1;
 		visibility: visible;
 	}
+	
 
 	.cont-menu {
 		width: 100%;
@@ -869,7 +916,7 @@ aside {
 		background-color: #333;
 		align-items: stretch;
 		height: 100vh;
-		position: absolute;
+		position: fixed;
 		transition: all 500ms ease;
 		transform: translateX(-100%);
 		z-index: 1;
@@ -879,6 +926,9 @@ aside {
 		transform: translateX(0%);
 	}
 
+	#btn-menu:checked~::-webkit-scrollbar {
+		display: none;
+	}
 	#btn-menu:checked~.container-menu .cont-menu label {
 		display: block;
 		right: 5px;
@@ -915,7 +965,7 @@ aside {
 		display: block;
 		text-decoration: none;
 		padding: 14px 16px !important;
-		height: 15px !important;
+		height: 42px !important;
 		color: #c7c7c7;
 		border-left: 5px solid transparent;
 		transition: all 400ms ease;
@@ -1134,14 +1184,14 @@ aside {
 		grid-template-columns: repeat(1, 1fr);
 		margin: auto;
 	}
-
+/* 
 	aside {
 		display: none;
-	}
+	} */
 
 	.articulo {
 		width: 12rem;
-		height: 22.5rem;
+		height: 23rem;
 		margin: auto;
 		padding: 0.2rem;
 		border: 1px solid #e45826;
