@@ -171,8 +171,8 @@ body {
 
 .containerSectionIndex {
 	background-color: white;
-	margin: 2rem;
-	padding: 1rem;
+	margin: 0.5rem;
+	padding: 0.2rem;
 	border-radius: 2rem;
 	display: flex;
 	flex-wrap: wrap;
@@ -181,7 +181,7 @@ body {
 }
 
 .containerSectionIndex img {
-	width: 35rem;
+	max-width: 35rem;
 	margin: 1rem 2rem;
 
 }
@@ -595,55 +595,12 @@ aside {
 		align-items: flex-start;
 	}
 
-	.sectionSecundaria {
-		display: grid;
-		grid-gap: 10px;
-		grid-template-columns: 200px 200px;
+	.containerSectionIndex img {
+		max-width: 25rem;
+		margin: 1rem 2rem;
+	
 	}
-
-	.sectionPricipal .imagePrincipal {
-		width: 410px;
-		height: 300px;
-	}
-
-	.sectionPricipal .imagePrincipal img {
-		width: 410px;
-		height: 300px;
-	}
-
-	.textPrincipal {
-		width: 410px;
-		height: 50px;
-		margin-top: -53px;
-		background-color: #1b1a17b6;
-		color: #eeeeee;
-	}
-
-	.textPrincipal h3,
-	h5 {
-		padding-left: 30px;
-	}
-
-	.sectionSecundaria .imageSecundaria {
-		display: grid;
-		width: 200px;
-		height: 145px;
-	}
-
-	.sectionSecundaria .imageSecundaria img {
-		width: 200px;
-		height: 145px;
-	}
-
-	.textSecundaria {
-		width: 200px;
-		height: 40px;
-		margin-top: -40px;
-		background-color: #1b1a17b6;
-		color: #eeeeee;
-		text-align: center;
-		font-size: small;
-	}
+	
 
 	/* CONTACT */
 	form {
@@ -1075,6 +1032,7 @@ aside {
 	}
 
 	.containerSectionIndex-text {
+		margin: 0.5rem;
 		padding: 1rem;
 		border-radius: 2rem;
 		width: 50rem;
@@ -1272,5 +1230,39 @@ aside {
 
 	.descripText h3 {
 		font-size: medium;
+	}
+}
+
+@media screen and (max-width: 400px) {
+
+	.containerSectionIndex{
+		background-color: white;
+		margin: 0.5rem;
+		padding: 0.2rem;
+		border-radius: 2rem;
+		display: flex  ;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+		height: 600px;
+	}
+
+	.containerSectionIndex img {
+		max-width: 15rem;
+		margin: 1rem 2rem;
+
+	}
+
+	.containerSectionIndex-text {
+		padding: 1rem;
+		border-radius: 2rem;
+		max-width: 15rem;
+		height: 400px;
+	}
+
+	.containerSectionIndex-text button{
+		display: flex;
+		justify-content: center;
+		align-items: flex-end;
 	}
 }
