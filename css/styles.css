@@ -9,7 +9,7 @@ ol {
 
 html,
 body {
-	height: 100% ;
+	height: 100%;
 	background-color: #f0a500 !important;
 	font-family: 'Montserrat', sans-serif;
 }
@@ -150,22 +150,26 @@ body {
 
 /*-- INDEX --*/
 
-.slide{
-	max-width:1350px;
+.slide {
+	max-width: 100%;
 	height: 600px;
 	margin: auto;
 }
-.carousel-item img{
-	max-width:1350px;
+
+.carousel-item img {
+	max-width: 100%;
 	height: 600px;
+	border-radius: 1rem;
 }
+
 .containerPrincipal {
 	background-color: #eeeeee;
 	margin: 2rem;
 	padding: 4rem 2rem;
 	border-radius: 1rem;
 }
-.carrouselContainer{
+
+.carrouselContainer {
 	position: sticky;
 }
 
@@ -183,7 +187,7 @@ body {
 .containerSectionIndex img {
 	max-width: 35rem;
 	margin: 1rem 2rem;
-
+	border-radius: 1rem;
 }
 
 .containerSectionIndex-text {
@@ -258,9 +262,10 @@ button:active {
 
 /*-- SHOP CAMISETAS --*/
 
-.icon-cancel-1{
+.icon-cancel-1 {
 	display: none;
 }
+
 .bodyContainerShop {
 	margin: 2rem 1rem;
 	padding: 3rem 0.5rem;
@@ -271,13 +276,14 @@ button:active {
 }
 
 .form-check-input:checked {
-	background-color:#e45826 !important ;
-	border: 2px solid #e4592677 !important ;
-  }
+	background-color: #e45826 !important;
+	border: 2px solid #e4592677 !important;
+}
 
-  .form-check-input:hover {
-	border: 2px solid #e4592677 !important ;
-  }
+.form-check-input:hover {
+	border: 2px solid #e4592677 !important;
+}
+
 .containerArticulos {
 	display: grid;
 	grid-gap: 25px;
@@ -297,6 +303,7 @@ button:active {
 	grid-column: span 1;
 	grid-row: span 1;
 }
+
 .articulo:hover {
 	text-decoration: none;
 	background-color: #333;
@@ -312,6 +319,7 @@ button:active {
 	color: #eeeeee !important;
 	color: #eeeeee !important;
 }
+
 .articulo .imagen {
 	display: flex;
 	justify-content: center;
@@ -348,7 +356,7 @@ button:active {
 }
 
 aside {
-	margin: 0 3rem ;
+	margin: 0 3rem;
 }
 
 .search {
@@ -372,14 +380,16 @@ aside {
 }
 
 
-.page-link{
+.page-link {
 	background-color: #333 !important;
 	color: #eeeeee !important;
 }
-.page-link:hover{
+
+.page-link:hover {
 	background-color: #f0a500 !important;
 	color: #333 !important;
 }
+
 /*-- ABOUT --*/
 
 .containerAbout {
@@ -426,11 +436,13 @@ aside {
 
 /*-- PRODUCT --*/
 
-.breadcrumb-item, .breadcrumb-item a{
+.breadcrumb-item,
+.breadcrumb-item a {
 	list-style: none !important;
 	text-decoration: none;
 	color: #333 !important;
 }
+
 .containerProduct {
 	margin: 2rem;
 	background-color: #eeeeee;
@@ -506,12 +518,14 @@ aside {
 .descOp {
 	font-weight: bold;
 }
-.accordion-button{
+
+.accordion-button {
 	background: #eeeeee !important;
 	color: #1b1a17 !important;
 	border: #1b1a17 1px solid !important;
 }
-.accordion-button:hover{
+
+.accordion-button:hover {
 	background: #1b1a17 !important;
 	color: #eeeeee !important;
 	border: #1b1a17 1px solid !important;
@@ -577,15 +591,17 @@ aside {
 	}
 
 	/* INDEX */
-	.slide{
-		max-width: 700px;
+	.slide {
+		max-width: 100%;
 		max-height: 400px;
 		margin: auto;
 	}
-	.carousel-item img{
-		max-width: 700px;
+
+	.carousel-item img {
+		max-width: 100%;
 		max-height: 400px;
 	}
+
 	.containerIndex {
 		display: grid;
 		grid-gap: 25px;
@@ -598,9 +614,9 @@ aside {
 	.containerSectionIndex img {
 		max-width: 25rem;
 		margin: 1rem 2rem;
-	
+
 	}
-	
+
 
 	/* CONTACT */
 	form {
@@ -612,7 +628,7 @@ aside {
 	}
 
 
-	form button{
+	form button {
 		background-color: #e45826 !important;
 		border: none !important;
 		color: #eeeeee !important;
@@ -646,25 +662,27 @@ aside {
 	}
 
 	/*SHOP*/
-	section h1{
+	section h1 {
 		text-align: center;
 	}
+
 	#filtros:focus~aside {
 		display: block;
 		text-align: center;
 		margin: auto;
 	}
-	.icon-cancel-1{
-		display: block;
- 	}
 
-	 .search {
+	.icon-cancel-1 {
+		display: block;
+	}
+
+	.search {
 		display: grid;
 
 		grid-template-columns: 4fr 1fr;
 		align-items: center;
 	}
-	
+
 	.search input {
 		width: 200px;
 		padding: 0.4rem 0.25rem;
@@ -672,20 +690,24 @@ aside {
 		color: #1b1a17;
 		font-size: 1rem;
 		border-radius: 1rem;
-	}	
+	}
+
 	#filtros:focus~#btn-filtros {
 		display: block;
 		margin-left: 5rem;
 	}
+
 	.containerArticulos {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 		margin: auto;
 	}
-	.containerArticulo{
+
+	.containerArticulo {
 		display: block;
 		align-items: flex-end;
 	}
+
 	.bodyContainerShop {
 		margin: 2rem 1rem;
 		padding: 1rem 0.5rem;
@@ -846,7 +868,7 @@ aside {
 		opacity: 1;
 		visibility: visible;
 	}
-	
+
 
 	.cont-menu {
 		width: 100%;
@@ -867,6 +889,7 @@ aside {
 	#btn-menu:checked~::-webkit-scrollbar {
 		display: none;
 	}
+
 	#btn-menu:checked~.container-menu .cont-menu label {
 		display: block;
 		right: 5px;
@@ -998,13 +1021,14 @@ aside {
 
 	/* INDEX */
 
-	.slide{
-		max-width: 350px;
+	.slide {
+		max-width: 100%;
 		height: 200px;
 		margin: auto;
 	}
-	.carousel-item img{
-		max-width: 350px;
+
+	.carousel-item img {
+		max-width: 100%;
 		height: 200px;
 	}
 
@@ -1013,13 +1037,13 @@ aside {
 		padding: 2rem 0.5rem;
 		border-radius: 1rem;
 	}
-	
-	.containerSectionIndex{
+
+	.containerSectionIndex {
 		background-color: white;
 		margin: 0.5rem;
 		padding: 0.2rem;
 		border-radius: 2rem;
-		display: flex  ;
+		display: flex;
 		flex-wrap: wrap;
 		justify-content: center;
 		align-items: center;
@@ -1039,11 +1063,11 @@ aside {
 		height: 20rem;
 	}
 
-	.containerSectionIndex-text p{
+	.containerSectionIndex-text p {
 		font-size: 11px;
 	}
 
-	.containerSectionIndex-text h3{
+	.containerSectionIndex-text h3 {
 		font-size: 18px;
 	}
 
@@ -1059,7 +1083,7 @@ aside {
 		color: white;
 		padding: 0.1rem;
 		text-align: center;
-		font-size:11px;
+		font-size: 11px;
 		font-weight: bold;
 		border-radius: 20rem;
 
@@ -1154,7 +1178,7 @@ aside {
 
 	/*-- PRODUCT --*/
 	.containerProduct {
-		margin: 2rem 1rem ;
+		margin: 2rem 1rem;
 		background-color: #eeeeee;
 		padding: 4rem 1rem;
 		border-radius: 1rem;
@@ -1235,12 +1259,12 @@ aside {
 
 @media screen and (max-width: 400px) {
 
-	.containerSectionIndex{
+	.containerSectionIndex {
 		background-color: white;
 		margin: 0.5rem;
 		padding: 0.2rem;
 		border-radius: 2rem;
-		display: flex  ;
+		display: flex;
 		flex-wrap: wrap;
 		justify-content: center;
 		align-items: center;
@@ -1260,7 +1284,7 @@ aside {
 		height: 400px;
 	}
 
-	.containerSectionIndex-text button{
+	.containerSectionIndex-text button {
 		display: flex;
 		justify-content: center;
 		align-items: flex-end;
