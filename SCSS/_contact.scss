@@ -1,0 +1,39 @@
+
+
+.buttonContact {
+  @include buttons(
+    $colorGrisOscuro,
+    white,
+    $colorFondo,
+    $colorGrisOscuro,
+    200px
+  );
+}
+
+
+form {
+  margin: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: $colorGrisBlanco;
+  padding: 6rem 2rem;
+  border-radius: 1rem;
+  h2 {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 1220px) {
+  form {
+    h2 {
+      font-size: large;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  form {
+    h2 {
+      font-size: medium;
+    }
+  }
+}

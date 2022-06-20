@@ -1,0 +1,215 @@
+.talle {
+  @include buttons(
+    $colorBeige,
+    $colorGrisOscuro,
+    $colorFondo,
+    $colorGrisOscuro,
+    100% 
+  );
+}
+
+.carrito {
+  @include buttons(
+    $colorGrisOscuro,
+    $colorGrisBlanco,
+    $colorFondo,
+    $colorGrisOscuro,
+    200px 
+  );
+}
+
+
+.containerProduct {
+  margin: 2rem 1rem;
+  background-color: $colorGrisBlanco;
+  padding: 4rem;
+  border-radius: 1rem;
+  section {
+    nav {
+      .breadcrumb-item {
+        list-style: none !important;
+        text-decoration: none;
+        color: #333 !important;
+        a {
+          list-style: none !important;
+          text-decoration: none;
+          color: #333 !important;
+        }
+      }
+    }
+    .containerSection {
+      display: grid;
+      grid-gap: 2rem;
+      grid-template-columns: repeat(auto-fill, 600px);
+      justify-content: center;
+      align-items: center;
+      .imagenProduct {
+        img {
+          width: 35rem;
+        }
+      }
+      .contenedor {
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-content: center;
+        .precio {
+          font-size: 4rem;
+        }
+        .talles {
+          display: grid;
+          grid-gap: 5px;
+          grid-template-columns: 1fr 1fr 1fr 1fr;
+          font-size: 13px;
+          justify-content: center;
+          margin: 2rem 0;
+          .talle {
+            border: $colorNaranja 1px solid;
+            border-radius: 2rem;
+            &:hover {
+              border: $colorGrisOscuro 1px solid;
+            }
+          }
+        }
+      }
+    }
+  }
+  section {
+    .accordion {
+      .accordion-item {
+        .accordion-collapse {
+          .accordion-body {
+            .listasDesc {
+              display: flex;
+              justify-content: space-evenly;
+              margin-top: 2rem;
+              .listDesc {
+                display: grid;
+                .descOp {
+                  font-weight: bold;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 1220px) {
+  .containerProduct {
+    section {
+      .containerSection {
+        display: grid;
+        grid-gap: 2rem;
+        grid-template-columns: repeat(auto-fill, 600px);
+        justify-content: center;
+        align-items: center;
+        .imagenProduct {
+          display: grid;
+          justify-content: center;
+          img {
+            max-width: 25rem;
+          }
+        }
+        .contenedor {
+          display: grid;
+          justify-content: center;
+          grid-template-columns: 400px;
+          text-align: center;
+          .precio {
+            font-size: 4rem;
+          }
+          .talles {
+            display: grid;
+            grid-gap: 5px;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            justify-content: center;
+            margin: 2rem auto;
+            .talle {
+              width: 70px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+}
+
+@media screen and (max-width: 500px) {
+  .containerProduct {
+    section {
+      .containerSection {
+        display: grid;
+        grid-gap: 2rem;
+        grid-template-columns: repeat(auto-fill, 400px);
+        justify-content: center;
+        align-items: center;
+        .imagenProduct {
+          display: grid;
+          justify-content: center;
+          img {
+            max-width: 17rem;
+          }
+        }
+        .contenedor {
+          display: grid;
+          justify-content: center;
+          grid-template-columns: 400px;
+          text-align: center;
+          h1{
+            font-size: 22px;
+          }
+          .precio {
+            font-size: 40px;
+          }
+          .talles {
+            font-size: 10px;
+            .talle {
+              width: 60px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+
+}
+@media screen and (max-width: 320px) {
+  .containerProduct {
+    section {
+      .containerSection {
+        display: grid;
+        grid-gap: 2rem;
+        grid-template-columns: repeat(auto-fill, 300px);
+        justify-content: center;
+        align-items: center;
+        .imagenProduct {
+          display: grid;
+          justify-content: center;
+          img {
+            max-width: 12rem;
+          }
+        }
+        .contenedor {
+          grid-template-columns: 300px;
+          h1{
+            font-size: 20px;
+          }
+          .precio {
+            font-size: 30px;
+          }
+          .talles {
+            grid-gap: 3px;
+            font-size: 8px;
+            justify-content: center;
+            .talle {
+              width: 55px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

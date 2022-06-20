@@ -1,0 +1,25 @@
+{
+  "name": "codigo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-css": "node-sass --include-path scss ./SCSS/styles.scss ./CSS/styles.css",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/atomix2395/coderDesafios.git"
+  },
+  "author": "Agustin Amaya",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/atomix2395/coderDesafios/issues"
+  },
+  "homepage": "https://github.com/atomix2395/coderDesafios#readme",
+  "devDependencies": {
+    "node-sass": "^7.0.1",
+    "nodemon": "^2.0.16"
+  }
+}

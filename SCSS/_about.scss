@@ -1,0 +1,54 @@
+.containerAbout {
+  margin: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: $colorGrisBlanco;
+  padding: 4rem 2rem;
+  border-radius: 1rem;
+  h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+  }
+  p {
+    font-size: 1.5rem;
+  }
+  h2 {
+    font-size: 2.3rem;
+    font-weight: bold;
+    text-align: center;
+  }
+  .valores {
+    list-style-type: none;
+    display: grid;
+    justify-content: center;
+    li {
+      font-size: 1.5rem;
+    }
+  }
+}
+@media screen and (max-width: 1220px) {
+  .containerAbout {
+    h1 {
+      font-size: 2rem;
+      font-weight: bold;
+      text-align: center;
+    }
+    p {
+      font-size: 1rem;
+    }
+    h2 {
+      font-size: 1.8rem;
+      font-weight: bold;
+      text-align: center;
+    }
+    .valores {
+      list-style-type: none;
+      display: grid;
+      justify-content: center;
+      li {
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
