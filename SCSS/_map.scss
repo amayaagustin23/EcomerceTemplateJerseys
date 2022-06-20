@@ -1,0 +1,13 @@
+$mapSizing: (
+  fontXlarge: 60px,
+  fontLarge: 50px,
+  fontMedium: 40px,
+  fontSmall: 20px,
+  fontXsmall: 10px,
+);
+
+$xsmall: map-get($mapSizing, fontXsmall);
+$small: map-get($mapSizing, fontSmall);
+$medium: map-get($mapSizing, fontMedium);
+$large: map-get($mapSizing, fontLarge);
+$xlarge: map-get($mapSizing, fontXlarge);

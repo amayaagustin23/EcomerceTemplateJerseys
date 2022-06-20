@@ -20,22 +20,6 @@ ol {
   margin: 1rem 0;
   border: none; }
 
-button {
-  background-color: #e45826;
-  border: none;
-  color: #eeeeee;
-  padding: 1rem 1.5rem !important;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 1.2em;
-  border-radius: 2rem !important; }
-  button:hover {
-    background-color: #1b1a17; }
-  button:active {
-    background-color: #f0a500;
-    color: #1b1a17; }
-
 body {
   height: 100%;
   background-color: #f0a500 !important;
@@ -282,6 +266,24 @@ header .cont-menu {
     display: flex;
     justify-content: center; } }
 
+.buttonIndex {
+  background-color: #e6d5b8;
+  color: #1b1a17;
+  width: 200px;
+  border: none;
+  padding: 1rem 1.5rem !important;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1.2em;
+  border-radius: 1rem !important; }
+  .buttonIndex:hover {
+    background-color: #1b1a17;
+    color: white; }
+  .buttonIndex:active {
+    background-color: #e6d5b8;
+    color: #1b1a17; }
+
 .containerPrincipal {
   background-color: #eeeeee;
   margin: 2rem;
@@ -410,6 +412,42 @@ header .cont-menu {
         justify-content: center;
         align-items: flex-end; } }
 
+.talle {
+  background-color: #e6d5b8;
+  color: #1b1a17;
+  width: 100px;
+  border: none;
+  padding: 1rem 1.5rem !important;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1.2em;
+  border-radius: 1rem !important; }
+  .talle:hover {
+    background-color: #e45826;
+    color: #1b1a17; }
+  .talle:active {
+    background-color: #e6d5b8;
+    color: #1b1a17; }
+
+#carrito {
+  background-color: #1b1a17;
+  color: white;
+  width: 200px;
+  border: none;
+  padding: 1rem 1.5rem !important;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1.2em;
+  border-radius: 1rem !important; }
+  #carrito:hover {
+    background-color: #f0a500;
+    color: #1b1a17; }
+  #carrito:active {
+    background-color: #1b1a17;
+    color: #1b1a17; }
+
 .containerProduct {
   margin: 2rem 1rem;
   background-color: #eeeeee;
@@ -445,14 +483,10 @@ header .cont-menu {
         justify-content: center;
         margin: 2rem 0; }
         .containerProduct section .containerSection .contenedor .talles .talle {
-          background-color: #e6d5b8;
           border: #e45826 1px solid;
-          color: #1b1a17;
           border-radius: 2rem; }
           .containerProduct section .containerSection .contenedor .talles .talle:hover {
-            background-color: #e45826;
-            border: #e45826 1px solid;
-            color: #e6d5b8; }
+            border: #e45826 1px solid; }
   .containerProduct section .accordion .accordion-item .accordion-collapse .accordion-body .listasDesc {
     display: flex;
     justify-content: space-evenly;
@@ -541,6 +575,24 @@ header .cont-menu {
         .containerProduct section .containerSection .contenedor .talles .talle {
           width: 55px; } }
 
+.buttonArticulo {
+  background-color: #e45826;
+  color: white;
+  width: 100%;
+  border: none;
+  padding: 1rem 1.5rem !important;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1.2em;
+  border-radius: 1rem !important; }
+  .buttonArticulo:hover {
+    background-color: #1b1a17;
+    color: white; }
+  .buttonArticulo:active {
+    background-color: #e45826;
+    color: #1b1a17; }
+
 .bodyContainerShop {
   margin: 2rem 1rem;
   padding: 3rem 0.5rem;
@@ -596,9 +648,6 @@ header .cont-menu {
       height: 7rem; }
       .bodyContainerShop .containerArticulos .textos:hover {
         color: #eeeeee !important; }
-    .bodyContainerShop .containerArticulos .buttonArticulo {
-      width: 100%;
-      border-radius: 2rem !important; }
   .bodyContainerShop .page-link {
     background-color: #333 !important;
     color: #eeeeee !important; }
@@ -679,6 +728,24 @@ header .cont-menu {
   padding: 4rem 2rem;
   border-radius: 1rem; }
 
+.butonContact {
+  background-color: #1b1a17;
+  color: white;
+  width: 200px;
+  border: none;
+  padding: 1rem 1.5rem !important;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1.2em;
+  border-radius: 1rem !important; }
+  .butonContact:hover {
+    background-color: #e45826;
+    color: #1b1a17; }
+  .butonContact:active {
+    background-color: #1b1a17;
+    color: #1b1a17; }
+
 form {
   margin: 2rem;
   flex-wrap: wrap;
@@ -687,15 +754,16 @@ form {
   padding: 6rem 2rem;
   border-radius: 1rem; }
   form h2 {
-    text-align: center; }
+    text-align: center;
+    font-size: 50px; }
 
 @media screen and (max-width: 1220px) {
   form h2 {
-    font-size: large; } }
+    font-size: 40px; } }
 
 @media screen and (max-width: 500px) {
   form h2 {
-    font-size: medium; } }
+    font-size: 20px; } }
 
 .containerAbout {
   margin: 2rem;

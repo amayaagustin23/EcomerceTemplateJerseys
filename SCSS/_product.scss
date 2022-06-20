@@ -1,3 +1,24 @@
+.talle{
+  @include button(
+    $colorBeige,
+    $colorGrisOscuro,
+    $colorNaranja,
+    $colorGrisOscuro,
+    100px
+  )
+}
+
+#carrito{
+  @include button(
+    $colorGrisOscuro,
+    white,
+    $colorFondo,
+    $colorGrisOscuro,
+    200px
+  )
+}
+
+
 .containerProduct {
   margin: 2rem 1rem;
   background-color: $colorGrisBlanco;
@@ -42,14 +63,10 @@
           justify-content: center;
           margin: 2rem 0;
           .talle {
-            background-color: #e6d5b8;
             border: #e45826 1px solid;
-            color: #1b1a17;
             border-radius: 2rem;
             &:hover {
-              background-color: #e45826;
               border: #e45826 1px solid;
-              color: #e6d5b8;
             }
           }
         }

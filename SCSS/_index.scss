@@ -1,3 +1,13 @@
+.buttonIndex{
+  @include button(
+    $colorBeige,
+    $colorGrisOscuro,
+    $colorGrisOscuro,
+    white,
+    200px
+  )
+}
+
 .containerPrincipal {
   background-color: $colorGrisBlanco;
   margin: 2rem;

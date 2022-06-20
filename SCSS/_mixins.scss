@@ -1,0 +1,21 @@
+@mixin button ($colorFondo,$colorLetter,$colorFondoHover,$colorLetterHover, $width) {
+    background-color: $colorFondo;
+    color: $colorLetter;
+    width: $width;
+    border: none;
+    padding: 1rem 1.5rem !important;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.2em;
+    border-radius: 1rem !important;
+    &:hover {
+      background-color: $colorFondoHover;
+      color: $colorLetterHover;
+    }
+    &:active {
+      background-color: $colorFondo;
+      color: $colorGrisOscuro;
+    }
+  }
+  
