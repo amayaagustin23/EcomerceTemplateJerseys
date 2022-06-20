@@ -1,14 +1,6 @@
-.buttonArticulo{
-  @include button(
-    $colorNaranja,
-    white,
-    $colorGrisOscuro,
-    white,
-    100%
-  )
+.buttonArticulo {
+  @include button($colorNaranja, white, $colorGrisOscuro, white, 100%, 1rem);
 }
-
-
 
 .bodyContainerShop {
   margin: 2rem 1rem;
@@ -84,7 +76,9 @@
         color: $colorGrisBlanco !important;
       }
     }
-
+    .buttonArticulo{
+      margin-top: 5px;
+    }
   }
   .page-link {
     background-color: $colorGrisClaro !important;
@@ -116,7 +110,7 @@
                   width: 800px !important;
                   padding: 0.4rem 0.25rem;
                   background: transparent;
-                  color: #1b1a17;
+                  color: $colorGrisOscuro;
                   font-size: 1rem;
                   border-radius: 1rem;
                 }
@@ -150,10 +144,11 @@
           font-size: small;
           justify-content: center;
         }
+        .buttonArticulo {
+          margin-top: -2px;
+        }
       }
-    
     }
-  
   }
 }
 
@@ -183,9 +178,10 @@
           font-size: small;
           justify-content: center;
         }
+        .buttonArticulo {
+          margin-top: -2px;
+        }
       }
-
     }
-  
   }
 }

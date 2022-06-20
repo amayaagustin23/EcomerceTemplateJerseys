@@ -8,6 +8,7 @@ ol {
 .accordion-button {
   background: #eeeeee !important;
   color: #1b1a17 !important;
+  border-radius: 1rem !important;
   border: #1b1a17 1px solid !important; }
 
 .accordion-button:hover {
@@ -271,7 +272,7 @@ header .cont-menu {
   color: #1b1a17;
   width: 200px;
   border: none;
-  padding: 1rem 1.5rem !important;
+  padding: 0.25rem !important;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -317,12 +318,13 @@ header .cont-menu {
       padding: 2rem;
       border-radius: 2rem;
       width: 50rem;
-      font-size: small;
-      height: 20rem; }
+      font-size: 15px;
+      height: 22rem; }
       .containerPrincipal .containerSectionIndex .containerSectionIndex-text .tags {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         grid-gap: 2rem;
+        margin-top: 0;
         margin-bottom: 0.5rem; }
         .containerPrincipal .containerSectionIndex .containerSectionIndex-text .tags .tag {
           background-color: #e45826;
@@ -330,7 +332,7 @@ header .cont-menu {
           padding: 0.1rem;
           text-align: center;
           font-weight: bold;
-          border-radius: 20rem; }
+          border-radius: 2rem; }
 
 @media screen and (max-width: 1220px) {
   .containerPrincipal .carrouselContainer .slide {
@@ -341,10 +343,10 @@ header .cont-menu {
       max-width: 100%;
       max-height: 400px; }
   .containerPrincipal .containerSectionIndex img {
-    max-width: 25rem;
+    max-width: 30rem;
     margin: 1rem 2rem; } }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 580px) {
   .containerPrincipal .carrouselContainer .slide {
     max-width: 100%;
     height: 200px;
@@ -356,20 +358,20 @@ header .cont-menu {
     background-color: white;
     margin: 0.5rem;
     padding: 0.2rem;
-    border-radius: 2rem;
+    border-radius: 1rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center; }
     .containerPrincipal .containerSectionIndex img {
-      max-width: 20rem;
+      max-width: 18rem;
       margin: 1rem 2rem; }
     .containerPrincipal .containerSectionIndex .containerSectionIndex-text {
       margin: 0.5rem;
       padding: 1rem;
       border-radius: 2rem;
       width: 50rem;
-      height: 20rem; }
+      height: 18rem; }
       .containerPrincipal .containerSectionIndex .containerSectionIndex-text .tags {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
@@ -380,13 +382,13 @@ header .cont-menu {
           color: white;
           padding: 0.1rem;
           text-align: center;
-          font-size: 11px;
+          font-size: 10px;
           font-weight: bold;
           border-radius: 20rem; }
       .containerPrincipal .containerSectionIndex .containerSectionIndex-text h3 {
-        font-size: 18px; }
+        font-size: 15px; }
       .containerPrincipal .containerSectionIndex .containerSectionIndex-text p {
-        font-size: 11px; } }
+        font-size: 10px; } }
 
 @media screen and (max-width: 400px) {
   .containerPrincipal .containerSectionIndex {
@@ -417,7 +419,7 @@ header .cont-menu {
   color: #1b1a17;
   width: 100px;
   border: none;
-  padding: 1rem 1.5rem !important;
+  padding: 1rem !important;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -435,7 +437,7 @@ header .cont-menu {
   color: white;
   width: 200px;
   border: none;
-  padding: 1rem 1.5rem !important;
+  padding: 1rem !important;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -580,7 +582,7 @@ header .cont-menu {
   color: white;
   width: 100%;
   border: none;
-  padding: 1rem 1.5rem !important;
+  padding: 1rem !important;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -648,6 +650,8 @@ header .cont-menu {
       height: 7rem; }
       .bodyContainerShop .containerArticulos .textos:hover {
         color: #eeeeee !important; }
+    .bodyContainerShop .containerArticulos .buttonArticulo {
+      margin-top: 5px; }
   .bodyContainerShop .page-link {
     background-color: #333 !important;
     color: #eeeeee !important; }
@@ -695,7 +699,9 @@ header .cont-menu {
             width: 14rem; }
         .bodyContainerShop .containerArticulos .articulo .textos {
           font-size: small;
-          justify-content: center; } }
+          justify-content: center; }
+        .bodyContainerShop .containerArticulos .articulo .buttonArticulo {
+          margin-top: -2px; } }
 
 @media screen and (max-width: 572px) {
   .bodyContainerShop .containerArticulos {
@@ -718,7 +724,9 @@ header .cont-menu {
           width: 11.5rem; }
       .bodyContainerShop .containerArticulos .articulo .textos {
         font-size: small;
-        justify-content: center; } }
+        justify-content: center; }
+      .bodyContainerShop .containerArticulos .articulo .buttonArticulo {
+        margin-top: -2px; } }
 
 .containerHelp {
   margin: 2rem;
@@ -733,7 +741,7 @@ header .cont-menu {
   color: white;
   width: 200px;
   border: none;
-  padding: 1rem 1.5rem !important;
+  padding: 1rem !important;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -763,7 +771,7 @@ form {
 
 @media screen and (max-width: 500px) {
   form h2 {
-    font-size: 20px; } }
+    font-size: 15px; } }
 
 .containerAbout {
   margin: 2rem;

@@ -4,7 +4,8 @@
     $colorGrisOscuro,
     $colorGrisOscuro,
     white,
-    200px
+    200px,
+    0.25rem
   )
 }
 
@@ -50,12 +51,13 @@
       padding: 2rem;
       border-radius: 2rem;
       width: 50rem;
-      font-size: small;
-      height: 20rem;
+      font-size: $small;
+      height: 22rem;
       .tags {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         grid-gap: 2rem;
+        margin-top: 0;
         margin-bottom: 0.5rem;
         .tag {
           background-color: $colorNaranja;
@@ -63,7 +65,7 @@
           padding: 0.1rem;
           text-align: center;
           font-weight: bold;
-          border-radius: 20rem;
+          border-radius: 2rem;
         }
       }
     }
@@ -89,14 +91,14 @@
     }
     .containerSectionIndex {
       img {
-        max-width: 25rem;
+        max-width: 30rem;
         margin: 1rem 2rem;
       }
     }
   }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 580px) {
   .containerPrincipal {
     .carrouselContainer {
       .slide {
@@ -117,13 +119,13 @@
       background-color: white;
       margin: 0.5rem;
       padding: 0.2rem;
-      border-radius: 2rem;
+      border-radius: 1rem;
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       align-items: center;
       img {
-        max-width: 20rem;
+        max-width: 18rem;
         margin: 1rem 2rem;
       }
       .containerSectionIndex-text {
@@ -131,7 +133,7 @@
         padding: 1rem;
         border-radius: 2rem;
         width: 50rem;
-        height: 20rem;
+        height: 18rem;
 
         .tags {
           display: grid;
@@ -139,20 +141,20 @@
           grid-gap: 2rem;
           margin-bottom: 0.5rem;
           .tag {
-            background-color: #e45826;
+            background-color: $colorNaranja;
             color: white;
             padding: 0.1rem;
             text-align: center;
-            font-size: 11px;
+            font-size: $xsmall;
             font-weight: bold;
             border-radius: 20rem;
           }
         }
         h3 {
-          font-size: 18px;
+          font-size:$small;
         }
         p {
-          font-size: 11px;
+          font-size: $xsmall;
         }
       }
     }

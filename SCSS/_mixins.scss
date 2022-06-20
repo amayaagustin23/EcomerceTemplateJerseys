@@ -1,9 +1,9 @@
-@mixin button ($colorFondo,$colorLetter,$colorFondoHover,$colorLetterHover, $width) {
+@mixin button ($colorFondo,$colorLetter,$colorFondoHover,$colorLetterHover, $width,$padding) {
     background-color: $colorFondo;
     color: $colorLetter;
     width: $width;
     border: none;
-    padding: 1rem 1.5rem !important;
+    padding: $padding !important;
     text-align: center;
     text-decoration: none;
     display: inline-block;
