@@ -1,191 +1,80 @@
-.buttonIndex{
-  @include button(
-    $colorBeige,
-    $colorGrisOscuro,
-    $colorGrisOscuro,
-    white,
-    200px,
-    0.25rem
-  )
-}
-
-.containerPrincipal {
-  background-color: $colorGrisBlanco;
-  margin: 2rem;
-  padding: 4rem 2rem;
-  border-radius: 1rem;
-  .carrouselContainer {
-    position: sticky;
-    .slide {
-      max-width: 100%;
-      height: 600px;
-      margin: auto;
-      .carousel-inner {
-        .carousel-item {
-          img {
-            max-width: 100%;
-            height: 600px;
-            border-radius: 1rem;
-          }
-        }
-      }
-    }
+.galeria {
+  .imagenPrincipal {
+    width: 100%;
+    height: 800px;
+    background-size: cover;
+    background-image: linear-gradient(transparent, $colorFondo 90%),
+      url("../image/home/fc-barcelona-2022-23-nike-home-kit-h.jpg");
   }
-
-  .containerSectionIndex {
-    background-color: white;
-    margin: 0.5rem;
-    padding: 0.2rem;
-    border-radius: 2rem;
+  .listarImagenes {
+    margin-top: -50px;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    img {
-      max-width: 35rem;
-      margin: 1rem 2rem;
-      border-radius: 1rem;
+    overflow: auto;
+    &::-webkit-scrollbar {
+      width: 2px;
+      height: 8px;
     }
-    .containerSectionIndex-text {
-      background-color: whitesmoke;
-      padding: 2rem;
-      border-radius: 2rem;
-      width: 50rem;
-      font-size: $small;
-      height: 22rem;
-      .tags {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-gap: 2rem;
-        margin-top: 0;
-        margin-bottom: 0.5rem;
-        .tag {
-          background-color: $colorNaranja;
-          color: white;
-          padding: 0.1rem;
-          text-align: center;
-          font-weight: bold;
-          border-radius: 2rem;
-        }
-      }
+    &::-webkit-scrollbar-thumb {
+      background: rgba(255, 68, 0, 0.066);
+      border-radius: 10px;
+      background-clip: padding-box;
     }
-  }
-}
-
-@media screen and (max-width: 1220px) {
-  .containerPrincipal {
-    .carrouselContainer {
-      .slide {
-        max-width: 100%;
-        max-height: 400px;
-        margin: auto;
-        .carousel-inner {
-          .carousel-item {
-            img {
-              max-width: 100%;
-              max-height: 400px;
-            }
-          }
-        }
-      }
+    &::-webkit-scrollbar-thumb:hover {
+      border: 0;
     }
-    .containerSectionIndex {
+    &::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    .item {
+      position: relative;
       img {
-        max-width: 30rem;
-        margin: 1rem 2rem;
-      }
-    }
-  }
-}
-
-@media screen and (max-width: 580px) {
-  .containerPrincipal {
-    .carrouselContainer {
-      .slide {
-        max-width: 100%;
-        height: 200px;
-        margin: auto;
-        .carousel-inner {
-          .carousel-item {
-            img {
-              max-width: 100%;
-              height: 200px;
-            }
-          }
+        width: 200px;
+        height: 120px;
+        object-fit: cover;
+        margin-right: 10px;
+        border-radius: 1rem;
+        border: 5px solid rgb(241, 228, 138);
+        &:hover {
+          width: 220px;
+          height: 140px;
+          background-color: rgba(0, 0, 0, 0.37);
         }
       }
-    }
-    .containerSectionIndex {
-      background-color: white;
-      margin: 0.5rem;
-      padding: 0.2rem;
-      border-radius: 1rem;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
-      img {
-        max-width: 18rem;
-        margin: 1rem 2rem;
-      }
-      .containerSectionIndex-text {
-        margin: 0.5rem;
-        padding: 1rem;
-        border-radius: 2rem;
-        width: 50rem;
-        height: 18rem;
 
-        .tags {
-          display: grid;
-          grid-template-columns: 1fr 1fr 1fr;
-          grid-gap: 2rem;
-          margin-bottom: 0.5rem;
-          .tag {
-            background-color: $colorNaranja;
-            color: white;
-            padding: 0.1rem;
-            text-align: center;
-            font-size: $xsmall;
-            font-weight: bold;
-            border-radius: 20rem;
-          }
-        }
+      .text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
         h3 {
-          font-size:$small;
-        }
-        p {
-          font-size: $xsmall;
+          margin: 0;
+          text-align: center;
         }
       }
     }
   }
-}
-
-@media screen and (max-width: 400px) {
-  .containerPrincipal {
-    .containerSectionIndex {
-      background-color: white;
-      margin: 0.5rem;
-      padding: 0.2rem;
-      border-radius: 2rem;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
-      height: 600px;
-      img {
-        max-width: 15rem;
-        margin: 1rem 2rem;
-      }
-      .containerSectionIndex-text {
-        padding: 1rem;
-        border-radius: 2rem;
-        max-width: 15rem;
-        height: 400px;
-        button {
-          display: flex;
-          justify-content: center;
-          align-items: flex-end;
+  .containerVideos {
+    margin: 1rem;
+    padding: 1rem;
+    object-fit: cover;
+    border-radius: 1rem;
+    background-color: $colorGrisClaro;
+    h2 {
+      color: $colorGrisBlanco;
+      text-align: center;
+    }
+    .videos {
+      display: grid;
+      .video {
+        display: flex;
+        justify-content: space-evenly;
+        iframe {
+          width: 300px;
+          height: 180px;
+        }
+        .description {
+          color: $colorGrisBlanco;
         }
       }
     }
