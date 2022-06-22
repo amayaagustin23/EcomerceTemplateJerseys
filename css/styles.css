@@ -303,7 +303,7 @@ header .cont-menu {
 .containerPrincipal {
   background-color: #eeeeee;
   margin: 2rem;
-  padding: 4rem 2rem;
+  padding: 2rem 0.5rem;
   border-radius: 1rem; }
   .containerPrincipal .carrouselContainer {
     position: sticky; }
@@ -326,6 +326,8 @@ header .cont-menu {
     align-items: center; }
     .containerPrincipal .containerCard .row .col-md-4 .img-fluid {
       border-radius: 1rem; }
+    .containerPrincipal .containerCard .row .col-md-8 h3 {
+      text-align: center; }
 
 @media screen and (max-width: 1220px) {
   .containerPrincipal .carrouselContainer .slide {

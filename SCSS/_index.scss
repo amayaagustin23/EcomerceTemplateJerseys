@@ -27,7 +27,7 @@
 .containerPrincipal {
   background-color: $colorGrisBlanco;
   margin: 2rem;
-  padding: 4rem 2rem;
+  padding: 2rem 0.5rem;
   border-radius: 1rem;
   .carrouselContainer {
     position: sticky;
@@ -60,7 +60,12 @@
       .col-md-4{
         .img-fluid{
           border-radius: 1rem;
-        
+          
+        }
+      }
+      .col-md-8{
+        h3{
+          text-align: center;
         }
       }
     }
