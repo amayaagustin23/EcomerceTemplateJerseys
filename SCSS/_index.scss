@@ -8,7 +8,21 @@
     0.25rem
   )
 }
-
+.tags {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 2rem;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  .tag {
+    background-color: $colorNaranja;
+    color: white;
+    padding: 0.1rem;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 2rem;
+  }
+}
 .containerPrincipal {
   background-color: $colorGrisBlanco;
   margin: 2rem;
@@ -32,40 +46,20 @@
     }
   }
 
-  .containerSectionIndex {
+  .containerCard {
     background-color: white;
     margin: 0.5rem;
-    padding: 0.2rem;
+    padding: 2rem;
     border-radius: 2rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    img {
-      max-width: 35rem;
-      margin: 1rem 2rem;
-      border-radius: 1rem;
-    }
-    .containerSectionIndex-text {
-      background-color: whitesmoke;
-      padding: 2rem;
-      border-radius: 2rem;
-      width: 50rem;
-      font-size: $small;
-      height: 22rem;
-      .tags {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-gap: 2rem;
-        margin-top: 0;
-        margin-bottom: 0.5rem;
-        .tag {
-          background-color: $colorNaranja;
-          color: white;
-          padding: 0.1rem;
-          text-align: center;
-          font-weight: bold;
-          border-radius: 2rem;
+    .row{
+      .col-md-4{
+        .img-fluid{
+          border-radius: 1rem;
+        
         }
       }
     }

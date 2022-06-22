@@ -285,6 +285,20 @@ header .cont-menu {
     background-color: #e6d5b8;
     color: #1b1a17; }
 
+.tags {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 2rem;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem; }
+  .tags .tag {
+    background-color: #e45826;
+    color: white;
+    padding: 0.1rem;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 2rem; }
+
 .containerPrincipal {
   background-color: #eeeeee;
   margin: 2rem;
@@ -300,39 +314,17 @@ header .cont-menu {
         max-width: 100%;
         height: 600px;
         border-radius: 1rem; }
-  .containerPrincipal .containerSectionIndex {
+  .containerPrincipal .containerCard {
     background-color: white;
     margin: 0.5rem;
-    padding: 0.2rem;
+    padding: 2rem;
     border-radius: 2rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center; }
-    .containerPrincipal .containerSectionIndex img {
-      max-width: 35rem;
-      margin: 1rem 2rem;
+    .containerPrincipal .containerCard .row .col-md-4 .img-fluid {
       border-radius: 1rem; }
-    .containerPrincipal .containerSectionIndex .containerSectionIndex-text {
-      background-color: whitesmoke;
-      padding: 2rem;
-      border-radius: 2rem;
-      width: 50rem;
-      font-size: 15px;
-      height: 22rem; }
-      .containerPrincipal .containerSectionIndex .containerSectionIndex-text .tags {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-gap: 2rem;
-        margin-top: 0;
-        margin-bottom: 0.5rem; }
-        .containerPrincipal .containerSectionIndex .containerSectionIndex-text .tags .tag {
-          background-color: #e45826;
-          color: white;
-          padding: 0.1rem;
-          text-align: center;
-          font-weight: bold;
-          border-radius: 2rem; }
 
 @media screen and (max-width: 1220px) {
   .containerPrincipal .carrouselContainer .slide {
