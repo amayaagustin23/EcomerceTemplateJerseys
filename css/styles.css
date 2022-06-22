@@ -317,9 +317,9 @@ header .cont-menu {
         border-radius: 1rem; }
   .containerPrincipal .containerCard {
     background-color: white;
-    margin: 0.5rem;
+    margin: 1rem 0;
     padding: 2rem;
-    border-radius: 2rem;
+    border-radius: 1rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
