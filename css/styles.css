@@ -40,11 +40,15 @@ header .socialsContenedor {
   header .socialsContenedor .socials {
     text-align: center; }
     header .socialsContenedor .socials img {
-      margin-inline: 0.3rem; }
+      margin-inline: 0.3rem;
+      -webkit-transition: all 1s;
+      transition: all 1s; }
       header .socialsContenedor .socials img:hover {
         border-radius: 50%;
         border: #e6d5b8 3px solid;
-        padding: 2px; }
+        padding: 2px;
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1); }
 
 header #btn-menu {
   display: none; }
@@ -105,11 +109,15 @@ header .cont-menu {
     .footer .contenedor .socials {
       text-align: center; }
       .footer .contenedor .socials img {
-        margin-inline: 0.3rem; }
+        margin-inline: 0.3rem;
+        -webkit-transition: all 1s;
+        transition: all 1s; }
         .footer .contenedor .socials img:hover {
           border-radius: 50%;
           border: #e6d5b8 3px solid;
-          padding: 2px; }
+          padding: 2px;
+          -webkit-transform: scale(1.1);
+          transform: scale(1.1); }
   .footer .copy {
     margin-top: 0.5rem; }
 
@@ -309,25 +317,31 @@ header .cont-menu {
     position: sticky; }
     .containerPrincipal .carrouselContainer .slide {
       max-width: 100%;
-      height: 600px;
+      height: 800px;
       margin: auto; }
       .containerPrincipal .carrouselContainer .slide .carousel-inner .carousel-item img {
         max-width: 100%;
-        height: 600px;
+        height: 800px;
         border-radius: 1rem; }
   .containerPrincipal .containerCard {
-    background-color: white;
-    margin: 2rem 0.1;
-    padding: 2rem;
-    border-radius: 1rem;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center; }
-    .containerPrincipal .containerCard .row .col-md-4 .img-fluid {
-      border-radius: 1rem; }
-    .containerPrincipal .containerCard .row .col-md-8 h3 {
-      text-align: center; }
+    margin: 2rem 1rem; }
+    .containerPrincipal .containerCard .row {
+      background-color: white;
+      border-radius: 1rem;
+      padding: 1rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      -webkit-transition: all 1s;
+      transition: all 1s; }
+      .containerPrincipal .containerCard .row .col-md-4 .img-fluid {
+        border-radius: 0.5rem; }
+      .containerPrincipal .containerCard .row .col-md-8 h3 {
+        text-align: center; }
+      .containerPrincipal .containerCard .row:hover {
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1); }
 
 @media screen and (max-width: 1220px) {
   .containerPrincipal .carrouselContainer .slide {

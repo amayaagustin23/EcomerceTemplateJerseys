@@ -1,4 +1,4 @@
-.buttonIndex{
+.buttonIndex {
   @include button(
     $colorBeige,
     $colorGrisOscuro,
@@ -6,7 +6,7 @@
     white,
     200px,
     0.25rem
-  )
+  );
 }
 .tags {
   display: grid;
@@ -33,13 +33,13 @@
     position: sticky;
     .slide {
       max-width: 100%;
-      height: 600px;
+      height: 800px;
       margin: auto;
       .carousel-inner {
         .carousel-item {
           img {
             max-width: 100%;
-            height: 600px;
+            height: 800px;
             border-radius: 1rem;
           }
         }
@@ -48,25 +48,30 @@
   }
 
   .containerCard {
-    background-color: white;
-    margin: 2rem 0.1;
-    padding: 2rem;
-    border-radius: 1rem;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    .row{
-      .col-md-4{
-        .img-fluid{
-          border-radius: 1rem;
-          
+    margin: 2rem 1rem;
+    .row {
+      background-color: white;
+      border-radius: 1rem;
+      padding: 1rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      -webkit-transition: all 1s;
+      transition: all 1s;
+      .col-md-4 {
+        .img-fluid {
+          border-radius: 0.5rem;
         }
       }
-      .col-md-8{
-        h3{
+      .col-md-8 {
+        h3 {
           text-align: center;
         }
+      }
+      &:hover {
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1);
       }
     }
   }
@@ -151,7 +156,7 @@
           }
         }
         h3 {
-          font-size:$small;
+          font-size: $small;
         }
         p {
           font-size: $xsmall;
