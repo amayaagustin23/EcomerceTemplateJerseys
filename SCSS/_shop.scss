@@ -1,5 +1,5 @@
 .buttonArticulo {
-  @include button($colorNaranja, white, $colorGrisOscuro, white, 100%, 1rem);
+  @include button($colorNaranja, white, $colorNegro, white, 100%, 1rem);
 }
 
 .bodyContainerShop {
@@ -8,10 +8,13 @@
   border-radius: 1rem;
   display: flex;
   justify-content: center;
-  background-color: $colorGrisBlanco;
+  background-color: $colorBlanco;
   aside {
+
+    display: flex;
+    justify-content: center;
     .asideSection {
-      margin-top: 2rem;
+      width: 20rem;
       .accordion {
         .accordion-item {
           .accordion-collapse {
@@ -22,7 +25,7 @@
                 max-width: 150px;
                 padding: 0.4rem 0.25rem;
                 background: transparent;
-                color: $colorGrisOscuro;
+                color: $colorNegro;
                 font-size: 1rem;
                 border-radius: 1rem;
                 margin-right: 0.5rem;
@@ -38,8 +41,8 @@
     grid-gap: 25px;
     grid-template-columns: repeat(3, 1fr);
     .articulo {
-      height: 30.3rem;
-      width: 19rem;
+      height: 35.2rem;
+      width: 24rem;
       margin: 1rem;
       padding: 0.2rem;
       border-radius: 1rem;
@@ -48,19 +51,20 @@
       grid-row: span 1;
       -webkit-transition: all 1s;
       transition: all 1s;
+      opacity: 1;
+      -webkit-transition: .3s ease-in-out;
+      transition: .3s ease-in-out;
+      transition: .3s ease-in-out;
       .aArticulo {
         text-decoration: none;
         display: block;
-        color: $colorGrisOscuro;
-        &:hover {
-          color: $colorGrisBlanco !important;
-        }
+        color: $colorNegro;
+
       }
       &:hover {
         -webkit-transform: scale(1.1);
         transform: scale(1.1);
-        background-color: $colorGrisClaro;
-        color: $colorGrisBlanco !important;
+        opacity: .8;
       }
     }
     .imagen {
@@ -69,52 +73,60 @@
       img {
         display: flex;
         justify-content: center;
-        width: 18rem;
+        width: 23rem;
         border-radius: 0.5rem;
+
       }
       &:hover {
         text-decoration: none;
-        color: $colorGrisBlanco !important;
+        color: $colorBlanco !important;
+
       }
     }
     .textos {
       margin-top: 0.4rem;
       height: 7rem;
-      p{
+      p {
         font-size: 22px;
       }
       &:hover {
-        color: $colorGrisBlanco !important;
+        color: $colorBlanco !important;
       }
     }
-    .buttonArticulo{
+    .buttonArticulo {
       margin-top: 0px;
     }
   }
 
   .page-link {
-    background-color: $colorGrisClaro !important;
-    color: $colorGrisBlanco !important;
+    background-color: $colorNegro !important;
+    color: $colorBlanco !important;
     &:hover {
-      background-color: $colorFondo !important;
-      color: $colorGrisClaro !important;
+      background-color: $colorAmarrillo !important;
+      color: $colorNegro !important;
     }
   }
 }
 @media screen and (max-width: 1220px) {
   .bodyContainerShop {
+    position: relative;
     display: grid;
     justify-content: center;
+    margin:  1rem;
     aside {
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 10px;
+      left: 0;
+      right: 0;
       .asideSection {
+        width: 20rem;
         .accordion {
           .accordion-item {
             .accordion-collapse {
               .search {
-
                 input {
                   max-width: 20rem;
- 
                 }
               }
             }
@@ -123,15 +135,16 @@
       }
     }
     .containerArticulos {
+      margin-top: 2rem;
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       margin: auto;
       .articulo {
-        width: 15rem;
-        height: 26.2rem;
+        width: 19rem;
+        height: 30.2rem;
         .imagen {
           img {
-            width: 14rem;
+            width: 18rem;
           }
         }
         .textos {
@@ -144,24 +157,30 @@
 
 @media screen and (max-width: 572px) {
   .bodyContainerShop {
+    aside {
+
+      .asideSection {
+        width: 15rem;
+      }
+    }
     .containerArticulos {
       display: grid;
       grid-template-columns: repeat(1, 1fr);
       margin: auto;
       .articulo {
-        width: 12rem;
-        height: 23rem;
+        width: 16rem;
+        height: 26.7rem;
         margin: auto;
 
         .imagen {
           display: flex;
           justify-content: center;
           img {
-            width: 11rem;
+            width: 15rem;
           }
         }
         .textos {
-          h3{
+          h3 {
             font-size: 22px;
           }
         }

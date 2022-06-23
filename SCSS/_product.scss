@@ -1,9 +1,9 @@
 .talle {
   @include button(
     $colorBeige,
-    $colorGrisOscuro,
+    $colorNegro,
     $colorNaranja,
-    $colorGrisOscuro,
+    $colorNegro,
     100px,
     1rem
   );
@@ -11,18 +11,24 @@
 
 #carrito {
   @include button(
-    $colorGrisOscuro,
+    $colorNegro,
     white,
-    $colorFondo,
-    $colorGrisOscuro,
+    $colorAmarrillo,
+    $colorNegro,
     200px,
     1rem
   );
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  &:hover {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
 }
 
 .containerProduct {
   margin: 2rem 1rem;
-  background-color: $colorGrisBlanco;
+  background-color: $colorBlanco;
   padding: 4rem;
   border-radius: 1rem;
   section {
@@ -46,15 +52,21 @@
       align-items: center;
       .imagenProduct {
         img {
+          content: '';
+          clear: both;
+          display: block;
+          overflow: hidden;
           width: 35rem;
           padding: 0.2rem;
           border-radius: 1rem;
           border: 5px solid $colorBeige;
-          -webkit-transition: all 1s;
-          transition: all 1s;
-          &:hover {
-            -webkit-transform: scale(1.1);
-            transform: scale(1.1);
+          -webkit-transform: scale(1);
+          transform: scale(1);
+          -webkit-transition: .3s ease-in-out;
+          transition: .3s ease-in-out;
+          &:hover{
+            -webkit-transform: scale(1.4);
+            transform: scale(1.4);
           }
         }
       }
@@ -73,10 +85,14 @@
           justify-content: center;
           margin: 2rem 0;
           .talle {
-            border: #e45826 1px solid;
+            border: $colorNaranja 1px solid;
             border-radius: 2rem;
+            -webkit-transition: all 1s;
+            transition: all 1s;
             &:hover {
-              border: #e45826 1px solid;
+              border: $colorNaranja 1px solid;
+              -webkit-transform: scale(1.1);
+              transform: scale(1.1);
             }
           }
         }
