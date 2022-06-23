@@ -50,8 +50,8 @@ header {
       text-align: center;
       img {
         margin-inline: 0.3rem;
-        -webkit-transition: all 1s;
-        transition: all 1s;
+        -webkit-transition: all 0.5s;
+        transition: all 0.5s;
         &:hover {
           border-radius: 50%;
           border: $colorBeige 3px solid;
@@ -135,8 +135,8 @@ header {
       text-align: center;
       img {
         margin-inline: 0.3rem;
-        -webkit-transition: all 1s;
-        transition: all 1s;
+        -webkit-transition: all 0.5s;
+        transition: all 0.5s;
         &:hover {
           border-radius: 50%;
           border: $colorBeige 3px solid;
