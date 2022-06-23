@@ -437,7 +437,15 @@ header .cont-menu {
     justify-content: center;
     align-items: center; }
     .containerProduct section .containerSection .imagenProduct img {
-      width: 35rem; }
+      width: 35rem;
+      padding: 0.2rem;
+      border-radius: 1rem;
+      border: 5px solid #e6d5b8;
+      -webkit-transition: all 1s;
+      transition: all 1s; }
+      .containerProduct section .containerSection .imagenProduct img:hover {
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1); }
     .containerProduct section .containerSection .contenedor {
       display: grid;
       grid-template-columns: 1fr;
@@ -494,30 +502,38 @@ header .cont-menu {
           width: 70px; } }
 
 @media screen and (max-width: 500px) {
-  .containerProduct section .containerSection {
-    display: grid;
-    grid-gap: 2rem;
-    grid-template-columns: repeat(auto-fill, 400px);
-    justify-content: center;
-    align-items: center; }
-    .containerProduct section .containerSection .imagenProduct {
+  .containerProduct {
+    padding: 1rem; }
+    .containerProduct section .containerSection {
       display: grid;
-      justify-content: center; }
-      .containerProduct section .containerSection .imagenProduct img {
-        max-width: 17rem; }
-    .containerProduct section .containerSection .contenedor {
-      display: grid;
+      grid-gap: 2rem;
+      grid-template-columns: repeat(auto-fill, 400px);
       justify-content: center;
-      grid-template-columns: 400px;
-      text-align: center; }
-      .containerProduct section .containerSection .contenedor h1 {
-        font-size: 22px; }
-      .containerProduct section .containerSection .contenedor .precio {
-        font-size: 40px; }
-      .containerProduct section .containerSection .contenedor .talles {
-        font-size: 10px; }
-        .containerProduct section .containerSection .contenedor .talles .talle {
-          width: 60px; } }
+      align-items: center; }
+      .containerProduct section .containerSection .imagenProduct {
+        display: grid;
+        justify-content: center; }
+        .containerProduct section .containerSection .imagenProduct img {
+          max-width: 17rem; }
+      .containerProduct section .containerSection .contenedor {
+        display: grid;
+        justify-content: center;
+        grid-template-columns: 400px;
+        text-align: center; }
+        .containerProduct section .containerSection .contenedor h1 {
+          font-size: 22px; }
+        .containerProduct section .containerSection .contenedor .precio {
+          font-size: 40px; }
+        .containerProduct section .containerSection .contenedor .talles {
+          font-size: 10px; }
+          .containerProduct section .containerSection .contenedor .talles .talle {
+            width: 60px; }
+    .containerProduct section .accordion .accordion-item .accordion-collapse .accordion-body .listasDesc {
+      display: block;
+      margin: 0 2rem; }
+      .containerProduct section .accordion .accordion-item .accordion-collapse .accordion-body .listasDesc .listDesc {
+        display: block;
+        margin: auto; } }
 
 @media screen and (max-width: 320px) {
   .containerProduct section .containerSection {

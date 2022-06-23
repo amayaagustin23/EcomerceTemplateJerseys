@@ -1,4 +1,4 @@
-.talle{
+.talle {
   @include button(
     $colorBeige,
     $colorGrisOscuro,
@@ -6,10 +6,10 @@
     $colorGrisOscuro,
     100px,
     1rem
-  )
+  );
 }
 
-#carrito{
+#carrito {
   @include button(
     $colorGrisOscuro,
     white,
@@ -17,9 +17,8 @@
     $colorGrisOscuro,
     200px,
     1rem
-  )
+  );
 }
-
 
 .containerProduct {
   margin: 2rem 1rem;
@@ -48,6 +47,15 @@
       .imagenProduct {
         img {
           width: 35rem;
+          padding: 0.2rem;
+          border-radius: 1rem;
+          border: 5px solid $colorBeige;
+          -webkit-transition: all 1s;
+          transition: all 1s;
+          &:hover {
+            -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+          }
         }
       }
       .contenedor {
@@ -135,11 +143,11 @@
       }
     }
   }
-
 }
 
 @media screen and (max-width: 500px) {
   .containerProduct {
+    padding: 1rem;
     section {
       .containerSection {
         display: grid;
@@ -159,7 +167,7 @@
           justify-content: center;
           grid-template-columns: 400px;
           text-align: center;
-          h1{
+          h1 {
             font-size: 22px;
           }
           .precio {
@@ -174,9 +182,25 @@
         }
       }
     }
+    section {
+      .accordion {
+        .accordion-item {
+          .accordion-collapse {
+            .accordion-body {
+              .listasDesc {
+                display: block;
+                margin: 0 2rem;
+                .listDesc {
+                  display: block;
+                  margin: auto;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
   }
-
-
 }
 @media screen and (max-width: 320px) {
   .containerProduct {
@@ -196,7 +220,7 @@
         }
         .contenedor {
           grid-template-columns: 300px;
-          h1{
+          h1 {
             font-size: 20px;
           }
           .precio {
