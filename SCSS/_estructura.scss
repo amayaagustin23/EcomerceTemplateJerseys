@@ -265,10 +265,17 @@ header {
             position: absolute;
             display: flex;
             bottom: 50px;
-            left: 15px;
-            img {
-              width: 32px;
-              margin-inline: 10px;
+            a {
+              margin-inline: -2.5px;
+              -webkit-transition: all 0.5s;
+              transition: all 0.5s;
+              img{
+                width: 25px;
+              }
+              &:hover {
+                -webkit-transform: scale(1.1);
+                transform: scale(1.1);
+              }
             }
           
           }

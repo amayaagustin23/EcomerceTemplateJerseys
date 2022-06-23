@@ -107,6 +107,8 @@
 
 @media screen and (max-width: 580px) {
   .containerPrincipal {
+    margin: 0.5rem;
+    padding: 0.5rem;
     .carrouselContainer {
       .slide {
         max-width: 100%;
@@ -122,79 +124,15 @@
         }
       }
     }
-    .containerSectionIndex {
-      background-color: white;
-      margin: 0.5rem;
-      padding: 0.2rem;
+    .containerCard {
+      margin: 1rem;
       border-radius: 1rem;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
-      img {
-        max-width: 18rem;
-        margin: 1rem 2rem;
+      .row {
+        margin: 0 .1rem;
+        border-radius: 1rem;
+        padding: 1rem .1rem;
       }
-      .containerSectionIndex-text {
-        margin: 0.5rem;
-        padding: 1rem;
-        border-radius: 2rem;
-        width: 50rem;
-        height: 18rem;
-
-        .tags {
-          display: grid;
-          grid-template-columns: 1fr 1fr 1fr;
-          grid-gap: 2rem;
-          margin-bottom: 0.5rem;
-          .tag {
-            background-color: $colorNaranja;
-            color: white;
-            padding: 0.1rem;
-            text-align: center;
-            font-size: $xsmall;
-            font-weight: bold;
-            border-radius: 20rem;
-          }
-        }
-        h3 {
-          font-size: $small;
-        }
-        p {
-          font-size: $xsmall;
-        }
-      }
-    }
+     }
   }
 }
 
-@media screen and (max-width: 400px) {
-  .containerPrincipal {
-    .containerSectionIndex {
-      background-color: white;
-      margin: 0.5rem;
-      padding: 0.2rem;
-      border-radius: 2rem;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
-      height: 600px;
-      img {
-        max-width: 15rem;
-        margin: 1rem 2rem;
-      }
-      .containerSectionIndex-text {
-        padding: 1rem;
-        border-radius: 2rem;
-        max-width: 15rem;
-        height: 400px;
-        button {
-          display: flex;
-          justify-content: center;
-          align-items: flex-end;
-        }
-      }
-    }
-  }
-}
