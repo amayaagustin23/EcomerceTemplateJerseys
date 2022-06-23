@@ -706,3 +706,90 @@ header .cont-menu {
         justify-content: center; }
         .containerProduct section .containerSection .contenedor .talles .talle {
           width: 55px; } }
+
+.containerHelp {
+  margin: 2rem 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: #EEEEEE;
+  padding: 4rem 2rem;
+  border-radius: 1rem; }
+
+.butonContact {
+  background-color: #1B1A17;
+  color: white;
+  width: 200px;
+  border: none;
+  padding: 1rem !important;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1.2em;
+  border-radius: 1rem !important; }
+  .butonContact:hover {
+    background-color: #FF8303;
+    color: #1B1A17; }
+  .butonContact:active {
+    background-color: #1B1A17;
+    color: #1B1A17; }
+
+form {
+  margin: 2rem 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: #EEEEEE;
+  padding: 6rem 2rem;
+  border-radius: 1rem; }
+  form h2 {
+    text-align: center;
+    font-size: 50px; }
+
+@media screen and (max-width: 1220px) {
+  form h2 {
+    font-size: 40px; } }
+
+@media screen and (max-width: 500px) {
+  form h2 {
+    font-size: 15px; } }
+
+.containerAbout {
+  margin: 2rem 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: #EEEEEE;
+  padding: 4rem 2rem;
+  border-radius: 1rem; }
+  .containerAbout h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center; }
+  .containerAbout p {
+    font-size: 1.5rem; }
+  .containerAbout h2 {
+    font-size: 2.3rem;
+    font-weight: bold;
+    text-align: center; }
+  .containerAbout .valores {
+    list-style-type: none;
+    display: grid;
+    justify-content: center; }
+    .containerAbout .valores li {
+      font-size: 1.5rem; }
+
+@media screen and (max-width: 1220px) {
+  .containerAbout h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center; }
+  .containerAbout p {
+    font-size: 1rem; }
+  .containerAbout h2 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-align: center; }
+  .containerAbout .valores {
+    list-style-type: none;
+    display: grid;
+    justify-content: center; }
+    .containerAbout .valores li {
+      font-size: 1.2rem; } }
