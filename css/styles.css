@@ -300,12 +300,68 @@ header .iconsNav {
   width: 100%;
   height: 600px;
   background-size: cover;
-  background-image: linear-gradient(transparent, #1B1A17 90%), url("../image/home/fc-barcelona-2022-23-nike-home-kit-h.jpg"); }
+  background-image: linear-gradient(transparent, #403F3D 90%), url("../image/home/fc-barcelona-2022-23-nike-home-kit-h.jpg"); }
 
 .galeria .listarImagenes {
   margin-top: -50px;
   display: flex;
   overflow: auto; }
+  .galeria .listarImagenes::-webkit-scrollbar {
+    width: 2px;
+    height: 8px; }
+  .galeria .listarImagenes::-webkit-scrollbar-thumb {
+    background: rgba(255, 68, 0, 0.066);
+    border-radius: 10px;
+    background-clip: padding-box; }
+  .galeria .listarImagenes::-webkit-scrollbar-thumb:hover {
+    border: 0; }
+  .galeria .listarImagenes::-webkit-scrollbar-track {
+    background: transparent; }
+  .galeria .listarImagenes .containerItem {
+    position: relative;
+    width: 200px;
+    height: 120px;
+    margin-inline: 10px;
+    -webkit-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out; }
+    .galeria .listarImagenes .containerItem .image {
+      display: block;
+      width: 200px;
+      height: 120px;
+      border-radius: 1rem; }
+      .galeria .listarImagenes .containerItem .image:hover {
+        -webkit-transform: scale(1.02);
+        transform: scale(1.02); }
+    .galeria .listarImagenes .containerItem .overlay {
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transition: .5s ease;
+      background-color: #1B1A17;
+      border-radius: 1rem;
+      font-weight: bold; }
+      .galeria .listarImagenes .containerItem .overlay .text {
+        color: white;
+        font-size: 20px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        text-align: center; }
+    .galeria .listarImagenes .containerItem:hover {
+      -webkit-transform: scale(1.1);
+      transform: scale(1.1); }
+    .galeria .listarImagenes .containerItem:hover .overlay {
+      opacity: 0.85; }
   .galeria .listarImagenes::-webkit-scrollbar {
     width: 2px;
     height: 8px; }
@@ -317,37 +373,6 @@ header .iconsNav {
     border: 0; }
   .galeria .listarImagenes::-webkit-scrollbar-track {
     background: transparent; }
-  .galeria .listarImagenes .item {
-    position: relative;
-    margin: 10px 7px;
-    transition: all 1s;
-    opacity: 1;
-    -webkit-transition: 0.3s ease-in-out;
-    transition: 0.3s ease-in-out;
-    transition: 0.3s ease-in-out; }
-    .galeria .listarImagenes .item img {
-      width: 200px;
-      height: 120px;
-      object-fit: cover;
-      margin-right: 10px;
-      border-radius: 1rem; }
-    .galeria .listarImagenes .item .text {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      color: white; }
-      .galeria .listarImagenes .item .text h3 {
-        transform: translate(-50%, -50%);
-        margin: 0;
-        text-align: center; }
-    .galeria .listarImagenes .item:hover {
-      width: 210px;
-      border: 5px solid #F0E3CA;
-      color: wheat;
-      border-radius: 1rem;
-      -webkit-transform: scale(1.1);
-      transform: scale(1.1);
-      opacity: 0.6; }
 
 .galeria .containerVideos {
   margin: 1rem 0;
@@ -369,6 +394,93 @@ header .iconsNav {
         height: 180px; }
       .galeria .containerVideos .videos .video .description {
         color: #1B1A17; }
+
+.buttonIndex {
+  background-color: #FDCA40;
+  color: #1B1A17;
+  width: 200px;
+  border: none;
+  padding: 0.25rem !important;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1.2em;
+  border-radius: 1rem !important; }
+  .buttonIndex:hover {
+    background-color: #1B1A17;
+    color: white; }
+  .buttonIndex:active {
+    background-color: #FDCA40;
+    color: #1B1A17; }
+
+.tags {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  justify-content: space-evenly; }
+  .tags .tag {
+    background-color: #1B1A17;
+    color: white;
+    padding: 0.2rem;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 1rem; }
+
+.containerPrincipal .carrouselContainer {
+  position: sticky; }
+  .containerPrincipal .carrouselContainer .slide {
+    width: 100%;
+    height: 800px; }
+    .containerPrincipal .carrouselContainer .slide .carousel-inner .carousel-item img {
+      width: 100%;
+      height: 800px; }
+
+.containerPrincipal .containerCard {
+  margin: 2rem 1rem;
+  border-radius: .5rem; }
+  .containerPrincipal .containerCard .row {
+    margin: 0 1rem;
+    border-radius: 1rem;
+    padding: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    -webkit-transition: all 2.5s;
+    transition: all 2.5s; }
+    .containerPrincipal .containerCard .row .col-md-4 .img-fluid {
+      border-radius: 0.5rem; }
+    .containerPrincipal .containerCard .row .col-md-8 h3 {
+      text-align: center; }
+    .containerPrincipal .containerCard .row:hover {
+      -webkit-transform: scale(0.9);
+      transform: scale(0.9); }
+
+@media screen and (max-width: 1220px) {
+  .containerPrincipal .carrouselContainer .slide {
+    max-height: 400px;
+    margin: auto; }
+    .containerPrincipal .carrouselContainer .slide .carousel-inner .carousel-item img {
+      max-height: 400px; }
+  .containerPrincipal .containerSectionIndex img {
+    max-width: 30rem;
+    margin: 1rem 2rem; } }
+
+@media screen and (max-width: 580px) {
+  .containerPrincipal .carrouselContainer .slide {
+    height: 200px;
+    margin: auto; }
+    .containerPrincipal .carrouselContainer .slide .carousel-inner .carousel-item img {
+      height: 200px; }
+  .containerPrincipal .containerCard {
+    margin: 1rem;
+    border-radius: 1rem; }
+    .containerPrincipal .containerCard .row {
+      margin: 0 .1rem;
+      border-radius: 1rem;
+      padding: 1rem .1rem; } }
 
 .buttonArticulo {
   background-color: #FF8303;

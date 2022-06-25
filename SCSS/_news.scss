@@ -1,0 +1,127 @@
+.buttonIndex {
+    @include button(
+      $colorAmarrillo,
+      $colorNegro,
+      $colorNegro,  
+      white,
+      200px,
+      0.25rem
+    );
+  }
+  .tags {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    justify-content: space-evenly;
+    .tag {
+      background-color: $colorNegro;
+      color: white;
+      padding: 0.2rem;
+      text-align: center;
+      font-weight: bold;
+      border-radius: 1rem;
+    }
+  }
+  .containerPrincipal {
+    .carrouselContainer {
+      position: sticky;
+      .slide {
+        width: 100%;
+        height: 800px;
+        .carousel-inner {
+          .carousel-item {
+            img {
+              width: 100%;
+              height: 800px;
+            }
+          }
+        }
+      }
+    }
+  
+    .containerCard {
+      margin: 2rem 1rem;
+      border-radius: .5rem;
+      .row {
+        margin: 0 1rem;
+        border-radius: 1rem;
+        padding: 1rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        -webkit-transition: all 2.5s;
+        transition: all 2.5s;
+        .col-md-4 {
+          .img-fluid {
+            border-radius: 0.5rem;
+          }
+        }
+        .col-md-8 {
+          h3 {
+            text-align: center;
+          }
+        }
+        &:hover {
+          -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+        }
+      }
+    }
+  }
+  
+  @media screen and (max-width: 1220px) {
+    .containerPrincipal {
+      .carrouselContainer {
+        .slide {
+          max-height: 400px;
+          margin: auto;
+          .carousel-inner {
+            .carousel-item {
+              img {
+                max-height: 400px;
+              }
+            }
+          }
+        }
+      }
+      .containerSectionIndex {
+        img {
+          max-width: 30rem;
+          margin: 1rem 2rem;
+        }
+      }
+    }
+  }
+  
+  @media screen and (max-width: 580px) {
+    .containerPrincipal {
+     
+      .carrouselContainer {
+        .slide {
+          height: 200px;
+          margin: auto;
+          .carousel-inner {
+            .carousel-item {
+              img {
+                height: 200px;
+              }
+            }
+          }
+        }
+      }
+      .containerCard {
+        margin: 1rem;
+        border-radius: 1rem;
+        .row {
+          margin: 0 .1rem;
+          border-radius: 1rem;
+          padding: 1rem .1rem;
+        }
+       }
+    }
+  }
+  
+  
