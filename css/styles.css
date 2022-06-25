@@ -296,92 +296,69 @@ header .iconsNav {
     display: flex;
     justify-content: center; } }
 
-.buttonIndex {
-  background-color: #FDCA40;
-  color: #1B1A17;
-  width: 200px;
-  border: none;
-  padding: 0.25rem !important;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 1.2em;
-  border-radius: 1rem !important; }
-  .buttonIndex:hover {
-    background-color: #1B1A17;
-    color: white; }
-  .buttonIndex:active {
-    background-color: #FDCA40;
-    color: #1B1A17; }
+.galeria .imagenPrincipal {
+  width: 100%;
+  height: 800px;
+  background-size: cover;
+  background-image: linear-gradient(transparent, #1B1A17 90%), url("../image/home/fc-barcelona-2022-23-nike-home-kit-h.jpg"); }
 
-.tags {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 1rem;
-  margin-top: 1rem;
-  margin-bottom: 0.5rem;
-  justify-content: space-evenly; }
-  .tags .tag {
-    background-color: #1B1A17;
-    color: white;
-    padding: 0.2rem;
-    text-align: center;
-    font-weight: bold;
-    border-radius: 1rem; }
-
-.containerPrincipal .carrouselContainer {
-  position: sticky; }
-  .containerPrincipal .carrouselContainer .slide {
-    width: 100%;
-    height: 800px; }
-    .containerPrincipal .carrouselContainer .slide .carousel-inner .carousel-item img {
-      width: 100%;
-      height: 800px; }
-
-.containerPrincipal .containerCard {
-  margin: 2rem 1rem;
-  border-radius: .5rem; }
-  .containerPrincipal .containerCard .row {
-    margin: 0 1rem;
-    border-radius: 1rem;
-    padding: 1rem;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    -webkit-transition: all 2.5s;
-    transition: all 2.5s; }
-    .containerPrincipal .containerCard .row .col-md-4 .img-fluid {
-      border-radius: 0.5rem; }
-    .containerPrincipal .containerCard .row .col-md-8 h3 {
-      text-align: center; }
-    .containerPrincipal .containerCard .row:hover {
-      -webkit-transform: scale(0.9);
-      transform: scale(0.9); }
-
-@media screen and (max-width: 1220px) {
-  .containerPrincipal .carrouselContainer .slide {
-    max-height: 400px;
-    margin: auto; }
-    .containerPrincipal .carrouselContainer .slide .carousel-inner .carousel-item img {
-      max-height: 400px; }
-  .containerPrincipal .containerSectionIndex img {
-    max-width: 30rem;
-    margin: 1rem 2rem; } }
-
-@media screen and (max-width: 580px) {
-  .containerPrincipal .carrouselContainer .slide {
-    height: 200px;
-    margin: auto; }
-    .containerPrincipal .carrouselContainer .slide .carousel-inner .carousel-item img {
-      height: 200px; }
-  .containerPrincipal .containerCard {
-    margin: 1rem;
-    border-radius: 1rem; }
-    .containerPrincipal .containerCard .row {
-      margin: 0 .1rem;
+.galeria .listarImagenes {
+  margin-top: -50px;
+  display: flex;
+  overflow: auto; }
+  .galeria .listarImagenes::-webkit-scrollbar {
+    width: 2px;
+    height: 8px; }
+  .galeria .listarImagenes::-webkit-scrollbar-thumb {
+    background: rgba(255, 68, 0, 0.066);
+    border-radius: 10px;
+    background-clip: padding-box; }
+  .galeria .listarImagenes::-webkit-scrollbar-thumb:hover {
+    border: 0; }
+  .galeria .listarImagenes::-webkit-scrollbar-track {
+    background: transparent; }
+  .galeria .listarImagenes .item {
+    position: relative; }
+    .galeria .listarImagenes .item img {
+      width: 200px;
+      height: 120px;
+      object-fit: cover;
+      margin-right: 10px;
       border-radius: 1rem;
-      padding: 1rem .1rem; } }
+      border: 5px solid #f1e48a; }
+      .galeria .listarImagenes .item img:hover {
+        width: 220px;
+        height: 140px;
+        background-color: rgba(0, 0, 0, 0.37); }
+    .galeria .listarImagenes .item .text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white; }
+      .galeria .listarImagenes .item .text h3 {
+        margin: 0;
+        text-align: center; }
+
+.galeria .containerVideos {
+  margin: 1rem;
+  padding: 1rem;
+  object-fit: cover;
+  border-radius: 1rem;
+  background-color: #403F3D; }
+  .galeria .containerVideos h2 {
+    color: #EEEEEE;
+    text-align: center; }
+  .galeria .containerVideos .videos {
+    display: grid; }
+    .galeria .containerVideos .videos .video {
+      display: flex;
+      justify-content: space-evenly; }
+      .galeria .containerVideos .videos .video iframe {
+        width: 300px;
+        height: 180px; }
+      .galeria .containerVideos .videos .video .description {
+        color: #EEEEEE; }
 
 .buttonArticulo {
   background-color: #FF8303;

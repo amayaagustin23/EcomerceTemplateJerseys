@@ -1,126 +1,82 @@
-.buttonIndex {
-  @include button(
-    $colorAmarrillo,
-    $colorNegro,
-    $colorNegro,  
-    white,
-    200px,
-    0.25rem
-  );
-}
-.tags {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 1rem;
-  margin-top: 1rem;
-  margin-bottom: 0.5rem;
-  justify-content: space-evenly;
-  .tag {
-    background-color: $colorNegro;
-    color: white;
-    padding: 0.2rem;
-    text-align: center;
-    font-weight: bold;
-    border-radius: 1rem;
+.galeria {
+  .imagenPrincipal {
+    width: 100%;
+    height: 800px;
+    background-size: cover;
+    background-image: linear-gradient(transparent, $colorNegro 90%),
+      url("../image/home/fc-barcelona-2022-23-nike-home-kit-h.jpg");
   }
-}
-.containerPrincipal {
-  .carrouselContainer {
-    position: sticky;
-    .slide {
-      width: 100%;
-      height: 800px;
-      .carousel-inner {
-        .carousel-item {
-          img {
-            width: 100%;
-            height: 800px;
-          }
-        }
-      }
+  .listarImagenes {
+    margin-top: -50px;
+    display: flex;
+    overflow: auto;
+    &::-webkit-scrollbar {
+      width: 2px;
+      height: 8px;
     }
-  }
-
-  .containerCard {
-    margin: 2rem 1rem;
-    border-radius: .5rem;
-    .row {
-      margin: 0 1rem;
-      border-radius: 1rem;
-      padding: 1rem;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
-      -webkit-transition: all 2.5s;
-      transition: all 2.5s;
-      .col-md-4 {
-        .img-fluid {
-          border-radius: 0.5rem;
+    &::-webkit-scrollbar-thumb {
+      background: rgba(255, 68, 0, 0.066);
+      border-radius: 10px;
+      background-clip: padding-box;
+    }
+    &::-webkit-scrollbar-thumb:hover {
+      border: 0;
+    }
+    &::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    .item {
+      position: relative;
+      img {
+        width: 200px;
+        height: 120px;
+        object-fit: cover;
+        margin-right: 10px;
+        border-radius: 1rem;
+        border: 5px solid rgb(241, 228, 138);
+        &:hover {
+          width: 220px;
+          height: 140px;
+          background-color: rgba(0, 0, 0, 0.37);
         }
       }
-      .col-md-8 {
+
+      .text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
         h3 {
+          margin: 0;
           text-align: center;
         }
       }
-      &:hover {
-        -webkit-transform: scale(0.9);
-        transform: scale(0.9);
-      }
     }
   }
-}
-
-@media screen and (max-width: 1220px) {
-  .containerPrincipal {
-    .carrouselContainer {
-      .slide {
-        max-height: 400px;
-        margin: auto;
-        .carousel-inner {
-          .carousel-item {
-            img {
-              max-height: 400px;
-            }
-          }
+  .containerVideos {
+    margin: 1rem;
+    padding: 1rem;
+    object-fit: cover;
+    border-radius: 1rem;
+    background-color: $colorGris;
+    h2 {
+      color: $colorBlanco;
+      text-align: center;
+    }
+    .videos {
+      display: grid;
+      .video {
+        display: flex;
+        justify-content: space-evenly;
+        iframe {
+          width: 300px;
+          height: 180px;
+        }
+        .description {
+          color: $colorBlanco;
         }
       }
     }
-    .containerSectionIndex {
-      img {
-        max-width: 30rem;
-        margin: 1rem 2rem;
-      }
-    }
   }
 }
-
-@media screen and (max-width: 580px) {
-  .containerPrincipal {
-   
-    .carrouselContainer {
-      .slide {
-        height: 200px;
-        margin: auto;
-        .carousel-inner {
-          .carousel-item {
-            img {
-              height: 200px;
-            }
-          }
-        }
-      }
-    }
-    .containerCard {
-      margin: 1rem;
-      border-radius: 1rem;
-      .row {
-        margin: 0 .1rem;
-        border-radius: 1rem;
-        padding: 1rem .1rem;
-      }
-     }
-  }
-}
-
