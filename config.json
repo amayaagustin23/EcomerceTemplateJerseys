@@ -8,7 +8,7 @@
   "glyphs": [
     {
       "uid": "5211af474d3a9848f67f945e2ccaf143",
-      "css": "cancel-1",
+      "css": "cancel",
       "code": 59393,
       "src": "fontawesome"
     },
@@ -16,6 +16,12 @@
       "uid": "559647a6f430b3aeadbecd67194451dd",
       "css": "menu",
       "code": 61641,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "9dd9e835aebe1060ba7190ad2b2ed951",
+      "css": "search-1",
+      "code": 59392,
       "src": "fontawesome"
     }
   ]
