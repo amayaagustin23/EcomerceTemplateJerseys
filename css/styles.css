@@ -566,22 +566,22 @@ header .iconsNav {
     grid-template-columns: repeat(auto-fill, 600px);
     justify-content: center;
     align-items: center; }
-    .containerProduct section .containerSection .imagenProduct img {
-      content: '';
-      clear: both;
-      display: block;
+    .containerProduct section .containerSection .imagenProduct {
+      height: 35rem;
       overflow: hidden;
-      width: 35rem;
-      padding: 0.2rem;
-      border-radius: 1rem;
-      border: 5px solid #F0E3CA;
-      -webkit-transform: scale(1);
-      transform: scale(1);
-      -webkit-transition: .3s ease-in-out;
-      transition: .3s ease-in-out; }
-      .containerProduct section .containerSection .imagenProduct img:hover {
-        -webkit-transform: scale(1.4);
-        transform: scale(1.4); }
+      transition: transform 1s, filter .5s ease-out; }
+      .containerProduct section .containerSection .imagenProduct img {
+        width: 35rem;
+        padding: 0.2rem;
+        border-radius: 1rem;
+        border: 5px solid #F0E3CA;
+        transform-origin: 55% 20%;
+        transition: transform 1s, filter .5s ease-out; }
+        .containerProduct section .containerSection .imagenProduct img:hover {
+          transform: scale(3); }
+      .containerProduct section .containerSection .imagenProduct:hover {
+        border-radius: 1rem;
+        border: 5px solid #F0E3CA; }
     .containerProduct section .containerSection .contenedor {
       display: grid;
       grid-template-columns: 1fr;
