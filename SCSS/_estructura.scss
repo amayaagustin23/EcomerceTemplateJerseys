@@ -116,6 +116,9 @@ header {
       display: none;
     }
   }
+  .iconsNav{
+    display: none;
+}
 }
 .footer {
   display: block;
@@ -334,6 +337,13 @@ header {
         }
       }
     }
+    .iconsNav{
+      background-color: $colorNegro;
+      width: 100%;
+      display: flex;
+      justify-content: end;
+      padding:0.5rem 1rem;
+  }
   }
     
     .footer {
@@ -375,4 +385,5 @@ header {
       justify-content: center;
     }
   }
+
 }

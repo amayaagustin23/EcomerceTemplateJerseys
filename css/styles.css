@@ -92,6 +92,9 @@ header .cont-menu {
   header .cont-menu label {
     display: none; }
 
+header .iconsNav {
+  display: none; }
+
 .footer {
   display: block;
   flex-flow: row wrap;
@@ -257,6 +260,12 @@ header .cont-menu {
         color: #EEEEEE;
         cursor: pointer;
         font-size: 18px; }
+  header .iconsNav {
+    background-color: #1B1A17;
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    padding: 0.5rem 1rem; }
   .footer .contenedor {
     display: block;
     justify-content: center; }
