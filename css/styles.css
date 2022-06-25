@@ -80,8 +80,15 @@ header .cont-menu {
       border-bottom: #403F3D 0.2rem solid; }
     header .cont-menu nav .socialsNav {
       display: none; }
-  header .cont-menu img {
-    width: 32px; }
+  header .cont-menu .icons {
+    display: flex; }
+    header .cont-menu .icons .icon .groupIcon {
+      margin-inline: 10px;
+      -webkit-transition: all 0.5s;
+      transition: all 0.5s; }
+      header .cont-menu .icons .icon .groupIcon:hover {
+        -webkit-transform: scale(1.3);
+        transform: scale(1.3); }
   header .cont-menu label {
     display: none; }
 
@@ -241,7 +248,7 @@ header .cont-menu {
           background-color: #1B1A17;
           border-bottom: 5px solid #FDCA40;
           color: #EEEEEE !important; }
-      header .container-menu .cont-menu div .groupIcon {
+      header .container-menu .cont-menu .icons .icon .groupIcon {
         display: none; }
       header .container-menu .cont-menu label {
         position: absolute;
@@ -316,11 +323,10 @@ header .cont-menu {
 .containerPrincipal .carrouselContainer {
   position: sticky; }
   .containerPrincipal .carrouselContainer .slide {
-    width: 100vw;
-    height: 800px;
-    margin: auto; }
+    width: 100%;
+    height: 800px; }
     .containerPrincipal .carrouselContainer .slide .carousel-inner .carousel-item img {
-      width: 100vw;
+      width: 100%;
       height: 800px; }
 
 .containerPrincipal .containerCard {
@@ -386,6 +392,9 @@ header .cont-menu {
     background-color: #FF8303;
     color: #1B1A17; }
 
+#nikecheck:checked ~ #adidas {
+  display: none; }
+
 .bodyContainerShop {
   margin: 2rem 1rem;
   padding: 3rem 0.5rem;
@@ -425,9 +434,9 @@ header .cont-menu {
       -webkit-transition: all 1s;
       transition: all 1s;
       opacity: 1;
-      -webkit-transition: .3s ease-in-out;
-      transition: .3s ease-in-out;
-      transition: .3s ease-in-out; }
+      -webkit-transition: 0.3s ease-in-out;
+      transition: 0.3s ease-in-out;
+      transition: 0.3s ease-in-out; }
       .bodyContainerShop .containerArticulos .articulo .aArticulo {
         text-decoration: none;
         display: block;
@@ -435,7 +444,7 @@ header .cont-menu {
       .bodyContainerShop .containerArticulos .articulo:hover {
         -webkit-transform: scale(1.1);
         transform: scale(1.1);
-        opacity: .8; }
+        opacity: 0.8; }
     .bodyContainerShop .containerArticulos .imagen {
       display: flex;
       justify-content: center; }
@@ -452,8 +461,6 @@ header .cont-menu {
       height: 7rem; }
       .bodyContainerShop .containerArticulos .textos p {
         font-size: 22px; }
-      .bodyContainerShop .containerArticulos .textos:hover {
-        color: #EEEEEE !important; }
     .bodyContainerShop .containerArticulos .buttonArticulo {
       margin-top: 0px; }
   .bodyContainerShop .page-link {

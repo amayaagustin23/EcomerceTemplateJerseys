@@ -2,6 +2,10 @@
   @include button($colorNaranja, white, $colorNegro, white, 100%, 1rem);
 }
 
+#nikecheck:checked~#adidas{
+  display: none;
+}
+
 .bodyContainerShop {
   margin: 2rem 1rem;
   padding: 3rem 0.5rem;
@@ -10,7 +14,6 @@
   justify-content: center;
   background-color: $colorBlanco;
   aside {
-
     display: flex;
     justify-content: center;
     .asideSection {
@@ -52,19 +55,18 @@
       -webkit-transition: all 1s;
       transition: all 1s;
       opacity: 1;
-      -webkit-transition: .3s ease-in-out;
-      transition: .3s ease-in-out;
-      transition: .3s ease-in-out;
+      -webkit-transition: 0.3s ease-in-out;
+      transition: 0.3s ease-in-out;
+      transition: 0.3s ease-in-out;
       .aArticulo {
         text-decoration: none;
         display: block;
         color: $colorNegro;
-
       }
       &:hover {
         -webkit-transform: scale(1.1);
         transform: scale(1.1);
-        opacity: .8;
+        opacity: 0.8;
       }
     }
     .imagen {
@@ -75,12 +77,10 @@
         justify-content: center;
         width: 23rem;
         border-radius: 0.5rem;
-
       }
       &:hover {
         text-decoration: none;
         color: $colorBlanco !important;
-
       }
     }
     .textos {
@@ -89,9 +89,7 @@
       p {
         font-size: 22px;
       }
-      &:hover {
-        color: $colorBlanco !important;
-      }
+
     }
     .buttonArticulo {
       margin-top: 0px;
@@ -112,7 +110,7 @@
     position: relative;
     display: grid;
     justify-content: center;
-    margin:  1rem;
+    margin: 1rem;
     aside {
       margin-left: auto;
       margin-right: auto;
@@ -158,7 +156,6 @@
 @media screen and (max-width: 572px) {
   .bodyContainerShop {
     aside {
-
       .asideSection {
         width: 15rem;
       }
