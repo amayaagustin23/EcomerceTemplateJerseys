@@ -427,8 +427,67 @@ header .iconsNav, header .NavSearch {
   .containerHome .listarImagenes::-webkit-scrollbar-track {
     background: transparent; }
 
+.containerHome .bestSeller {
+  background-color: #1B1A17;
+  margin: auto;
+  text-align: center;
+  padding: 2rem 0; }
+  .containerHome .bestSeller h2 {
+    color: #EEEEEE; }
+  .containerHome .bestSeller .containerBestSeller {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 400px);
+    grid-gap: 1rem;
+    justify-content: center; }
+    .containerHome .bestSeller .containerBestSeller .article {
+      margin: 1rem auto;
+      padding: 20px;
+      background-color: #EEEEEE;
+      border-radius: .5rem;
+      -webkit-transition: 0.3s ease-in-out;
+      transition: 0.3s ease-in-out;
+      transition: 0.3s ease-in-out;
+      position: relative; }
+      .containerHome .bestSeller .containerBestSeller .article:hover {
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1); }
+      .containerHome .bestSeller .containerBestSeller .article img {
+        width: 280px; }
+      .containerHome .bestSeller .containerBestSeller .article .overlay {
+        object-fit: cover;
+        position: absolute;
+        bottom: 5px;
+        left: 10px;
+        right: 10px;
+        width: 94%;
+        height: 15%;
+        opacity: 0;
+        transition: .5s ease;
+        background-color: #1B1A17;
+        border-radius: 1rem;
+        font-weight: bold; }
+        .containerHome .bestSeller .containerBestSeller .article .overlay .text {
+          color: white;
+          font-size: 20px;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          -webkit-transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+          text-align: center; }
+          .containerHome .bestSeller .containerBestSeller .article .overlay .text a {
+            text-decoration: none;
+            color: #EEEEEE; }
+      .containerHome .bestSeller .containerBestSeller .article:hover {
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1);
+        height: 420px; }
+      .containerHome .bestSeller .containerBestSeller .article:hover .overlay {
+        opacity: 1; }
+
 .containerHome .containerVideos {
-  margin: 1rem 0;
+  margin: auto;
   background-color: #EEEEEE; }
   .containerHome .containerVideos h2 {
     color: #1B1A17;
