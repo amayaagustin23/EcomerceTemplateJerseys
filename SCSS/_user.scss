@@ -48,3 +48,61 @@
         }
     }
 }
+
+@media screen and (max-width: 576px) {
+    .containerUser{
+        background-color: $colorBlanco;
+        margin: 1rem;
+        border-radius: 1rem;
+        padding: 3rem 2rem;
+        display: flex;
+        flex-wrap: wrap;
+        .imagenPerfil{
+            padding-right: .5rem;
+            border-right: none;
+            border-bottom: 2px solid $colorNaranja;
+            width: 100%;
+            img{
+                display: flex;
+                margin: auto;
+                width: 200px;
+                border-radius: 50%;            
+            }
+        }
+        .containerInfo{
+            padding: 0rem;
+            margin: auto;
+            h2{
+                padding: 1rem 0;
+            }
+            .info{
+            margin: auto;
+
+                background-color: white;
+                border-radius: 1rem;
+                padding: 2rem 1rem;
+                height: 25rem;
+                p{
+                    margin-bottom: 20px;
+                    strong{
+                        padding-right: 5px;
+                    }
+                }
+                .button{
+                    display: flex;
+                    justify-content: end;
+                    button{
+                        background-color: transparent;
+                        color: $colorNaranja;
+                        font-weight: bold;
+                        font-size: 30px;
+                        border: none;
+                        &:hover{
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+        }
+    }   
+}
