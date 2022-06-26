@@ -492,7 +492,8 @@ header .iconsNav, header .NavSearch {
 
 .containerHome .containerVideos {
   margin: auto;
-  background-color: #EEEEEE; }
+  background-color: #EEEEEE;
+  padding: 1rem 0; }
   .containerHome .containerVideos h2 {
     color: #1B1A17;
     text-align: center;
