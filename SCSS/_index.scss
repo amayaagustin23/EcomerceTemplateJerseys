@@ -1,8 +1,9 @@
-.galeria {
+.containerHome {
   .imagenPrincipal {
     width: 100%;
     height: 600px;
     background-size: cover;
+    background-repeat: no-repeat;
     background-image: linear-gradient(transparent, $colorGris 90%),
       url("../image/home/fc-barcelona-2022-23-nike-home-kit-h.jpg");
   }
@@ -122,6 +123,19 @@
           color: $colorNegro;
         }
       }
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .containerHome{
+    .imagenPrincipal {
+      width: 100%;
+      height: 300px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-image: linear-gradient(transparent, $colorGris 80%),
+        url("../image/home/fc-barcelona-2022-23-nike-home-kit-h.jpg");
     }
   }
 }

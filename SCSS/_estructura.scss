@@ -98,6 +98,29 @@ header {
         display: none;
       }
     }
+    .searchNav{
+      display: flex;
+      align-items: center;
+      margin-right: 4rem;
+      input{
+        background-color: $colorBeige;
+        border-radius: 1rem;
+        border: none;
+        color: $colorNegro;
+        padding-left:1.6rem ;
+        padding-right:.5rem ;
+        font-weight: bold;
+        position: relative;
+        font-size: 20px;
+      }
+      label{
+        position: absolute;
+        display: block;
+        font-size: 20px;
+        color: $colorNegro;
+        left: 1;
+      }
+    }
     .icons{
       display: flex;
       .icon{
@@ -116,7 +139,7 @@ header {
       display: none;
     }
   }
-  .iconsNav{
+  .iconsNav, .NavSearch{
     display: none;
 }
 }
@@ -216,7 +239,7 @@ header {
     }
   }
 }
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 576px) {
   header{
     .socialsContenedor {
       display: grid;
@@ -319,6 +342,9 @@ header {
             color: $colorBlanco !important;
           }
         }
+        .searchNav{
+          display: none;
+        }
         .icons{
           .icon{
             .groupIcon{
@@ -343,6 +369,34 @@ header {
       display: flex;
       justify-content: end;
       padding:0.5rem 1rem;
+  }
+  .NavSearch{
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding:.5rem 1rem;
+    background-color: $colorNegro;
+    width: 100%;
+    justify-content: end;
+    input{
+      background-color: $colorBeige;
+      border-radius: 1rem;
+      border: none;
+      color: $colorNegro;
+      padding-right:2.3rem ;
+      padding-left:.6rem ;
+      font-weight: bold;
+      position: relative;
+      font-size: 20px;
+      width: 10rem;
+    }
+    label{
+      position: absolute;
+      display: block;
+      font-size: 20px;
+      color: $colorNegro;
+      padding-right: 10px;
+    }
   }
   }
     

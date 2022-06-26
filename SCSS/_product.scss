@@ -52,20 +52,20 @@
       align-items: center;
       .imagenProduct {
         height: 35rem;
-        overflow: hidden;        
-        transition: transform 1s, filter .5s ease-out;
+        overflow: hidden;
+        transition: transform 1s, filter 0.5s ease-out;
         img {
           width: 35rem;
           padding: 0.2rem;
-          border-radius: 1rem; 
+          border-radius: 1rem;
           border: 5px solid $colorBeige;
           transform-origin: 55% 20%;
-          transition: transform 1s, filter .5s ease-out;
-          &:hover{
+          transition: transform 1s, filter 0.5s ease-out;
+          &:hover {
             transform: scale(3);
           }
         }
-        &:hover{
+        &:hover {
           border-radius: 1rem;
           border: 5px solid $colorBeige;
         }
@@ -121,7 +121,7 @@
     }
   }
 }
-@media screen and (max-width: 1220px) {
+@media screen and (max-width: 1200px) {
   .containerProduct {
     section {
       .containerSection {
@@ -161,21 +161,36 @@
   }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 576px) {
   .containerProduct {
     padding: 1rem;
     section {
       .containerSection {
         display: grid;
         grid-gap: 2rem;
-        grid-template-columns: repeat(auto-fill, 400px);
+        grid-template-columns: repeat(auto-fill, 600px);
         justify-content: center;
         align-items: center;
         .imagenProduct {
-          display: grid;
-          justify-content: center;
+          height: 17rem;
+          width: 17rem;
+          margin: auto;
+          overflow: hidden;
+          transition: transform 1s, filter 0.5s ease-out;
           img {
-            max-width: 17rem;
+            width: 17rem;
+            padding: 0.2rem;
+            border-radius: 1rem;
+            border: 5px solid $colorBeige;
+            transform-origin: 55% 20%;
+            transition: transform 1s, filter 0.5s ease-out;
+            &:hover {
+              transform: scale(3);
+            }
+          }
+          &:hover {
+            border-radius: 1rem;
+            border: 5px solid $colorBeige;
           }
         }
         .contenedor {
@@ -196,58 +211,22 @@
             }
           }
         }
+
       }
-    }
-    section {
-      .accordion {
-        .accordion-item {
-          .accordion-collapse {
-            .accordion-body {
-              .listasDesc {
-                display: block;
-                margin: 0 2rem;
-                .listDesc {
-                  display: block;
+      section {
+        .accordion {
+          .accordion-item {
+            .accordion-collapse {
+              .accordion-body {
+                .listasDesc {
+                  display: grid;
                   margin: auto;
+                  .listDesc {
+                    display: grid;
+                    margin: auto;
+                  }
                 }
               }
-            }
-          }
-        }
-      }
-    }
-  }
-}
-@media screen and (max-width: 320px) {
-  .containerProduct {
-    section {
-      .containerSection {
-        display: grid;
-        grid-gap: 2rem;
-        grid-template-columns: repeat(auto-fill, 300px);
-        justify-content: center;
-        align-items: center;
-        .imagenProduct {
-          display: grid;
-          justify-content: center;
-          img {
-            max-width: 12rem;
-          }
-        }
-        .contenedor {
-          grid-template-columns: 300px;
-          h1 {
-            font-size: 20px;
-          }
-          .precio {
-            font-size: 30px;
-          }
-          .talles {
-            grid-gap: 3px;
-            font-size: 8px;
-            justify-content: center;
-            .talle {
-              width: 55px;
             }
           }
         }

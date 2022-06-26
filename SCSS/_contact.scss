@@ -22,7 +22,7 @@ form {
     font-size: $large;
   }
 }
-@media screen and (max-width: 1220px) {
+@media screen and (max-width: 1200px) {
   form {
     h2 {
       font-size: $medium;
@@ -30,7 +30,7 @@ form {
   }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 576px) {
   form {
     h2 {
       font-size: $small;

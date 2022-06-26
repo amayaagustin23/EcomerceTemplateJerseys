@@ -80,6 +80,26 @@ header .cont-menu {
       border-bottom: #403F3D 0.2rem solid; }
     header .cont-menu nav .socialsNav {
       display: none; }
+  header .cont-menu .searchNav {
+    display: flex;
+    align-items: center;
+    margin-right: 4rem; }
+    header .cont-menu .searchNav input {
+      background-color: #F0E3CA;
+      border-radius: 1rem;
+      border: none;
+      color: #1B1A17;
+      padding-left: 1.6rem;
+      padding-right: .5rem;
+      font-weight: bold;
+      position: relative;
+      font-size: 20px; }
+    header .cont-menu .searchNav label {
+      position: absolute;
+      display: block;
+      font-size: 20px;
+      color: #1B1A17;
+      left: 1; }
   header .cont-menu .icons {
     display: flex; }
     header .cont-menu .icons .icon .groupIcon {
@@ -92,7 +112,7 @@ header .cont-menu {
   header .cont-menu label {
     display: none; }
 
-header .iconsNav {
+header .iconsNav, header .NavSearch {
   display: none; }
 
 .footer {
@@ -168,7 +188,7 @@ header .iconsNav {
     display: flex;
     justify-content: center; } }
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 576px) {
   header .socialsContenedor {
     display: grid;
     grid-template-columns: 1fr 11fr; }
@@ -251,6 +271,8 @@ header .iconsNav {
           background-color: #1B1A17;
           border-bottom: 5px solid #FDCA40;
           color: #EEEEEE !important; }
+      header .container-menu .cont-menu .searchNav {
+        display: none; }
       header .container-menu .cont-menu .icons .icon .groupIcon {
         display: none; }
       header .container-menu .cont-menu label {
@@ -266,6 +288,31 @@ header .iconsNav {
     display: flex;
     justify-content: end;
     padding: 0.5rem 1rem; }
+  header .NavSearch {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: .5rem 1rem;
+    background-color: #1B1A17;
+    width: 100%;
+    justify-content: end; }
+    header .NavSearch input {
+      background-color: #F0E3CA;
+      border-radius: 1rem;
+      border: none;
+      color: #1B1A17;
+      padding-right: 2.3rem;
+      padding-left: .6rem;
+      font-weight: bold;
+      position: relative;
+      font-size: 20px;
+      width: 10rem; }
+    header .NavSearch label {
+      position: absolute;
+      display: block;
+      font-size: 20px;
+      color: #1B1A17;
+      padding-right: 10px; }
   .footer .contenedor {
     display: block;
     justify-content: center; }
@@ -296,28 +343,29 @@ header .iconsNav {
     display: flex;
     justify-content: center; } }
 
-.galeria .imagenPrincipal {
+.containerHome .imagenPrincipal {
   width: 100%;
   height: 600px;
   background-size: cover;
+  background-repeat: no-repeat;
   background-image: linear-gradient(transparent, #403F3D 90%), url("../image/home/fc-barcelona-2022-23-nike-home-kit-h.jpg"); }
 
-.galeria .listarImagenes {
+.containerHome .listarImagenes {
   margin-top: -50px;
   display: flex;
   overflow: auto; }
-  .galeria .listarImagenes::-webkit-scrollbar {
+  .containerHome .listarImagenes::-webkit-scrollbar {
     width: 2px;
     height: 8px; }
-  .galeria .listarImagenes::-webkit-scrollbar-thumb {
+  .containerHome .listarImagenes::-webkit-scrollbar-thumb {
     background: rgba(255, 68, 0, 0.066);
     border-radius: 10px;
     background-clip: padding-box; }
-  .galeria .listarImagenes::-webkit-scrollbar-thumb:hover {
+  .containerHome .listarImagenes::-webkit-scrollbar-thumb:hover {
     border: 0; }
-  .galeria .listarImagenes::-webkit-scrollbar-track {
+  .containerHome .listarImagenes::-webkit-scrollbar-track {
     background: transparent; }
-  .galeria .listarImagenes .containerItem {
+  .containerHome .listarImagenes .containerItem {
     position: relative;
     width: 200px;
     height: 120px;
@@ -325,15 +373,15 @@ header .iconsNav {
     -webkit-transition: 0.3s ease-in-out;
     transition: 0.3s ease-in-out;
     transition: 0.3s ease-in-out; }
-    .galeria .listarImagenes .containerItem .image {
+    .containerHome .listarImagenes .containerItem .image {
       display: block;
       width: 200px;
       height: 120px;
       border-radius: 1rem; }
-      .galeria .listarImagenes .containerItem .image:hover {
+      .containerHome .listarImagenes .containerItem .image:hover {
         -webkit-transform: scale(1.02);
         transform: scale(1.02); }
-    .galeria .listarImagenes .containerItem .overlay {
+    .containerHome .listarImagenes .containerItem .overlay {
       object-fit: cover;
       position: absolute;
       top: 0;
@@ -347,7 +395,7 @@ header .iconsNav {
       background-color: #1B1A17;
       border-radius: 1rem;
       font-weight: bold; }
-      .galeria .listarImagenes .containerItem .overlay .text {
+      .containerHome .listarImagenes .containerItem .overlay .text {
         color: white;
         font-size: 20px;
         position: absolute;
@@ -357,43 +405,51 @@ header .iconsNav {
         -ms-transform: translate(-50%, -50%);
         transform: translate(-50%, -50%);
         text-align: center; }
-    .galeria .listarImagenes .containerItem:hover {
+    .containerHome .listarImagenes .containerItem:hover {
       -webkit-transform: scale(1.1);
       transform: scale(1.1); }
-    .galeria .listarImagenes .containerItem:hover .overlay {
+    .containerHome .listarImagenes .containerItem:hover .overlay {
       opacity: 0.85; }
-  .galeria .listarImagenes::-webkit-scrollbar {
+  .containerHome .listarImagenes::-webkit-scrollbar {
     width: 2px;
     height: 8px; }
-  .galeria .listarImagenes::-webkit-scrollbar-thumb {
+  .containerHome .listarImagenes::-webkit-scrollbar-thumb {
     background: rgba(33, 33, 33, 0.066);
     border-radius: 10px;
     background-clip: padding-box; }
-  .galeria .listarImagenes::-webkit-scrollbar-thumb:hover {
+  .containerHome .listarImagenes::-webkit-scrollbar-thumb:hover {
     border: 0; }
-  .galeria .listarImagenes::-webkit-scrollbar-track {
+  .containerHome .listarImagenes::-webkit-scrollbar-track {
     background: transparent; }
 
-.galeria .containerVideos {
+.containerHome .containerVideos {
   margin: 1rem 0;
   background-color: #EEEEEE; }
-  .galeria .containerVideos h2 {
+  .containerHome .containerVideos h2 {
     color: #1B1A17;
     text-align: center;
     margin-bottom: 2rem; }
-  .galeria .containerVideos .videos {
+  .containerHome .containerVideos .videos {
     display: grid; }
-    .galeria .containerVideos .videos .video {
+    .containerHome .containerVideos .videos .video {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-evenly;
       margin: .5rem 0;
       align-items: center; }
-      .galeria .containerVideos .videos .video iframe {
+      .containerHome .containerVideos .videos .video iframe {
         width: 300px;
         height: 180px; }
-      .galeria .containerVideos .videos .video .description {
+      .containerHome .containerVideos .videos .video .description {
         color: #1B1A17; }
+
+@media screen and (max-width: 576px) {
+  .containerHome .imagenPrincipal {
+    width: 100%;
+    height: 300px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(transparent, #403F3D 80%), url("../image/home/fc-barcelona-2022-23-nike-home-kit-h.jpg"); } }
 
 .buttonIndex {
   background-color: #FDCA40;
@@ -691,14 +747,14 @@ header .iconsNav {
     .containerProduct section .containerSection .imagenProduct {
       height: 35rem;
       overflow: hidden;
-      transition: transform 1s, filter .5s ease-out; }
+      transition: transform 1s, filter 0.5s ease-out; }
       .containerProduct section .containerSection .imagenProduct img {
         width: 35rem;
         padding: 0.2rem;
         border-radius: 1rem;
         border: 5px solid #F0E3CA;
         transform-origin: 55% 20%;
-        transition: transform 1s, filter .5s ease-out; }
+        transition: transform 1s, filter 0.5s ease-out; }
         .containerProduct section .containerSection .imagenProduct img:hover {
           transform: scale(3); }
       .containerProduct section .containerSection .imagenProduct:hover {
@@ -735,7 +791,7 @@ header .iconsNav {
       .containerProduct section .accordion .accordion-item .accordion-collapse .accordion-body .listasDesc .listDesc .descOp {
         font-weight: bold; }
 
-@media screen and (max-width: 1220px) {
+@media screen and (max-width: 1200px) {
   .containerProduct section .containerSection {
     display: grid;
     grid-gap: 2rem;
@@ -763,20 +819,33 @@ header .iconsNav {
         .containerProduct section .containerSection .contenedor .talles .talle {
           width: 70px; } }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 576px) {
   .containerProduct {
     padding: 1rem; }
     .containerProduct section .containerSection {
       display: grid;
       grid-gap: 2rem;
-      grid-template-columns: repeat(auto-fill, 400px);
+      grid-template-columns: repeat(auto-fill, 600px);
       justify-content: center;
       align-items: center; }
       .containerProduct section .containerSection .imagenProduct {
-        display: grid;
-        justify-content: center; }
+        height: 17rem;
+        width: 17rem;
+        margin: auto;
+        overflow: hidden;
+        transition: transform 1s, filter 0.5s ease-out; }
         .containerProduct section .containerSection .imagenProduct img {
-          max-width: 17rem; }
+          width: 17rem;
+          padding: 0.2rem;
+          border-radius: 1rem;
+          border: 5px solid #F0E3CA;
+          transform-origin: 55% 20%;
+          transition: transform 1s, filter 0.5s ease-out; }
+          .containerProduct section .containerSection .imagenProduct img:hover {
+            transform: scale(3); }
+        .containerProduct section .containerSection .imagenProduct:hover {
+          border-radius: 1rem;
+          border: 5px solid #F0E3CA; }
       .containerProduct section .containerSection .contenedor {
         display: grid;
         justify-content: center;
@@ -790,37 +859,12 @@ header .iconsNav {
           font-size: 10px; }
           .containerProduct section .containerSection .contenedor .talles .talle {
             width: 60px; }
-    .containerProduct section .accordion .accordion-item .accordion-collapse .accordion-body .listasDesc {
-      display: block;
-      margin: 0 2rem; }
-      .containerProduct section .accordion .accordion-item .accordion-collapse .accordion-body .listasDesc .listDesc {
-        display: block;
-        margin: auto; } }
-
-@media screen and (max-width: 320px) {
-  .containerProduct section .containerSection {
-    display: grid;
-    grid-gap: 2rem;
-    grid-template-columns: repeat(auto-fill, 300px);
-    justify-content: center;
-    align-items: center; }
-    .containerProduct section .containerSection .imagenProduct {
+    .containerProduct section section .accordion .accordion-item .accordion-collapse .accordion-body .listasDesc {
       display: grid;
-      justify-content: center; }
-      .containerProduct section .containerSection .imagenProduct img {
-        max-width: 12rem; }
-    .containerProduct section .containerSection .contenedor {
-      grid-template-columns: 300px; }
-      .containerProduct section .containerSection .contenedor h1 {
-        font-size: 20px; }
-      .containerProduct section .containerSection .contenedor .precio {
-        font-size: 30px; }
-      .containerProduct section .containerSection .contenedor .talles {
-        grid-gap: 3px;
-        font-size: 8px;
-        justify-content: center; }
-        .containerProduct section .containerSection .contenedor .talles .talle {
-          width: 55px; } }
+      margin: auto; }
+      .containerProduct section section .accordion .accordion-item .accordion-collapse .accordion-body .listasDesc .listDesc {
+        display: grid;
+        margin: auto; } }
 
 .containerHelp {
   margin: 2rem 1rem;
@@ -859,11 +903,11 @@ form {
     text-align: center;
     font-size: 50px; }
 
-@media screen and (max-width: 1220px) {
+@media screen and (max-width: 1200px) {
   form h2 {
     font-size: 40px; } }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 576px) {
   form h2 {
     font-size: 15px; } }
 
@@ -891,7 +935,7 @@ form {
     .containerAbout .valores li {
       font-size: 1.5rem; }
 
-@media screen and (max-width: 1220px) {
+@media screen and (max-width: 1200px) {
   .containerAbout h1 {
     font-size: 2rem;
     font-weight: bold;
