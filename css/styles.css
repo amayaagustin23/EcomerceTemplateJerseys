@@ -1031,7 +1031,7 @@ form {
   display: flex;
   flex-wrap: wrap; }
   .containerUser .imagenPerfil {
-    padding-right: .5rem;
+    padding-right: 0.5rem;
     border-right: 2px solid #FF8303; }
     .containerUser .imagenPerfil img {
       display: flex;
@@ -1064,46 +1064,17 @@ form {
             text-decoration: underline; }
 
 @media screen and (max-width: 576px) {
-  .containerUser {
-    background-color: #EEEEEE;
-    margin: 1rem;
-    border-radius: 1rem;
-    padding: 3rem 2rem;
-    display: flex;
-    flex-wrap: wrap; }
-    .containerUser .imagenPerfil {
-      padding-right: .5rem;
-      border-right: none;
-      border-bottom: 2px solid #FF8303;
-      width: 100%; }
-      .containerUser .imagenPerfil img {
-        display: flex;
-        margin: auto;
-        width: 200px;
-        border-radius: 50%; }
-    .containerUser .containerInfo {
-      padding: 0rem;
-      margin: auto; }
-      .containerUser .containerInfo h2 {
-        padding: 1rem 0; }
-      .containerUser .containerInfo .info {
-        margin: auto;
-        background-color: white;
-        border-radius: 1rem;
-        padding: 2rem 1rem;
-        height: 25rem; }
-        .containerUser .containerInfo .info p {
-          margin-bottom: 20px; }
-          .containerUser .containerInfo .info p strong {
-            padding-right: 5px; }
-        .containerUser .containerInfo .info .button {
-          display: flex;
-          justify-content: end; }
-          .containerUser .containerInfo .info .button button {
-            background-color: transparent;
-            color: #FF8303;
-            font-weight: bold;
-            font-size: 30px;
-            border: none; }
-            .containerUser .containerInfo .info .button button:hover {
-              text-decoration: underline; } }
+  .containerUser .imagenPerfil {
+    padding-right: 0;
+    border-right: none;
+    border-bottom: 2px solid #FF8303;
+    width: 100%; }
+  .containerUser .containerInfo {
+    padding: 0rem;
+    margin: auto; }
+    .containerUser .containerInfo h2 {
+      padding: 1rem 0; }
+    .containerUser .containerInfo .info {
+      margin: auto;
+      padding: 2rem 1rem;
+      height: 25rem; } }
