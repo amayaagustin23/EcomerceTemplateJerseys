@@ -373,6 +373,9 @@ header {
       display: flex;
       justify-content: end;
       padding:0.5rem 1rem;
+      .icon{
+        margin-inline: 30px;
+      }
   }
   .NavSearch{
     position: relative;

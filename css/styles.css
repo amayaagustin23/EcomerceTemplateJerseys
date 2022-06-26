@@ -292,6 +292,8 @@ header .iconsNav, header .NavSearch {
     display: flex;
     justify-content: end;
     padding: 0.5rem 1rem; }
+    header .iconsNav .icon {
+      margin-inline: 30px; }
   header .NavSearch {
     position: relative;
     display: flex;
