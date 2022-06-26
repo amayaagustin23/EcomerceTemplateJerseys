@@ -1,0 +1,50 @@
+.containerUser{
+    background-color: $colorBlanco;
+    margin: 1rem;
+    border-radius: 1rem;
+    padding: 3rem 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    .imagenPerfil{
+        padding-right: .5rem;
+        border-right: 2px solid $colorNaranja;
+        img{
+            display: flex;
+            margin: auto;
+            width: 200px;
+            border-radius: 50%;            
+        }
+    }
+    .containerInfo{
+        padding-left: 1rem;
+        h2{
+            padding: 1rem;
+        }
+        .info{
+            background-color: white;
+            border-radius: 1rem;
+            padding: 2rem;
+            height: 30rem;
+            p{
+                margin-bottom: 20px;
+                strong{
+                    padding-right: 5px;
+                }
+            }
+            .button{
+                display: flex;
+                justify-content: end;
+                button{
+                    background-color: transparent;
+                    color: $colorNaranja;
+                    font-weight: bold;
+                    font-size: 30px;
+                    border: none;
+                    &:hover{
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+}
