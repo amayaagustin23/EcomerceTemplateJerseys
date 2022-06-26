@@ -510,7 +510,8 @@ header .iconsNav, header .NavSearch {
       align-items: center; }
       .containerHome .containerVideos .videos .video iframe {
         width: 400px;
-        height: 230px; }
+        height: 230px;
+        border-radius: .5rem; }
       .containerHome .containerVideos .videos .video .description {
         color: #1B1A17;
         width: 400px; }
