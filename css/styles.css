@@ -312,7 +312,8 @@ header .iconsNav, header .NavSearch {
       display: block;
       font-size: 20px;
       color: #1B1A17;
-      padding-right: 10px; }
+      padding-right: 10px;
+      padding-top: 5px; }
   .footer .contenedor {
     display: block;
     justify-content: center; }
