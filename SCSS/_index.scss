@@ -26,7 +26,7 @@
     &::-webkit-scrollbar-track {
       background: transparent;
     }
-    .containerItem{
+    .containerItem {
       position: relative;
       width: 200px;
       height: 120px;
@@ -39,10 +39,9 @@
         width: 200px;
         height: 120px;
         border-radius: 1rem;
-        &:hover{
+        &:hover {
           -webkit-transform: scale(1.02);
           transform: scale(1.02);
-          
         }
       }
       .overlay {
@@ -55,11 +54,11 @@
         width: 100%;
         height: 100%;
         opacity: 0;
-        transition: .5s ease;
+        transition: 0.5s ease;
         background-color: $colorNegro;
         border-radius: 1rem;
         font-weight: bold;
-        
+
         .text {
           color: white;
           font-size: 20px;
@@ -72,14 +71,12 @@
           text-align: center;
         }
       }
-      &:hover{
+      &:hover {
         -webkit-transform: scale(1.1);
         transform: scale(1.1);
-
-      } 
+      }
       &:hover .overlay {
         opacity: 0.85;
-        
       }
     }
     &::-webkit-scrollbar {
@@ -98,39 +95,39 @@
       background: transparent;
     }
   }
-  .bestSeller{
+  .bestSeller {
     background-color: $colorNegro;
     margin: auto;
     text-align: center;
     padding: 2rem 0;
-    h2{
+    h2 {
       color: $colorBlanco;
     }
-    .containerBestSeller{
+    .containerBestSeller {
       display: grid;
       grid-template-columns: repeat(auto-fill, 400px);
       grid-gap: 1rem;
       justify-content: center;
-      .article{
+      .article {
         margin: 1rem auto;
         padding: 20px;
         background-color: $colorBlanco;
-        border-radius: .5rem;
+        border-radius: 0.5rem;
         -webkit-transition: 0.3s ease-in-out;
         transition: 0.3s ease-in-out;
         transition: 0.3s ease-in-out;
         position: relative;
-        &:hover{
+        &:hover {
           -webkit-transform: scale(1.1);
           transform: scale(1.1);
-  
-        } 
-        img{
-          width: 280px;
-          border-radius: .5rem;
         }
-        .textArticle{
-          p{
+        img {
+          width: 280px;
+          border-radius: 0.5rem;
+          background-color: white;
+        }
+        .textArticle {
+          p {
             font-size: 24px;
             font-weight: bold;
           }
@@ -144,11 +141,11 @@
           width: 94%;
           height: 15%;
           opacity: 0;
-          transition: .5s ease;
+          transition: 0.5s ease;
           background-color: $colorNegro;
           border-radius: 1rem;
           font-weight: bold;
-          
+
           .text {
             color: white;
             font-size: 20px;
@@ -159,19 +156,19 @@
             -ms-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
             text-align: center;
-            a{
+            a {
               text-decoration: none;
               color: $colorBlanco;
             }
           }
         }
-        &:hover{
+        &:hover {
           -webkit-transform: scale(1.1);
           transform: scale(1.1);
           height: 450px;
-        } 
+        }
         &:hover .overlay {
-          opacity:1;
+          opacity: 1;
         }
       }
     }
@@ -191,12 +188,12 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: space-evenly;
-        margin: .5rem 0;
+        margin: 0.5rem 0;
         align-items: center;
         iframe {
           width: 400px;
           height: 230px;
-          border-radius: .5rem;
+          border-radius: 0.5rem;
         }
         .description {
           color: $colorNegro;
@@ -208,7 +205,7 @@
 }
 
 @media screen and (max-width: 576px) {
-  .containerHome{
+  .containerHome {
     .imagenPrincipal {
       width: 100%;
       height: 280px;
@@ -216,6 +213,43 @@
       background-repeat: no-repeat;
       background-image: linear-gradient(transparent, $colorGris 80%),
         url("../image/home/fc-barcelona-2022-23-nike-home-kit-h.jpg");
+    }
+    .bestSeller {
+      background-color: $colorNegro;
+      margin: auto;
+      text-align: center;
+      padding: 2rem 0;
+      h2 {
+        color: $colorBlanco;
+      }
+      .containerBestSeller {
+        grid-template-columns: repeat(auto-fill, 300px);
+
+        .article {
+          width: 300px;
+
+          img {
+            width: 200px;
+          }
+        }
+      }
+    }
+    .containerVideos {
+      h2 {
+      }
+      .videos {
+        .video {
+          iframe {
+            width: 300px;
+            height: 180px;
+            border-radius: 0.5rem;
+          }
+          .description {
+            color: $colorNegro;
+            width: 300px;
+          }
+        }
+      }
     }
   }
 }

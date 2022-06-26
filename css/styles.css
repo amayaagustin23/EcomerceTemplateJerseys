@@ -293,7 +293,7 @@ header .iconsNav, header .NavSearch {
     justify-content: end;
     padding: 0.5rem 1rem; }
     header .iconsNav .icon {
-      margin-inline: 30px; }
+      margin-inline: 10px; }
   header .NavSearch {
     position: relative;
     display: flex;
@@ -398,7 +398,7 @@ header .iconsNav, header .NavSearch {
       width: 100%;
       height: 100%;
       opacity: 0;
-      transition: .5s ease;
+      transition: 0.5s ease;
       background-color: #1B1A17;
       border-radius: 1rem;
       font-weight: bold; }
@@ -445,7 +445,7 @@ header .iconsNav, header .NavSearch {
       margin: 1rem auto;
       padding: 20px;
       background-color: #EEEEEE;
-      border-radius: .5rem;
+      border-radius: 0.5rem;
       -webkit-transition: 0.3s ease-in-out;
       transition: 0.3s ease-in-out;
       transition: 0.3s ease-in-out;
@@ -455,7 +455,8 @@ header .iconsNav, header .NavSearch {
         transform: scale(1.1); }
       .containerHome .bestSeller .containerBestSeller .article img {
         width: 280px;
-        border-radius: .5rem; }
+        border-radius: 0.5rem;
+        background-color: white; }
       .containerHome .bestSeller .containerBestSeller .article .textArticle p {
         font-size: 24px;
         font-weight: bold; }
@@ -468,7 +469,7 @@ header .iconsNav, header .NavSearch {
         width: 94%;
         height: 15%;
         opacity: 0;
-        transition: .5s ease;
+        transition: 0.5s ease;
         background-color: #1B1A17;
         border-radius: 1rem;
         font-weight: bold; }
@@ -506,12 +507,12 @@ header .iconsNav, header .NavSearch {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-evenly;
-      margin: .5rem 0;
+      margin: 0.5rem 0;
       align-items: center; }
       .containerHome .containerVideos .videos .video iframe {
         width: 400px;
         height: 230px;
-        border-radius: .5rem; }
+        border-radius: 0.5rem; }
       .containerHome .containerVideos .videos .video .description {
         color: #1B1A17;
         width: 400px; }
@@ -522,7 +523,27 @@ header .iconsNav, header .NavSearch {
     height: 280px;
     background-size: contain;
     background-repeat: no-repeat;
-    background-image: linear-gradient(transparent, #403F3D 80%), url("../image/home/fc-barcelona-2022-23-nike-home-kit-h.jpg"); } }
+    background-image: linear-gradient(transparent, #403F3D 80%), url("../image/home/fc-barcelona-2022-23-nike-home-kit-h.jpg"); }
+  .containerHome .bestSeller {
+    background-color: #1B1A17;
+    margin: auto;
+    text-align: center;
+    padding: 2rem 0; }
+    .containerHome .bestSeller h2 {
+      color: #EEEEEE; }
+    .containerHome .bestSeller .containerBestSeller {
+      grid-template-columns: repeat(auto-fill, 300px); }
+      .containerHome .bestSeller .containerBestSeller .article {
+        width: 300px; }
+        .containerHome .bestSeller .containerBestSeller .article img {
+          width: 200px; }
+  .containerHome .containerVideos .videos .video iframe {
+    width: 300px;
+    height: 180px;
+    border-radius: 0.5rem; }
+  .containerHome .containerVideos .videos .video .description {
+    color: #1B1A17;
+    width: 300px; } }
 
 .buttonIndex {
   background-color: #FDCA40;
