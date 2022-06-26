@@ -944,7 +944,9 @@ header .iconsNav, header .NavSearch {
         display: grid;
         justify-content: center;
         grid-template-columns: 400px;
-        text-align: center; }
+        text-align: center;
+        width: 400px;
+        margin: auto; }
         .containerProduct section .containerSection .contenedor h1 {
           font-size: 22px; }
         .containerProduct section .containerSection .contenedor .precio {
