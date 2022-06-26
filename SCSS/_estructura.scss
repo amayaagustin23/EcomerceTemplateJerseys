@@ -107,18 +107,20 @@ header {
         border-radius: 1rem;
         border: none;
         color: $colorNegro;
-        padding-left:1.6rem ;
-        padding-right:.5rem ;
+        padding-right:1.8rem ;
+        padding-left:.8rem ;
         font-weight: bold;
         position: relative;
         font-size: 20px;
+        width: 21rem;
       }
       label{
         position: absolute;
         display: block;
         font-size: 20px;
         color: $colorNegro;
-        left: 1;
+        left: 95%;
+        padding-top: 5px;
       }
     }
     .icons{

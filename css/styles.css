@@ -89,17 +89,19 @@ header .cont-menu {
       border-radius: 1rem;
       border: none;
       color: #1B1A17;
-      padding-left: 1.6rem;
-      padding-right: .5rem;
+      padding-right: 1.8rem;
+      padding-left: .8rem;
       font-weight: bold;
       position: relative;
-      font-size: 20px; }
+      font-size: 20px;
+      width: 21rem; }
     header .cont-menu .searchNav label {
       position: absolute;
       display: block;
       font-size: 20px;
       color: #1B1A17;
-      left: 1; }
+      left: 95%;
+      padding-top: 5px; }
   header .cont-menu .icons {
     display: flex; }
     header .cont-menu .icons .icon .groupIcon {
