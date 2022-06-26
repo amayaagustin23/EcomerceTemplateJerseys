@@ -111,8 +111,8 @@ header .cont-menu {
       -webkit-transition: all 0.5s;
       transition: all 0.5s; }
       header .cont-menu .icons .icon .groupIcon:hover {
-        -webkit-transform: scale(0.9);
-        transform: scale(0.9); }
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1); }
   header .cont-menu label {
     display: none; }
 
