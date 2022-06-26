@@ -129,6 +129,12 @@
           width: 280px;
           border-radius: .5rem;
         }
+        .textArticle{
+          p{
+            font-size: 24px;
+            font-weight: bold;
+          }
+        }
         .overlay {
           object-fit: cover;
           position: absolute;
@@ -162,7 +168,7 @@
         &:hover{
           -webkit-transform: scale(1.1);
           transform: scale(1.1);
-          height: 420px;
+          height: 450px;
         } 
         &:hover .overlay {
           opacity:1;

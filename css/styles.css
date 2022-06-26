@@ -454,6 +454,9 @@ header .iconsNav, header .NavSearch {
       .containerHome .bestSeller .containerBestSeller .article img {
         width: 280px;
         border-radius: .5rem; }
+      .containerHome .bestSeller .containerBestSeller .article .textArticle p {
+        font-size: 24px;
+        font-weight: bold; }
       .containerHome .bestSeller .containerBestSeller .article .overlay {
         object-fit: cover;
         position: absolute;
@@ -483,7 +486,7 @@ header .iconsNav, header .NavSearch {
       .containerHome .bestSeller .containerBestSeller .article:hover {
         -webkit-transform: scale(1.1);
         transform: scale(1.1);
-        height: 420px; }
+        height: 450px; }
       .containerHome .bestSeller .containerBestSeller .article:hover .overlay {
         opacity: 1; }
 
