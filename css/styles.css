@@ -63,6 +63,7 @@ header .cont-menu {
     display: flex;
     font-family: "Roboto Condensed", sans-serif;
     background-color: #1B1A17;
+    padding-top: 5px;
     padding: 0 20px; }
     header .cont-menu nav .navOp {
       display: block !important;
@@ -105,12 +106,13 @@ header .cont-menu {
   header .cont-menu .icons {
     display: flex; }
     header .cont-menu .icons .icon .groupIcon {
+      width: 40px;
       margin-inline: 10px;
       -webkit-transition: all 0.5s;
       transition: all 0.5s; }
       header .cont-menu .icons .icon .groupIcon:hover {
-        -webkit-transform: scale(1.3);
-        transform: scale(1.3); }
+        -webkit-transform: scale(0.9);
+        transform: scale(0.9); }
   header .cont-menu label {
     display: none; }
 
