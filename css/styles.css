@@ -452,7 +452,8 @@ header .iconsNav, header .NavSearch {
         -webkit-transform: scale(1.1);
         transform: scale(1.1); }
       .containerHome .bestSeller .containerBestSeller .article img {
-        width: 280px; }
+        width: 280px;
+        border-radius: .5rem; }
       .containerHome .bestSeller .containerBestSeller .article .overlay {
         object-fit: cover;
         position: absolute;
