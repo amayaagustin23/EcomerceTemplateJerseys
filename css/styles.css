@@ -509,7 +509,8 @@ header .iconsNav, header .NavSearch {
         width: 300px;
         height: 180px; }
       .containerHome .containerVideos .videos .video .description {
-        color: #1B1A17; }
+        color: #1B1A17;
+        width: 400px; }
 
 @media screen and (max-width: 576px) {
   .containerHome .imagenPrincipal {
