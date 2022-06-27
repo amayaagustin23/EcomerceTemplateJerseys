@@ -524,6 +524,12 @@ header .iconsNav, header .NavSearch {
     background-size: contain;
     background-repeat: no-repeat;
     background-image: linear-gradient(transparent, #403F3D 80%), url("../image/home/fc-barcelona-2022-23-nike-home-kit-h.jpg"); }
+  .containerHome .listarImagenes .containerItem {
+    width: 150px;
+    height: 100px; }
+    .containerHome .listarImagenes .containerItem .image {
+      width: 150px;
+      height: 100px; }
   .containerHome .bestSeller {
     background-color: #1B1A17;
     margin: auto;
