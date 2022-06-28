@@ -130,11 +130,23 @@
         grid-template-columns: repeat(auto-fill, 600px);
         justify-content: center;
         align-items: center;
-        .imagenProduct {
+        .contenedor {
           display: grid;
           justify-content: center;
-          img {
-            max-width: 25rem;
+          grid-template-columns: 400px;
+          text-align: center;
+          .precio {
+            font-size: 4rem;
+          }
+          .talles {
+            display: grid;
+            grid-gap: 5px;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            justify-content: center;
+            margin: 2rem auto;
+            .talle {
+              width: 70px;
+            }
           }
         }
         .contenedor {

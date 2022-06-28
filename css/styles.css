@@ -243,7 +243,7 @@ header .iconsNav, header .NavSearch {
         header .container-menu .cont-menu nav .socialsNav {
           position: absolute;
           display: flex;
-          bottom: 150px; }
+          bottom: 90px; }
           header .container-menu .cont-menu nav .socialsNav a {
             margin-inline: -2.5px;
             -webkit-transition: all 0.5s;
@@ -918,11 +918,21 @@ header .iconsNav, header .NavSearch {
     grid-template-columns: repeat(auto-fill, 600px);
     justify-content: center;
     align-items: center; }
-    .containerProduct section .containerSection .imagenProduct {
+    .containerProduct section .containerSection .contenedor {
       display: grid;
-      justify-content: center; }
-      .containerProduct section .containerSection .imagenProduct img {
-        max-width: 25rem; }
+      justify-content: center;
+      grid-template-columns: 400px;
+      text-align: center; }
+      .containerProduct section .containerSection .contenedor .precio {
+        font-size: 4rem; }
+      .containerProduct section .containerSection .contenedor .talles {
+        display: grid;
+        grid-gap: 5px;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        justify-content: center;
+        margin: 2rem auto; }
+        .containerProduct section .containerSection .contenedor .talles .talle {
+          width: 70px; }
     .containerProduct section .containerSection .contenedor {
       display: grid;
       justify-content: center;
