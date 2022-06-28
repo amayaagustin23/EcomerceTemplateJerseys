@@ -236,7 +236,6 @@ header .iconsNav, header .NavSearch {
       transform: translateX(-100%);
       z-index: 1; }
       header .container-menu .cont-menu nav {
-        /* transform: translateY(15%); */
         display: grid;
         background-color: #1B1A17;
         margin-top: 70px;
@@ -244,7 +243,7 @@ header .iconsNav, header .NavSearch {
         header .container-menu .cont-menu nav .socialsNav {
           position: absolute;
           display: flex;
-          bottom: 20px; }
+          bottom: 150px; }
           header .container-menu .cont-menu nav .socialsNav a {
             margin-inline: -2.5px;
             -webkit-transition: all 0.5s;

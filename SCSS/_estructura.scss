@@ -297,7 +297,7 @@ header {
         transform: translateX(-100%);
         z-index: 1;
         nav {
-          /* transform: translateY(15%); */
+          // transform: translateY(15%); 
           display: grid;
           background-color: $colorNegro;
           margin-top: 70px;
@@ -305,7 +305,7 @@ header {
           .socialsNav {
             position: absolute;
             display: flex;
-            bottom: 20px;
+            bottom: 150px;
             a {
               margin-inline: -2.5px;
               -webkit-transition: all 0.5s;
