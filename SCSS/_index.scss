@@ -241,6 +241,38 @@
           img {
             width: 200px;
           }
+          .textArticle {
+            h3 {
+              font-size: 20px;
+              font-weight: bold;
+            }
+            p {
+              font-size: 14px;
+              font-weight: bold;
+            }
+        }
+        .overlay {
+          object-fit: cover;
+          position: absolute;
+          bottom: 5px;
+          left: 10px;
+          right: 10px;
+          width: 94%;
+          height: 15%;
+          opacity: 0;
+          transition: 0.5s ease;
+          background-color: $colorNegro;
+          border-radius: 1rem;
+          font-weight: bold;
+
+          .text {
+
+          }
+        }
+        &:hover {
+          -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+          height: 350px;
         }
       }
     }
@@ -260,4 +292,5 @@
       }
     }
   }
+}
 }

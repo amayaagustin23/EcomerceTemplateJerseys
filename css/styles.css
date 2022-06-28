@@ -543,13 +543,36 @@ header .iconsNav, header .NavSearch {
         width: 300px; }
         .containerHome .bestSeller .containerBestSeller .article img {
           width: 200px; }
-  .containerHome .containerVideos .videos .video iframe {
-    width: 300px;
-    height: 180px;
-    border-radius: 0.5rem; }
-  .containerHome .containerVideos .videos .video .description {
-    color: #1B1A17;
-    width: 300px; } }
+        .containerHome .bestSeller .containerBestSeller .article .textArticle h3 {
+          font-size: 20px;
+          font-weight: bold; }
+        .containerHome .bestSeller .containerBestSeller .article .textArticle p {
+          font-size: 14px;
+          font-weight: bold; }
+        .containerHome .bestSeller .containerBestSeller .article .overlay {
+          object-fit: cover;
+          position: absolute;
+          bottom: 5px;
+          left: 10px;
+          right: 10px;
+          width: 94%;
+          height: 15%;
+          opacity: 0;
+          transition: 0.5s ease;
+          background-color: #1B1A17;
+          border-radius: 1rem;
+          font-weight: bold; }
+        .containerHome .bestSeller .containerBestSeller .article:hover {
+          -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+          height: 350px; }
+    .containerHome .bestSeller .containerVideos .videos .video iframe {
+      width: 300px;
+      height: 180px;
+      border-radius: 0.5rem; }
+    .containerHome .bestSeller .containerVideos .videos .video .description {
+      color: #1B1A17;
+      width: 300px; } }
 
 .buttonIndex {
   background-color: #FDCA40;
