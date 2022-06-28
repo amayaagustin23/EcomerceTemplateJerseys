@@ -239,7 +239,8 @@ header .iconsNav, header .NavSearch {
         /* transform: translateY(15%); */
         display: grid;
         background-color: #1B1A17;
-        margin-top: 35px; }
+        margin-top: 50px;
+        height: 80vh; }
         header .container-menu .cont-menu nav .socialsNav {
           position: absolute;
           display: flex;
@@ -289,9 +290,7 @@ header .iconsNav, header .NavSearch {
   header .iconsNav {
     background-color: #1B1A17;
     width: 100%;
-    display: flex;
-    justify-content: end;
-    padding: 0.5rem 1rem; }
+    display: flex; }
     header .iconsNav .icon {
       margin-inline: 10px; }
   header .NavSearch {
