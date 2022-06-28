@@ -239,7 +239,7 @@ header .iconsNav, header .NavSearch {
         /* transform: translateY(15%); */
         display: grid;
         background-color: #1B1A17;
-        margin-top: 100px; }
+        margin-top: 35px; }
         header .container-menu .cont-menu nav .socialsNav {
           position: absolute;
           display: flex;
