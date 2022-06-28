@@ -511,7 +511,7 @@ header .iconsNav, header .NavSearch {
       align-items: center; }
       .containerHome .containerVideos .videos .video iframe {
         width: 400px;
-        height: 230px;
+        height: 200px;
         border-radius: 0.5rem; }
       .containerHome .containerVideos .videos .video .description {
         color: #1B1A17;
@@ -550,29 +550,26 @@ header .iconsNav, header .NavSearch {
           font-size: 14px;
           font-weight: bold; }
         .containerHome .bestSeller .containerBestSeller .article .overlay {
-          object-fit: cover;
-          position: absolute;
-          bottom: 5px;
-          left: 10px;
-          right: 10px;
-          width: 94%;
-          height: 15%;
-          opacity: 0;
-          transition: 0.5s ease;
-          background-color: #1B1A17;
-          border-radius: 1rem;
-          font-weight: bold; }
+          margin: 0.5rem auto; }
         .containerHome .bestSeller .containerBestSeller .article:hover {
           -webkit-transform: scale(1.1);
           transform: scale(1.1);
           height: 350px; }
-    .containerHome .bestSeller .containerVideos .videos .video iframe {
-      width: 300px;
-      height: 180px;
-      border-radius: 0.5rem; }
-    .containerHome .bestSeller .containerVideos .videos .video .description {
-      color: #1B1A17;
-      width: 300px; } }
+  .containerHome .containerVideos h2 {
+    color: #1B1A17;
+    text-align: center;
+    margin-bottom: 2rem; }
+  .containerHome .containerVideos .videos .video iframe {
+    width: 300px;
+    height: 180px; }
+  .containerHome .containerVideos .videos .video .description {
+    color: #1B1A17;
+    width: 280px; }
+    .containerHome .containerVideos .videos .video .description h3 {
+      font-size: 20px;
+      text-align: center; }
+    .containerHome .containerVideos .videos .video .description p {
+      font-size: 14px; } }
 
 .buttonIndex {
   background-color: #FDCA40;

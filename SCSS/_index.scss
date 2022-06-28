@@ -192,7 +192,7 @@
         align-items: center;
         iframe {
           width: 400px;
-          height: 230px;
+          height: 200px;
           border-radius: 0.5rem;
         }
         .description {
@@ -250,47 +250,45 @@
               font-size: 14px;
               font-weight: bold;
             }
-        }
-        .overlay {
-          object-fit: cover;
-          position: absolute;
-          bottom: 5px;
-          left: 10px;
-          right: 10px;
-          width: 94%;
-          height: 15%;
-          opacity: 0;
-          transition: 0.5s ease;
-          background-color: $colorNegro;
-          border-radius: 1rem;
-          font-weight: bold;
-
-          .text {
-
           }
-        }
-        &:hover {
-          -webkit-transform: scale(1.1);
-          transform: scale(1.1);
-          height: 350px;
+          .overlay {
+            margin: 0.5rem auto;
+          }
+          &:hover {
+            -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+            height: 350px;
+          }
         }
       }
     }
     .containerVideos {
+
+      h2 {
+        color: $colorNegro;
+        text-align: center;
+        margin-bottom: 2rem;
+      }
       .videos {
         .video {
+
           iframe {
             width: 300px;
             height: 180px;
-            border-radius: 0.5rem;
           }
           .description {
             color: $colorNegro;
-            width: 300px;
+            width: 280px;
+            h3{
+              font-size: 20px;
+              text-align: center;
+            }
+            p{
+              font-size: 14px;
+            }
           }
         }
       }
     }
   }
-}
 }
