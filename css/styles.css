@@ -522,7 +522,8 @@ header .iconsNav, header .NavSearch {
         transform: scale(1.1);
         height: 450px; }
       .containerHome .bestSeller .containerBestSeller .article:hover .overlay {
-        opacity: 1; }
+        opacity: 1;
+        cursor: pointer; }
 
 .containerHome .containerVideos {
   margin: auto;
@@ -710,15 +711,14 @@ header .iconsNav, header .NavSearch {
 .view {
   background-color: #1B1A17;
   color: white;
-  width: 20%;
+  width: 100%;
   border: none;
   padding: 1rem !important;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 1.2em;
-  border-radius: 1rem !important;
-  margin-left: 1rem; }
+  border-radius: 1rem !important; }
   .view:hover {
     background-color: #FDCA40;
     color: black; }
@@ -796,8 +796,7 @@ header .iconsNav, header .NavSearch {
       .bodyContainerShop .containerArticulos .textos p {
         font-size: 22px; }
     .bodyContainerShop .containerArticulos .containerButton {
-      display: flex;
-      justify-content: space-between; }
+      margin-top: 0; }
   .bodyContainerShop .page-link {
     background-color: #1B1A17 !important;
     color: #EEEEEE !important; }
