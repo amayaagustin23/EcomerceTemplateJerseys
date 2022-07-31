@@ -2,7 +2,7 @@ const list=JSON.parse(localStorage.getItem('productos'))
 const id=parseInt(localStorage.getItem('idProducto'))
 const cantidad=parseInt(localStorage.getItem('cantidad'))
 const producto=list.find(item=>item.id===id)
-// document.getElementById('cartcountNav').innerHTML = localStorage.getItem('cantidad');
+document.getElementById('cartcountNav').innerHTML = `${cantidad} `;
 document.getElementById('cartcount').innerHTML = `${cantidad} `;
 
   
