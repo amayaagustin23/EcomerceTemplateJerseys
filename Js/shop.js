@@ -1,4 +1,10 @@
 const carrito = [];
+const listFilterMarcas = [];
+const cantidad = parseInt(localStorage.getItem('cantidad'));
+document.getElementById('cartcountNav').innerHTML = `${cantidad} `;
+document.getElementById('cartcount').innerHTML = `${cantidad} `;
+const marca = '';
+
 const listaproductos = [
   {
     id: 1,
@@ -14,6 +20,7 @@ const listaproductos = [
     calce: 'Regular',
     marca: 'Nike',
     garantia: 'Contra defecto de fabricación',
+    tallesDisponibles: 'M,XL',
   },
   {
     id: 2,
@@ -29,6 +36,7 @@ const listaproductos = [
     calce: 'Regular',
     marca: 'Givova',
     garantia: 'Contra defecto de fabricación',
+    tallesDisponibles: 'S,L,XL',
   },
   {
     id: 3,
@@ -44,6 +52,7 @@ const listaproductos = [
     calce: 'Regular',
     marca: 'Adidas',
     garantia: 'Contra defecto de fabricación',
+    tallesDisponibles: 'M,L',
   },
   {
     id: 4,
@@ -59,6 +68,7 @@ const listaproductos = [
     calce: 'Regular',
     marca: 'Adidas',
     garantia: 'Contra defecto de fabricación',
+    tallesDisponibles: 'S,XL',
   },
   {
     id: 5,
@@ -74,6 +84,7 @@ const listaproductos = [
     calce: 'Regular',
     marca: 'Umbro',
     garantia: 'Contra defecto de fabricación',
+    tallesDisponibles: 'L,XL',
   },
   {
     id: 6,
@@ -89,62 +100,88 @@ const listaproductos = [
     calce: 'Regular',
     marca: 'Nike',
     garantia: 'Contra defecto de fabricación',
+    tallesDisponibles: 'S,L,XL',
   },
 ];
-function getProductTemplate() {
-  return listaproductos.map(
-    item =>
-      `<div class="articulo">
-        <div class="imagen">
-          <img src="${item.imagen}" alt="${item.nombre}" title="${item.nombre}"/>
-        </div>
-        <div class="textos">
-          <h3>${item.nombre}</h3>
-          <p>$${item.precio}</p>
-        </div>
-        <div class="containerButton">
-          <button class="buttonArticulo" id=${item.id}>Agregar al carrito</button>
-          <button class="view" id="view_${item.id}" href="#">Ver</button>
-        </div>
-    </div>`
-  );
+const marcas = document.getElementsByClassName('form-check-marcas');
+for (var i = 0; i < marcas.length; i++) {
+  marcas[i].addEventListener('click', function (event) {
+    const listaMarcas=listaproductos.filter(item => event.target.value === item.marca)
+    document.getElementById('containerArticulos').innerHTML=""
+    getProductTemplate(listaMarcas);
+  });
 }
 
-const elementHTML = document.getElementById('containerArticulos');
+const talles = document.getElementsByClassName('form-check-talles');
+for (var i = 0; i < talles.length; i++) {
+  talles[i].addEventListener('click', function (event) {
+    console.log(event.target.value)
+    const listaTalles=listaproductos.filter(item =>item.tallesDisponibles.includes(event.target.value))
+    document.getElementById('containerArticulos').innerHTML=""
+    getProductTemplate(listaTalles);
+  });
+}
 
-const data = getProductTemplate();
-data.forEach(element => {
-  elementHTML.innerHTML += element;
-});
-
-listaproductos.map(item => {
-  document.getElementById(item.id).onclick = function (event) {
-    const id = event.srcElement.id;
-    if (id === item.id);
-    {
-      const prodCart = listaproductos.find(item => parseInt(id) === item.id);
-      carrito.push(prodCart);
-      event.preventDefault();
-      console.log(carrito);
-      localStorage.setItem('myArray', JSON.stringify(carrito));
-      localStorage.setItem('cantidad', carrito.length);
-      document.getElementById('cartcount').innerHTML = carrito.length;
-      document.getElementById('cartcountNav').innerHTML = carrito.length;
-    }
-  };
-});
-listaproductos.map(item => {
-  document.getElementById('view_' + item.id).onclick = function (event) {
-    const idView = event.srcElement.id.split('_');
-    const id = idView[1];
-    if (id === item.id);
-    {
-      localStorage.setItem('productos', JSON.stringify(listaproductos));
-      localStorage.setItem('idProducto', id);
-      console.log(window.location.href );
-      if(window.location.href==="http://127.0.0.1:5501/pages/shop.html"){window.location.href="http://127.0.0.1:5501/pages/product.html"}
-      if(window.location.href==="https://amayaagustin23.github.io/EcomerceTemplateJerseys/pages/shop.html"){window.location.href="https://amayaagustin23.github.io/EcomerceTemplateJerseys/pages/product.html"}
-      // window.location.href = 'product.html';
-    }
-  };
-});
+const getProductTemplate=(list)=> {
+  const products=list.map(
+    item =>
+    `<div class="articulo">
+    <div class="imagen">
+    <img src="${item.imagen}" alt="${item.nombre}" title="${item.nombre}"/>
+    </div>
+    <div class="textos">
+    <h3>${item.nombre}</h3>
+    <p>$${item.precio}</p>
+    </div>
+    <div class="containerButton">
+    <button class="buttonArticulo" id=${item.id}>Agregar al carrito</button>
+    <button class="view" id="view_${item.id}" href="#">Ver</button>
+    </div>
+    </div>`
+    );
+    const elementHTML = document.getElementById('containerArticulos');
+    const data = products;
+    data.forEach(element => {
+      elementHTML.innerHTML += element;
+    });
+    
+  }
+  
+  getProductTemplate(listaproductos)
+  
+  listaproductos.map(item => {
+    document.getElementById(item.id).onclick = function (event) {
+      const id = event.srcElement.id;
+      if (id === item.id);
+      {
+        const prodCart = listaproductos.find(item => parseInt(id) === item.id);
+        carrito.push(prodCart);
+        event.preventDefault();
+        console.log(carrito);
+        localStorage.setItem('myArray', JSON.stringify(carrito));
+        localStorage.setItem('cantidad', carrito.length);
+        document.getElementById('cartcount').innerHTML = carrito.length;
+        document.getElementById('cartcountNav').innerHTML = carrito.length;
+      }
+    };
+  });
+  listaproductos.map(item => {
+    document.getElementById('view_' + item.id).onclick = function (event) {
+      const idView = event.srcElement.id.split('_');
+      const id = idView[1];
+      if (id === item.id);
+      {
+        localStorage.setItem('productos', JSON.stringify(listaproductos));
+        localStorage.setItem('idProducto', id);
+        console.log(window.location.href);
+        if (window.location.href === 'http://127.0.0.1:5501/pages/shop.html') {
+          window.location.href = 'http://127.0.0.1:5501/pages/product.html';
+        }
+        if (window.location.href === 'https://amayaagustin23.github.io/EcomerceTemplateJerseys/pages/shop.html') {
+          window.location.href = 'https://amayaagustin23.github.io/EcomerceTemplateJerseys/pages/product.html';
+        }
+        // window.location.href = 'product.html';
+      }
+    };
+  });
+  
