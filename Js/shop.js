@@ -136,7 +136,8 @@ listaproductos.map(item => {
     {
       localStorage.setItem('productos', JSON.stringify(listaproductos));
       localStorage.setItem('idProducto', id);
-      window.location.href="http://127.0.0.1:5501/pages/product.html";
+      console.log()
+      window.location.href="./pages/product.html";
     }
   };
 });
