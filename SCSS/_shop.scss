@@ -2,7 +2,7 @@
   @include button($colorNaranja, white, $colorNegro, white, 100%, 1rem);
 }
 .view {
-  @include button($colorNegro, white, $colorAmarrillo, black, 20%, 1rem);
+  @include button($colorNegro, white, $colorAmarrillo, black, 100%, 1rem);
 }
 
 #nikecheck:checked~#adidas{
