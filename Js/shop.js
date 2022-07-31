@@ -129,6 +129,7 @@ listaproductos.map(item => {
       localStorage.setItem('myArray', JSON.stringify(carrito));
       localStorage.setItem('cantidad', carrito.length);
       document.getElementById('cartcount').innerHTML = carrito.length;
+      document.getElementById('cartcountNav').innerHTML = carrito.length;
     }
   };
 });

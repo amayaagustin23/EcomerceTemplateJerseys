@@ -4,6 +4,8 @@ const cantidad=parseInt(localStorage.getItem('cantidad'))
 let totalCompra = listCart.reduce((acum, elemento)=> acum +=elemento.precio, 0)
 document.getElementById("subtotal").innerHTML=`$${totalCompra}`
 document.getElementById("countProducts").innerHTML=`${cantidad} PRODUCTOS `
+// document.getElementById('cartcountNav').innerHTML = `${cantidad} `;
+document.getElementById('cartcount').innerHTML = `${cantidad} `;
 
 console.log(listCart)
 

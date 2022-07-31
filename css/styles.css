@@ -5,6 +5,22 @@
 ol {
   list-style-type: none; }
 
+#cartcount {
+  color: white;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: brown;
+  margin-left: -32px;
+  margin-top: -3px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  z-index: 10; }
+
+#cartcountNav {
+  display: none; }
+
 .accordion-button {
   background: #EEEEEE !important;
   color: #1B1A17 !important;
@@ -193,6 +209,20 @@ header .iconsNav, header .NavSearch {
     justify-content: center; } }
 
 @media screen and (max-width: 576px) {
+  #cartcountNav {
+    color: white;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: brown;
+    margin-left: -32px;
+    margin-top: -3px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    z-index: 10; }
+  #cartcount {
+    display: none; }
   header .socialsContenedor {
     display: grid;
     grid-template-columns: 1fr 11fr; }
@@ -697,19 +727,6 @@ header .iconsNav, header .NavSearch {
 
 #nikecheck:checked ~ #adidas {
   display: none; }
-
-#cartcount {
-  color: white;
-  width: 25px;
-  height: 25px;
-  border-radius: 50%;
-  background-color: brown;
-  margin-left: -32px;
-  margin-top: -3px;
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  z-index: 10; }
 
 .bodyContainerShop {
   margin: 2rem 1rem;
