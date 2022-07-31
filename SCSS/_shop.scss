@@ -1,9 +1,27 @@
-.buttonArticulo {
+.buttonArticulo{
   @include button($colorNaranja, white, $colorNegro, white, 100%, 1rem);
+}
+.view {
+  @include button($colorNegro, white, $colorAmarrillo, black, 20%, 1rem);
+  margin-left: 1rem;
 }
 
 #nikecheck:checked~#adidas{
   display: none;
+}
+
+#cartcount{
+  color: white;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: brown;
+  margin-left: -32px;
+  margin-top: -3px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  z-index: 10;
 }
 
 .bodyContainerShop {
@@ -91,8 +109,10 @@
       }
 
     }
-    .buttonArticulo {
-      margin-top: 0px;
+    .containerButton{
+      display: flex;
+      justify-content: space-between;
+      margin-inline: 1rem;
     }
   }
 

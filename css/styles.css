@@ -676,8 +676,40 @@ header .iconsNav, header .NavSearch {
     background-color: #FF8303;
     color: #1B1A17; }
 
+.view {
+  background-color: #1B1A17;
+  color: white;
+  width: 20%;
+  border: none;
+  padding: 1rem !important;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1.2em;
+  border-radius: 1rem !important;
+  margin-left: 1rem; }
+  .view:hover {
+    background-color: #FDCA40;
+    color: black; }
+  .view:active {
+    background-color: #1B1A17;
+    color: #1B1A17; }
+
 #nikecheck:checked ~ #adidas {
   display: none; }
+
+#cartcount {
+  color: white;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: brown;
+  margin-left: -32px;
+  margin-top: -3px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  z-index: 10; }
 
 .bodyContainerShop {
   margin: 2rem 1rem;
@@ -745,8 +777,10 @@ header .iconsNav, header .NavSearch {
       height: 7rem; }
       .bodyContainerShop .containerArticulos .textos p {
         font-size: 22px; }
-    .bodyContainerShop .containerArticulos .buttonArticulo {
-      margin-top: 0px; }
+    .bodyContainerShop .containerArticulos .containerButton {
+      display: flex;
+      justify-content: space-between;
+      margin-inline: 1rem; }
   .bodyContainerShop .page-link {
     background-color: #1B1A17 !important;
     color: #EEEEEE !important; }
