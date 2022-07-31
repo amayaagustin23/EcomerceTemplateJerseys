@@ -3,7 +3,6 @@
 }
 .view {
   @include button($colorNegro, white, $colorAmarrillo, black, 20%, 1rem);
-  margin-left: 1rem;
 }
 
 #nikecheck:checked~#adidas{
@@ -97,8 +96,7 @@
 
     }
     .containerButton{
-      display: flex;
-      justify-content: space-between;
+      margin-top: 0;
     }
   }
 
