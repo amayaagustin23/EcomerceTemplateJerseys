@@ -140,5 +140,3 @@ listaproductos.map(item => {
     }
   };
 });
-
-
