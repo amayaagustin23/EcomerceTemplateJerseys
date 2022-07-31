@@ -779,8 +779,7 @@ header .iconsNav, header .NavSearch {
         font-size: 22px; }
     .bodyContainerShop .containerArticulos .containerButton {
       display: flex;
-      justify-content: space-between;
-      margin-inline: 1rem; }
+      justify-content: space-between; }
   .bodyContainerShop .page-link {
     background-color: #1B1A17 !important;
     color: #EEEEEE !important; }
