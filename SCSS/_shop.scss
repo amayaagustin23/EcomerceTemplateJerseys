@@ -1,8 +1,8 @@
 .buttonArticulo{
-  @include button($colorNaranja, white, $colorNegro, white, 100%, 1rem);
+  @include button($colorNaranja, white, $colorNegro, white, 70%, 1rem);
 }
 .view {
-  @include button($colorNegro, white, $colorAmarrillo, black, 100%, 1rem);
+  @include button($colorNegro, white, $colorAmarrillo, black, 30%, 1rem);
 }
 
 #nikecheck:checked~#adidas{
@@ -12,7 +12,7 @@
 
 .bodyContainerShop {
   margin: 2rem 1rem;
-  padding: 3rem 0.5rem;
+  padding: 3rem 1.5rem;
   border-radius: 1rem;
   display: flex;
   justify-content: center;
@@ -20,16 +20,18 @@
   aside {
     display: flex;
     justify-content: center;
+    margin-right: 5rem;
     .asideSection {
-      width: 20rem;
+      width: 18rem;
       .accordion {
         .accordion-item {
           .accordion-collapse {
             .search {
               display: grid;
-              grid-template-columns: 11fr 1fr;
+              grid-template-columns: 9fr 1fr;
+              margin-bottom: 3rem;
               input {
-                max-width: 150px;
+                max-width: 80%;
                 padding: 0.4rem 0.25rem;
                 background: transparent;
                 color: $colorNegro;
@@ -48,8 +50,8 @@
     grid-gap: 25px;
     grid-template-columns: repeat(3, 1fr);
     .articulo {
-      height: 35.2rem;
-      width: 24rem;
+      height: 30rem;
+      width: 20rem;
       margin: 1rem;
       padding: 0.2rem;
       border-radius: 1rem;
@@ -79,7 +81,7 @@
       img {
         display: flex;
         justify-content: center;
-        width: 23rem;
+        width: 19rem;
         border-radius: 0.5rem;
       }
       &:hover {
@@ -89,14 +91,17 @@
     }
     .textos {
       margin-top: 0.4rem;
-      height: 7rem;
+      height: 6rem;
       p {
         font-size: 22px;
       }
 
     }
     .containerButton{
-      margin-top: 0;
+      margin-top: -5px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
     }
   }
 
@@ -128,7 +133,7 @@
             .accordion-collapse {
               .search {
                 input {
-                  max-width: 20rem;
+                  max-width: 100%;
                 }
               }
             }
@@ -152,6 +157,15 @@
         .textos {
           font-size: small;
         }
+        .containerButton{
+          margin-top: 1.5rem;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          .buttonArticulo,.view {
+            font-size: 14px;
+          }
+        }
       }
     }
   }
@@ -162,6 +176,20 @@
     aside {
       .asideSection {
         width: 15rem;
+        .accordion {
+          .accordion-item {
+            .accordion-collapse {
+              .search {
+                display: grid;
+                grid-template-columns: 9fr 1fr;
+                input {
+                  max-width: 70%;
+
+                }
+              }
+            }
+          }
+        }
       }
     }
     .containerArticulos {
@@ -185,8 +213,14 @@
             font-size: 22px;
           }
         }
-        .buttonArticulo {
-          font-size: 15px;
+        .containerButton{
+          margin-top: 1rem;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          .buttonArticulo,.view {
+            font-size: 14px;
+          }
         }
       }
     }

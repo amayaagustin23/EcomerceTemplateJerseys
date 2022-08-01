@@ -22,21 +22,30 @@ ol {
 #cartcountNav {
   display: none; }
 
+#flush-collapseOne {
+  border: none !important; }
+
 .accordion-button {
   background: #EEEEEE !important;
   color: #1B1A17 !important;
   border-radius: 1rem !important;
-  border: #1B1A17 1px solid !important; }
+  border: #1B1A17 1px solid !important;
+  padding: 0 1rem; }
 
 .accordion-button:hover {
   background: #1B1A17 !important;
   color: #EEEEEE !important;
-  border: #1B1A17 1px solid !important; }
+  border: #1B1A17 2px solid !important; }
 
 .accordion-item {
-  border-radius: 2rem !important;
+  border-radius: 1rem !important;
   margin: 1rem 0;
-  border: none; }
+  border: none !important; }
+
+.accordion-item div {
+  border-radius: 1rem !important;
+  padding-left: .5rem;
+  border: none !important; }
 
 body {
   height: 100%;
@@ -211,17 +220,18 @@ header .iconsNav, header .NavSearch {
 
 @media screen and (max-width: 576px) {
   #cartcountNav {
-    color: white;
+    color: #1B1A17;
     width: 25px;
     height: 25px;
     border-radius: 50%;
-    background-color: brown;
-    margin-left: -32px;
-    margin-top: -3px;
+    background-color: #FDCA40;
+    margin-left: -24px;
+    margin-top: 10px;
     align-items: center;
     display: flex;
     justify-content: center;
-    z-index: 10; }
+    z-index: 10;
+    font-weight: bold; }
   #cartcount {
     display: none; }
   header .socialsContenedor {
@@ -613,7 +623,8 @@ header .iconsNav, header .NavSearch {
   text-decoration: none;
   display: inline-block;
   font-size: 1.2em;
-  border-radius: 1rem !important; }
+  border-radius: 1rem !important;
+  margin-inline: 10px; }
   .buttonIndex:hover {
     background-color: #1B1A17;
     color: white; }
@@ -693,14 +704,15 @@ header .iconsNav, header .NavSearch {
 .buttonArticulo {
   background-color: #FF8303;
   color: white;
-  width: 100%;
+  width: 70%;
   border: none;
   padding: 1rem !important;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 1.2em;
-  border-radius: 1rem !important; }
+  border-radius: 1rem !important;
+  margin-inline: 10px; }
   .buttonArticulo:hover {
     background-color: #1B1A17;
     color: white; }
@@ -711,14 +723,15 @@ header .iconsNav, header .NavSearch {
 .view {
   background-color: #1B1A17;
   color: white;
-  width: 100%;
+  width: 30%;
   border: none;
   padding: 1rem !important;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 1.2em;
-  border-radius: 1rem !important; }
+  border-radius: 1rem !important;
+  margin-inline: 10px; }
   .view:hover {
     background-color: #FDCA40;
     color: black; }
@@ -731,21 +744,23 @@ header .iconsNav, header .NavSearch {
 
 .bodyContainerShop {
   margin: 2rem 1rem;
-  padding: 3rem 0.5rem;
+  padding: 3rem 1.5rem;
   border-radius: 1rem;
   display: flex;
   justify-content: center;
   background-color: #EEEEEE; }
   .bodyContainerShop aside {
     display: flex;
-    justify-content: center; }
+    justify-content: center;
+    margin-right: 5rem; }
     .bodyContainerShop aside .asideSection {
-      width: 20rem; }
+      width: 18rem; }
       .bodyContainerShop aside .asideSection .accordion .accordion-item .accordion-collapse .search {
         display: grid;
-        grid-template-columns: 11fr 1fr; }
+        grid-template-columns: 9fr 1fr;
+        margin-bottom: 3rem; }
         .bodyContainerShop aside .asideSection .accordion .accordion-item .accordion-collapse .search input {
-          max-width: 150px;
+          max-width: 80%;
           padding: 0.4rem 0.25rem;
           background: transparent;
           color: #1B1A17;
@@ -757,8 +772,8 @@ header .iconsNav, header .NavSearch {
     grid-gap: 25px;
     grid-template-columns: repeat(3, 1fr); }
     .bodyContainerShop .containerArticulos .articulo {
-      height: 35.2rem;
-      width: 24rem;
+      height: 30rem;
+      width: 20rem;
       margin: 1rem;
       padding: 0.2rem;
       border-radius: 1rem;
@@ -785,18 +800,21 @@ header .iconsNav, header .NavSearch {
       .bodyContainerShop .containerArticulos .imagen img {
         display: flex;
         justify-content: center;
-        width: 23rem;
+        width: 19rem;
         border-radius: 0.5rem; }
       .bodyContainerShop .containerArticulos .imagen:hover {
         text-decoration: none;
         color: #EEEEEE !important; }
     .bodyContainerShop .containerArticulos .textos {
       margin-top: 0.4rem;
-      height: 7rem; }
+      height: 6rem; }
       .bodyContainerShop .containerArticulos .textos p {
         font-size: 22px; }
     .bodyContainerShop .containerArticulos .containerButton {
-      margin-top: 0; }
+      margin-top: -5px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between; }
   .bodyContainerShop .page-link {
     background-color: #1B1A17 !important;
     color: #EEEEEE !important; }
@@ -819,7 +837,7 @@ header .iconsNav, header .NavSearch {
       .bodyContainerShop aside .asideSection {
         width: 20rem; }
         .bodyContainerShop aside .asideSection .accordion .accordion-item .accordion-collapse .search input {
-          max-width: 20rem; }
+          max-width: 100%; }
     .bodyContainerShop .containerArticulos {
       margin-top: 2rem;
       display: grid;
@@ -831,11 +849,23 @@ header .iconsNav, header .NavSearch {
         .bodyContainerShop .containerArticulos .articulo .imagen img {
           width: 18rem; }
         .bodyContainerShop .containerArticulos .articulo .textos {
-          font-size: small; } }
+          font-size: small; }
+        .bodyContainerShop .containerArticulos .articulo .containerButton {
+          margin-top: 1.5rem;
+          display: flex;
+          align-items: center;
+          justify-content: space-between; }
+          .bodyContainerShop .containerArticulos .articulo .containerButton .buttonArticulo, .bodyContainerShop .containerArticulos .articulo .containerButton .view {
+            font-size: 14px; } }
 
 @media screen and (max-width: 572px) {
   .bodyContainerShop aside .asideSection {
     width: 15rem; }
+    .bodyContainerShop aside .asideSection .accordion .accordion-item .accordion-collapse .search {
+      display: grid;
+      grid-template-columns: 9fr 1fr; }
+      .bodyContainerShop aside .asideSection .accordion .accordion-item .accordion-collapse .search input {
+        max-width: 70%; }
   .bodyContainerShop .containerArticulos {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
@@ -851,8 +881,13 @@ header .iconsNav, header .NavSearch {
           width: 15rem; }
       .bodyContainerShop .containerArticulos .articulo .textos h3 {
         font-size: 22px; }
-      .bodyContainerShop .containerArticulos .articulo .buttonArticulo {
-        font-size: 15px; } }
+      .bodyContainerShop .containerArticulos .articulo .containerButton {
+        margin-top: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between; }
+        .bodyContainerShop .containerArticulos .articulo .containerButton .buttonArticulo, .bodyContainerShop .containerArticulos .articulo .containerButton .view {
+          font-size: 14px; } }
 
 .talle {
   background-color: #F0E3CA;
@@ -864,7 +899,8 @@ header .iconsNav, header .NavSearch {
   text-decoration: none;
   display: inline-block;
   font-size: 1.2em;
-  border-radius: 1rem !important; }
+  border-radius: 1rem !important;
+  margin-inline: 10px; }
   .talle:hover {
     background-color: #FF8303;
     color: #1B1A17; }
@@ -883,6 +919,7 @@ header .iconsNav, header .NavSearch {
   display: inline-block;
   font-size: 1.2em;
   border-radius: 1rem !important;
+  margin-inline: 10px;
   -webkit-transition: all 1s;
   transition: all 1s; }
   #carrito:hover {
@@ -1066,7 +1103,8 @@ header .iconsNav, header .NavSearch {
   text-decoration: none;
   display: inline-block;
   font-size: 1.2em;
-  border-radius: 1rem !important; }
+  border-radius: 1rem !important;
+  margin-inline: 10px; }
   .butonContact:hover {
     background-color: #FF8303;
     color: #1B1A17; }

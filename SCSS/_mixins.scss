@@ -9,6 +9,7 @@
     display: inline-block;
     font-size: 1.2em;
     border-radius: 1rem !important;
+    margin-inline: 10px;
     &:hover {
       background-color: $colorFondoHover;
       color: $colorLetterHover;

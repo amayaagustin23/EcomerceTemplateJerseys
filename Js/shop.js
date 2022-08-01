@@ -134,6 +134,7 @@ const getProductTemplate=(list)=> {
     <p>$${item.precio}</p>
     </div>
     <div class="containerButton">
+    <button class="buttonArticulo" id=${item.id} href="#">Añadir al carrito</button>
     <button class="view" id="view_${item.id}" href="#">Ver</button>
     </div>
     </div>`
