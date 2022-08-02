@@ -103,29 +103,11 @@ const listaproductos = [
     tallesDisponibles: 'S,L,XL',
   },
 ];
-const marcas = document.getElementsByClassName('form-check-marcas');
-for (var i = 0; i < marcas.length; i++) {
-  marcas[i].addEventListener('click', function (event) {
-    const listaMarcas=listaproductos.filter(item => event.target.value === item.marca)
-    document.getElementById('containerArticulos').innerHTML=""
-    getProductTemplate(listaMarcas);
-  });
-}
 
-const talles = document.getElementsByClassName('form-check-talles');
-for (var i = 0; i < talles.length; i++) {
-  talles[i].addEventListener('click', function (event) {
-    console.log(event.target.value)
-    const listaTalles=listaproductos.filter(item =>item.tallesDisponibles.includes(event.target.value))
-    document.getElementById('containerArticulos').innerHTML=""
-    getProductTemplate(listaTalles);
-  });
-}
-
-const getProductTemplate=(list)=> {
-  const products=list.map(
+const getProductTemplate = list => {
+  const products = list.map(
     item =>
-    `<div class="articulo">
+      `<div class="articulo" id=${item.nombre}>
     <div class="imagen">
     <img src="${item.imagen}" alt="${item.nombre}" title="${item.nombre}"/>
     </div>
@@ -138,50 +120,71 @@ const getProductTemplate=(list)=> {
     <button class="view" id="view_${item.id}" href="#">Ver</button>
     </div>
     </div>`
-    );
-    const elementHTML = document.getElementById('containerArticulos');
-    const data = products;
-    data.forEach(element => {
-      elementHTML.innerHTML += element;
+  );
+  const elementHTML = document.getElementById('containerArticulos');
+  const data = products;
+  data.forEach(element => {
+    elementHTML.innerHTML += element;
+  });
+};
+
+getProductTemplate(listaproductos);
+
+listaproductos.map(item => {
+  document.getElementById(item.id).onclick = function (event) {
+    const id = event.srcElement.id;
+    if (id === item.id);
+    {
+      const prodCart = listaproductos.find(item => parseInt(id) === item.id);
+      carrito.push(prodCart);
+      event.preventDefault();
+      console.log(carrito);
+      localStorage.setItem('myArray', JSON.stringify(carrito));
+      localStorage.setItem('cantidad', carrito.length);
+      document.getElementById('cartcount').innerHTML = carrito.length;
+      document.getElementById('cartcountNav').innerHTML = carrito.length;
+    }
+  };
+});
+listaproductos.map(item => {
+  document.getElementById('view_' + item.id).onclick = function (event) {
+    const idView = event.srcElement.id.split('_');
+    const id = idView[1];
+    if (id === item.id);
+    {
+      localStorage.setItem('productos', JSON.stringify(listaproductos));
+      localStorage.setItem('idProducto', id);
+      console.log(window.location.href);
+      if (window.location.href === 'http://127.0.0.1:5501/pages/shop.html') {
+        window.location.href = 'http://127.0.0.1:5501/pages/product.html';
+      }
+      if (window.location.href === 'https://amayaagustin23.github.io/EcomerceTemplateJerseys/pages/shop.html') {
+        window.location.href = 'https://amayaagustin23.github.io/EcomerceTemplateJerseys/pages/product.html';
+      }
+    }
+  };
+});
+
+const marcas = document.getElementsByClassName('form-check-marcas');
+let dataMarca = [];
+for (var i = 0; i < marcas.length; i++) {
+  marcas[i].addEventListener('click', function (event) {
+    document.getElementById('containerArticulos').innerHTML = '';
+    dataMarca.push({marca: event.target.value});
+    const listaMarcas = dataMarca.map(value => {
+      return listaproductos.filter(item => value.marca === item.marca);
     });
-    
-  }
-  
-  getProductTemplate(listaproductos)
-  
-  listaproductos.map(item => {
-    document.getElementById(item.id).onclick = function (event) {
-      const id = event.srcElement.id;
-      if (id === item.id);
-      {
-        const prodCart = listaproductos.find(item => parseInt(id) === item.id);
-        carrito.push(prodCart);
-        event.preventDefault();
-        console.log(carrito);
-        localStorage.setItem('myArray', JSON.stringify(carrito));
-        localStorage.setItem('cantidad', carrito.length);
-        document.getElementById('cartcount').innerHTML = carrito.length;
-        document.getElementById('cartcountNav').innerHTML = carrito.length;
-      }
-    };
+
+    getProductTemplate(listaMarcas.flat());
   });
-  listaproductos.map(item => {
-    document.getElementById('view_' + item.id).onclick = function (event) {
-      const idView = event.srcElement.id.split('_');
-      const id = idView[1];
-      if (id === item.id);
-      {
-        localStorage.setItem('productos', JSON.stringify(listaproductos));
-        localStorage.setItem('idProducto', id);
-        console.log(window.location.href);
-        if (window.location.href === 'http://127.0.0.1:5501/pages/shop.html') {
-          window.location.href = 'http://127.0.0.1:5501/pages/product.html';
-        }
-        if (window.location.href === 'https://amayaagustin23.github.io/EcomerceTemplateJerseys/pages/shop.html') {
-          window.location.href = 'https://amayaagustin23.github.io/EcomerceTemplateJerseys/pages/product.html';
-        }
-        // window.location.href = 'product.html';
-      }
-    };
+}
+
+const talles = document.getElementsByClassName('form-check-talles');
+for (var i = 0; i < talles.length; i++) {
+  talles[i].addEventListener('click', function (event) {
+    console.log(event.target.value);
+    const listaTalles = listaproductos.filter(item => item.tallesDisponibles.includes(event.target.value));
+    document.getElementById('containerArticulos').innerHTML = '';
+    getProductTemplate(listaTalles);
   });
-  
+}

@@ -2,6 +2,7 @@
 const listCart=JSON.parse(localStorage.getItem('myArray'))
 const cantidad=parseInt(localStorage.getItem('cantidad'))
 let totalCompra = listCart.reduce((acum, elemento)=> acum +=elemento.precio, 0)
+let compraEnvio=totalCompra
 document.getElementById("subtotal").innerHTML=`$${totalCompra}`
 document.getElementById("countProducts").innerHTML=`${cantidad} PRODUCTOS `
 document.getElementById('cartcountNav').innerHTML = `${cantidad} `;
@@ -21,7 +22,8 @@ let select = document.getElementById('select');
 select.addEventListener('change',
   function(){
 	let selectedOption = this.options[select.selectedIndex];
-	console.log(selectedOption.value);
+	totalCompra=compraEnvio+parseInt(selectedOption.value);
+	document.getElementById("subtotal").innerHTML=`$${totalCompra}`
   });
 
 function getCart() {
