@@ -75,6 +75,8 @@
       &:hover {
         -webkit-transform: scale(1.1);
         transform: scale(1.1);
+        cursor: pointer;
+        text-decoration: none;
       }
       &:hover .overlay {
         opacity: 0.85;
