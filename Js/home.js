@@ -240,10 +240,10 @@ const getProductTemplate = list => {
 const getNewsTemplate = list => {
   const news = list.map(
     item =>
-      `<div class="containerItem" id="view_${item.id}" href="./pages/newView.html" >
+      `<div class="containerItem">
         <img src=${item.imagenes[0]} alt="Avatar" class="image">
         <div class="overlay">
-          <a class="text" id="new_${item.id}">${item.tituloCarrucel} </a>
+          <a class="text" id="new_${item.id}"  href="./pages/newView.html" >${item.tituloCarrucel}</a>
         </div>
       </div>`
   );
