@@ -86,22 +86,22 @@ const listaproductos = [
     garantia: 'Contra defecto de fabricación',
     tallesDisponibles: 'L,XL',
   },
-  // {
-  //   id: 6,
-  //   nombre: 'Liverpool Fc 2022/23',
-  //   precio: 12999,
-  //   imagen: 'https://www.dexter.com.ar/on/demandware.static/-/Sites-dabra-catalog/default/dw969a2eb2/products/NI_DJ7862-609/NI_DJ7862-609-1.JPG',
-  //   descripcion:
-  //     'La Camiseta Nike Liverpool FC 2022/23 Stadium Home es una representación ideal de tu pasión por uno de los equipos más grandes de todos. Combina detalles de diseño tipo réplica basado en la camiseta que usan los profesionales en el campo dándote un look insuperable. Además te brinda comodidad absoluta gracias a su tecnología Dri-FIT para la absorción de sudor. Algo muy importante al momento de elegir esta prenda, es que está hecha en un 100% de fibras recicladas. Porque sabemos que no solo pensás en elegir tu vestimenta, sino que querés hacerlo bien.',
-  //   genero: 'Hombre',
-  //   material: 'Poliéster',
-  //   liga: 'Inglaterra',
-  //   cuello: 'Redondo',
-  //   calce: 'Regular',
-  //   marca: 'Nike',
-  //   garantia: 'Contra defecto de fabricación',
-  //   tallesDisponibles: 'S,L,XL',
-  // },
+  {
+    id: 6,
+    nombre: 'Liverpool Fc 2022/23',
+    precio: 12999,
+    imagen: 'https://www.dexter.com.ar/on/demandware.static/-/Sites-dabra-catalog/default/dw969a2eb2/products/NI_DJ7862-609/NI_DJ7862-609-1.JPG',
+    descripcion:
+      'La Camiseta Nike Liverpool FC 2022/23 Stadium Home es una representación ideal de tu pasión por uno de los equipos más grandes de todos. Combina detalles de diseño tipo réplica basado en la camiseta que usan los profesionales en el campo dándote un look insuperable. Además te brinda comodidad absoluta gracias a su tecnología Dri-FIT para la absorción de sudor. Algo muy importante al momento de elegir esta prenda, es que está hecha en un 100% de fibras recicladas. Porque sabemos que no solo pensás en elegir tu vestimenta, sino que querés hacerlo bien.',
+    genero: 'Hombre',
+    material: 'Poliéster',
+    liga: 'Inglaterra',
+    cuello: 'Redondo',
+    calce: 'Regular',
+    marca: 'Nike',
+    garantia: 'Contra defecto de fabricación',
+    tallesDisponibles: 'S,L,XL',
+  },
 ];
 
 const getProductTemplate = list => {

@@ -10,6 +10,7 @@
   .listarImagenes {
     margin-top: -50px;
     display: flex;
+    padding: 10px 0;
     overflow: auto;
     &::-webkit-scrollbar {
       width: 2px;
@@ -217,12 +218,18 @@
         url("../image/home/fc-barcelona-2022-23-nike-home-kit-h.jpg");
     }
     .listarImagenes {
+      padding: 5px 0;
       .containerItem {
         width: 150px;
         height: 100px;
         .image {
           width: 150px;
           height: 100px;
+        }
+        .overlay{
+          .text {
+            font-size: 14px;
+          }
         }
       }
     }
