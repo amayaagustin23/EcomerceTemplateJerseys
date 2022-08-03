@@ -1,0 +1,224 @@
+.containerNew {
+  margin: 2rem 1rem;
+  background-color: $colorBlanco;
+  padding: 2rem;
+  border-radius: 1rem;
+  .titleContainer {
+    position: relative;
+    margin: auto;
+    display: flex;
+    width: 90%;
+    justify-content: center;
+    .categorias {
+      display: flex;
+      justify-content: center;
+      position: absolute;
+      width: 30%;
+      left: 10px;
+      bottom: 5rem;
+      font-weight: bold;
+      p {
+        background-color: $colorGris;
+        margin-inline: 10px;
+        color: $colorBlanco;
+        padding: 0.1rem 0.2rem;
+        border-radius: 0.4rem;
+
+      }
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    img {
+      width: 100%;
+      opacity: 1;
+      transition: 0.5s ease;
+      border-radius: .5rem;
+    }
+    h1 {
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        bottom: -10px;
+        width: 94%;
+        height: 10%;
+        font-weight: bold;
+        color: $colorBlanco;
+        background: rgb(27,26,23);
+        background: linear-gradient(0deg, rgba(27,26,23,1) 0%, rgba(27, 26, 23, 0.394) 61%, rgba(0,212,255,0) 100%);
+        width: 100%;
+        border-radius: .5rem;
+    }
+}
+section{
+    margin-top: 2rem;
+    article{
+        width: 80%;
+        margin: auto;
+        img{
+            display: flex;
+            margin: auto;
+            justify-content: center;
+            border-radius: .5rem; 
+        }
+        p{
+            font-size: 20px;
+            text-align: center;
+        }
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+    .containerNew {
+        margin: 2rem 1rem;
+        background-color: $colorBlanco;
+        padding: 2rem;
+        border-radius: 1rem;
+        .titleContainer {
+          position: relative;
+          margin: auto;
+          display: flex;
+          width: 90%;
+          justify-content: center;
+          .categorias {
+            display: flex;
+            justify-content: center;
+            position: absolute;
+            width: 40%;
+            left: -25px;
+            bottom: 3rem;
+            font-weight: bold;
+            p {
+              background-color: $colorGris;
+              margin-inline: 5px;
+              color: $colorBlanco;
+              padding: 0.1rem 0.2rem;
+              border-radius: 0.4rem;
+              font-size: 10px;
+            }
+            &:hover {
+              cursor: pointer;
+            }
+          }
+      
+          img {
+            width: 100%;
+            opacity: 1;
+            transition: 0.5s ease;
+            border-radius: .5rem;
+          }
+          h1 {
+              display: flex;
+              justify-content: center;
+              position: absolute;
+              bottom: -10px;
+              width: 94%;
+              height: 14%;
+              font-weight: bold;
+              color: $colorBlanco;
+              background: rgb(27,26,23);
+              background: linear-gradient(0deg, rgba(27,26,23,1) 0%, rgba(27, 26, 23, 0.394) 61%, rgba(0,212,255,0) 100%);
+              width: 100%;
+              border-radius: .5rem;
+              font-size:30px;
+          }
+      }
+      section{
+          margin-top: 2rem;
+          article{
+              width: 80%;
+              margin: auto;
+              img{
+                  display: flex;
+                  margin: auto;
+                  justify-content: center;
+                  border-radius: .5rem; 
+                  width: 30rem;
+              }
+              p{
+                  font-size: 20px;
+                  text-align: center;
+              }
+          }
+        }
+      }   
+}
+
+@media screen and (max-width: 576px) {
+    .containerNew {
+        margin: 2rem 1rem;
+        background-color: $colorBlanco;
+        padding: 2rem;
+        border-radius: 1rem;
+        .titleContainer {
+          position: relative;
+          margin: auto;
+          display: flex;
+          width: 90%;
+          justify-content: center;
+          .categorias {
+            display: flex;
+            justify-content: center;
+            position: absolute;
+            width: 79%;
+            left: -25px;
+            bottom: 2.4rem;
+            font-weight: bold;
+            p {
+              background-color: $colorGris;
+              margin-inline: 5px;
+              color: $colorBlanco;
+              padding: 0.1rem 0.2rem;
+              border-radius: 0.4rem;
+              font-size: 10px;
+            }
+            &:hover {
+              cursor: pointer;
+            }
+          }
+      
+          img {
+            width: 100%;
+            opacity: 1;
+            transition: 0.5s ease;
+            border-radius: .5rem;
+          }
+          h1 {
+              display: flex;
+              justify-content: center;
+              position: absolute;
+              bottom: -10px;
+              width: 94%;
+              height: 25%;
+              font-weight: bold;
+              color: $colorBlanco;
+              background: rgb(27,26,23);
+              background: linear-gradient(0deg, rgba(27,26,23,1) 0%, rgba(27, 26, 23, 0.394) 61%, rgba(0,212,255,0) 100%);
+              width: 100%;
+              border-radius: .5rem;
+              font-size: 20px;
+              text-align: center;
+          }
+      }
+      section{
+          margin-top: 2rem;
+          article{
+              width: 80%;
+              margin: auto;
+              img{
+                  display: flex;
+                  margin: auto;
+                  justify-content: center;
+                  border-radius: .5rem; 
+                  width: 20rem;
+              }
+              p{
+                  font-size: 15px;
+                  text-align: center;
+              }
+          }
+        }
+      }   
+}

@@ -708,6 +708,192 @@ header .iconsNav, header .NavSearch {
       border-radius: 1rem;
       padding: 1rem .1rem; } }
 
+.containerNew {
+  margin: 2rem 1rem;
+  background-color: #EEEEEE;
+  padding: 2rem;
+  border-radius: 1rem; }
+  .containerNew .titleContainer {
+    position: relative;
+    margin: auto;
+    display: flex;
+    width: 90%;
+    justify-content: center; }
+    .containerNew .titleContainer .categorias {
+      display: flex;
+      justify-content: center;
+      position: absolute;
+      width: 30%;
+      left: 10px;
+      bottom: 5rem;
+      font-weight: bold; }
+      .containerNew .titleContainer .categorias p {
+        background-color: #403F3D;
+        margin-inline: 10px;
+        color: #EEEEEE;
+        padding: 0.1rem 0.2rem;
+        border-radius: 0.4rem; }
+      .containerNew .titleContainer .categorias:hover {
+        cursor: pointer; }
+    .containerNew .titleContainer img {
+      width: 100%;
+      opacity: 1;
+      transition: 0.5s ease;
+      border-radius: .5rem; }
+    .containerNew .titleContainer h1 {
+      display: flex;
+      justify-content: center;
+      position: absolute;
+      bottom: -10px;
+      width: 94%;
+      height: 10%;
+      font-weight: bold;
+      color: #EEEEEE;
+      background: #1b1a17;
+      background: linear-gradient(0deg, #1b1a17 0%, rgba(27, 26, 23, 0.394) 61%, rgba(0, 212, 255, 0) 100%);
+      width: 100%;
+      border-radius: .5rem; }
+  .containerNew section {
+    margin-top: 2rem; }
+    .containerNew section article {
+      width: 80%;
+      margin: auto; }
+      .containerNew section article img {
+        display: flex;
+        margin: auto;
+        justify-content: center;
+        border-radius: .5rem; }
+      .containerNew section article p {
+        font-size: 20px;
+        text-align: center; }
+
+@media screen and (max-width: 1000px) {
+  .containerNew {
+    margin: 2rem 1rem;
+    background-color: #EEEEEE;
+    padding: 2rem;
+    border-radius: 1rem; }
+    .containerNew .titleContainer {
+      position: relative;
+      margin: auto;
+      display: flex;
+      width: 90%;
+      justify-content: center; }
+      .containerNew .titleContainer .categorias {
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        width: 40%;
+        left: -25px;
+        bottom: 3rem;
+        font-weight: bold; }
+        .containerNew .titleContainer .categorias p {
+          background-color: #403F3D;
+          margin-inline: 5px;
+          color: #EEEEEE;
+          padding: 0.1rem 0.2rem;
+          border-radius: 0.4rem;
+          font-size: 10px; }
+        .containerNew .titleContainer .categorias:hover {
+          cursor: pointer; }
+      .containerNew .titleContainer img {
+        width: 100%;
+        opacity: 1;
+        transition: 0.5s ease;
+        border-radius: .5rem; }
+      .containerNew .titleContainer h1 {
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        bottom: -10px;
+        width: 94%;
+        height: 14%;
+        font-weight: bold;
+        color: #EEEEEE;
+        background: #1b1a17;
+        background: linear-gradient(0deg, #1b1a17 0%, rgba(27, 26, 23, 0.394) 61%, rgba(0, 212, 255, 0) 100%);
+        width: 100%;
+        border-radius: .5rem;
+        font-size: 30px; }
+    .containerNew section {
+      margin-top: 2rem; }
+      .containerNew section article {
+        width: 80%;
+        margin: auto; }
+        .containerNew section article img {
+          display: flex;
+          margin: auto;
+          justify-content: center;
+          border-radius: .5rem;
+          width: 30rem; }
+        .containerNew section article p {
+          font-size: 20px;
+          text-align: center; } }
+
+@media screen and (max-width: 576px) {
+  .containerNew {
+    margin: 2rem 1rem;
+    background-color: #EEEEEE;
+    padding: 2rem;
+    border-radius: 1rem; }
+    .containerNew .titleContainer {
+      position: relative;
+      margin: auto;
+      display: flex;
+      width: 90%;
+      justify-content: center; }
+      .containerNew .titleContainer .categorias {
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        width: 79%;
+        left: -25px;
+        bottom: 2.4rem;
+        font-weight: bold; }
+        .containerNew .titleContainer .categorias p {
+          background-color: #403F3D;
+          margin-inline: 5px;
+          color: #EEEEEE;
+          padding: 0.1rem 0.2rem;
+          border-radius: 0.4rem;
+          font-size: 10px; }
+        .containerNew .titleContainer .categorias:hover {
+          cursor: pointer; }
+      .containerNew .titleContainer img {
+        width: 100%;
+        opacity: 1;
+        transition: 0.5s ease;
+        border-radius: .5rem; }
+      .containerNew .titleContainer h1 {
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        bottom: -10px;
+        width: 94%;
+        height: 25%;
+        font-weight: bold;
+        color: #EEEEEE;
+        background: #1b1a17;
+        background: linear-gradient(0deg, #1b1a17 0%, rgba(27, 26, 23, 0.394) 61%, rgba(0, 212, 255, 0) 100%);
+        width: 100%;
+        border-radius: .5rem;
+        font-size: 20px;
+        text-align: center; }
+    .containerNew section {
+      margin-top: 2rem; }
+      .containerNew section article {
+        width: 80%;
+        margin: auto; }
+        .containerNew section article img {
+          display: flex;
+          margin: auto;
+          justify-content: center;
+          border-radius: .5rem;
+          width: 20rem; }
+        .containerNew section article p {
+          font-size: 15px;
+          text-align: center; } }
+
 .buttonArticulo {
   background-color: #FF8303;
   color: white;
@@ -787,16 +973,12 @@ header .iconsNav, header .NavSearch {
       border: 5px solid #F0E3CA;
       grid-column: span 1;
       grid-row: span 1;
+      opacity: 1;
       -webkit-transition: all 1s;
       transition: all 1s;
-      opacity: 1;
       -webkit-transition: 0.3s ease-in-out;
       transition: 0.3s ease-in-out;
       transition: 0.3s ease-in-out; }
-      .bodyContainerShop .containerArticulos .articulo .aArticulo {
-        text-decoration: none;
-        display: block;
-        color: #1B1A17; }
       .bodyContainerShop .containerArticulos .articulo:hover {
         -webkit-transform: scale(1.1);
         transform: scale(1.1);

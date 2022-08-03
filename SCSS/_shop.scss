@@ -58,17 +58,13 @@
       border: 5px solid $colorBeige;
       grid-column: span 1;
       grid-row: span 1;
+      opacity: 1;
       -webkit-transition: all 1s;
       transition: all 1s;
-      opacity: 1;
       -webkit-transition: 0.3s ease-in-out;
       transition: 0.3s ease-in-out;
       transition: 0.3s ease-in-out;
-      .aArticulo {
-        text-decoration: none;
-        display: block;
-        color: $colorNegro;
-      }
+
       &:hover {
         -webkit-transform: scale(1.1);
         transform: scale(1.1);
