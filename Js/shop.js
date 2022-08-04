@@ -1,3 +1,5 @@
+const { result } = require("lodash");
+
 const carrito = [];
 const listFilterMarcas = [];
 const cantidad = parseInt(localStorage.getItem('cantidad'));
@@ -117,7 +119,7 @@ const getProductTemplate = list => {
     </div>
     <div class="containerButton">
     <button class="buttonArticulo" id=${item.id} href="#">Añadir al carrito</button>
-    <button class="view" id="view_${item.id}" href="#">Ver</button>
+    <a href="../pages/product.html"  class="view"><button id="view_${item.id}" href="#">Ver</button></a>
     </div>
     </div>`
   );
@@ -154,28 +156,30 @@ listaproductos.map(item => {
     {
       localStorage.setItem('productos', JSON.stringify(listaproductos));
       localStorage.setItem('idProducto', id);
-      console.log(window.location.href);
-      if (window.location.href === 'http://127.0.0.1:5501/pages/shop.html') {
-        window.location.href = 'http://127.0.0.1:5501/pages/product.html';
-      }
-      if (window.location.href === 'https://amayaagustin23.github.io/EcomerceTemplateJerseys/pages/shop.html') {
-        window.location.href = 'https://amayaagustin23.github.io/EcomerceTemplateJerseys/pages/product.html';
-      }
+
     }
   };
 });
 
 const marcas = document.getElementsByClassName('form-check-marcas');
+const resultFilter=[]
 let dataMarca = [];
 for (var i = 0; i < marcas.length; i++) {
   marcas[i].addEventListener('click', function (event) {
-    document.getElementById('containerArticulos').innerHTML = '';
-    dataMarca.push({marca: event.target.value});
-    const listaMarcas = dataMarca.map(value => {
-      return listaproductos.filter(item => value.marca === item.marca);
-    });
-
-    getProductTemplate(listaMarcas.flat());
+    if(event.srcElement.checked===true){
+      document.getElementById('containerArticulos').innerHTML = '';
+      dataMarca.push({marca: event.target.value});
+      const listaMarcas = dataMarca.map(value => {
+        return listaproductos.filter(item => value.marca === item.marca);
+      });
+      const listFilter= listaMarcas.flat()
+      const sinRepetir = new Set(listFilter)
+      resultFilter =[...sinRepetir]
+      getProductTemplate(resultFilter);
+    }else{
+      const result=resultFilter.filter(item)
+      getProductTemplate(result);
+    }
   });
 }
 

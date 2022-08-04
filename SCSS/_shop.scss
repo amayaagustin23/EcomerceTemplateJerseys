@@ -3,6 +3,14 @@
 }
 .view {
   @include button($colorNegro, white, $colorAmarrillo, black, 30%, 1rem);
+  button{
+    background-color: transparent;
+    color: $colorBlanco ;
+    border: none;
+  }
+  &:hover{
+    color: $colorNegro;
+  }
 }
 
 #nikecheck:checked~#adidas{

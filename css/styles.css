@@ -931,6 +931,12 @@ header .iconsNav, header .NavSearch {
   .view:active {
     background-color: #1B1A17;
     color: #1B1A17; }
+  .view button {
+    background-color: transparent;
+    color: #EEEEEE;
+    border: none; }
+  .view:hover {
+    color: #1B1A17; }
 
 #nikecheck:checked ~ #adidas {
   display: none; }
