@@ -1,5 +1,3 @@
-const { result } = require("lodash");
-
 const carrito = [];
 const listFilterMarcas = [];
 const cantidad = parseInt(localStorage.getItem('cantidad'));
@@ -156,29 +154,32 @@ listaproductos.map(item => {
     {
       localStorage.setItem('productos', JSON.stringify(listaproductos));
       localStorage.setItem('idProducto', id);
-
     }
   };
 });
 
 const marcas = document.getElementsByClassName('form-check-marcas');
-const resultFilter=[]
 let dataMarca = [];
+let aux;
 for (var i = 0; i < marcas.length; i++) {
   marcas[i].addEventListener('click', function (event) {
-    if(event.srcElement.checked===true){
+    if (event.srcElement.checked === true) {
       document.getElementById('containerArticulos').innerHTML = '';
       dataMarca.push({marca: event.target.value});
       const listaMarcas = dataMarca.map(value => {
         return listaproductos.filter(item => value.marca === item.marca);
       });
-      const listFilter= listaMarcas.flat()
-      const sinRepetir = new Set(listFilter)
-      resultFilter =[...sinRepetir]
-      getProductTemplate(resultFilter);
-    }else{
-      const result=resultFilter.filter(item)
+      const listFilter = listaMarcas.flat();
+      const sinRepetir = new Set(listFilter);
+      const result = [...sinRepetir];
+      console.log(result);
+      aux = result;
       getProductTemplate(result);
+    } else {
+      const resultado =listaproductos.filter(item => event.target.value !== item.marca);
+      console.log(resultado);
+      document.getElementById('containerArticulos').innerHTML = '';
+      getProductTemplate(resultado);
     }
   });
 }
