@@ -105,7 +105,6 @@ const listaproductos = [
 ];
 
 const getProductTemplate = list => {
-  console.log(list);
   const products = list.map(
     item =>
       `<div class="articulo" id=${item.nombre}>
@@ -205,13 +204,20 @@ for (let i = 0; i < generos.length; i++) {
 const aplicarFiltros = () => {
   let productosFiltrados = [];
   listaproductos.forEach(item => {
-    let bool1 = marcasFiltradas.length===0?true:marcasFiltradas.includes(item.marca)
-    let bool2 = generoFiltrados.length===0?true:generoFiltrados.includes(item.genero)
-    let bool3 = tallesFIltrados.length===0?true:tallesFIltrados.includes(item.tallesDisponibles)
-    if(bool1&&bool2&&bool3){
-      productosFiltrados.push(item)
+    console.log(tallesFIltrados);
+    let bool1 = marcasFiltradas.length === 0 ? true : marcasFiltradas.includes(item.marca);
+    let bool2 = generoFiltrados.length === 0 ? true : generoFiltrados.includes(item.genero);
+    let bool3 
+    for (let index = 0; index < item.tallesDisponibles.length; index++) {
+      if(tallesFIltrados.includes(item.tallesDisponibles[index])){
+        bool3 = tallesFIltrados.length === 0 ? true : tallesFIltrados.includes(item.tallesDisponibles[index]);
+      }
+    }
+    console.log(bool3)
+    if (bool1 && bool2 && bool3) {
+      productosFiltrados.push(item);
     }
   });
-  document.getElementById('containerArticulos').innerHTML="";
-  getProductTemplate(productosFiltrados)
+  document.getElementById('containerArticulos').innerHTML = '';
+  getProductTemplate(productosFiltrados);
 };
