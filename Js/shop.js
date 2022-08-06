@@ -176,6 +176,19 @@ for (let i = 0; i < marcas.length; i++) {
   });
 }
 
+const generos = document.getElementsByClassName('form-check-genero');
+for (let i = 0; i < generos.length; i++) {
+  generos[i].addEventListener('click', function (event) {
+    if (event.srcElement.checked) {
+      generoFiltrados.push(event.target.value);
+    } else {
+      let aux = generoFiltrados.filter(item => item !== event.target.value);
+      generoFiltrados = aux;
+    }
+    aplicarFiltros();
+  });
+}
+
 const talles = document.getElementsByClassName('form-check-talles');
 for (let i = 0; i < talles.length; i++) {
   talles[i].addEventListener('click', function (event) {
@@ -189,18 +202,6 @@ for (let i = 0; i < talles.length; i++) {
   });
 }
 
-const generos = document.getElementsByClassName('form-check-genero');
-for (let i = 0; i < generos.length; i++) {
-  generos[i].addEventListener('click', function (event) {
-    if (event.srcElement.checked) {
-      generoFiltrados.push(event.target.value);
-    } else {
-      let aux = generoFiltrados.filter(item => item !== event.target.value);
-      generoFiltrados = aux;
-    }
-    aplicarFiltros();
-  });
-}
 const aplicarFiltros = () => {
   let productosFiltrados = [];
   listaproductos.forEach(item => {
@@ -208,12 +209,12 @@ const aplicarFiltros = () => {
     let bool1 = marcasFiltradas.length === 0 ? true : marcasFiltradas.includes(item.marca);
     let bool2 = generoFiltrados.length === 0 ? true : generoFiltrados.includes(item.genero);
     let bool3 
-    for (let index = 0; index < item.tallesDisponibles.length; index++) {
-      if(tallesFIltrados.includes(item.tallesDisponibles[index])){
-        bool3 = tallesFIltrados.length === 0 ? true : tallesFIltrados.includes(item.tallesDisponibles[index]);
-      }
-    }
-    console.log(bool3)
+    // for (let index = 0; index < item.tallesDisponibles.length; index++) {
+    //   if(tallesFIltrados.includes(item.tallesDisponibles[index])){
+    //     bool3 = tallesFIltrados.length === 0 ? true : tallesFIltrados.includes(item.tallesDisponibles[index]);
+    //   }
+    // }
+    // console.log(bool3)
     if (bool1 && bool2 && bool3) {
       productosFiltrados.push(item);
     }
