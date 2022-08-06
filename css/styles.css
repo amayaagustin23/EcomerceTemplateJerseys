@@ -676,8 +676,10 @@ header .iconsNav, header .NavSearch {
     align-items: center;
     -webkit-transition: all 2.5s;
     transition: all 2.5s; }
-    .containerPrincipal .containerCard .row .col-md-4 .img-fluid {
-      border-radius: 0.5rem; }
+    .containerPrincipal .containerCard .row .col-md-4 img {
+      border-radius: 0.5rem;
+      max-width: 100%;
+      height: auto; }
     .containerPrincipal .containerCard .row .col-md-8 h3 {
       text-align: center; }
     .containerPrincipal .containerCard .row:hover {

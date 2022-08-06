@@ -249,6 +249,7 @@ const getProductTemplate = list => {
     elementHTML.innerHTML += element;
   });
 };
+
 const getNewsTemplate = list => {
   const news = list.map(
     item =>

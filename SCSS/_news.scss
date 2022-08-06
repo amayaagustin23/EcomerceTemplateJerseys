@@ -55,8 +55,10 @@
         -webkit-transition: all 2.5s;
         transition: all 2.5s;
         .col-md-4 {
-          .img-fluid {
+          img {
             border-radius: 0.5rem;
+            max-width: 100%;
+            height: auto;
           }
         }
         .col-md-8 {
