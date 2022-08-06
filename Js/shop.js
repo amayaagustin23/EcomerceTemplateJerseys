@@ -20,7 +20,7 @@ const listaproductos = [
     calce: 'Regular',
     marca: 'Nike',
     garantia: 'Contra defecto de fabricación',
-    tallesDisponibles: 'M,XL',
+    tallesDisponibles: ['M', 'XL'],
   },
   {
     id: 2,
@@ -36,7 +36,7 @@ const listaproductos = [
     calce: 'Regular',
     marca: 'Givova',
     garantia: 'Contra defecto de fabricación',
-    tallesDisponibles: 'S,L,XL',
+    tallesDisponibles: ['S', 'L', 'XL'],
   },
   {
     id: 3,
@@ -52,7 +52,7 @@ const listaproductos = [
     calce: 'Regular',
     marca: 'Adidas',
     garantia: 'Contra defecto de fabricación',
-    tallesDisponibles: 'M,L',
+    tallesDisponibles: ['M', 'L'],
   },
   {
     id: 4,
@@ -68,7 +68,7 @@ const listaproductos = [
     calce: 'Regular',
     marca: 'Adidas',
     garantia: 'Contra defecto de fabricación',
-    tallesDisponibles: 'S,XL',
+    tallesDisponibles: ['S', 'XL'],
   },
   {
     id: 5,
@@ -84,7 +84,7 @@ const listaproductos = [
     calce: 'Regular',
     marca: 'Umbro',
     garantia: 'Contra defecto de fabricación',
-    tallesDisponibles: 'L,XL',
+    tallesDisponibles: ['L', 'XL'],
   },
   {
     id: 6,
@@ -93,18 +93,19 @@ const listaproductos = [
     imagen: 'https://www.dexter.com.ar/on/demandware.static/-/Sites-dabra-catalog/default/dw969a2eb2/products/NI_DJ7862-609/NI_DJ7862-609-1.JPG',
     descripcion:
       'La Camiseta Nike Liverpool FC 2022/23 Stadium Home es una representación ideal de tu pasión por uno de los equipos más grandes de todos. Combina detalles de diseño tipo réplica basado en la camiseta que usan los profesionales en el campo dándote un look insuperable. Además te brinda comodidad absoluta gracias a su tecnología Dri-FIT para la absorción de sudor. Algo muy importante al momento de elegir esta prenda, es que está hecha en un 100% de fibras recicladas. Porque sabemos que no solo pensás en elegir tu vestimenta, sino que querés hacerlo bien.',
-    genero: 'Hombre',
+    genero: 'Mujer',
     material: 'Poliéster',
     liga: 'Inglaterra',
     cuello: 'Redondo',
     calce: 'Regular',
     marca: 'Nike',
     garantia: 'Contra defecto de fabricación',
-    tallesDisponibles: 'S,L,XL',
+    tallesDisponibles: ['S', 'L', 'XL'],
   },
 ];
 
 const getProductTemplate = list => {
+  console.log(list);
   const products = list.map(
     item =>
       `<div class="articulo" id=${item.nombre}>
@@ -158,38 +159,59 @@ listaproductos.map(item => {
   };
 });
 
+let productosFiltrados = [];
+let marcasFiltradas = [];
+let tallesFIltrados = [];
+let generoFiltrados = [];
+
 const marcas = document.getElementsByClassName('form-check-marcas');
-let dataMarca = [];
-let aux;
-for (var i = 0; i < marcas.length; i++) {
+for (let i = 0; i < marcas.length; i++) {
   marcas[i].addEventListener('click', function (event) {
-    if (event.srcElement.checked === true) {
-      document.getElementById('containerArticulos').innerHTML = '';
-      dataMarca.push({marca: event.target.value});
-      const listaMarcas = dataMarca.map(value => {
-        return listaproductos.filter(item => value.marca === item.marca);
-      });
-      const listFilter = listaMarcas.flat();
-      const sinRepetir = new Set(listFilter);
-      const result = [...sinRepetir];
-      console.log(result);
-      aux = result;
-      getProductTemplate(result);
+    if (event.srcElement.checked) {
+      marcasFiltradas.push(event.target.value);
     } else {
-      const resultado =listaproductos.filter(item => event.target.value !== item.marca);
-      console.log(resultado);
-      document.getElementById('containerArticulos').innerHTML = '';
-      getProductTemplate(resultado);
+      let aux = marcasFiltradas.filter(item => item !== event.target.value);
+      marcasFiltradas = aux;
     }
+    aplicarFiltros();
   });
 }
 
 const talles = document.getElementsByClassName('form-check-talles');
-for (var i = 0; i < talles.length; i++) {
+for (let i = 0; i < talles.length; i++) {
   talles[i].addEventListener('click', function (event) {
-    console.log(event.target.value);
-    const listaTalles = listaproductos.filter(item => item.tallesDisponibles.includes(event.target.value));
-    document.getElementById('containerArticulos').innerHTML = '';
-    getProductTemplate(listaTalles);
+    if (event.srcElement.checked) {
+      tallesFIltrados.push(event.target.value);
+    } else {
+      let aux = tallesFIltrados.filter(item => item !== event.target.value);
+      tallesFIltrados = aux;
+    }
+    aplicarFiltros();
   });
 }
+
+const generos = document.getElementsByClassName('form-check-genero');
+for (let i = 0; i < generos.length; i++) {
+  generos[i].addEventListener('click', function (event) {
+    if (event.srcElement.checked) {
+      generoFiltrados.push(event.target.value);
+    } else {
+      let aux = generoFiltrados.filter(item => item !== event.target.value);
+      generoFiltrados = aux;
+    }
+    aplicarFiltros();
+  });
+}
+const aplicarFiltros = () => {
+  let productosFiltrados = [];
+  listaproductos.forEach(item => {
+    let bool1 = marcasFiltradas.length===0?true:marcasFiltradas.includes(item.marca)
+    let bool2 = generoFiltrados.length===0?true:generoFiltrados.includes(item.genero)
+    let bool3 = tallesFIltrados.length===0?true:tallesFIltrados.includes(item.tallesDisponibles)
+    if(bool1&&bool2&&bool3){
+      productosFiltrados.push(item)
+    }
+  });
+  document.getElementById('containerArticulos').innerHTML="";
+  getProductTemplate(productosFiltrados)
+};
