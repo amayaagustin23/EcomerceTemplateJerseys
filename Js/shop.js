@@ -140,7 +140,7 @@ const getProductTemplate = list => {
   
   getProductTemplate(listaproductos);
   
-  if (cantidad === NaN) cantidad=0;
+  if (cantidad === undefined) cantidad=0;
   document.getElementById('cartcountNav').innerHTML = cantidad;
   document.getElementById('cartcount').innerHTML = cantidad;
   

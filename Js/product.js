@@ -81,7 +81,7 @@ const talles = document.getElementsByClassName('talle');
 for (let i = 0; i < talles.length; i++) {
   producto.tallesFaltante.map(item => {
     if (talles[i].innerHTML === item) {
-      talles[i].disabled = true;
+      talles[i].style.display="none";
     }
   });
 }
