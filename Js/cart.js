@@ -10,11 +10,12 @@ document.getElementById('cartcount').innerHTML = `${cantidad} `;
 
 console.log(listCart)
 
-const result = [...listCart.reduce( (list, item) => {
-    if (!list.has(item.id &&item.talle)) list.set(item.id, { ...item, count: 0 });
-    list.get(item.id).count++;
-    return list;
-}, new Map).values()];
+const result = listCart.reduce((acc,item)=>{
+	if(!acc.includes(item)){
+		acc.push(item);
+	}
+	return acc;
+  },[])
 
 
 console.log(result)
@@ -27,7 +28,7 @@ select.addEventListener('change',
   });
 
 function getCart() {
-  return listCart.map(
+  return result.map(
     item =>
       `  <hr class="my-4" />
 		<div class="row mb-4 d-flex justify-content-between align-items-center">

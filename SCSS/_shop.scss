@@ -1,51 +1,49 @@
-.buttonArticulo{
+.buttonArticulo {
   @include button($colorNaranja, white, $colorNegro, white, 70%, 1rem);
 }
 .view {
   @include button($colorNegro, white, $colorAmarrillo, black, 30%, 1rem);
-  button{
+  button {
     background-color: transparent;
-    color: $colorBlanco ;
+    color: $colorBlanco;
     border: none;
   }
-  &:hover{
+  &:hover {
     color: $colorNegro;
   }
 }
 
-#nikecheck:checked~#adidas{
+#nikecheck:checked ~ #adidas {
   display: none;
 }
-
 
 .bodyContainerShop {
   margin: 2rem 1rem;
   padding: 3rem 1.5rem;
   border-radius: 1rem;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   background-color: $colorBlanco;
   aside {
     display: flex;
     justify-content: center;
-    margin-right: 5rem;
     .asideSection {
-      width: 18rem;
+      width: 16rem;
       .accordion {
         .accordion-item {
           .accordion-collapse {
             .search {
               display: grid;
-              grid-template-columns: 9fr 1fr;
-              margin-bottom: 3rem;
+              margin-bottom: 1rem;
               input {
-                max-width: 80%;
+                max-width: 85%;
                 padding: 0.4rem 0.25rem;
                 background: transparent;
                 color: $colorNegro;
                 font-size: 1rem;
                 border-radius: 1rem;
                 margin-right: 0.5rem;
+                margin-left: -1rem;
               }
             }
           }
@@ -58,9 +56,9 @@
     grid-gap: 25px;
     grid-template-columns: repeat(3, 1fr);
     .articulo {
-      height: 30rem;
-      width: 20rem;
-      margin: 1rem;
+      height: 22rem;
+      width: 17rem;
+      margin: 0.5rem;
       padding: 0.2rem;
       border-radius: 1rem;
       border: 5px solid $colorBeige;
@@ -72,7 +70,6 @@
       -webkit-transition: 0.3s ease-in-out;
       transition: 0.3s ease-in-out;
       transition: 0.3s ease-in-out;
-
       &:hover {
         -webkit-transform: scale(1.1);
         transform: scale(1.1);
@@ -85,7 +82,7 @@
       img {
         display: flex;
         justify-content: center;
-        width: 19rem;
+        width: 16rem;
         border-radius: 0.5rem;
       }
       &:hover {
@@ -94,14 +91,31 @@
       }
     }
     .textos {
+      color: $colorNegro;
+      text-decoration: none !important;
       margin-top: 0.4rem;
       height: 6rem;
-      p {
+      padding-left: 0.2rem;
+      .title{
         font-size: 22px;
       }
-
+      .precioEtiqueta {
+        display: flex;
+        justify-content: space-between;
+        p {
+          text-decoration: none !important;
+          font-size: 22px;
+        }
+        .etiqueta{
+          font-weight: bold;
+          color: $colorBlanco;
+          border-radius: 1rem;
+          padding: .2rem;
+          margin-right: 1rem;
+        }
+      }
     }
-    .containerButton{
+    .containerButton {
       margin-top: -5px;
       display: flex;
       align-items: center;
@@ -138,6 +152,7 @@
               .search {
                 input {
                   max-width: 100%;
+                  margin-left: 0;
                 }
               }
             }
@@ -151,22 +166,23 @@
       grid-template-columns: repeat(2, 1fr);
       margin: auto;
       .articulo {
-        width: 19rem;
-        height: 30.2rem;
+        width: 13rem;
+        height: 20.2rem;
         .imagen {
           img {
-            width: 18rem;
+            width: 12rem;
           }
         }
         .textos {
           font-size: small;
         }
-        .containerButton{
+        .containerButton {
           margin-top: 1.5rem;
           display: flex;
           align-items: center;
           justify-content: space-between;
-          .buttonArticulo,.view {
+          .buttonArticulo,
+          .view {
             font-size: 14px;
           }
         }
@@ -188,7 +204,6 @@
                 grid-template-columns: 9fr 1fr;
                 input {
                   max-width: 70%;
-
                 }
               }
             }
@@ -202,7 +217,7 @@
       margin: auto;
       .articulo {
         width: 16rem;
-        height: 26.7rem;
+        height: 21.5rem;
         margin: auto;
 
         .imagen {
@@ -217,12 +232,13 @@
             font-size: 22px;
           }
         }
-        .containerButton{
+        .containerButton {
           margin-top: 1rem;
           display: flex;
           align-items: center;
           justify-content: space-between;
-          .buttonArticulo,.view {
+          .buttonArticulo,
+          .view {
             font-size: 14px;
           }
         }

@@ -5,6 +5,10 @@
 ol {
   list-style-type: none;
 }
+a {
+  text-decoration: none !important;
+}
+
 
 #cartcount{
   color: $colorNegro;

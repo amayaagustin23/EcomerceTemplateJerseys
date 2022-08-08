@@ -1,6 +1,7 @@
 const carrito = [];
 const listFilterMarcas = [];
-const marca = '';
+const cantidad = parseInt(localStorage.getItem('cantidad'));
+
 
 const listaproductos = [
   {
@@ -19,10 +20,11 @@ const listaproductos = [
     garantia: 'Contra defecto de fabricación',
     tallesDisponibles: ['M', 'XL'],
     tallesFaltante: ['S', 'L'],
+    etiqueta: 'OFERTA',
   },
   {
     id: 2,
-    nombre: "Newell'sOldBoys 2022",
+    nombre: "Newell's Old Boys 2022",
     precio: 9599,
     imagen: 'https://www.dexter.com.ar/on/demandware.static/-/Sites-dabra-catalog/default/dwc73dbb89/products/GV_NOB22010110121/GV_NOB22010110121-1.JPG',
     descripcion:
@@ -36,6 +38,7 @@ const listaproductos = [
     garantia: 'Contra defecto de fabricación',
     tallesDisponibles: ['S', 'L', 'XL'],
     tallesFaltante: ['M'],
+    etiqueta: '',
   },
   {
     id: 3,
@@ -52,6 +55,7 @@ const listaproductos = [
     marca: 'Adidas',
     garantia: 'Contra defecto de fabricación',
     tallesDisponibles: ['M', 'L'],
+    etiqueta: 'OFERTA',
   },
   {
     id: 4,
@@ -69,6 +73,7 @@ const listaproductos = [
     garantia: 'Contra defecto de fabricación',
     tallesDisponibles: ['S', 'XL'],
     tallesFaltante: ['M', 'L'],
+    etiqueta: 'NUEVO',
   },
   {
     id: 5,
@@ -86,6 +91,7 @@ const listaproductos = [
     garantia: 'Contra defecto de fabricación',
     tallesDisponibles: ['L', 'XL'],
     tallesFaltante: ['S', 'M'],
+    etiqueta: '',
   },
   {
     id: 6,
@@ -103,54 +109,50 @@ const listaproductos = [
     garantia: 'Contra defecto de fabricación',
     tallesDisponibles: ['S', 'L', 'XL'],
     tallesFaltante: ['M'],
+    etiqueta: 'OFERTA',
   },
 ];
 
 const getProductTemplate = list => {
   const products = list.map(
     item =>
-      `<div class="articulo" id=${item.nombre}>
+    `<div class="articulo" id=${item.nombre}>
+    <a id="view_${item.id}" href="../pages/product.html">
     <div class="imagen">
     <img src="${item.imagen}" alt="${item.nombre}" title="${item.nombre}"/>
     </div>
     <div class="textos">
-    <h3>${item.nombre}</h3>
+    <h3 class="title">${item.nombre}</h3>
+    <div class='precioEtiqueta'>
     <p>$${item.precio}</p>
+    <p class='etiqueta'>${item.etiqueta}</p>
     </div>
-    <div class="containerButton">
-    <button class="buttonArticulo" id=${item.id} href="#">Añadir al carrito</button>
-    <a href="../pages/product.html"  class="view"><button id="view_${item.id}" href="#">Ver</button></a>
     </div>
+    </a>
     </div>`
-  );
-  const elementHTML = document.getElementById('containerArticulos');
-  const data = products;
-  data.forEach(element => {
-    elementHTML.innerHTML += element;
-  });
-};
-
-getProductTemplate(listaproductos);
-
-listaproductos.map(item => {
-  document.getElementById(item.id).onclick = function (event) {
-    const id = event.srcElement.id;
-    if (id === item.id);
-    {
-      const prodCart = listaproductos.find(item => parseInt(id) === item.id);
-      carrito.push(prodCart);
-      event.preventDefault();
-      console.log(carrito);
-      localStorage.setItem('myArray', JSON.stringify(carrito));
-      localStorage.setItem('cantidad', carrito.length);
-      document.getElementById('cartcount').innerHTML = carrito.length;
-      document.getElementById('cartcountNav').innerHTML = carrito.length;
-    }
+    );
+    const elementHTML = document.getElementById('containerArticulos');
+    const data = products;
+    data.forEach(element => {
+      elementHTML.innerHTML += element;
+    });
   };
-});
+  
+  getProductTemplate(listaproductos);
+  
+  if (cantidad === NaN) cantidad=0;
+  document.getElementById('cartcountNav').innerHTML = cantidad;
+  document.getElementById('cartcount').innerHTML = cantidad;
+  
+  let etiquetas = document.getElementsByClassName('etiqueta');
+for (let index = 0; index < etiquetas.length; index++) {
+  if(etiquetas[index].innerHTML==="OFERTA") etiquetas[index].style.backgroundColor="green"
+  if(etiquetas[index].innerHTML==="NUEVO") etiquetas[index].style.backgroundColor="orange"
+}
+
 listaproductos.map(item => {
-  document.getElementById('view_' + item.id).onclick = function (event) {
-    const idView = event.srcElement.id.split('_');
+  document.getElementById('view_' + item.id).onclick = () => {
+    const idView = document.getElementById('view_' + item.id).id.split('_');
     const id = idView[1];
     if (id === item.id);
     {

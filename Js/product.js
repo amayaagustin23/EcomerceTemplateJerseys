@@ -104,5 +104,7 @@ document.getElementById('carrito').onclick = () => {
     console.log(listCart)
    localStorage.setItem('myArray', JSON.stringify(listCart));
    localStorage.setItem('cantidad', listCart.length);
+   document.getElementById('cartcountNav').innerHTML = listCart.length;
+   document.getElementById('cartcount').innerHTML = listCart.length;
   }
 };
