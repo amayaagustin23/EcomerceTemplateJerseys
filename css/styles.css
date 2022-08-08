@@ -638,6 +638,9 @@ header .iconsNav, header .NavSearch {
   .buttonIndex:active {
     background-color: #FDCA40;
     color: #1B1A17; }
+  .buttonIndex:disabled {
+    background-color: #cccccc;
+    color: #1B1A17; }
 
 .tags {
   display: grid;
@@ -914,6 +917,9 @@ header .iconsNav, header .NavSearch {
   .buttonArticulo:active {
     background-color: #FF8303;
     color: #1B1A17; }
+  .buttonArticulo:disabled {
+    background-color: #cccccc;
+    color: #1B1A17; }
 
 .view {
   background-color: #1B1A17;
@@ -932,6 +938,9 @@ header .iconsNav, header .NavSearch {
     color: black; }
   .view:active {
     background-color: #1B1A17;
+    color: #1B1A17; }
+  .view:disabled {
+    background-color: #cccccc;
     color: #1B1A17; }
   .view button {
     background-color: transparent;
@@ -1104,6 +1113,9 @@ header .iconsNav, header .NavSearch {
   .talle:active {
     background-color: #F0E3CA;
     color: #1B1A17; }
+  .talle:disabled {
+    background-color: #cccccc;
+    color: #1B1A17; }
 
 #carrito {
   background-color: #1B1A17;
@@ -1124,6 +1136,9 @@ header .iconsNav, header .NavSearch {
     color: #1B1A17; }
   #carrito:active {
     background-color: #1B1A17;
+    color: #1B1A17; }
+  #carrito:disabled {
+    background-color: #cccccc;
     color: #1B1A17; }
   #carrito:hover {
     -webkit-transform: scale(1.1);
@@ -1186,6 +1201,13 @@ header .iconsNav, header .NavSearch {
             border: #FF8303 1px solid;
             -webkit-transform: scale(1.1);
             transform: scale(1.1); }
+      .containerProduct section .containerSection .contenedor .containerAddCart {
+        display: flex; }
+        .containerProduct section .containerSection .contenedor .containerAddCart input {
+          border-radius: 1rem;
+          border: 1px solid #FF8303;
+          padding-left: 1rem;
+          width: 5rem; }
   .containerProduct section .accordion .accordion-item .accordion-collapse .accordion-body .listasDesc {
     display: flex;
     justify-content: space-evenly;
@@ -1275,6 +1297,9 @@ header .iconsNav, header .NavSearch {
           font-size: 10px; }
           .containerProduct section .containerSection .contenedor .talles .talle {
             width: 60px; }
+        .containerProduct section .containerSection .contenedor .containerAddCart {
+          margin: auto;
+          justify-content: center; }
     .containerProduct section section .accordion .accordion-item .accordion-collapse .accordion-body .listasDesc {
       display: grid;
       margin: auto; }
@@ -1307,6 +1332,9 @@ header .iconsNav, header .NavSearch {
     color: #1B1A17; }
   .butonContact:active {
     background-color: #1B1A17;
+    color: #1B1A17; }
+  .butonContact:disabled {
+    background-color: #cccccc;
     color: #1B1A17; }
 
 form {

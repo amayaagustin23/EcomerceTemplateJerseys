@@ -1,8 +1,5 @@
 const carrito = [];
 const listFilterMarcas = [];
-const cantidad = parseInt(localStorage.getItem('cantidad'));
-document.getElementById('cartcountNav').innerHTML = `${cantidad} `;
-document.getElementById('cartcount').innerHTML = `${cantidad} `;
 const marca = '';
 
 const listaproductos = [
@@ -21,6 +18,7 @@ const listaproductos = [
     marca: 'Nike',
     garantia: 'Contra defecto de fabricación',
     tallesDisponibles: ['M', 'XL'],
+    tallesFaltante: ['S', 'L'],
   },
   {
     id: 2,
@@ -37,6 +35,7 @@ const listaproductos = [
     marca: 'Givova',
     garantia: 'Contra defecto de fabricación',
     tallesDisponibles: ['S', 'L', 'XL'],
+    tallesFaltante: ['M'],
   },
   {
     id: 3,
@@ -69,6 +68,7 @@ const listaproductos = [
     marca: 'Adidas',
     garantia: 'Contra defecto de fabricación',
     tallesDisponibles: ['S', 'XL'],
+    tallesFaltante: ['M', 'L'],
   },
   {
     id: 5,
@@ -85,6 +85,7 @@ const listaproductos = [
     marca: 'Umbro',
     garantia: 'Contra defecto de fabricación',
     tallesDisponibles: ['L', 'XL'],
+    tallesFaltante: ['S', 'M'],
   },
   {
     id: 6,
@@ -101,6 +102,7 @@ const listaproductos = [
     marca: 'Nike',
     garantia: 'Contra defecto de fabricación',
     tallesDisponibles: ['S', 'L', 'XL'],
+    tallesFaltante: ['M'],
   },
 ];
 
@@ -208,14 +210,12 @@ const aplicarFiltros = () => {
     let bool1 = marcasFiltradas.length === 0 ? true : marcasFiltradas.includes(item.marca);
     let bool2 = generoFiltrados.length === 0 ? true : generoFiltrados.includes(item.genero);
     let bool3 = false;
-    if(tallesFIltrados.length===0){
-      bool3=true
-    }else{
-
+    if (tallesFIltrados.length === 0) {
+      bool3 = true;
+    } else {
       for (let index = 0; index < item.tallesDisponibles.length; index++) {
         if (tallesFIltrados.includes(item.tallesDisponibles[index])) {
-
-          bool3=tallesFIltrados.includes(item.tallesDisponibles[index])
+          bool3 = tallesFIltrados.includes(item.tallesDisponibles[index]);
         }
       }
     }

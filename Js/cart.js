@@ -1,7 +1,7 @@
 
 const listCart=JSON.parse(localStorage.getItem('myArray'))
 const cantidad=parseInt(localStorage.getItem('cantidad'))
-let totalCompra = listCart.reduce((acum, elemento)=> acum +=elemento.precio, 0)
+let totalCompra = listCart.reduce((acum, elemento)=> acum +=elemento.precio*elemento.count, 0)
 let compraEnvio=totalCompra
 document.getElementById("subtotal").innerHTML=`$${totalCompra}`
 document.getElementById("countProducts").innerHTML=`${cantidad} PRODUCTOS `
@@ -11,7 +11,7 @@ document.getElementById('cartcount').innerHTML = `${cantidad} `;
 console.log(listCart)
 
 const result = [...listCart.reduce( (list, item) => {
-    if (!list.has(item.id)) list.set(item.id, { ...item, count: 0 });
+    if (!list.has(item.id &&item.talle)) list.set(item.id, { ...item, count: 0 });
     list.get(item.id).count++;
     return list;
 }, new Map).values()];
@@ -27,7 +27,7 @@ select.addEventListener('change',
   });
 
 function getCart() {
-  return result.map(
+  return listCart.map(
     item =>
       `  <hr class="my-4" />
 		<div class="row mb-4 d-flex justify-content-between align-items-center">
@@ -35,7 +35,7 @@ function getCart() {
 			<img src=${item.imagen} class="img-fluid rounded-3" />
 		  </div>
 		  <div class="col-md-3 col-lg-3 col-xl-3">
-			<h6 class="text-muted">${item.nombre}</h6>
+			<h6 class="text-muted">${item.nombre} - ${item.talle}</h6>
 			<h6 class="text-black mb-0">Camiseta</h6>
 		  </div>
 		  <div class="col-md-3 col-lg-3 col-xl-2 d-flex">

@@ -1,12 +1,14 @@
-const list=JSON.parse(localStorage.getItem('productos'))
-const id=parseInt(localStorage.getItem('idProducto'))
-const cantidad=parseInt(localStorage.getItem('cantidad'))
-const producto=list.find(item=>item.id===id)
+const list = JSON.parse(localStorage.getItem('productos'));
+const id = parseInt(localStorage.getItem('idProducto'));
+const cantidad = parseInt(localStorage.getItem('cantidad'));
+let listCart = [];
+listCart = JSON.parse(localStorage.getItem('myArray'));
+const producto = list.find(item => item.id === id);
 document.getElementById('cartcountNav').innerHTML = `${cantidad} `;
 document.getElementById('cartcount').innerHTML = `${cantidad} `;
-console.log(producto)
-  
-const productoView=`<section>
+console.log(producto);
+
+const productoView = `<section>
 <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);"
     aria-label="breadcrumb">
     <ol class="breadcrumb">
@@ -25,13 +27,14 @@ const productoView=`<section>
     <br>
     <h3 class="precio">$${producto.precio}</h3>
     <div class="talles">
-    <button class="talle">S</button>
-    <button class="talle">M</button>
-    <button class="talle">L</button>
-    <button class="talle">XL</button>
+        <button class="talle" value="S">S</button>
+        <button class="talle" value="M">M</button>
+        <button class="talle" value="L">L</button>
+        <button class="talle" value="XL">XL</button>
     </div>
-    <div>
-    <button id="carrito">Agregar al carrito</button>
+    <div class="containerAddCart">
+        <button id="carrito">Agregar al carrito</button>
+        <input min=0 value=0 type="number" id="count">
     </div>
     </div>
     </div>
@@ -71,5 +74,35 @@ const productoView=`<section>
         </div>
     </div>
 </section>`;
-    
-    document.getElementById('containerProduct').innerHTML=productoView
+
+document.getElementById('containerProduct').innerHTML = productoView;
+
+const talles = document.getElementsByClassName('talle');
+for (let i = 0; i < talles.length; i++) {
+  producto.tallesFaltante.map(item => {
+    if (talles[i].innerHTML === item) {
+      talles[i].disabled = true;
+    }
+  });
+}
+let productCarrito;
+for (let i = 0; i < talles.length; i++) {
+  talles[i].onclick = function (event) {
+    productCarrito = {...producto, talle: talles[i].innerHTML};
+
+    talles[i].getElementsByClassName.backgorundColor = 'black';
+    talles[i].getElementsByClassName.color = 'white';
+  };
+}
+console.log(listCart);
+document.getElementById('carrito').onclick = () => {
+  if (listCart === null) listCart = [];
+  if (document.getElementById('count').value==="0") alert("No se ingreso la cantidad")
+  else{
+    const prod={...productCarrito,count:parseInt(document.getElementById('count').value)}
+    listCart.push(prod);
+    console.log(listCart)
+   localStorage.setItem('myArray', JSON.stringify(listCart));
+   localStorage.setItem('cantidad', listCart.length);
+  }
+};

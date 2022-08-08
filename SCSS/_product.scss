@@ -96,6 +96,15 @@
             }
           }
         }
+        .containerAddCart{
+          display: flex;
+          input{
+            border-radius: 1rem;
+            border: 1px solid $colorNaranja;
+            padding-left: 1rem;
+            width: 5rem;
+          }
+        }
       }
     }
   }
@@ -224,6 +233,11 @@
               width: 60px;
             }
           }
+          .containerAddCart{
+            margin: auto;
+            justify-content: center;
+          }
+
         }
 
       }
