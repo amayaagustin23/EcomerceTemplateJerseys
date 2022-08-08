@@ -854,13 +854,13 @@ header .iconsNav, header .NavSearch {
         display: flex;
         justify-content: center;
         position: absolute;
-        width: 79%;
-        left: -25px;
-        bottom: 2.4rem;
+        width: 82%;
+        left: -2px;
+        bottom: 1.8rem;
         font-weight: bold; }
         .containerNew .titleContainer .categorias p {
           background-color: #403F3D;
-          margin-inline: 5px;
+          margin-inline: 3px;
           color: #EEEEEE;
           padding: 0.1rem 0.2rem;
           border-radius: 0.4rem;
@@ -878,7 +878,7 @@ header .iconsNav, header .NavSearch {
         position: absolute;
         bottom: -10px;
         width: 94%;
-        height: 25%;
+        height: 32%;
         font-weight: bold;
         color: #EEEEEE;
         background: #1b1a17;
@@ -897,7 +897,7 @@ header .iconsNav, header .NavSearch {
           margin: auto;
           justify-content: center;
           border-radius: .5rem;
-          width: 20rem; }
+          width: 14rem; }
         .containerNew section article p {
           font-size: 15px;
           text-align: center; } }

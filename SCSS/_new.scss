@@ -162,13 +162,13 @@ section{
             display: flex;
             justify-content: center;
             position: absolute;
-            width: 79%;
-            left: -25px;
-            bottom: 2.4rem;
+            width: 82%;
+            left: -2px;
+            bottom: 1.8rem;
             font-weight: bold;
             p {
               background-color: $colorGris;
-              margin-inline: 5px;
+              margin-inline: 3px;
               color: $colorBlanco;
               padding: 0.1rem 0.2rem;
               border-radius: 0.4rem;
@@ -191,7 +191,7 @@ section{
               position: absolute;
               bottom: -10px;
               width: 94%;
-              height: 25%;
+              height: 32%;
               font-weight: bold;
               color: $colorBlanco;
               background: rgb(27,26,23);
@@ -212,7 +212,7 @@ section{
                   margin: auto;
                   justify-content: center;
                   border-radius: .5rem; 
-                  width: 20rem;
+                  width: 14rem;
               }
               p{
                   font-size: 15px;
