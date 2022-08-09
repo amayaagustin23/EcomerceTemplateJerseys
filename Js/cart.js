@@ -66,5 +66,7 @@ listCart.map(item => {
     document.getElementById('cartcountNav').innerHTML = filtered.length;
     document.getElementById('cartcount').innerHTML = filtered.length;
     document.getElementById('countProducts').innerHTML = filtered.length;
+	let totalCompraNew = filtered.reduce((acum, elemento) => (acum += elemento.precio * elemento.count), 0);
+	document.getElementById('subtotal').innerHTML = `$${totalCompraNew}`;
   };
 });

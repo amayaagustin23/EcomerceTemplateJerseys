@@ -6,6 +6,8 @@ const producto = list.find(item => item.id === id);
 if(cantidad===null) cantidad="0"
 console.log(producto);
 
+document.getElementById('containerProduct').innerHTML = `<div class="spinner-border" role="status">
+</div>`;
 const productoView = `<section>
 <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);"
 aria-label="breadcrumb">
@@ -72,15 +74,10 @@ aria-label="breadcrumb">
     </div>
     </div>
     </section>`;
+
+    const prodview=document.getElementById('containerProduct').innerHTML = productoView
+    setTimeout(prodview, 3000);
     
-    const cargando = () => {
-      return `<div class="spinner-border" role="status">
-      <span class="sr-only">Loading...</span>
-      </div>`;
-    };
-    setTimeout(cargando, 3000);
-    document.getElementById('containerProduct').innerHTML = cargando;
-    document.getElementById('containerProduct').innerHTML = productoView;
     
     document.getElementById('cartcountNav').innerHTML = `${cantidad} `;
     document.getElementById('cartcount').innerHTML = `${cantidad} `;
