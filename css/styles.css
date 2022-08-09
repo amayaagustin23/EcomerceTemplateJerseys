@@ -1252,28 +1252,14 @@ header .iconsNav, header .NavSearch {
       .containerProduct section .containerSection .contenedor .precio {
         font-size: 4rem; }
       .containerProduct section .containerSection .contenedor .talles {
-        display: grid;
-        grid-gap: 5px;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+        display: flex;
         justify-content: center;
         margin: 2rem auto; }
         .containerProduct section .containerSection .contenedor .talles .talle {
           width: 70px; }
-    .containerProduct section .containerSection .contenedor {
-      display: grid;
-      justify-content: center;
-      grid-template-columns: 400px;
-      text-align: center; }
-      .containerProduct section .containerSection .contenedor .precio {
-        font-size: 4rem; }
-      .containerProduct section .containerSection .contenedor .talles {
-        display: grid;
-        grid-gap: 5px;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        justify-content: center;
-        margin: 2rem auto; }
-        .containerProduct section .containerSection .contenedor .talles .talle {
-          width: 70px; } }
+      .containerProduct section .containerSection .contenedor .containerAddCart {
+        display: flex;
+        justify-content: center; } }
 
 @media screen and (max-width: 576px) {
   .containerProduct {
@@ -1314,7 +1300,11 @@ header .iconsNav, header .NavSearch {
         .containerProduct section .containerSection .contenedor .precio {
           font-size: 40px; }
         .containerProduct section .containerSection .contenedor .talles {
-          font-size: 10px; }
+          font-size: 10px;
+          margin: auto;
+          display: flex;
+          justify-content: center;
+          margin-bottom: 1rem; }
           .containerProduct section .containerSection .contenedor .talles .talle {
             width: 60px; }
         .containerProduct section .containerSection .contenedor .containerAddCart {

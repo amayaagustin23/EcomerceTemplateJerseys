@@ -1,34 +1,22 @@
-
-const listCart=JSON.parse(localStorage.getItem('myArray'))
-const cantidad=parseInt(localStorage.getItem('cantidad'))
-let totalCompra = listCart.reduce((acum, elemento)=> acum +=elemento.precio*elemento.count, 0)
-let compraEnvio=totalCompra
-document.getElementById("subtotal").innerHTML=`$${totalCompra}`
-document.getElementById("countProducts").innerHTML=`${cantidad} PRODUCTOS `
+const listCart = JSON.parse(localStorage.getItem('listCart'));
+const cantidad = parseInt(localStorage.getItem('cantidad'));
+let totalCompra = listCart.reduce((acum, elemento) => (acum += elemento.precio * elemento.count), 0);
+let compraEnvio = totalCompra;
+document.getElementById('subtotal').innerHTML = `$${totalCompra}`;
+document.getElementById('countProducts').innerHTML = `${cantidad} PRODUCTOS `;
 document.getElementById('cartcountNav').innerHTML = `${cantidad} `;
 document.getElementById('cartcount').innerHTML = `${cantidad} `;
-
-console.log(listCart)
-
-const result = listCart.reduce((acc,item)=>{
-	if(!acc.includes(item)){
-		acc.push(item);
-	}
-	return acc;
-  },[])
-
-
-console.log(result)
+console.log(listCart);
 let select = document.getElementById('select');
-select.addEventListener('change',
-  function(){
-	let selectedOption = this.options[select.selectedIndex];
-	totalCompra=compraEnvio+parseInt(selectedOption.value);
-	document.getElementById("subtotal").innerHTML=`$${totalCompra}`
-  });
+select.addEventListener('change', function () {
+  let selectedOption = this.options[select.selectedIndex];
+  totalCompra = compraEnvio + parseInt(selectedOption.value);
+  document.getElementById('subtotal').innerHTML = `$${totalCompra}`;
+});
 
-function getCart() {
-  return result.map(
+const getCart = list => {
+  document.getElementById('containerCart').innerHTML = '';
+  const carts = list.map(
     item =>
       `  <hr class="my-4" />
 		<div class="row mb-4 d-flex justify-content-between align-items-center">
@@ -54,15 +42,29 @@ function getCart() {
 			<h6 class="mb-0">$${item.precio}</h6>
 		  </div>
 		  <div class="col-md-1 col-lg-1 col-xl-1 text-end">
-			<a href="#!" class="text-muted"><i class="fas fa-times"></i></a>
+			<a href="#!" class="text-muted"><i id="remove_${item.id}_${item.talle}" class="fas fa-times"></i></a>
 		  </div>
 		</div>`
   );
-}
-
-
-const cartHTML = document.getElementById('containerCart');
-const cartData = getCart();
-cartData.forEach(element => {
-  cartHTML.innerHTML += element;
+  const cartHTML = document.getElementById('containerCart');
+  const cartData = carts;
+  cartData.forEach(element => {
+    cartHTML.innerHTML += element;
+  });
+};
+getCart(listCart);
+let filtered = [];
+listCart.map(item => {
+  document.getElementById('remove_' + item.id + '_' + item.talle).onclick = () => {
+    const idView = document.getElementById('remove_' + item.id + '_' + item.talle).id.split('_');
+    const id = idView[1];
+    const talle = idView[2];
+    filtered = listCart.filter(item => item.id !== id && item.talle !== talle);
+    getCart(filtered);
+    localStorage.setItem('listCart', JSON.stringify(filtered));
+    localStorage.setItem('cantidad', filtered.length);
+    document.getElementById('cartcountNav').innerHTML = filtered.length;
+    document.getElementById('cartcount').innerHTML = filtered.length;
+    document.getElementById('countProducts').innerHTML = filtered.length;
+  };
 });

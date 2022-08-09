@@ -55,6 +55,7 @@ const listaproductos = [
     marca: 'Adidas',
     garantia: 'Contra defecto de fabricación',
     tallesDisponibles: ['M', 'L'],
+    tallesFaltante: ['S', 'XL'],
     etiqueta: 'OFERTA',
   },
   {

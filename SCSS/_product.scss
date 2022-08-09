@@ -148,33 +148,16 @@
             font-size: 4rem;
           }
           .talles {
-            display: grid;
-            grid-gap: 5px;
-            grid-template-columns: 1fr 1fr 1fr 1fr;
+            display: flex;
             justify-content: center;
             margin: 2rem auto;
             .talle {
               width: 70px;
             }
           }
-        }
-        .contenedor {
-          display: grid;
-          justify-content: center;
-          grid-template-columns: 400px;
-          text-align: center;
-          .precio {
-            font-size: 4rem;
-          }
-          .talles {
-            display: grid;
-            grid-gap: 5px;
-            grid-template-columns: 1fr 1fr 1fr 1fr;
+          .containerAddCart{
+            display: flex;
             justify-content: center;
-            margin: 2rem auto;
-            .talle {
-              width: 70px;
-            }
           }
         }
       }
@@ -229,6 +212,10 @@
           }
           .talles {
             font-size: 10px;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 1rem;
             .talle {
               width: 60px;
             }
