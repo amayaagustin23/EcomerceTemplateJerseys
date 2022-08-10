@@ -3,8 +3,7 @@ const id = parseInt(localStorage.getItem('idProducto'));
 const cantidad = parseInt(localStorage.getItem('cantidad'));
 let listCart = JSON.parse(localStorage.getItem('listCart'));
 const producto = list.find(item => item.id === id);
-if(cantidad===null) cantidad="0"
-
+if (cantidad === null) cantidad = '0';
 
 const productoView = `<section>
 <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);"
@@ -73,22 +72,21 @@ aria-label="breadcrumb">
     </div>
     </section>`;
 
-    const prodview=document.getElementById('containerProduct').innerHTML = productoView
-    
-    
-    document.getElementById('cartcountNav').innerHTML = `${cantidad} `;
-    document.getElementById('cartcount').innerHTML = `${cantidad} `;
-    const talles = document.getElementsByClassName('talle');
-    for (let i = 0; i < talles.length; i++) {
-      producto.tallesFaltante.map(item => {
-        if (talles[i].innerHTML === item) {
-          talles[i].style.display = 'none';
-        }
-      });
+const prodview = (document.getElementById('containerProduct').innerHTML = productoView);
+
+document.getElementById('cartcountNav').innerHTML = `${cantidad} `;
+document.getElementById('cartcount').innerHTML = `${cantidad} `;
+const talles = document.getElementsByClassName('talle');
+for (let i = 0; i < talles.length; i++) {
+  producto.tallesFaltante.map(item => {
+    if (talles[i].innerHTML === item) {
+      talles[i].style.display = 'none';
     }
-    let productCarrito;
-    for (let i = 0; i < talles.length; i++) {
-      talles[i].onclick = ()=>{
+  });
+}
+let productCarrito='';
+for (let i = 0; i < talles.length; i++) {
+  talles[i].onclick = () => {
     productCarrito = {...producto, talle: talles[i].innerHTML};
 
     talles[i].getElementsByClassName.backgorundColor = 'black';
@@ -96,21 +94,21 @@ aria-label="breadcrumb">
   };
 }
 document.getElementById('carrito').onclick = () => {
+  console.log(productCarrito)
   if (listCart === null) listCart = [];
   if (document.getElementById('count').value === '0') alert('No se ingreso la cantidad');
-  else {
+  else if (productCarrito==='') alert('No se ingreso talle');
+  else{
     const prodexistente = listCart.find(item => item.id === productCarrito.id && item.talle === productCarrito.talle);
     if (prodexistente !== undefined) {
-      const filtered = listCart.filter(item => item.id !== productCarrito.id || item.talle!==productCarrito.talle);
+      const filtered = listCart.filter(item => item.id !== productCarrito.id || item.talle !== productCarrito.talle);
       const count = prodexistente.count + parseInt(document.getElementById('count').value);
       const prod = {...productCarrito, count: count};
       listCart = filtered;
       listCart.push(prod);
-      console.log(listCart)
     } else {
       const prod = {...productCarrito, count: parseInt(document.getElementById('count').value)};
       listCart.push(prod);
-      console.log(listCart);
     }
     localStorage.setItem('listCart', JSON.stringify(listCart));
     localStorage.setItem('cantidad', listCart.length);
