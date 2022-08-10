@@ -97,20 +97,22 @@
       height: 6rem;
       padding-left: 0.2rem;
       .title{
-        font-size: 22px;
+        font-size: 18px;
       }
       .precioEtiqueta {
         display: flex;
         justify-content: space-between;
         p {
           text-decoration: none !important;
-          font-size: 22px;
+          font-size: 26px;
+          font-weight: bold;
         }
         .etiqueta{
+          font-size: 16px;
           font-weight: bold;
           color: $colorBlanco;
-          border-radius: 1rem;
-          padding: .2rem;
+          border-radius: .5rem;
+          padding: .4rem;
           margin-right: 1rem;
         }
       }
@@ -166,11 +168,11 @@
       grid-template-columns: repeat(2, 1fr);
       margin: auto;
       .articulo {
-        width: 13rem;
+        width: 15rem;
         height: 20.2rem;
         .imagen {
           img {
-            width: 12rem;
+            width: 14rem;
           }
         }
         .textos {
@@ -228,8 +230,24 @@
           }
         }
         .textos {
-          h3 {
-            font-size: 22px;
+          .title{
+            font-size: 18px;
+          }
+          .precioEtiqueta {
+    
+            p {
+              text-decoration: none !important;
+              font-size: 26px;
+              font-weight: bold;
+            }
+            .etiqueta{
+              font-size: 16px;
+              font-weight: bold;
+              color: $colorBlanco;
+              border-radius: .5rem;
+              padding: .4rem;
+              margin-right: 1rem;
+            }
           }
         }
         .containerButton {

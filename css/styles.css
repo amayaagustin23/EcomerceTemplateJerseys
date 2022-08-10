@@ -1016,18 +1016,20 @@ header .iconsNav, header .NavSearch {
       height: 6rem;
       padding-left: 0.2rem; }
       .bodyContainerShop .containerArticulos .textos .title {
-        font-size: 22px; }
+        font-size: 18px; }
       .bodyContainerShop .containerArticulos .textos .precioEtiqueta {
         display: flex;
         justify-content: space-between; }
         .bodyContainerShop .containerArticulos .textos .precioEtiqueta p {
           text-decoration: none !important;
-          font-size: 22px; }
+          font-size: 26px;
+          font-weight: bold; }
         .bodyContainerShop .containerArticulos .textos .precioEtiqueta .etiqueta {
+          font-size: 16px;
           font-weight: bold;
           color: #EEEEEE;
-          border-radius: 1rem;
-          padding: .2rem;
+          border-radius: .5rem;
+          padding: .4rem;
           margin-right: 1rem; }
     .bodyContainerShop .containerArticulos .containerButton {
       margin-top: -5px;
@@ -1064,10 +1066,10 @@ header .iconsNav, header .NavSearch {
       grid-template-columns: repeat(2, 1fr);
       margin: auto; }
       .bodyContainerShop .containerArticulos .articulo {
-        width: 13rem;
+        width: 15rem;
         height: 20.2rem; }
         .bodyContainerShop .containerArticulos .articulo .imagen img {
-          width: 12rem; }
+          width: 14rem; }
         .bodyContainerShop .containerArticulos .articulo .textos {
           font-size: small; }
         .bodyContainerShop .containerArticulos .articulo .containerButton {
@@ -1100,8 +1102,19 @@ header .iconsNav, header .NavSearch {
         justify-content: center; }
         .bodyContainerShop .containerArticulos .articulo .imagen img {
           width: 15rem; }
-      .bodyContainerShop .containerArticulos .articulo .textos h3 {
-        font-size: 22px; }
+      .bodyContainerShop .containerArticulos .articulo .textos .title {
+        font-size: 18px; }
+      .bodyContainerShop .containerArticulos .articulo .textos .precioEtiqueta p {
+        text-decoration: none !important;
+        font-size: 26px;
+        font-weight: bold; }
+      .bodyContainerShop .containerArticulos .articulo .textos .precioEtiqueta .etiqueta {
+        font-size: 16px;
+        font-weight: bold;
+        color: #EEEEEE;
+        border-radius: .5rem;
+        padding: .4rem;
+        margin-right: 1rem; }
       .bodyContainerShop .containerArticulos .articulo .containerButton {
         margin-top: 1rem;
         display: flex;
