@@ -7,13 +7,14 @@
     100px,
     1rem
   );
-  &::after{
-    background-color: $colorNaranja;
-    color: $colorNegro;
-  }
+
 }
 .activeTalle{
   background-color: $colorNaranja;
+  color:$colorNegro;
+}
+.notActiveTalle{
+  background-color: $colorBeige;
   color:$colorNegro;
 }
 #carrito {
@@ -106,18 +107,17 @@
         .containerAddCart{
           display: flex;
           align-items: center;
-          width: 40rem;
           input{
             border-radius: 1rem;
             border: 1px solid $colorNaranja;
             padding-left: 1rem;
             width: 5rem;
           }
-          #spanNotify{
-            color: $colorGris;
-            font-size: 20px;
-            margin-left: 1rem;
-          }
+        }
+        #spanNotify{
+          color: $colorGris;
+          font-size: 20px;
+          margin-left: 1rem;
         }
       }
     }
