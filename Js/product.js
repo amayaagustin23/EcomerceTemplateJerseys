@@ -24,7 +24,7 @@ aria-label="breadcrumb">
 </div>
 <div class="contenedor">
 <h1>${producto.nombre}</h1>
-<p>Item No. AD_GU9603</p>
+<p>Item No. ${producto.item}</p>
 <br>
 <h3 class="precio">$${producto.precio}</h3>
 <div class="talles">
