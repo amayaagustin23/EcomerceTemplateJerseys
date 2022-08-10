@@ -32,6 +32,7 @@ aria-label="breadcrumb">
 <div class="containerAddCart">
 <button id="carrito">Agregar al carrito</button>
 <input min=0 value=0 type="number" id="count">
+ <span id="spanNotify"></span>
 </div>
     </div>
     </div>
@@ -96,8 +97,8 @@ for (let i = 0; i < talles.length; i++) {
 document.getElementById('carrito').onclick = () => {
   console.log(productCarrito)
   if (listCart === null) listCart = [];
-  if (document.getElementById('count').value === '0') alert('No se ingreso la cantidad');
-  else if (productCarrito==='') alert('No se ingreso talle');
+  if (document.getElementById('count').value === '0') document.getElementById("spanNotify").innerHTML="No se ingreso la cantidad"
+  else if (productCarrito==='') document.getElementById("spanNotify").innerHTML="No se ingreso un talle"
   else{
     const prodexistente = listCart.find(item => item.id === productCarrito.id && item.talle === productCarrito.talle);
     if (prodexistente !== undefined) {
@@ -114,5 +115,7 @@ document.getElementById('carrito').onclick = () => {
     localStorage.setItem('cantidad', listCart.length);
     document.getElementById('cartcountNav').innerHTML = listCart.length;
     document.getElementById('cartcount').innerHTML = listCart.length;
+    document.getElementById("spanNotify").style.color="green"
+    document.getElementById("spanNotify").innerHTML="Se agrego correctamente el producto"
   }
 };

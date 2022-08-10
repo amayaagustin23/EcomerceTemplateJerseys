@@ -1209,12 +1209,18 @@ header .iconsNav, header .NavSearch {
             -webkit-transform: scale(1.1);
             transform: scale(1.1); }
       .containerProduct section .containerSection .contenedor .containerAddCart {
-        display: flex; }
+        display: flex;
+        align-items: center;
+        width: 40rem; }
         .containerProduct section .containerSection .contenedor .containerAddCart input {
           border-radius: 1rem;
           border: 1px solid #FF8303;
           padding-left: 1rem;
           width: 5rem; }
+        .containerProduct section .containerSection .contenedor .containerAddCart #spanNotify {
+          color: #403F3D;
+          font-size: 20px;
+          margin-left: 1rem; }
   .containerProduct section .accordion .accordion-item .accordion-collapse .accordion-body .listasDesc {
     display: flex;
     justify-content: space-evenly;
