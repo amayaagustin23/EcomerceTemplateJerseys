@@ -7,7 +7,7 @@
     100px,
     1rem
   );
-  &:focus{
+  &::after{
     background-color: $colorNaranja;
     color: $colorNegro;
   }

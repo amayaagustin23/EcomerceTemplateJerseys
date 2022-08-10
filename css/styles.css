@@ -638,9 +638,6 @@ header .iconsNav, header .NavSearch {
   .buttonIndex:hover {
     background-color: #1B1A17;
     color: white; }
-  .buttonIndex:active {
-    background-color: #FDCA40;
-    color: #1B1A17; }
 
 .tags {
   display: grid;
@@ -914,9 +911,6 @@ header .iconsNav, header .NavSearch {
   .buttonArticulo:hover {
     background-color: #1B1A17;
     color: white; }
-  .buttonArticulo:active {
-    background-color: #FF8303;
-    color: #1B1A17; }
 
 .view {
   background-color: #1B1A17;
@@ -933,9 +927,6 @@ header .iconsNav, header .NavSearch {
   .view:hover {
     background-color: #FDCA40;
     color: black; }
-  .view:active {
-    background-color: #1B1A17;
-    color: #1B1A17; }
   .view button {
     background-color: transparent;
     color: #EEEEEE;
@@ -1121,10 +1112,7 @@ header .iconsNav, header .NavSearch {
   .talle:hover {
     background-color: #FF8303;
     color: #1B1A17; }
-  .talle:active {
-    background-color: #F0E3CA;
-    color: #1B1A17; }
-  .talle:focus {
+  .talle::after {
     background-color: #FF8303;
     color: #1B1A17; }
 
@@ -1144,9 +1132,6 @@ header .iconsNav, header .NavSearch {
   transition: all 1s; }
   #carrito:hover {
     background-color: #FDCA40;
-    color: #1B1A17; }
-  #carrito:active {
-    background-color: #1B1A17;
     color: #1B1A17; }
   #carrito:hover {
     -webkit-transform: scale(1.1);
@@ -1327,9 +1312,6 @@ header .iconsNav, header .NavSearch {
   margin-inline: 10px; }
   .butonContact:hover {
     background-color: #FF8303;
-    color: #1B1A17; }
-  .butonContact:active {
-    background-color: #1B1A17;
     color: #1B1A17; }
 
 form {
