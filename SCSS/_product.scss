@@ -12,7 +12,10 @@
     color: $colorNegro;
   }
 }
-
+.activeTalle{
+  background-color: $colorNaranja;
+  color:$colorNegro;
+}
 #carrito {
   @include button(
     $colorNegro,

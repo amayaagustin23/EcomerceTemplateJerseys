@@ -1,7 +1,9 @@
 const carrito = [];
-const listFilterMarcas = [];
-const cantidad = parseInt(localStorage.getItem('cantidad'));
-
+let cantidad = (localStorage.getItem('cantidad'));
+console.log(cantidad)
+if(cantidad===null) cantidad=0
+document.getElementById('cartcountNav').innerHTML = cantidad;
+document.getElementById('cartcount').innerHTML = cantidad;
 
 const listaproductos = [
   {
@@ -117,7 +119,7 @@ const listaproductos = [
 const getProductTemplate = list => {
   const products = list.map(
     item =>
-    `<div class="articulo" id=${item.nombre}>
+      `<div class="articulo" id=${item.nombre}>
     <a id="view_${item.id}" href="../pages/product.html">
     <div class="imagen">
     <img src="${item.imagen}" alt="${item.nombre}" title="${item.nombre}"/>
@@ -131,24 +133,20 @@ const getProductTemplate = list => {
     </div>
     </a>
     </div>`
-    );
-    const elementHTML = document.getElementById('containerArticulos');
-    const data = products;
-    data.forEach(element => {
-      elementHTML.innerHTML += element;
-    });
-  };
-  
-  getProductTemplate(listaproductos);
-  
-  if (cantidad === undefined) cantidad=0;
-  document.getElementById('cartcountNav').innerHTML = cantidad;
-  document.getElementById('cartcount').innerHTML = cantidad;
-  
-  let etiquetas = document.getElementsByClassName('etiqueta');
+  );
+  const elementHTML = document.getElementById('containerArticulos');
+  const data = products;
+  data.forEach(element => {
+    elementHTML.innerHTML += element;
+  });
+};
+
+getProductTemplate(listaproductos);
+
+let etiquetas = document.getElementsByClassName('etiqueta');
 for (let index = 0; index < etiquetas.length; index++) {
-  if(etiquetas[index].innerHTML==="OFERTA") etiquetas[index].style.backgroundColor="green"
-  if(etiquetas[index].innerHTML==="NUEVO") etiquetas[index].style.backgroundColor="orange"
+  if (etiquetas[index].innerHTML === 'OFERTA') etiquetas[index].style.backgroundColor = 'green';
+  if (etiquetas[index].innerHTML === 'NUEVO') etiquetas[index].style.backgroundColor = 'orange';
 }
 
 listaproductos.map(item => {

@@ -1,12 +1,14 @@
 const listCart = JSON.parse(localStorage.getItem('listCart'));
-const cantidad = parseInt(localStorage.getItem('cantidad'));
-let totalCompra = listCart.reduce((acum, elemento) => (acum += elemento.precio * elemento.count), 0);
+
+let totalCompra = listCart?.reduce((acum, elemento) => (acum += elemento.precio * elemento.count), 0);
 let compraEnvio = totalCompra;
 document.getElementById('subtotal').innerHTML = `$${totalCompra}`;
+let cantidad = (localStorage.getItem('cantidad'));
+if(cantidad===null) cantidad=0
+document.getElementById('cartcountNav').innerHTML = cantidad;
+document.getElementById('cartcount').innerHTML = cantidad;
 document.getElementById('countProducts').innerHTML = `${cantidad} PRODUCTOS `;
-document.getElementById('cartcountNav').innerHTML = `${cantidad} `;
-document.getElementById('cartcount').innerHTML = `${cantidad} `;
-console.log(listCart);
+
 let select = document.getElementById('select');
 select.addEventListener('change', function () {
   let selectedOption = this.options[select.selectedIndex];
@@ -16,7 +18,7 @@ select.addEventListener('change', function () {
 
 const getCart = list => {
   document.getElementById('containerCart').innerHTML = '';
-  const carts = list.map(
+  const carts = list?.map(
     item =>
       `  <hr class="my-4" />
 		<div class="row mb-4 d-flex justify-content-between align-items-center">
@@ -43,13 +45,13 @@ const getCart = list => {
   );
   const cartHTML = document.getElementById('containerCart');
   const cartData = carts;
-  cartData.forEach(element => {
+  cartData?.forEach(element => {
     cartHTML.innerHTML += element;
   });
 };
 getCart(listCart);
 let filtered = [];
-listCart.map(item => {
+listCart?.map(item => {
   document.getElementById('remove_' + item.id + '_' + item.talle).onclick = () => {
     const idView = document.getElementById('remove_' + item.id + '_' + item.talle).id.split('_');
     const id = idView[1];
@@ -67,7 +69,7 @@ listCart.map(item => {
   };
 });
 
-listCart.map(item => {
+listCart?.map(item => {
   document.getElementById('count_' + item.id + '_' + item.talle).onchange = () => {
     const dataInput = document.getElementById('count_' + item.id + '_' + item.talle).id.split('_');
     const id = dataInput[1];

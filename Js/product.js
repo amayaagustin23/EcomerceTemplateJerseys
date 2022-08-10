@@ -1,9 +1,13 @@
 const list = JSON.parse(localStorage.getItem('productos'));
 const id = parseInt(localStorage.getItem('idProducto'));
-const cantidad = parseInt(localStorage.getItem('cantidad'));
+
 let listCart = JSON.parse(localStorage.getItem('listCart'));
 const producto = list.find(item => item.id === id);
-if (cantidad === null) cantidad = '0';
+let cantidad = (localStorage.getItem('cantidad'));
+if(cantidad===null) cantidad=0
+document.getElementById('cartcountNav').innerHTML = cantidad;
+document.getElementById('cartcount').innerHTML = cantidad;
+
 
 const productoView = `<section>
 <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);"
@@ -75,8 +79,6 @@ aria-label="breadcrumb">
 
 const prodview = (document.getElementById('containerProduct').innerHTML = productoView);
 
-document.getElementById('cartcountNav').innerHTML = `${cantidad} `;
-document.getElementById('cartcount').innerHTML = `${cantidad} `;
 const talles = document.getElementsByClassName('talle');
 for (let i = 0; i < talles.length; i++) {
   producto.tallesFaltante.map(item => {
@@ -89,9 +91,8 @@ let productCarrito='';
 for (let i = 0; i < talles.length; i++) {
   talles[i].onclick = () => {
     productCarrito = {...producto, talle: talles[i].innerHTML};
-
-    talles[i].getElementsByClassName.backgorundColor = 'black';
-    talles[i].getElementsByClassName.color = 'white';
+    if(productCarrito.talle===talles[i].innerHTML) talles[i].classList.add('activeTalle')
+    else talles[i].classList.remove('activeTalle')
   };
 }
 document.getElementById('carrito').onclick = () => {

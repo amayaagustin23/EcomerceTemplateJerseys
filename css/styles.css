@@ -1130,6 +1130,10 @@ header .iconsNav, header .NavSearch {
     background-color: #FF8303;
     color: #1B1A17; }
 
+.activeTalle {
+  background-color: #FF8303;
+  color: #1B1A17; }
+
 #carrito {
   background-color: #1B1A17;
   color: white;
