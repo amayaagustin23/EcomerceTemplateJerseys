@@ -14,13 +14,19 @@ a {
   height: 25px;
   border-radius: 50%;
   background-color: #FDCA40;
-  margin-left: -24px;
-  margin-top: 10px;
+  position: absolute;
   align-items: center;
   display: flex;
   justify-content: center;
   z-index: 10;
-  font-weight: bold; }
+  font-weight: bold;
+  top: 5px;
+  left: 30px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s; }
+  #cartcount:hover {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1); }
 
 #cartcountNav {
   display: none; }
@@ -134,14 +140,16 @@ header .cont-menu {
       padding-top: 5px; }
   header .cont-menu .icons {
     display: flex; }
-    header .cont-menu .icons .icon .groupIcon {
-      width: 40px;
-      margin-inline: 10px;
-      -webkit-transition: all 0.5s;
-      transition: all 0.5s; }
-      header .cont-menu .icons .icon .groupIcon:hover {
-        -webkit-transform: scale(1.1);
-        transform: scale(1.1); }
+    header .cont-menu .icons .icon {
+      position: relative; }
+      header .cont-menu .icons .icon .groupIcon {
+        width: 40px;
+        margin-inline: 10px;
+        -webkit-transition: all 0.5s;
+        transition: all 0.5s; }
+        header .cont-menu .icons .icon .groupIcon:hover {
+          -webkit-transform: scale(1.1);
+          transform: scale(1.1); }
   header .cont-menu label {
     display: none; }
 
@@ -228,13 +236,19 @@ header .iconsNav, header .NavSearch {
     height: 25px;
     border-radius: 50%;
     background-color: #FDCA40;
-    margin-left: -24px;
-    margin-top: 10px;
+    position: absolute;
+    margin-left: 15px;
+    margin-top: -35px;
     align-items: center;
     display: flex;
     justify-content: center;
-    z-index: 10;
-    font-weight: bold; }
+    z-index: 99;
+    font-weight: bold;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s; }
+    #cartcountNav:hover {
+      -webkit-transform: scale(1.1);
+      transform: scale(1.1); }
   #cartcount {
     display: none; }
   header .socialsContenedor {

@@ -16,13 +16,20 @@ a {
   height: 25px;
   border-radius: 50%;
   background-color: $colorAmarrillo;
-  margin-left: -24px;
-  margin-top: 10px;
+  position: absolute ;
   align-items: center;
   display: flex;
   justify-content: center;
   z-index: 10;
   font-weight: bold;
+  top: 5px;
+  left: 30px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  &:hover{
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
 }
 #cartcountNav{display: none;}
 
@@ -158,6 +165,7 @@ header {
     .icons{
       display: flex;
       .icon{
+        position: relative;
         .groupIcon{
           width: 40px;
           margin-inline: 10px;
@@ -281,13 +289,20 @@ header {
     height: 25px;
     border-radius: 50%;
     background-color: $colorAmarrillo;
-    margin-left: -24px;
-    margin-top: 10px;
+    position: absolute;
+    margin-left: 15px;
+    margin-top: -35px;
     align-items: center;
     display: flex;
     justify-content: center;
-    z-index: 10;
+    z-index: 99;
     font-weight: bold;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    &:hover{
+      -webkit-transform: scale(1.1);
+      transform: scale(1.1);
+    }
   }
   #cartcount{
     display: none;
