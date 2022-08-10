@@ -32,7 +32,7 @@ const getCart = list => {
 			  <i class="fas fa-minus"></i>
 			</button>
 
-			<input id="form1" min="0" name="quantity" value=${item.count} type="number" class="form-control form-control-sm" />
+			<input id="count_${item.id}_${item.talle}" min="0" name="quantity" value=${item.count} type="number" class="form-control form-control-sm" />
 
 			<button class="btn btn-link px-2" onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
 			  <i class="fas fa-plus"></i>
@@ -66,7 +66,27 @@ listCart.map(item => {
     document.getElementById('cartcountNav').innerHTML = filtered.length;
     document.getElementById('cartcount').innerHTML = filtered.length;
     document.getElementById('countProducts').innerHTML = filtered.length;
-	let totalCompraNew = filtered.reduce((acum, elemento) => (acum += elemento.precio * elemento.count), 0);
-	document.getElementById('subtotal').innerHTML = `$${totalCompraNew}`;
+    let totalCompraNew = filtered.reduce((acum, elemento) => (acum += elemento.precio * elemento.count), 0);
+    document.getElementById('subtotal').innerHTML = `$${totalCompraNew}`;
+    window.location.href = './shoppingCart.html';
+  };
+});
+
+listCart.map(item => {
+  document.getElementById('count_' + item.id + '_' + item.talle).onchange = () => {
+    const dataInput = document.getElementById('count_' + item.id + '_' + item.talle).id.split('_');
+    const id = dataInput[1];
+    const talle = dataInput[2];
+    if (item => item.id === id && item.talle === talle) {
+      const newCount = parseInt(document.getElementById('count_' + item.id + '_' + item.talle).value);
+      item.count = newCount;
+      totalCompra = listCart.reduce((acum, elemento) => (acum += elemento.precio * elemento.count), 0);
+      compraEnvio = totalCompra;
+      document.getElementById('subtotal').innerHTML = `$${totalCompra}`;
+      filtered = listCart.filter(item => item.id !== id && item.talle !== talle);
+      filtered.push(item);
+      localStorage.setItem('listCart', JSON.stringify(filtered));
+    }
+    filtered = listCart.filter(item => item.id !== id && item.talle !== talle);
   };
 });

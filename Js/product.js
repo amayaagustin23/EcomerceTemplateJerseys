@@ -4,10 +4,8 @@ const cantidad = parseInt(localStorage.getItem('cantidad'));
 let listCart = JSON.parse(localStorage.getItem('listCart'));
 const producto = list.find(item => item.id === id);
 if(cantidad===null) cantidad="0"
-console.log(producto);
 
-document.getElementById('containerProduct').innerHTML = `<div class="spinner-border" role="status">
-</div>`;
+
 const productoView = `<section>
 <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);"
 aria-label="breadcrumb">
@@ -76,7 +74,6 @@ aria-label="breadcrumb">
     </section>`;
 
     const prodview=document.getElementById('containerProduct').innerHTML = productoView
-    setTimeout(prodview, 3000);
     
     
     document.getElementById('cartcountNav').innerHTML = `${cantidad} `;
@@ -91,14 +88,13 @@ aria-label="breadcrumb">
     }
     let productCarrito;
     for (let i = 0; i < talles.length; i++) {
-      talles[i].onclick = function (event) {
+      talles[i].onclick = ()=>{
     productCarrito = {...producto, talle: talles[i].innerHTML};
 
     talles[i].getElementsByClassName.backgorundColor = 'black';
     talles[i].getElementsByClassName.color = 'white';
   };
 }
-console.log(listCart);
 document.getElementById('carrito').onclick = () => {
   if (listCart === null) listCart = [];
   if (document.getElementById('count').value === '0') alert('No se ingreso la cantidad');
