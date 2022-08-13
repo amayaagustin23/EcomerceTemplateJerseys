@@ -2,6 +2,7 @@ const listCart = JSON.parse(localStorage.getItem('listCart'));
 
 let totalCompra = listCart?.reduce((acum, elemento) => (acum += elemento.precio * elemento.count), 0);
 let compraEnvio = totalCompra;
+if(totalCompra===undefined) totalCompra=0 
 document.getElementById('subtotal').innerHTML = `$${totalCompra}`;
 let cantidad = (localStorage.getItem('cantidad'));
 if(cantidad===null) cantidad=0
@@ -31,7 +32,7 @@ const getCart = list => {
 		  </div>
 		  <div class="col-md-3 col-lg-3 col-xl-2 d-flex">
 
-			<input id="count_${item.id}_${item.talle}" min="0" name="quantity" value=${item.count} type="number" class="form-control form-control-sm" />
+			<input id="count_${item.id}_${item.talle}" min=0 name="quantity" value=${item.count} type="number" class="form-control form-control-sm" />
 
 	
 		  </div>
