@@ -121,3 +121,12 @@ document.getElementById('carrito').onclick = () => {
     document.getElementById("spanNotify").innerHTML="Se agrego correctamente el producto"
   }
 };
+let elements = document.getElementsByClassName('talle');
+for (const element of elements) {
+  element.addEventListener('click', () => {
+    for (const element of elements) {
+      element.classList.remove('activeTalle');
+    }
+    element.classList.toggle('activeTalle');
+  });
+}

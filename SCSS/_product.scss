@@ -13,10 +13,7 @@
   background-color: $colorNaranja;
   color:$colorNegro;
 }
-.notActiveTalle{
-  background-color: $colorBeige;
-  color:$colorNegro;
-}
+
 #carrito {
   @include button(
     $colorNegro,
