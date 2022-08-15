@@ -1,9 +1,11 @@
+//#region Variables y LocalStorage
 const list = JSON.parse(localStorage.getItem('news'));
 const id = parseInt(localStorage.getItem('idNew'));
 const news = list.find(item => item.id === id);
-console.log(news);
+//#endregion
 
-const newView = `      <div class="titleContainer">
+//#region Renderizado
+const newView = `<div class="titleContainer">
 <img src=${news.imagenes[0]} alt=${news.tituloNew} />
 <div class="categorias">
 <p class="categoria">${news.categorias[0]}</p>
@@ -23,3 +25,4 @@ const newView = `      <div class="titleContainer">
 </section>
 `;
 document.getElementById('containerNew').innerHTML = newView;
+//#endregion
