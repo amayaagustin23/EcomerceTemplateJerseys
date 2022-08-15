@@ -162,7 +162,6 @@ const listNews = [
 
   },
 ];
-
 const listaproductos = [
   {
     id: 1,
@@ -229,6 +228,8 @@ const listaproductos = [
     tallesDisponibles: 'L,XL',
   },
 ];
+
+
 const getProductTemplate = list => {
   const products = list.map(
     item =>

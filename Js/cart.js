@@ -1,5 +1,4 @@
 const listCart = JSON.parse(localStorage.getItem('listCart'));
-
 let totalCompra = listCart?.reduce((acum, elemento) => (acum += elemento.precio * elemento.count), 0);
 let compraEnvio = totalCompra;
 if(totalCompra===undefined) totalCompra=0 

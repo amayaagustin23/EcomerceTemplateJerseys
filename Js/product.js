@@ -8,7 +8,6 @@ if(cantidad===null) cantidad=0
 document.getElementById('cartcountNav').innerHTML = cantidad;
 document.getElementById('cartcount').innerHTML = cantidad;
 
-
 const productoView = `<section>
 <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);"
 aria-label="breadcrumb">
@@ -94,6 +93,16 @@ for (let i = 0; i < talles.length; i++) {
     if(productCarrito.talle===talles[i].innerHTML) talles[i].classList.add('activeTalle')
   }
 }
+for (const element of talles) {
+  element.addEventListener('click', () => {
+    productCarrito = {...producto, talle: talles[i].innerHTML};
+    if(productCarrito.talle===talles[i].innerHTML) talles[i].classList.add('activeTalle')
+    for (const element of talles) {
+      element.classList.remove('activeTalle');
+    }
+    element.classList.toggle('activeTalle');
+  });
+}
 
 
 document.getElementById('carrito').onclick = () => {
@@ -121,12 +130,3 @@ document.getElementById('carrito').onclick = () => {
     document.getElementById("spanNotify").innerHTML="Se agrego correctamente el producto"
   }
 };
-let elements = document.getElementsByClassName('talle');
-for (const element of elements) {
-  element.addEventListener('click', () => {
-    for (const element of elements) {
-      element.classList.remove('activeTalle');
-    }
-    element.classList.toggle('activeTalle');
-  });
-}

@@ -94,10 +94,10 @@ const getNewsTemplate = list => {
 getNewsTemplate(listNews);
 
 listNews.map(item => {
-  document.getElementById('new_' + item.id).onclick = function (event) {
+  document.getElementById('new_' + item.id).onclick = event => {
     const idView = event.srcElement.id.split('_');
     const id = idView[1];
-    console.log(id)
+    console.log(id);
     if (id === item.id);
     {
       localStorage.setItem('news', JSON.stringify(listNews));
