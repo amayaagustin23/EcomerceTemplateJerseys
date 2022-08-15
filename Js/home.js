@@ -1,3 +1,4 @@
+//#region Listas
 const listNews = [
   {
     id: 1,
@@ -13,7 +14,7 @@ const listNews = [
       'La camiseta será rosa, color que nunca se ha usado en la historia del equipo, agregando un patrón tonal de armiños heráldicos similar al que tuvo el escudo institucional entre finales de los años 40 e inicios del siglo actual. El cuello es tipo V cruzado, pintado de azul marino con un remate celeste. Las tres tiras se posicionan sobre los hombros, con el mismo color base del cuello.',
       'El escudo se aplica en versión monocromática, haciendo juego con los logos de adidas y patrocinadores sobre el frente y manga izquierda. El patrón de armiños se repite en las mangas y espalda de la prenda.',
     ],
-    categorias:["ESTRENOS","PREMIER LEAGUE","DESTACADOS"],
+    categorias: ['ESTRENOS', 'PREMIER LEAGUE', 'DESTACADOS'],
   },
   {
     id: 2,
@@ -29,7 +30,7 @@ const listNews = [
       'La camiseta toma inspiración en el modelo de 1989, con el que ganaron la Copa de Alemania ante Werder Bremen con Nobby Dickel como gran héroe. La base amarilla es acompañada por figuras en negro y blanco sobre los hombros, emulando el diseño de aquel entonces. El cuello redondo se pinta en negro sólido, mientras que las mangas quedan completamente blancas.',
       'El escudo se presenta en sus colores oficiales, acompañado por los logos de PUMA y patrocinadores. El lema “Borussia Verbindet” (Borussia Se Conecta) toma posición en lo alto de la espalda, como vimos en las otras dos camisetas.',
     ],
-    categorias:["ESTRENOS","LIGA ALEMANA","DESTACADOS"],
+    categorias: ['ESTRENOS', 'LIGA ALEMANA', 'DESTACADOS'],
   },
   {
     id: 3,
@@ -45,8 +46,7 @@ const listNews = [
       'La camiseta presenta un gofrado en el cuerpo con el escudo del club en repetición, complementado por un gradiente de varias capas sobre las mangas, que conecta con el tono azul marino del cuello. El escudo aparece en sus colores oficiales, acompañado por los logos de EA7 y patrocinadores, incluyendo el habitual Lete en rojo.',
       '¿Te gustó lo nuevo de EA7 y Napoli? ¡Deja tu opinión en la sección de comentarios de abajo!',
     ],
-    categorias:["ESTRENOS","SERIE A","DESTACADOS"],
-    
+    categorias: ['ESTRENOS', 'SERIE A', 'DESTACADOS'],
   },
   {
     id: 4,
@@ -62,7 +62,7 @@ const listNews = [
       'La camiseta ve el esperado regreso de la Senyera, que no se había visto desde que PUMA tomo el rol de sponsor técnico de los Murciélagos en 2019. Los bastones amarillos y rojos se posan sobre el frente y espalda baja de la prenda, dejando la zona dorsal en amarillo sólido. Como es habitual en Valencia, el diseño se completa con vivos azules, que esta vez se toman los hombros y mangas.',
       'El escudo se aplica en sus colores oficiales, acompañado por los logos de PUMA y patrocinadores, destacando Cazoo dentro de una caja al frente. El sello que conmemora los 100 años del Estadio Mestalla aparece como jock tag sobre la nuca. Shorts y medias azules completan la nueva tercera equipación de Valencia CF para la próxima temporada.',
     ],
-    categorias:["ESTRENOS","LA LIGA","DESTACADOS"],
+    categorias: ['ESTRENOS', 'LA LIGA', 'DESTACADOS'],
   },
   {
     id: 5,
@@ -78,7 +78,7 @@ const listNews = [
       'La camiseta vuelve al tono blanco después de un año en beige, con toques rojinegros en el cuello, puños y franjas horizontales sobre el panel frontal que se cortan a los costados. Mangas y espalda, por su parte, quedan dominadas por el blanco.',
       'El escudo se aplica en sus colores oficiales, acompañado por los logos de PUMA y patrocinadores en rojo. El lema “Sempre Milan” se aplica en dos colores sobre un sello negro en la nuca de la prenda, y el Scudetto se ubica en medio del pecho.',
     ],
-    categorias:["ESTRENOS","SERIE A","DESTACADOS"],
+    categorias: ['ESTRENOS', 'SERIE A', 'DESTACADOS'],
   },
   {
     id: 6,
@@ -94,7 +94,7 @@ const listNews = [
       'La camiseta alternativa de la Juve pasa a ser negra, agregando un patrón enérgico que el club ha descrito como una aplicación sutil de la estrella, símbolo asociado con Juventus. El mencionado gráfico se aplica sobre toda la superficie en forma tonal, incluyendo la zona dorsal. El cuello va con corte V cruzado, pintado de negro sólido con un borde blanco, haciendo juego con el remate de los puños. Las tres tiras de la marca alemana hacen presencia sobre los hombros en blanco.',
       'El escudo del club aparece en blanco, acompañado por los logos de adidas y Jeep, este con su nueva aplicación con rayos adentro que ya vimos en la camiseta titular.',
     ],
-    categorias:["ESTRENOS","SERIE A","DESTACADOS"],
+    categorias: ['ESTRENOS', 'SERIE A', 'DESTACADOS'],
   },
   {
     id: 7,
@@ -110,7 +110,7 @@ const listNews = [
       'Siguiendo la línea de las otras dos, esta camiseta presenta un look sencillo en el que destaca el uso de dorado, color que ha tenido bastante presencia en los kits de Venezia, además de tener prominencia en el arte y arquitectura de la ciudad. El cuello es tipo polo abotonable con solapas negras que hacen juego con los puños de la prenda. El cierre cuenta con vivos verdes y naranjas, con un botón negro adelante.',
       'El renovado escudo del club se aplica en negro, acompañado por los logos de Kappa (ubicados en pecho y hombros) y el patrocinio de la ciudad, aplicado en tamaño reducido, como vimos en el modelo titular.',
     ],
-    categorias:["ESTRENOS","SERIE A","DESTACADOS"],
+    categorias: ['ESTRENOS', 'SERIE A', 'DESTACADOS'],
   },
   {
     id: 8,
@@ -126,7 +126,7 @@ const listNews = [
       'La camiseta ve el regreso de los bastones rojinegros, look que el club ha usado en varias ocasiones y que ha tenido presencia en varios títulos desde la FA Cup de 1969. Para darle un giro de tuerca, esta vez han decidido aplicar las líneas de forma diagonal sobre el frente y espalda baja. El cuello V, mangas y espalda quedan en negro sólido.',
       'El escudo se aplica en negro y amarillo, acompañado por los logos de PUMA y patrocinadores. El barco del escudo hace presencia en lo alto de la espalda junto a la palabra “City”.',
     ],
-    categorias:["ESTRENOS","PREMIER LEAGUE","DESTACADOS"],
+    categorias: ['ESTRENOS', 'PREMIER LEAGUE', 'DESTACADOS'],
   },
   {
     id: 9,
@@ -142,7 +142,7 @@ const listNews = [
       'La camiseta es dominada por el blanco, como muchos modelos alternativos clásicos del United. Esta vez el cuello y puños se pintan de negro y agregan un patrón de diamantes que alternan entre rojo y blanco. Un leve patrón de hélice está grabado sobre la tela, mientras que las tres tiras alternan entre rojo y negro sobre los hombros.',
       'El escudo se presenta con el mismo envolvente noventero visto en la titular, ahora con fondo negro; acompañan los logos de adidas y patrocinadores.',
     ],
-    categorias:["ESTRENOS","PREMIER LEAGUE","DESTACADOS"],
+    categorias: ['ESTRENOS', 'PREMIER LEAGUE', 'DESTACADOS'],
   },
   {
     id: 10,
@@ -158,8 +158,7 @@ const listNews = [
       'Luego de un par de temporadas con experimentos, la camiseta de Inter vuelve a lo tradicional, implementando bastones azules y negros sobre uno de los templates actuales de la marca norteamericana. Las rayas aparecen sobre el frente, mangas y espalda; el cuello cuenta con un panel negro al frente y otro azul sobre el posterior, mientras que los puños se pintan de negro con finos bordes azules.',
       'El escudo actual del club, que debutó el año pasado, se aplica en azul, negro y blanco, acompañado por la estrella que representa sus títulos de liga. La Coccarda se posa sobre el logo de Nike, certificándolos como vigentes campeones de la Coppa Italia. Un sello que celebra la unión de Inter con la ciudad de Milán aparece dentro del cuello.',
     ],
-    categorias:["ESTRENOS","SERIE A","DESTACADOS"],
-
+    categorias: ['ESTRENOS', 'SERIE A', 'DESTACADOS'],
   },
 ];
 const listaproductos = [
@@ -228,8 +227,9 @@ const listaproductos = [
     tallesDisponibles: 'L,XL',
   },
 ];
+//#endregion
 
-
+//#region Funciones de renderizado
 const getProductTemplate = list => {
   const products = list.map(
     item =>
@@ -270,37 +270,47 @@ const getNewsTemplate = list => {
 
 getNewsTemplate(listNews);
 getProductTemplate(listaproductos);
+//#endregion
+
+//#region Funciones de Redirect
+const redirectToProduct = (event, item) => {
+  console.log(event.srcElement.id);
+  const idView = event.srcElement.id.split('_');
+  const id = idView[1];
+  console.log(id);
+  if (id === item.id);
+  {
+    localStorage.setItem('idProducto', id);
+    console.log(window.location.href);
+    if (window.location.href === 'http://127.0.0.1:5501/index.html') {
+      window.location.href = 'http://127.0.0.1:5501/pages/product.html';
+    }
+    if (window.location.href === 'https://amayaagustin23.github.io/EcomerceTemplateJerseys/index.html') {
+      window.location.href = 'https://amayaagustin23.github.io/EcomerceTemplateJerseys/pages/product.html';
+    }
+  }
+};
+
+const redirectToNews = (event, item) => {
+  const idView = event.srcElement.id.split('_');
+  const id = idView[1];
+  console.log(id);
+  if (id === item.id);
+  {
+    localStorage.setItem('news', JSON.stringify(listNews));
+    localStorage.setItem('idNew', id);
+  }
+};
 
 listaproductos.map(item => {
-  document.getElementById('view_' + item.id).onclick = function (event) {
-    const idView = event.srcElement.id.split('_');
-    const id = idView[1];
-    console.log(id)
-    if (id === item.id);
-    {
-      localStorage.setItem('idProducto', id);
-      console.log(window.location.href);
-      if (window.location.href === 'http://127.0.0.1:5501/index.html') {
-        window.location.href = 'http://127.0.0.1:5501/pages/product.html';
-      }
-      if (window.location.href === 'https://amayaagustin23.github.io/EcomerceTemplateJerseys/index.html') {
-        window.location.href = 'https://amayaagustin23.github.io/EcomerceTemplateJerseys/pages/product.html';
-      }
-      // window.location.href = 'product.html';
-    }
+  document.getElementById('view_' + item.id).onclick = event => {
+    redirectToProduct(event, item);
   };
 });
-
 
 listNews.map(item => {
-  document.getElementById('new_' + item.id).onclick = function (event) {
-    const idView = event.srcElement.id.split('_');
-    const id = idView[1];
-    console.log(id)
-    if (id === item.id);
-    {
-      localStorage.setItem('news', JSON.stringify(listNews));
-      localStorage.setItem('idNew', id);
-    }
+  document.getElementById('new_' + item.id).onclick = event => {
+    redirectToNews(event, item);
   };
 });
+//#endregion
