@@ -1,14 +1,17 @@
+//#region Variables y LocalStorage
 const list = JSON.parse(localStorage.getItem('productos'));
 const id = parseInt(localStorage.getItem('idProducto'));
-
 let listCart = JSON.parse(localStorage.getItem('listCart'));
 const producto = list.find(item => item.id === id);
-let cantidad = (localStorage.getItem('cantidad'));
-if(cantidad===null) cantidad=0
+let cantidad = localStorage.getItem('cantidad');
+if (cantidad === null) cantidad = 0;
 document.getElementById('cartcountNav').innerHTML = cantidad;
 document.getElementById('cartcount').innerHTML = cantidad;
+const talles = document.getElementsByClassName('talle');
+let productCarrito = '';
+//#endregion
 
-
+//#region Renderizado
 const productoView = `<section>
 <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);"
 aria-label="breadcrumb">
@@ -79,29 +82,38 @@ aria-label="breadcrumb">
 
 const prodview = (document.getElementById('containerProduct').innerHTML = productoView);
 
-const talles = document.getElementsByClassName('talle');
-for (let i = 0; i < talles.length; i++) {
-  producto.tallesFaltante.map(item => {
-    if (talles[i].innerHTML === item) {
-      talles[i].style.display = 'none';
+const FilterTalle = () => {
+  for (let i = 0; i < talles.length; i++) {
+    producto.tallesFaltante.map(item => {
+      if (talles[i].innerHTML === item) {
+        talles[i].style.display = 'none';
+      }
+    });
+  }
+};
+
+FilterTalle();
+//#endregion
+
+//#region Seleccionar Talle
+let elements = document.getElementsByClassName('talle');
+for (const element of elements) {
+  element.addEventListener('click', () => {
+    for (const element of elements) {
+      productCarrito = {...producto, talle: element.innerHTML};
+      element.classList.remove('activeTalle');
     }
+    element.classList.toggle('activeTalle');
   });
 }
-let productCarrito='';
-for (let i = 0; i < talles.length; i++) {
-  talles[i].onclick = () => {
-    productCarrito = {...producto, talle: talles[i].innerHTML};
-    if(productCarrito.talle===talles[i].innerHTML) talles[i].classList.add('activeTalle')
-  }
-}
+//#endregion
 
-
-document.getElementById('carrito').onclick = () => {
-  console.log(productCarrito)
+//#region AddCart
+const addProductToCart = () => {
   if (listCart === null) listCart = [];
-  if (document.getElementById('count').value === '0') document.getElementById("spanNotify").innerHTML="No se ingreso la cantidad"
-  else if (productCarrito==='') document.getElementById("spanNotify").innerHTML="No se ingreso un talle"
-  else{
+  if (document.getElementById('count').value === '0') document.getElementById('spanNotify').innerHTML = 'No se ingreso la cantidad';
+  else if (productCarrito === '') document.getElementById('spanNotify').innerHTML = 'No se ingreso un talle';
+  else {
     const prodexistente = listCart.find(item => item.id === productCarrito.id && item.talle === productCarrito.talle);
     if (prodexistente !== undefined) {
       const filtered = listCart.filter(item => item.id !== productCarrito.id || item.talle !== productCarrito.talle);
@@ -117,16 +129,11 @@ document.getElementById('carrito').onclick = () => {
     localStorage.setItem('cantidad', listCart.length);
     document.getElementById('cartcountNav').innerHTML = listCart.length;
     document.getElementById('cartcount').innerHTML = listCart.length;
-    document.getElementById("spanNotify").style.color="green"
-    document.getElementById("spanNotify").innerHTML="Se agrego correctamente el producto"
+    document.getElementById('spanNotify').style.color = 'green';
+    document.getElementById('spanNotify').innerHTML = 'Se agrego correctamente el producto';
   }
 };
-let elements = document.getElementsByClassName('talle');
-for (const element of elements) {
-  element.addEventListener('click', () => {
-    for (const element of elements) {
-      element.classList.remove('activeTalle');
-    }
-    element.classList.toggle('activeTalle');
-  });
-}
+document.getElementById('carrito').onclick = () => {
+  addProductToCart();
+};
+//#endregion
