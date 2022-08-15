@@ -1,3 +1,4 @@
+//#region Lista
 const listNews = [
   {
     id: 1,
@@ -64,6 +65,9 @@ const listNews = [
     categorias: ['ESTRENOS', 'LA LIGA', 'DESTACADOS'],
   },
 ];
+//#endregion
+
+//#region funcion de Renderizado
 const getNewsTemplate = list => {
   const news = list.map(
     item =>
@@ -92,16 +96,22 @@ const getNewsTemplate = list => {
   });
 };
 getNewsTemplate(listNews);
+//#endregion
 
+//#region Evento Onclick
+const Click = (event, item) => {
+  const idView = event.srcElement.id.split('_');
+  const id = idView[1];
+  console.log(id);
+  if (id === item.id);
+  {
+    localStorage.setItem('news', JSON.stringify(listNews));
+    localStorage.setItem('idNew', id);
+  }
+};
 listNews.map(item => {
   document.getElementById('new_' + item.id).onclick = event => {
-    const idView = event.srcElement.id.split('_');
-    const id = idView[1];
-    console.log(id);
-    if (id === item.id);
-    {
-      localStorage.setItem('news', JSON.stringify(listNews));
-      localStorage.setItem('idNew', id);
-    }
+    Click(event, item);
   };
 });
+//#endregion
