@@ -1,6 +1,5 @@
 //#region LocalStorage
 let cantidad = localStorage.getItem('cantidad');
-console.log(cantidad);
 if (cantidad === null) cantidad = 0;
 document.getElementById('cartcountNav').innerHTML = cantidad;
 document.getElementById('cartcount').innerHTML = cantidad;
@@ -128,12 +127,20 @@ let productosFiltrados = [];
 let marcasFiltradas = [];
 let tallesFIltrados = [];
 let generoFiltrados = [];
+let searchFiltrados = [];
 const marcas = document.getElementsByClassName('form-check-marcas');
 const talles = document.getElementsByClassName('form-check-talles');
 const generos = document.getElementsByClassName('form-check-genero');
 //#endregion
 
 //#region Funciones de renderizados
+
+if (screen.width < 1220) {
+  document.getElementById('collapseTwo').classList.add('collapse');
+  document.getElementById('panelsStayOpen-collapseOne').classList.add('collapse');
+  document.getElementById('panelsStayOpen-collapseTwo').classList.add('collapse');
+  document.getElementById('panelsStayOpen-collapseThree').classList.add('collapse');
+}
 const LabelColor = () => {
   let etiquetas = document.getElementsByClassName('etiqueta');
   for (let index = 0; index < etiquetas.length; index++) {
@@ -188,7 +195,16 @@ listaproductos.map(item => {
 });
 //#endregion
 
-//#region Filtros de CheckBox
+//#region Filtros
+const FiltrosSearch = () => {
+  const search = document.getElementById('search').value.toLowerCase();
+  searchFiltrados = listaproductos.filter(item => item.nombre.toLowerCase().includes(search) ||item.descripcion.toLowerCase().includes(search));
+  aplicarFiltros(); 
+};
+document.getElementById('buttonSearch').onclick = () => {
+  FiltrosSearch();
+};
+
 const filterMarcas = event => {
   if (event.srcElement.checked) {
     marcasFiltradas.push(event.target.value);
@@ -240,7 +256,6 @@ for (let i = 0; i < generos.length; i++) {
 const aplicarFiltros = () => {
   let productosFiltrados = [];
   listaproductos.forEach(item => {
-    console.log(tallesFIltrados);
     let bool1 = marcasFiltradas.length === 0 ? true : marcasFiltradas.includes(item.marca);
     let bool2 = generoFiltrados.length === 0 ? true : generoFiltrados.includes(item.genero);
     let bool3 = false;
@@ -253,7 +268,8 @@ const aplicarFiltros = () => {
         }
       }
     }
-    if (bool1 && bool2 && bool3) {
+    let bool4 = searchFiltrados.length === 0 ? true : searchFiltrados.includes(item);
+    if (bool1 && bool2 && bool3 && bool4) {
       productosFiltrados.push(item);
     }
   });

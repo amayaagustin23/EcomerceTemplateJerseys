@@ -976,6 +976,9 @@ header .iconsNav, header .NavSearch {
           border-radius: 1rem;
           margin-right: 0.5rem;
           margin-left: -1rem; }
+        .bodyContainerShop aside .asideSection .accordion .accordion-item .accordion-collapse .search #buttonSearch {
+          background-color: transparent;
+          border: none; }
   .bodyContainerShop .containerArticulos {
     display: grid;
     grid-gap: 25px;

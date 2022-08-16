@@ -59,14 +59,20 @@
           </nav>
           <div class="icons">
             <a class="icon" href="./User.html"><img class="groupIcon" src="../image/icon/profile-user.png" alt="user" /></a>
-            <a class="icon" href="./shoppingCart.html"><img class="groupIcon" src="../image/icon/shopping-cart.png" alt="cart" /><div id="cartcount">0</div></a>
+            <a class="icon" href="./shoppingCart.html"
+              ><img class="groupIcon" src="../image/icon/shopping-cart.png" alt="cart" />
+              <div id="cartcount">0</div></a
+            >
           </div>
           <label class="icon-cancel" for="btn-menu"></label>
         </div>
       </div>
       <div class="iconsNav">
         <a class="icon" href="./User.html"><img class="groupIcon" src="../image/icon/profile-user.png" width="32" alt="user" /></a>
-        <a class="icon" href="./shoppingCart.html"><img class="groupIcon" src="../image/icon/shopping-cart.png" alt="cart" /><div id="cartcountNav">0</div></a>
+        <a class="icon" href="./shoppingCart.html"
+          ><img class="groupIcon" src="../image/icon/shopping-cart.png" alt="cart" />
+          <div id="cartcountNav">0</div></a
+        >
       </div>
     </header>
     <main class="bodyContainerShop">
@@ -77,24 +83,24 @@
               <h2 class="accordion-header" id="headingTwo">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">Filtros</button>
               </h2>
-              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+              <div id="collapseTwo" class="accordion-collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                 <div class="accordion-body">
                   <div class="search">
                     <div class="search-input">
                       <input type="text" id="search" />
-                      <span>
+                      <button id="buttonSearch">
                         <img src="../image/socials/search-dark.png" alt="searh" width="24px" />
-                      </span>
+                      </button>
                     </div>
                   </div>
-                  <div class="accordion accordion-flush" id="accordionFlushExample">
-                    <div class="accordion-item mt-2">
-                      <h2 class="accordion-header" id="flush-headingTwo">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                  <div class="accordion" id="accordionPanelsStayOpenExample">
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
                           Genero
                         </button>
                       </h2>
-                      <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                      <div id="panelsStayOpen-collapseOne" class="accordion-collapse " aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
                         <div class="form-check-genero mt-2">
                           <input class="form-check-input adidascheck" type="checkbox" value="Hombre" id="flexCheckDefault" />
                           <label class="form-check-label" for="flexCheckDefault">Hombre</label>
@@ -105,49 +111,44 @@
                         </div>
                       </div>
                     </div>
-                    <div class="accordion-item mt-2">
-                      <h2 class="accordion-header" id="flush-headingTwo">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
                           Marcas
                         </button>
                       </h2>
-                      <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-                        <div class="form-check-marcas mt-2">
-                          <input class="form-check-input adidascheck" type="checkbox" value="Adidas" id="flexCheckDefault" />
-                          <label class="form-check-label " for="flexCheckDefault">Adidas</label>
-                        </div>
-                        <div class="form-check-marcas">
-                          <input class="form-check-input" type="checkbox" value="Nike" id="flexCheckDefault nikecheck" />
-                          <label class="form-check-label" for="flexCheckDefault">Nike</label>
-                        </div>
-                        <div class="form-check-marcas">
-                          <input class="form-check-input" type="checkbox" value="Puma" id="flexCheckDefault" />
-                          <label class="form-check-label" for="flexCheckDefault">Puma</label>
-                        </div>
-                        <div class="form-check-marcas">
-                          <input class="form-check-input umbro" type="checkbox" value="Umbro" id="flexCheckDefault" />
-                          <label class="form-check-label" for="flexCheckDefault">Umbro</label>
-                        </div>
-                        <div class="form-check-marcas">
-                          <input class="form-check-input" type="checkbox" value="Under Armour" id="flexCheckDefault" />
-                          <label class="form-check-label" for="flexCheckDefault">Under Armour</label>
+                      <div id="panelsStayOpen-collapseTwo" class="accordion-collapse" aria-labelledby="panelsStayOpen-headingTwo">
+                        <div id="panelsStayOpen-collapseTwo" class="accordion-collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                          <div class="form-check-marcas mt-2">
+                            <input class="form-check-input adidascheck" type="checkbox" value="Adidas" id="flexCheckDefault" />
+                            <label class="form-check-label " for="flexCheckDefault">Adidas</label>
+                          </div>
+                          <div class="form-check-marcas">
+                            <input class="form-check-input" type="checkbox" value="Nike" id="flexCheckDefault nikecheck" />
+                            <label class="form-check-label" for="flexCheckDefault">Nike</label>
+                          </div>
+                          <div class="form-check-marcas">
+                            <input class="form-check-input" type="checkbox" value="Puma" id="flexCheckDefault" />
+                            <label class="form-check-label" for="flexCheckDefault">Puma</label>
+                          </div>
+                          <div class="form-check-marcas">
+                            <input class="form-check-input umbro" type="checkbox" value="Umbro" id="flexCheckDefault" />
+                            <label class="form-check-label" for="flexCheckDefault">Umbro</label>
+                          </div>
+                          <div class="form-check-marcas">
+                            <input class="form-check-input" type="checkbox" value="Under Armour" id="flexCheckDefault" />
+                            <label class="form-check-label" for="flexCheckDefault">Under Armour</label>
+                          </div>
                         </div>
                       </div>
                     </div>
-                    <div class="accordion-item mt-2">
-                      <h2 class="accordion-header" id="flush-headingThree">
-                        <button
-                          class="accordion-button collapsed"
-                          type="button"
-                          data-bs-toggle="collapse"
-                          data-bs-target="#flush-collapseThree"
-                          aria-expanded="false"
-                          aria-controls="flush-collapseThree"
-                        >
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
                           Talles
                         </button>
                       </h2>
-                      <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                      <div id="panelsStayOpen-collapseThree" class="accordion-collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
                         <div class="form-check-talles mt-2">
                           <input class="form-check-input" type="checkbox" value="S" id="flexCheckDefault" />
                           <label class="form-check-label" for="flexCheckDefault">S</label>
