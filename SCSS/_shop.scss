@@ -17,6 +17,17 @@
   display: none;
 }
 
+.noProduct{
+  color: $colorNegro;
+  display: flex;
+  justify-content: center;
+  margin:15rem;
+  width: 82%;
+}
+.containerNoProduct{
+  display: flex;
+  justify-content: center;
+}
 .bodyContainerShop {
   margin: 2rem 1rem;
   padding: 3rem 1.5rem;

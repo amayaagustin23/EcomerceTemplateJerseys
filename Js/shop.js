@@ -274,6 +274,15 @@ const aplicarFiltros = () => {
     }
   });
   document.getElementById('containerArticulos').innerHTML = '';
-  getProductTemplate(productosFiltrados);
+  if(productosFiltrados.length===0){
+    document.getElementById('containerArticulos').classList.remove("containerArticulos")
+    document.getElementById('containerArticulos').classList.add("containerNoProduct")
+    document.getElementById('containerArticulos').innerHTML=`<h2 class="noProduct">NO SE ENCONTRARON PRODUCTOS</h2>`
+  }
+  else {
+    document.getElementById('containerArticulos').classList.add("containerArticulos")
+    getProductTemplate(productosFiltrados);
+  }
+
 };
 //#endregion

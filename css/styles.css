@@ -952,6 +952,17 @@ header .iconsNav, header .NavSearch {
 #nikecheck:checked ~ #adidas {
   display: none; }
 
+.noProduct {
+  color: #1B1A17;
+  display: flex;
+  justify-content: center;
+  margin: 15rem;
+  width: 82%; }
+
+.containerNoProduct {
+  display: flex;
+  justify-content: center; }
+
 .bodyContainerShop {
   margin: 2rem 1rem;
   padding: 3rem 1.5rem;
