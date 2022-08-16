@@ -1,6 +1,6 @@
 const list = JSON.parse(localStorage.getItem('productos'));
 const id = parseInt(localStorage.getItem('idProducto'));
-
+let productCarrito='';
 let listCart = JSON.parse(localStorage.getItem('listCart'));
 const producto = list.find(item => item.id === id);
 let cantidad = (localStorage.getItem('cantidad'));
@@ -87,13 +87,6 @@ for (let i = 0; i < talles.length; i++) {
     }
   });
 }
-let productCarrito='';
-for (let i = 0; i < talles.length; i++) {
-  talles[i].onclick = () => {
-    productCarrito = {...producto, talle: talles[i].innerHTML};
-    if(productCarrito.talle===talles[i].innerHTML) talles[i].classList.add('activeTalle')
-  }
-}
 
 
 document.getElementById('carrito').onclick = () => {
@@ -121,10 +114,16 @@ document.getElementById('carrito').onclick = () => {
     document.getElementById("spanNotify").innerHTML="Se agrego correctamente el producto"
   }
 };
-let elements = document.getElementsByClassName('talle');
-for (const element of elements) {
+
+for (let i = 0; i < talles.length; i++) {
+  talles[i].onclick = () => {
+    productCarrito = {...producto, talle: talles[i].innerHTML};
+    if(productCarrito.talle===talles[i].innerHTML) talles[i].classList.add('activeTalle')
+  }
+}
+for (const element of talles) {
   element.addEventListener('click', () => {
-    for (const element of elements) {
+    for (const element of talles) {
       element.classList.remove('activeTalle');
     }
     element.classList.toggle('activeTalle');

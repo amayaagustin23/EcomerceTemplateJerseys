@@ -59,10 +59,9 @@ select.addEventListener('change', function () {
 
 const removeProductToCart=(item)=>{
   const idView = document.getElementById('remove_' + item.id + '_' + item.talle).id.split('_');
-  const id = idView[1];
+  const id = parseInt(idView[1]);
   const talle = idView[2];
-  filtered = listCart.filter(item => item.id !== id && item.talle !== talle);
-  getCart(filtered);
+  filtered = listCart.filter(item => item.id !== id || item.talle !== talle);
   localStorage.setItem('listCart', JSON.stringify(filtered));
   localStorage.setItem('cantidad', filtered.length);
   document.getElementById('cartcountNav').innerHTML = filtered.length;
