@@ -130,3 +130,4 @@ for (const element of elements) {
     element.classList.toggle('activeTalle');
   });
 }
+
