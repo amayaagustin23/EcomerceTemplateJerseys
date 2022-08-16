@@ -12,11 +12,6 @@
     color: $colorNegro;
   }
 }
-
-#nikecheck:checked ~ #adidas {
-  display: none;
-}
-
 .noProduct{
   color: $colorNegro;
   display: flex;
@@ -150,6 +145,9 @@
   }
 }
 @media screen and (max-width: 1220px) {
+  .noProduct{
+    margin:2rem auto;
+  }
   .bodyContainerShop {
     position: relative;
     display: grid;
