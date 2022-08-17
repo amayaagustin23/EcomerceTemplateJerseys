@@ -210,20 +210,19 @@ header .iconsNav, header .NavSearch {
     .footer .contenedor .categorias {
       display: block;
       justify-content: center; }
-      .footer .contenedor .categorias h3 {
+      .footer .contenedor .categorias h2 {
         display: flex;
         justify-content: center;
-        font-size: medium;
+        font-size: x-large;
         margin-top: 20px; }
       .footer .contenedor .categorias .redirecCat {
         flex-wrap: wrap;
         display: flex;
         justify-content: center;
         font-size: small;
-        margin-inline: -50px; }
+        margin: auto; }
         .footer .contenedor .categorias .redirecCat .footerOp {
           padding: 30px 30px 20px 30px;
-          color: #FDCA40;
           list-style: none; }
   .footer .copy {
     display: flex;
@@ -393,17 +392,14 @@ header .iconsNav, header .NavSearch {
       .footer .contenedor .categorias h2 {
         display: flex;
         justify-content: center;
-        font-size: medium;
+        font-size: large;
         margin-top: 20px; }
       .footer .contenedor .categorias .redirecCat {
         display: grid;
         grid-template-columns: 12fr;
         justify-content: center;
-        text-align: center; }
-        .footer .contenedor .categorias .redirecCat .footerOp {
-          padding: 30px 30px 20px 30px;
-          color: #F0E3CA;
-          list-style: none; }
+        text-align: center;
+        margin: auto; }
   .footer .copy {
     display: flex;
     justify-content: center; } }

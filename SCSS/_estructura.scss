@@ -256,10 +256,10 @@ header {
       .categorias {
         display: block;
         justify-content: center;
-        h3 {
+        h2 {
           display: flex;
           justify-content: center;
-          font-size: medium;
+          font-size: x-large;
           margin-top: 20px;
         }
         .redirecCat {
@@ -267,10 +267,9 @@ header {
           display: flex;
           justify-content: center;
           font-size: small;
-          margin-inline: -50px;
+          margin: auto;
           .footerOp {
             padding: 30px 30px 20px 30px;
-            color: $colorAmarrillo;
             list-style: none;
           }
         }
@@ -492,7 +491,7 @@ header {
         h2 {
           display: flex;
           justify-content: center;
-          font-size: medium;
+          font-size: large;
           margin-top: 20px;
         }
         .redirecCat {
@@ -500,11 +499,8 @@ header {
           grid-template-columns: 12fr;
           justify-content: center;
           text-align: center;
-          .footerOp {
-            padding: 30px 30px 20px 30px;
-            color: $colorBeige;
-            list-style: none;
-          }
+          margin: auto;
+
         }
       }
     }
