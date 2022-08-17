@@ -1292,10 +1292,10 @@ header .iconsNav, header .NavSearch {
         border-radius: .5rem;
         border: 2px solid #F0E3CA; }
     .containerProduct section .containerSection .contenedor {
-      display: grid;
+      display: block;
       justify-content: center;
-      grid-template-columns: 400px;
-      text-align: center; }
+      text-align: center;
+      margin: auto; }
       .containerProduct section .containerSection .contenedor .precio {
         font-size: 4rem; }
       .containerProduct section .containerSection .contenedor .talles {

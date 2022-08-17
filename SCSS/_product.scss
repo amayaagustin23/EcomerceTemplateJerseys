@@ -177,10 +177,10 @@
           }
         }
         .contenedor {
-          display: grid;
+          display: block;
           justify-content: center;
-          grid-template-columns: 400px;
           text-align: center;
+          margin: auto;
           .precio {
             font-size: 4rem;
           }
