@@ -1,28 +1,13 @@
 .talle {
-  @include button(
-    $colorBeige,
-    $colorNegro,
-    $colorNaranja,
-    $colorNegro,
-    100px,
-    1rem
-  );
-
+  @include button($colorBeige, $colorNegro, $colorNaranja, $colorNegro, 100px, 1rem);
 }
-.activeTalle{
+.activeTalle {
   background-color: $colorNaranja;
-  color:$colorNegro;
+  color: $colorNegro;
 }
 
 #carrito {
-  @include button(
-    $colorNegro,
-    white,
-    $colorAmarrillo,
-    $colorNegro,
-    200px,
-    1rem
-  );
+  @include button($colorNegro, white, $colorAmarrillo, $colorNegro, 200px, 1rem);
   -webkit-transition: all 1s;
   transition: all 1s;
   &:hover {
@@ -56,23 +41,23 @@
       justify-content: center;
       align-items: center;
       .imagenProduct {
-        height: 35rem;
-        overflow: hidden;
-        transition: transform 1s, filter 0.5s ease-out;
-        img {
+        figure.zoom {
+          background-position: 50% 50%;
+          position: relative;
+          border: 5px solid $colorBeige;
           width: 35rem;
-          padding: 0.2rem;
           border-radius: 1rem;
-          border: 5px solid $colorBeige;
-          transform-origin: 55% 20%;
-          transition: transform 1s, filter 0.5s ease-out;
-          &:hover {
-            transform: scale(3);
+          overflow: hidden;
+          cursor: zoom-in;
+          img {
+            transition: opacity 0.5s;
+            display: block;
+            width: 100%;
+            height: 100%;
+            &:hover {
+              opacity: 0;
+            }
           }
-        }
-        &:hover {
-          border-radius: 1rem;
-          border: 5px solid $colorBeige;
         }
       }
       .contenedor {
@@ -101,17 +86,17 @@
             }
           }
         }
-        .containerAddCart{
+        .containerAddCart {
           display: flex;
           align-items: center;
-          input{
+          input {
             border-radius: 1rem;
             border: 1px solid $colorNaranja;
             padding-left: 1rem;
             width: 5rem;
           }
         }
-        #spanNotify{
+        #spanNotify {
           color: $colorGris;
           font-size: 20px;
           margin-left: 1rem;
@@ -166,7 +151,7 @@
               width: 70px;
             }
           }
-          .containerAddCart{
+          .containerAddCart {
             display: flex;
             justify-content: center;
           }
@@ -186,29 +171,26 @@
         grid-template-columns: repeat(auto-fill, 600px);
         justify-content: center;
         align-items: center;
-        .imagenProduct {
-          height: 17rem;
-          width: 17rem;
+        figure.zoom {
           margin: auto;
+          position: relative;
+          border: 5px solid $colorBeige;
+          border-radius: 1rem;
+          width: 20rem !important;
+          height: 20rem !important;
           overflow: hidden;
-          transition: transform 1s, filter 0.5s ease-out;
+          cursor: zoom-in;
           img {
-            width: 17rem;
-            padding: 0.2rem;
-            border-radius: 1rem;
-            border: 5px solid $colorBeige;
-            transform-origin: 55% 20%;
-            transition: transform 1s, filter 0.5s ease-out;
+            transition: opacity 0.5s;
+            display: block;
+            width: 100%;
             &:hover {
-              transform: scale(3);
+              opacity: 0;
             }
-          }
-          &:hover {
-            border-radius: 1rem;
-            border: 5px solid $colorBeige;
           }
         }
         .contenedor {
+          margin-top: -2rem;
           display: grid;
           justify-content: center;
           grid-template-columns: 400px;
@@ -231,13 +213,11 @@
               width: 60px;
             }
           }
-          .containerAddCart{
+          .containerAddCart {
             margin: auto;
             justify-content: center;
           }
-
         }
-
       }
       section {
         .accordion {
