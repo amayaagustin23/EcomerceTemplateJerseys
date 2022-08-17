@@ -92,14 +92,7 @@ ${getImagenes(producto.imagenes).join("")}
 
 const prodview = (document.getElementById('containerProduct').innerHTML = productoView);
 
-function zoom(e) {
-  var zoomer = e.currentTarget;
-  e.offsetX ? (offsetX = e.offsetX) : (offsetX = e.touches[0].pageX);
-  e.offsetY ? (offsetY = e.offsetY) : (offsetX = e.touches[0].pageX);
-  x = (offsetX / zoomer.offsetWidth) * 100;
-  y = (offsetY / zoomer.offsetHeight) * 100;
-  zoomer.style.backgroundPosition = x + '% ' + y + '%';
-}
+
 
 const talles = document.getElementsByClassName('talle');
 for (let i = 0; i < talles.length; i++) {
@@ -157,4 +150,13 @@ for (let i = 0; i < imagenes.length; i++) {
     document.getElementById('imagenPrincipal').src = imagenes[i].currentSrc;
     document.getElementById('figurePrincipal').style.backgroundImage = `url(${imagenes[i].currentSrc})`;
   };
+}
+
+function zoom(e) {
+  var zoomer = e.currentTarget;
+  e.offsetX ? (offsetX = e.offsetX) : (offsetX = e.touches[0].pageX);
+  e.offsetY ? (offsetY = e.offsetY) : (offsetX = e.touches[0].pageX);
+  x = (offsetX / zoomer.offsetWidth) * 100;
+  y = (offsetY / zoomer.offsetHeight) * 100;
+  zoomer.style.backgroundPosition = x + '% ' + y + '%';
 }
