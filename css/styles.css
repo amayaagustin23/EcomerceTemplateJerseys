@@ -1211,6 +1211,10 @@ header .iconsNav, header .NavSearch {
           height: 100%; }
           .containerProduct section .containerSection .imagenProduct figure.zoom img:hover {
             opacity: 0; }
+      .containerProduct section .containerSection .imagenProduct .imagenesAll .imagenesExtra {
+        width: 10rem;
+        border-radius: .5rem;
+        border: 2px solid #F0E3CA; }
     .containerProduct section .containerSection .contenedor {
       display: grid;
       grid-template-columns: 1fr;
@@ -1262,8 +1266,27 @@ header .iconsNav, header .NavSearch {
     justify-content: center;
     align-items: center; }
     .containerProduct section .containerSection .imagenProduct {
-      margin: auto;
-      display: flex; }
+      width: 32rem;
+      margin: auto; }
+      .containerProduct section .containerSection .imagenProduct figure.zoom {
+        background-position: 50% 50%;
+        position: relative;
+        border: 5px solid #F0E3CA;
+        width: 32rem;
+        border-radius: 1rem;
+        overflow: hidden;
+        cursor: zoom-in; }
+        .containerProduct section .containerSection .imagenProduct figure.zoom img {
+          transition: opacity 0.5s;
+          display: block;
+          width: 100%;
+          height: 100%; }
+          .containerProduct section .containerSection .imagenProduct figure.zoom img:hover {
+            opacity: 0; }
+      .containerProduct section .containerSection .imagenProduct .imagenesAll .imagenesExtra {
+        width: 8rem;
+        border-radius: .5rem;
+        border: 2px solid #F0E3CA; }
     .containerProduct section .containerSection .contenedor {
       display: grid;
       justify-content: center;
@@ -1291,8 +1314,27 @@ header .iconsNav, header .NavSearch {
       justify-content: center;
       align-items: center; }
       .containerProduct section .containerSection .imagenProduct {
-        max-width: 20rem;
+        width: 20rem;
         margin: auto; }
+        .containerProduct section .containerSection .imagenProduct figure.zoom {
+          background-position: 50% 50%;
+          position: relative;
+          border: 5px solid #F0E3CA;
+          width: 20rem;
+          border-radius: 1rem;
+          overflow: hidden;
+          cursor: zoom-in; }
+          .containerProduct section .containerSection .imagenProduct figure.zoom img {
+            transition: opacity 0.5s;
+            display: block;
+            width: 100%;
+            height: 100%; }
+            .containerProduct section .containerSection .imagenProduct figure.zoom img:hover {
+              opacity: 0; }
+        .containerProduct section .containerSection .imagenProduct .imagenesAll .imagenesExtra {
+          width: 5rem;
+          border-radius: .5rem;
+          border: 2px solid #F0E3CA; }
       .containerProduct section .containerSection .contenedor {
         display: grid;
         justify-content: center;

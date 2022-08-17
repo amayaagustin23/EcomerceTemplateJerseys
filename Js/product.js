@@ -8,6 +8,16 @@ if (cantidad === null) cantidad = 0;
 document.getElementById('cartcountNav').innerHTML = cantidad;
 document.getElementById('cartcount').innerHTML = cantidad;
 
+const getImagenes = list => {
+  const imagenes = list.map(item => ` <img class="imagenesExtra" src="${item}">`);
+  const elementHTML = document.getElementsByClassName('imagenesAll');
+  const data = imagenes;
+  data.forEach(element => {
+    elementHTML.innerHTML += element;
+  });
+  return data;
+};
+
 const productoView = `<section>
 <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);"
 aria-label="breadcrumb">
@@ -19,9 +29,12 @@ aria-label="breadcrumb">
 <br>
 <div class="containerSection">
 <div class="imagenProduct">
-<figure class="zoom" onmousemove="zoom(event)" style="background-image: url(${producto.imagen})">
-<img src=${producto.imagen}>
+<figure id="figurePrincipal" class="zoom" onmousemove="zoom(event)" style="background-image: url(${producto.imagenes[0]})">
+<img id="imagenPrincipal" src=${producto.imagenes[0]}>
 </figure>
+<div class="imagenesAll">
+${getImagenes(producto.imagenes)}
+</div>
 </div>
 <div class="contenedor">
 <h1>${producto.nombre}</h1>
@@ -80,15 +93,14 @@ aria-label="breadcrumb">
 
 const prodview = (document.getElementById('containerProduct').innerHTML = productoView);
 
-function zoom(e){
+function zoom(e) {
   var zoomer = e.currentTarget;
-  e.offsetX ? offsetX = e.offsetX : offsetX = e.touches[0].pageX
-  e.offsetY ? offsetY = e.offsetY : offsetX = e.touches[0].pageX
-  x = offsetX/zoomer.offsetWidth*100
-  y = offsetY/zoomer.offsetHeight*100
+  e.offsetX ? (offsetX = e.offsetX) : (offsetX = e.touches[0].pageX);
+  e.offsetY ? (offsetY = e.offsetY) : (offsetX = e.touches[0].pageX);
+  x = (offsetX / zoomer.offsetWidth) * 100;
+  y = (offsetY / zoomer.offsetHeight) * 100;
   zoomer.style.backgroundPosition = x + '% ' + y + '%';
 }
-
 
 const talles = document.getElementsByClassName('talle');
 for (let i = 0; i < talles.length; i++) {
@@ -138,4 +150,12 @@ for (const element of talles) {
     }
     element.classList.toggle('activeTalle');
   });
+}
+
+const imagenes = document.getElementsByClassName('imagenesExtra');
+for (let i = 0; i < imagenes.length; i++) {
+  imagenes[i].onclick = () => {
+    document.getElementById('imagenPrincipal').src = imagenes[i].currentSrc;
+    document.getElementById('figurePrincipal').style.backgroundImage = `url(${imagenes[i].currentSrc})`;
+  };
 }

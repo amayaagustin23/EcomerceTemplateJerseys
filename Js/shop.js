@@ -13,7 +13,10 @@ const listaproductos = [
     nombre: 'Barcelona 2022/23',
     item: 'AD_GU9601',
     precio: 12999,
-    imagen: 'https://www.dexter.com.ar/on/demandware.static/-/Sites-dabra-catalog/default/dw6bdad884/products/NI_DM1840-452/NI_DM1840-452-1.JPG',
+    imagenes: [
+      'https://www.dexter.com.ar/on/demandware.static/-/Sites-dabra-catalog/default/dw6bdad884/products/NI_DM1840-452/NI_DM1840-452-1.JPG',
+      'https://essential.vtexassets.com/arquivos/ids/593398-1200-auto?v=637939395993430000&width=1200&height=auto&aspect=true',
+    ],
     descripcion:
       'La Camiseta Nike Fc Barcelona 2022/23 Stadium Home es una representación ideal de tu pasión por uno de los equipos más grandes de todos. Combina detalles de diseño basado en la camiseta que usan los profesionales en el campo dándote un look insuperable. Además te brinda comodidad absoluta gracias a su tecnología Dri-FIT para la absorción de sudor. Algo muy importante al momento de elegir esta prenda, es que está hecha en al menos un 50% de fibras recicladas. Porque sabemos que no solo pensás en elegir tu vestimenta, sino que querés hacerlo bien.',
     genero: 'Hombre',
@@ -32,7 +35,10 @@ const listaproductos = [
     nombre: "Newell's Old Boys 2022",
     item: 'AD_GU9602',
     precio: 9599,
-    imagen: 'https://www.dexter.com.ar/on/demandware.static/-/Sites-dabra-catalog/default/dwc73dbb89/products/GV_NOB22010110121/GV_NOB22010110121-1.JPG',
+    imagenes: [
+      'https://newsport.vteximg.com.br/arquivos/ids/14058869-1000-1000/22010110121-A.jpg?v=637945245819900000',
+      'https://newsport.vteximg.com.br/arquivos/ids/14058870-1000-1000/22010110121-B.jpg?v=637945245822270000',
+    ],
     descripcion:
       "Ya llevas la pasión por Newell's en las venas, ahora llevala puesta con la Camiseta Givova Newell's Old Boys Titular, confeccionada con cuello en V y mangas cortas para mayor frescura y con el escudo del club que más alegrías te dio sobre el pecho.",
     genero: 'Hombre',
@@ -51,7 +57,10 @@ const listaproductos = [
     nombre: 'River Plate 2022',
     item: 'AD_GU9603',
     precio: 14999,
-    imagen: 'https://www.dexter.com.ar/on/demandware.static/-/Sites-dabra-catalog/default/dw33965a81/products/AD_GU9603/AD_GU9603-1.JPG',
+    imagenes: [
+      'https://pacogarcia.vtexassets.com/arquivos/ids/170630-1200-auto?v=637578022186100000&width=1200&height=auto&aspect=true',
+      'https://pacogarcia.vtexassets.com/arquivos/ids/170631-1200-auto?v=637578022274630000&width=1200&height=auto&aspect=true',
+    ],
     descripcion:
       'La camiseta adidas River Plate 120 Años es más que un homenaje al Millonario y su vida de grandeza. Su diseño posee la banda roja más ancha que nunca, como una alfombra de gala para las ocasiones más especiales que existen. La tecnología AEROREADY te brinda una sensación de comodidad estés donde estés, mientras que la confección con Primegreen, una serie de materiales reciclados de alta performance, le dan el toque justo. Posee el escudo y una leyenda en la zona de la nuca para que la vistas con orgullo todos tus días.',
     genero: 'Hombre',
@@ -70,7 +79,10 @@ const listaproductos = [
     nombre: 'Camiseta adidas Afa',
     item: 'AD_GU9604',
     precio: 14999,
-    imagen: 'https://www.dexter.com.ar/on/demandware.static/-/Sites-dabra-catalog/default/dw66da801b/products/AD_HB9215/AD_HB9215-1.JPG',
+    imagenes: [
+      'https://newsport.vteximg.com.br/arquivos/ids/13956745-1000-1000/HB9215-a.jpg?v=637928170158630000',
+      'https://newsport.vteximg.com.br/arquivos/ids/13956747-1000-1000/HB9215-c.jpg?v=637928170163000000',
+    ],
     descripcion:
       'Porque este año no podés dejar de tener la Camiseta adidas Afa, para alentar llevar con vos los colores de tu selección. Está diseñada para que portes tu pasión con toda la comodidad que esperás ya que su corte relajado te permite moverte fácilmente donde vayas. Además cuenta con tecnología AEROREADY para absorber la transpiración y se combina con sus paneles de malla laterales para mantenerte seco y fresco en todo momento. El detalle de la bandera nacional debajo del cuello en la parte de atrás, le da el toque final. Unite a la hinchada con esta increible prenda.',
     genero: 'Hombre',
@@ -89,7 +101,10 @@ const listaproductos = [
     nombre: 'Camiseta C.A.T. 2022 ',
     item: 'AD_GU9605',
     precio: 11949,
-    imagen: 'https://www.dexter.com.ar/on/demandware.static/-/Sites-dabra-catalog/default/dw9e95136d/products/UB_U31TU01021-7267/UB_U31TU01021-7267-1.JPG',
+    imagenes: [
+      'https://www.dexter.com.ar/on/demandware.static/-/Sites-dabra-catalog/default/dw9e95136d/products/UB_U31TU01021-7267/UB_U31TU01021-7267-1.JPG',
+      'https://www.dexter.com.ar/on/demandware.static/-/Sites-dabra-catalog/default/dwdc6f837c/products/UB_U31TU01021-7267/UB_U31TU01021-7267-2.JPG',
+    ],
     descripcion:
       'La Camiseta Umbro C.A.T 2022 Titular es una prenda ideal para los que eligen llevar el amor por el celeste y blanco a sus partidos más esforzados o al asado con amigos. El cuello escote en V le da un aire futbolístico moderno ideal para lucir en la cancha. Su escudo original festoneado y el logo Umbro bordado imprimen el toque final a tu pasión.',
     genero: 'Hombre',
@@ -108,7 +123,11 @@ const listaproductos = [
     nombre: 'Liverpool Fc 2022/23',
     item: 'AD_GU9606',
     precio: 12999,
-    imagen: 'https://www.dexter.com.ar/on/demandware.static/-/Sites-dabra-catalog/default/dw969a2eb2/products/NI_DJ7862-609/NI_DJ7862-609-1.JPG',
+    imagenes: [
+      'https://www.dexter.com.ar/on/demandware.static/-/Sites-dabra-catalog/default/dw969a2eb2/products/NI_DJ7862-609/NI_DJ7862-609-1.JPG',
+      'https://www.dexter.com.ar/on/demandware.static/-/Sites-dabra-catalog/default/dw4a5a80dd/products/NI_DM1843-609/NI_DM1843-609-2.JPG',
+      'https://www.dexter.com.ar/on/demandware.static/-/Sites-dabra-catalog/default/dw4a5a80dd/products/NI_DM1843-609/NI_DM1843-609-3.JPG',
+    ],
     descripcion:
       'La Camiseta Nike Liverpool FC 2022/23 Stadium Home es una representación ideal de tu pasión por uno de los equipos más grandes de todos. Combina detalles de diseño tipo réplica basado en la camiseta que usan los profesionales en el campo dándote un look insuperable. Además te brinda comodidad absoluta gracias a su tecnología Dri-FIT para la absorción de sudor. Algo muy importante al momento de elegir esta prenda, es que está hecha en un 100% de fibras recicladas. Porque sabemos que no solo pensás en elegir tu vestimenta, sino que querés hacerlo bien.',
     genero: 'Mujer',
@@ -155,7 +174,7 @@ const getProductTemplate = list => {
       `<div class="articulo" id=${item.nombre}>
     <a id="view_${item.id}" href="../pages/product.html">
     <div class="imagen">
-    <img src="${item.imagen}" alt="${item.nombre}" title="${item.nombre}"/>
+    <img src="${item.imagenes[0]}" alt="${item.nombre}" title="${item.nombre}"/>
     </div>
     <div class="textos">
     <h3 class="title">${item.nombre}</h3>
@@ -198,8 +217,8 @@ listaproductos.map(item => {
 //#region Filtros
 const FiltrosSearch = () => {
   const search = document.getElementById('search').value.toLowerCase();
-  searchFiltrados = listaproductos.filter(item => item.nombre.toLowerCase().includes(search) ||item.descripcion.toLowerCase().includes(search));
-  aplicarFiltros(); 
+  searchFiltrados = listaproductos.filter(item => item.nombre.toLowerCase().includes(search) || item.descripcion.toLowerCase().includes(search));
+  aplicarFiltros();
 };
 document.getElementById('buttonSearch').onclick = () => {
   FiltrosSearch();
@@ -274,15 +293,13 @@ const aplicarFiltros = () => {
     }
   });
   document.getElementById('containerArticulos').innerHTML = '';
-  if(productosFiltrados.length===0){
-    document.getElementById('containerArticulos').classList.remove("containerArticulos")
-    document.getElementById('containerArticulos').classList.add("containerNoProduct")
-    document.getElementById('containerArticulos').innerHTML=`<h2 class="noProduct">NO SE ENCONTRARON PRODUCTOS</h2>`
-  }
-  else {
-    document.getElementById('containerArticulos').classList.add("containerArticulos")
+  if (productosFiltrados.length === 0) {
+    document.getElementById('containerArticulos').classList.remove('containerArticulos');
+    document.getElementById('containerArticulos').classList.add('containerNoProduct');
+    document.getElementById('containerArticulos').innerHTML = `<h2 class="noProduct">NO SE ENCONTRARON PRODUCTOS</h2>`;
+  } else {
+    document.getElementById('containerArticulos').classList.add('containerArticulos');
     getProductTemplate(productosFiltrados);
   }
-
 };
 //#endregion
