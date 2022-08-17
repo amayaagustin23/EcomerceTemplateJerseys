@@ -1339,16 +1339,21 @@ header .iconsNav, header .NavSearch {
           border-radius: .5rem;
           border: 2px solid #F0E3CA; }
       .containerProduct section .containerSection .contenedor {
-        display: grid;
+        display: block;
         justify-content: center;
-        grid-template-columns: 400px;
         text-align: center;
-        width: 400px;
         margin: auto; }
         .containerProduct section .containerSection .contenedor h1 {
-          font-size: 22px; }
+          font-size: 22px;
+          width: 20rem;
+          margin: auto; }
+        .containerProduct section .containerSection .contenedor p {
+          width: 20rem;
+          margin: auto; }
         .containerProduct section .containerSection .contenedor .precio {
-          font-size: 40px; }
+          font-size: 40px;
+          width: 20rem;
+          margin: auto; }
         .containerProduct section .containerSection .contenedor .talles {
           font-size: 10px;
           margin: auto;
