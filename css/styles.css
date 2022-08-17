@@ -1264,7 +1264,8 @@ header .iconsNav, header .NavSearch {
     justify-content: center;
     align-items: center; }
     .containerProduct section .containerSection .imagenProduct {
-      margin: auto; }
+      margin: auto;
+      width: 35rem; }
     .containerProduct section .containerSection .contenedor {
       display: grid;
       justify-content: center;
