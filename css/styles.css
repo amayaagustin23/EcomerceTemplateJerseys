@@ -1266,7 +1266,8 @@ header .iconsNav, header .NavSearch {
     justify-content: center;
     align-items: center; }
     .containerProduct section .containerSection .imagenProduct {
-      margin: auto; }
+      margin: auto;
+      display: flex; }
     .containerProduct section .containerSection .contenedor {
       display: grid;
       justify-content: center;
@@ -1296,23 +1297,7 @@ header .iconsNav, header .NavSearch {
       .containerProduct section .containerSection .imagenProduct {
         max-width: 20rem;
         margin: auto; }
-        .containerProduct section .containerSection .imagenProduct figure.zoom {
-          margin: auto;
-          position: relative;
-          border: 5px solid #F0E3CA;
-          border-radius: 1rem;
-          width: 20rem !important;
-          height: 20rem !important;
-          overflow: hidden;
-          cursor: zoom-in; }
-          .containerProduct section .containerSection .imagenProduct figure.zoom img {
-            transition: opacity 0.5s;
-            display: block;
-            width: 20rem; }
-            .containerProduct section .containerSection .imagenProduct figure.zoom img:hover {
-              opacity: 0; }
       .containerProduct section .containerSection .contenedor {
-        margin-top: -2rem;
         display: grid;
         justify-content: center;
         grid-template-columns: 400px;

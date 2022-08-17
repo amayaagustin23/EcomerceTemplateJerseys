@@ -138,6 +138,7 @@
         align-items: center;
         .imagenProduct {
           margin: auto;
+          display: flex;
         }
         .contenedor {
           display: grid;
@@ -178,27 +179,9 @@
         .imagenProduct {
           max-width: 20rem;
           margin: auto;
-          figure.zoom {
-            margin: auto;
-            position: relative;
-            border: 5px solid $colorBeige;
-            border-radius: 1rem;
-            width: 20rem !important;
-            height: 20rem !important;
-            overflow: hidden;
-            cursor: zoom-in;
-            img {
-              transition: opacity 0.5s;
-              display: block;
-              width: 20rem;
-              &:hover {
-                opacity: 0;
-              }
-            }
-          }
+          
         }
         .contenedor {
-          margin-top: -2rem;
           display: grid;
           justify-content: center;
           grid-template-columns: 400px;
