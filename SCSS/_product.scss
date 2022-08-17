@@ -61,6 +61,8 @@
           }
         }
         .imagenesAll{
+          display: flex;
+          justify-content: center;
           .imagenesExtra{
             width: 10rem;
             border-radius: .5rem;
@@ -202,12 +204,11 @@
 
 @media screen and (max-width: 576px) {
   .containerProduct {
+    margin: 1rem !important;
     padding: 1rem;
     section {
       .containerSection {
-        display: grid;
-        grid-gap: 2rem;
-        grid-template-columns: repeat(auto-fill, 600px);
+        display: block;
         justify-content: center;
         align-items: center;
         .imagenProduct {
@@ -232,7 +233,7 @@
             }
           }
           .imagenesAll{
-            
+
             .imagenesExtra{
               width: 5rem;
               border-radius: .5rem;

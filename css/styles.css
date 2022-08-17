@@ -1211,11 +1211,14 @@ header .iconsNav, header .NavSearch {
           height: 100%; }
           .containerProduct section .containerSection .imagenProduct figure.zoom img:hover {
             opacity: 0; }
-      .containerProduct section .containerSection .imagenProduct .imagenesAll .imagenesExtra {
-        width: 10rem;
-        border-radius: .5rem;
-        border: 2px solid #F0E3CA;
-        margin-inline: .5rem; }
+      .containerProduct section .containerSection .imagenProduct .imagenesAll {
+        display: flex;
+        justify-content: center; }
+        .containerProduct section .containerSection .imagenProduct .imagenesAll .imagenesExtra {
+          width: 10rem;
+          border-radius: .5rem;
+          border: 2px solid #F0E3CA;
+          margin-inline: .5rem; }
     .containerProduct section .containerSection .contenedor {
       display: grid;
       grid-template-columns: 1fr;
@@ -1307,11 +1310,10 @@ header .iconsNav, header .NavSearch {
 
 @media screen and (max-width: 576px) {
   .containerProduct {
+    margin: 1rem !important;
     padding: 1rem; }
     .containerProduct section .containerSection {
-      display: grid;
-      grid-gap: 2rem;
-      grid-template-columns: repeat(auto-fill, 600px);
+      display: block;
       justify-content: center;
       align-items: center; }
       .containerProduct section .containerSection .imagenProduct {
