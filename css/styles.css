@@ -1289,21 +1289,24 @@ header .iconsNav, header .NavSearch {
       grid-template-columns: repeat(auto-fill, 600px);
       justify-content: center;
       align-items: center; }
-      .containerProduct section .containerSection figure.zoom {
-        margin: auto;
-        position: relative;
-        border: 5px solid #F0E3CA;
-        border-radius: 1rem;
-        width: 20rem !important;
-        height: 20rem !important;
-        overflow: hidden;
-        cursor: zoom-in; }
-        .containerProduct section .containerSection figure.zoom img {
-          transition: opacity 0.5s;
-          display: block;
-          width: 100%; }
-          .containerProduct section .containerSection figure.zoom img:hover {
-            opacity: 0; }
+      .containerProduct section .containerSection .imagenProduct {
+        width: 20rem;
+        margin: auto; }
+        .containerProduct section .containerSection .imagenProduct figure.zoom {
+          margin: auto;
+          position: relative;
+          border: 5px solid #F0E3CA;
+          border-radius: 1rem;
+          width: 20rem !important;
+          height: 20rem !important;
+          overflow: hidden;
+          cursor: zoom-in; }
+          .containerProduct section .containerSection .imagenProduct figure.zoom img {
+            transition: opacity 0.5s;
+            display: block;
+            width: 20rem; }
+            .containerProduct section .containerSection .imagenProduct figure.zoom img:hover {
+              opacity: 0; }
       .containerProduct section .containerSection .contenedor {
         margin-top: -2rem;
         display: grid;

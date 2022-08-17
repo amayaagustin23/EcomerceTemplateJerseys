@@ -18,7 +18,7 @@ aria-label="breadcrumb">
 </nav>
 <br>
 <div class="containerSection">
-<div id="img-container" class="imagenProduct">
+<div class="imagenProduct">
 <figure class="zoom" onmousemove="zoom(event)" style="background-image: url(${producto.imagen})">
 <img src=${producto.imagen}>
 </figure>
