@@ -1214,7 +1214,8 @@ header .iconsNav, header .NavSearch {
       .containerProduct section .containerSection .imagenProduct .imagenesAll .imagenesExtra {
         width: 10rem;
         border-radius: .5rem;
-        border: 2px solid #F0E3CA; }
+        border: 2px solid #F0E3CA;
+        margin-inline: .5rem; }
     .containerProduct section .containerSection .contenedor {
       display: grid;
       grid-template-columns: 1fr;
