@@ -41,6 +41,7 @@
       justify-content: center;
       align-items: center;
       .imagenProduct {
+        width: 35rem;
         figure.zoom {
           background-position: 50% 50%;
           position: relative;
@@ -137,7 +138,6 @@
         align-items: center;
         .imagenProduct {
           margin: auto;
-          width: 35rem;
         }
         .contenedor {
           display: grid;
