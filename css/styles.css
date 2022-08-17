@@ -1263,6 +1263,8 @@ header .iconsNav, header .NavSearch {
     grid-template-columns: repeat(auto-fill, 600px);
     justify-content: center;
     align-items: center; }
+    .containerProduct section .containerSection .imagenProduct {
+      margin: auto; }
     .containerProduct section .containerSection .contenedor {
       display: grid;
       justify-content: center;
@@ -1290,7 +1292,7 @@ header .iconsNav, header .NavSearch {
       justify-content: center;
       align-items: center; }
       .containerProduct section .containerSection .imagenProduct {
-        width: 20rem;
+        max-width: 20rem;
         margin: auto; }
         .containerProduct section .containerSection .imagenProduct figure.zoom {
           margin: auto;
