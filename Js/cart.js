@@ -125,7 +125,7 @@ const getCart = list => {
       <hr class="my-4" />
 		  <div class="row mb-4 d-flex justify-content-between align-items-center">
         <div class="col-md-2 col-lg-2 col-xl-2">
-        <img src=${item.imagenes[0]} class="img-fluid rounded-3" />
+        <a href="../pages/product.html"><img  id="viewImg_${item.id}_${item.talle}"src=${item.imagenes[0]} class="img-fluid rounded-3" /></a>
         </div>
         <div class="col-md-3 col-lg-3 col-xl-3">
           <a  href="../pages/product.html"><h6 id="view_${item.id}_${item.talle}" class="text-muted">${item.nombre} - ${item.talle}</h6></a>
@@ -215,6 +215,9 @@ listCart?.map(item => {
     removeProductToCart(item);
   };
   document.getElementById('view_' + item.id + '_' + item.talle).onclick = () => {
+    redirectProduct(item);
+  };
+  document.getElementById('viewImg_' + item.id + '_' + item.talle).onclick = () => {
     redirectProduct(item);
   };
 });
