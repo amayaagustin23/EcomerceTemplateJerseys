@@ -32,7 +32,6 @@ const getCarrito = list => {
         </div>
         `
   );
-  console.log(cart.join());
   return cart.join('');
 };
 
