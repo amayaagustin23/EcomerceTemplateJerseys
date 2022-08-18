@@ -1,5 +1,7 @@
 //#region Variables y LocalStorage
   const listCart = JSON.parse(localStorage.getItem('listCart'));
+const modal = document.getElementById('myModal');
+
   let totalCompra = listCart?.reduce((acum, elemento) => (acum += elemento.precio * elemento.count), 0);
   let compraEnvio = totalCompra;
   if(totalCompra===undefined) totalCompra=0 
@@ -13,6 +15,42 @@
   let select = document.getElementById('select');
 //#endregion
 
+//#region Modal Carrito
+
+const getCarrito = list => {
+  const imagenes = list.map(
+    item => `
+        <div class="bodyCart">
+        <h4>${item.nombre}</h4>
+        <div class="container">
+        <img class="imgCart" src=${item.imagenes[0]}>
+        <div class="textContainer">
+        <p>Talle: ${item.talle}</p>
+        <p>Cantidad: ${item.count}</p>
+        <p>Subtotal: $${item.count * item.precio}</p>
+        </div>
+        </div>
+        </div>
+        `
+  );
+  document.getElementById('bodyModal').innerHTML = imagenes.join('');
+};
+
+
+document.getElementById("cartNavResponsive").onclick=()=>{
+  getCarrito(listCart);
+  modal.style.display = 'block';
+}
+document.getElementById("cartNav").onclick=()=>{
+  getCarrito(listCart);
+  modal.style.display = 'block';
+}
+var span = document.getElementsByClassName("close")[0];
+span.onclick = ()=> {
+  modal.style.display = "none";
+}
+//#endregion
+
 //#region Renderizado
 const getCart = list => {
   document.getElementById('containerCart').innerHTML = '';
@@ -21,7 +59,7 @@ const getCart = list => {
       `  <hr class="my-4" />
 		<div class="row mb-4 d-flex justify-content-between align-items-center">
 		  <div class="col-md-2 col-lg-2 col-xl-2">
-			<img src=${item.imagen} class="img-fluid rounded-3" />
+			<img src=${item.imagenes[0]} class="img-fluid rounded-3" />
 		  </div>
 		  <div class="col-md-3 col-lg-3 col-xl-3">
 			<h6 class="text-muted">${item.nombre} - ${item.talle}</h6>
@@ -58,18 +96,37 @@ select.addEventListener('change', function () {
 });
 
 const removeProductToCart=(item)=>{
-  const idView = document.getElementById('remove_' + item.id + '_' + item.talle).id.split('_');
-  const id = parseInt(idView[1]);
-  const talle = idView[2];
-  filtered = listCart.filter(item => item.id !== id || item.talle !== talle);
-  localStorage.setItem('listCart', JSON.stringify(filtered));
-  localStorage.setItem('cantidad', filtered.length);
-  document.getElementById('cartcountNav').innerHTML = filtered.length;
-  document.getElementById('cartcount').innerHTML = filtered.length;
-  document.getElementById('countProducts').innerHTML = filtered.length;
-  let totalCompraNew = filtered.reduce((acum, elemento) => (acum += elemento.precio * elemento.count), 0);
-  document.getElementById('subtotal').innerHTML = `$${totalCompraNew}`;
-  window.location.href = './shoppingCart.html';
+  Swal.fire({
+    title: '¿Esta seguro que quiere eliminar?',
+    text: "",
+    icon: 'warning',
+    showCancelButton: true,
+    confirmButtonColor: '#FF8303',
+    cancelButtonColor: '#1B1A17',
+    cancelButtonText : 'Cancelar',
+    confirmButtonText: 'Si'
+  }).then((result) => {
+    if (result.isConfirmed) {
+      const idView = document.getElementById('remove_' + item.id + '_' + item.talle).id.split('_');
+      const id = parseInt(idView[1]);
+      const talle = idView[2];
+      filtered = listCart.filter(item => item.id !== id || item.talle !== talle);
+      localStorage.setItem('listCart', JSON.stringify(filtered));
+      localStorage.setItem('cantidad', filtered.length);
+      document.getElementById('cartcountNav').innerHTML = filtered.length;
+      document.getElementById('cartcount').innerHTML = filtered.length;
+      document.getElementById('countProducts').innerHTML = filtered.length;
+      let totalCompraNew = filtered.reduce((acum, elemento) => (acum += elemento.precio * elemento.count), 0);
+      document.getElementById('subtotal').innerHTML = `$${totalCompraNew}`;
+      window.location.href = './shoppingCart.html';
+      Swal.fire(
+        'Deleted!',
+        'Your file has been deleted.',
+        'success'
+      )
+    }
+  })
+
 }
 
 const changeCount=(item)=>{

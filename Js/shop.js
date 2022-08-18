@@ -3,6 +3,7 @@ let cantidad = localStorage.getItem('cantidad');
 if (cantidad === null) cantidad = 0;
 document.getElementById('cartcountNav').innerHTML = cantidad;
 document.getElementById('cartcount').innerHTML = cantidad;
+let listCart = JSON.parse(localStorage.getItem('listCart'));
 //#endregion
 
 //#region Variables
@@ -150,6 +151,42 @@ let searchFiltrados = [];
 const marcas = document.getElementsByClassName('form-check-marcas');
 const talles = document.getElementsByClassName('form-check-talles');
 const generos = document.getElementsByClassName('form-check-genero');
+const modal = document.getElementById('myModal');
+//#endregion
+
+
+document.getElementById("cartNavResponsive").onclick=()=>{
+  getCarrito(listCart);
+  modal.style.display = 'block';
+}
+document.getElementById("cartNav").onclick=()=>{
+  getCarrito(listCart);
+  modal.style.display = 'block';
+}
+var span = document.getElementsByClassName("close")[0];
+span.onclick = ()=> {
+  modal.style.display = "none";
+}
+
+const getCarrito = list => {
+  const imagenes = list.map(
+    item => `
+        <div class="bodyCart">
+        <h4>${item.nombre}</h4>
+        <div class="container">
+        <img class="imgCart" src=${item.imagenes[0]}>
+        <div class="textContainer">
+        <p>Talle: ${item.talle}</p>
+        <p>Cantidad: ${item.count}</p>
+        <p>Subtotal: $${item.count * item.precio}</p>
+        </div>
+        </div>
+        </div>
+        `
+  );
+  document.getElementById('bodyModal').innerHTML = imagenes.join('');
+};
+
 //#endregion
 
 //#region Funciones de renderizados

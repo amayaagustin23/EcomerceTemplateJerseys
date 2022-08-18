@@ -10,6 +10,7 @@
         vida de grandeza."
     />
     <meta name="keywords" content="Futbol, Camiseta, Camisetas, River Plate, Adidas, Football, Argentina, Shop, Tienda, Sport, Deportes, Ropa deportiva, Ropa" />
+    <link href="//cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/fontello.css" media="screen" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
@@ -61,7 +62,7 @@
           </nav>
           <div class="icons">
             <a class="icon" href="./User.html"><img class="groupIcon" src="../image/icon/profile-user.png" alt="user" /></a>
-            <a class="icon" href="./shoppingCart.html"
+            <a class="icon" id="cartNav"
               ><img class="groupIcon" src="../image/icon/shopping-cart.png" alt="cart" />
               <div id="cartcount">0</div></a
             >
@@ -71,13 +72,25 @@
       </div>
       <div class="iconsNav">
         <a class="icon" href="./User.html"><img class="groupIcon" src="../image/icon/profile-user.png" width="32" alt="user" /></a>
-        <a class="icon" href="./shoppingCart.html"
+        <a class="icon" id="cartNavResponsive"
           ><img class="groupIcon" src="../image/icon/shopping-cart.png" alt="cart" />
           <div id="cartcountNav">0</div></a
         >
       </div>
     </header>
     <div class="containerProduct" id="containerProduct"></div>
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <div class="headerModal">
+          <h3>Mi carrito</h3>
+          <span class="close">&times;</span>
+        </div>
+        <div id="bodyModal"></div>
+        <div class="footerModal">
+          <a href="./shoppingCart.html">Ir al carrito</a>
+        </div>
+      </div>
+    </div>
     <footer class="footer">
       <div class="contenedor" data-aos="zoom-in" data-aos-easing="linear" data-aos-duration="1500">
         <div class="logoFooter">
@@ -102,7 +115,7 @@
         <p>&copy; Copyright © 2022 — SPS.</p>
       </div>
     </footer>
-
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
       AOS.init();

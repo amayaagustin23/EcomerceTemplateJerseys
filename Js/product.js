@@ -8,6 +8,41 @@ if (cantidad === null) cantidad = 0;
 document.getElementById('cartcountNav').innerHTML = cantidad;
 document.getElementById('cartcount').innerHTML = cantidad;
 
+
+const getCarrito = list => {
+  const imagenes = list.map(
+    item => `
+        <div class="bodyCart">
+        <h4>${item.nombre}</h4>
+        <div class="container">
+        <img class="imgCart" src=${item.imagenes[0]}>
+        <div class="textContainer">
+        <p>Talle: ${item.talle}</p>
+        <p>Cantidad: ${item.count}</p>
+        <p>Subtotal: $${item.count * item.precio}</p>
+        </div>
+        </div>
+        </div>
+        `
+  );
+  document.getElementById('bodyModal').innerHTML = imagenes.join('');
+};
+
+
+document.getElementById("cartNavResponsive").onclick=()=>{
+  getCarrito(listCart);
+  modal.style.display = 'block';
+}
+document.getElementById("cartNav").onclick=()=>{
+  getCarrito(listCart);
+  modal.style.display = 'block';
+}
+var span = document.getElementsByClassName("close")[0];
+span.onclick = ()=> {
+  modal.style.display = "none";
+}
+const modal = document.getElementById('myModal');
+
 const getImagenes = list => {
   const imagenes = list.map(item => ` <img class="imagenesExtra" src="${item}">`);
   const elementHTML = document.getElementsByClassName('imagenesAll');
@@ -17,6 +52,7 @@ const getImagenes = list => {
   });
   return data;
 };
+
 const productoView = `<section>
 <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);"
 aria-label="breadcrumb">
@@ -32,7 +68,7 @@ aria-label="breadcrumb">
 <img id="imagenPrincipal" src=${producto.imagenes[0]}>
 </figure>
 <div class="imagenesAll">
-${getImagenes(producto.imagenes).join("")}
+${getImagenes(producto.imagenes).join('')}
 </div>
 </div>
 <div class="contenedor">
@@ -82,7 +118,6 @@ ${getImagenes(producto.imagenes).join("")}
     <li><span class="descOp">Calce:</span> ${producto.calce}</li>
     <li><span class="descOp">Liga: </span> ${producto.liga}</li>
     </ol>
-    
     </div>
     </div>
     </div>
@@ -91,7 +126,6 @@ ${getImagenes(producto.imagenes).join("")}
     </section>`;
 
 const prodview = (document.getElementById('containerProduct').innerHTML = productoView);
-
 
 
 const talles = document.getElementsByClassName('talle');
@@ -103,11 +137,14 @@ for (let i = 0; i < talles.length; i++) {
   });
 }
 
+
 document.getElementById('carrito').onclick = () => {
-  console.log(productCarrito);
   if (listCart === null) listCart = [];
-  if (document.getElementById('count').value === '0') document.getElementById('spanNotify').innerHTML = 'No se ingreso la cantidad';
-  else if (productCarrito === '') document.getElementById('spanNotify').innerHTML = 'No se ingreso un talle';
+  if (document.getElementById('count').value === '0'){
+
+  } 
+  else if (productCarrito === '') {
+  }
   else {
     const prodexistente = listCart.find(item => item.id === productCarrito.id && item.talle === productCarrito.talle);
     if (prodexistente !== undefined) {
@@ -124,8 +161,13 @@ document.getElementById('carrito').onclick = () => {
     localStorage.setItem('cantidad', listCart.length);
     document.getElementById('cartcountNav').innerHTML = listCart.length;
     document.getElementById('cartcount').innerHTML = listCart.length;
-    document.getElementById('spanNotify').style.color = 'green';
-    document.getElementById('spanNotify').innerHTML = 'Se agrego correctamente el producto';
+
+    Swal.fire({
+      icon: 'success',
+      title: 'Se agrego correctamente al carrito',
+      showConfirmButton: false,
+      timer: 1500
+    })
   }
 };
 
@@ -160,3 +202,9 @@ function zoom(e) {
   y = (offsetY / zoomer.offsetHeight) * 100;
   zoomer.style.backgroundPosition = x + '% ' + y + '%';
 }
+
+window.onclick = function (event) {
+  if (event.target == modal) {
+    modal.style.display = 'none';
+  }
+};
