@@ -17,7 +17,7 @@ a {
 
 .bodyCart {
   display: block;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   background-color: #EEEEEE;
   border: 2px solid #403F3D;
@@ -30,8 +30,8 @@ a {
   .bodyCart .containerModal {
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    width: 16rem; }
+    justify-content: space-between;
+    padding: .2rem 1rem; }
     .bodyCart .containerModal .imgCart {
       width: 6rem;
       border-radius: .5rem;
@@ -43,6 +43,14 @@ a {
       .bodyCart .containerModal .textContainer p {
         padding: 0;
         margin: 0; }
+    .bodyCart .containerModal .deleteCart {
+      margin-left: 1rem;
+      background-color: #FF8303;
+      border: none;
+      padding: .3rem;
+      border-radius: .2rem; }
+      .bodyCart .containerModal .deleteCart:hover {
+        background-color: #1B1A17; }
 
 #cartcount {
   color: #1B1A17;

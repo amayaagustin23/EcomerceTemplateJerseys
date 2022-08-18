@@ -308,6 +308,30 @@ const aplicarFiltros = () => {
 //#endregion
 
 //#region Modal Carrito
+const removeProductToCart = item => {
+  console.log(item)
+  Swal.fire({
+    title: '¿Esta seguro que quiere eliminar?',
+    text: '',
+    icon: 'warning',
+    showCancelButton: true,
+    confirmButtonColor: '#FF8303',
+    cancelButtonColor: '#1B1A17',
+    cancelButtonText: 'Cancelar',
+    confirmButtonText: 'Si',
+  }).then(result => {
+    if (result.isConfirmed) {
+      const id = item.id;
+      const talle = item.talle;
+      filtered = listCart.filter(item => item.id !== id || item.talle !== talle);
+      console.log(filtered)
+      localStorage.setItem('listCart', JSON.stringify(filtered));
+      localStorage.setItem('cantidad', filtered.length);
+      document.getElementById('cartcountNav').innerHTML = filtered.length;
+      document.getElementById('cartcount').innerHTML = filtered.length;
+    }
+  });
+};
 let total = listCart?.reduce((acum, elemento) => (acum += elemento.precio * elemento.count), 0);
 const parrafototal = `<h4>Total: $${total}</h4>`;
 const getCarrito = list => {
@@ -317,26 +341,26 @@ const getCarrito = list => {
           <h4>${item.nombre}</h4>
           <div class="containerModal">
             <img class="imgCart" src=${item.imagenes[0]}>
-          <div class="textContainer">
-            <p>Talle: ${item.talle}</p>
-            <p>Cantidad: ${item.count}</p>
-            <p>Subtotal: $${item.count * item.precio}</p>
-          </div>
+            <div class="textContainer">
+              <p>Talle: ${item.talle}</p>
+              <p>Cantidad: ${item.count}</p>
+              <p>Total: $${item.count * item.precio}</p>
+            </div>
+            <button id="remove_${item.id}_${item.talle}" class="deleteCart"><img src="../image/icon/delete.png"></button>
           </div>
         </div>
         `
   );
   return cart.join('');
 };
-
 document.getElementById('cartNavResponsive').onclick = () => {
+  listCart = JSON.parse(localStorage.getItem('listCart'));
   Swal.fire({
     position: 'top-end',
     title: 'Carrito ',
     showConfirmButton: true,
     html: getCarrito(listCart),
     width: '25rem',
-    padding: '-20rem',
     customClass: 'modalAlert',
     confirmButtonColor: '#FF8303',
     confirmButtonText: 'Ver carrito',
@@ -347,16 +371,21 @@ document.getElementById('cartNavResponsive').onclick = () => {
     if (result.isConfirmed) {
       window.location.href = './shoppingCart.html';
     }
+  });
+  listCart.map(item => {
+    document.getElementById(`remove_${item.id}_${item.talle}`).onclick = () => {
+      removeProductToCart(item)
+    };
   });
 };
 document.getElementById('cartNav').onclick = () => {
+  listCart = JSON.parse(localStorage.getItem('listCart'));
   Swal.fire({
     position: 'top-end',
     title: 'Carrito ',
     showConfirmButton: true,
     html: getCarrito(listCart),
     width: '25rem',
-    padding: '-20rem',
     customClass: 'modalAlert',
     confirmButtonColor: '#FF8303',
     confirmButtonText: 'Ver carrito',
@@ -368,5 +397,10 @@ document.getElementById('cartNav').onclick = () => {
       window.location.href = './shoppingCart.html';
     }
   });
+  listCart.map(item => {
+    document.getElementById(`remove_${item.id}_${item.talle}`).onclick = () => {
+      removeProductToCart(item)
+    };
+  });
 };
-//#endregion
+// #endregion

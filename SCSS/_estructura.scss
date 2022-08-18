@@ -19,7 +19,7 @@ a {
 
 .bodyCart{
   display: block;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   background-color: $colorBlanco;
   border: 2px solid $colorGris;
@@ -33,9 +33,8 @@ a {
   .containerModal{
     display: flex;
     align-items: center;
-    justify-content:space-around ;
-    width: 16rem;
-
+    justify-content:space-between ;
+    padding: .2rem 1rem;
     .imgCart{
       width: 6rem;
       border-radius: .5rem;
@@ -48,6 +47,17 @@ a {
       p{
         padding: 0;
         margin: 0;
+      }
+    }
+    .deleteCart{ 
+      margin-left: 1rem;
+      background-color: $colorNaranja;
+      border: none;
+      padding: .3rem;
+      border-radius: .2rem;
+      &:hover{
+        background-color: $colorNegro;
+
       }
     }
   }
