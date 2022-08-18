@@ -122,12 +122,6 @@ const removeProductToCart=(item)=>{
       document.getElementById('countProducts').innerHTML = filtered.length;
       let totalCompraNew = filtered.reduce((acum, elemento) => (acum += elemento.precio * elemento.count), 0);
       document.getElementById('subtotal').innerHTML = `$${totalCompraNew}`;
-      Swal.fire({
-        icon: 'success',
-        title: 'Se elimino correctamente el producto del carrito',
-        showConfirmButton: false,
-        timer: 1000
-      })
         window.location.href = './shoppingCart.html';
     }
   })

@@ -9,7 +9,24 @@ a {
   text-decoration: none !important;
 }
 
-
+.containerModal{
+  display: flex;
+  justify-content:center !important;
+  width: 16rem;
+  .imgCart{
+    width: 6rem;
+    border-radius: .5rem;
+    padding: .2rem;
+    margin-right: .2rem;
+  }
+  .textContainer{
+    height: 5rem;
+    p{
+      padding: 0;
+      margin: 0;
+    }
+  }
+}
 #cartcount{
   color: $colorNegro;
   width: 25px;
@@ -264,7 +281,7 @@ header {
       border-radius: .5rem;
       margin: .5rem 1rem;
       padding: 1.5rem;
-      .container{
+      .containerModal{
         display: flex;
         align-items: center;
         justify-content:space-around ;

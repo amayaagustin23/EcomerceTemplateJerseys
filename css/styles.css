@@ -8,6 +8,21 @@ ol {
 a {
   text-decoration: none !important; }
 
+.containerModal {
+  display: flex;
+  justify-content: center !important;
+  width: 16rem; }
+  .containerModal .imgCart {
+    width: 6rem;
+    border-radius: .5rem;
+    padding: .2rem;
+    margin-right: .2rem; }
+  .containerModal .textContainer {
+    height: 5rem; }
+    .containerModal .textContainer p {
+      padding: 0;
+      margin: 0; }
+
 #cartcount {
   color: #1B1A17;
   width: 25px;
@@ -225,19 +240,19 @@ header .iconsNav, header .NavSearch {
       border-radius: .5rem;
       margin: .5rem 1rem;
       padding: 1.5rem; }
-      .modal .modal-content .bodyCart .container {
+      .modal .modal-content .bodyCart .containerModal {
         display: flex;
         align-items: center;
         justify-content: space-around;
         width: 16rem; }
-        .modal .modal-content .bodyCart .container .imgCart {
+        .modal .modal-content .bodyCart .containerModal .imgCart {
           width: 6rem;
           border-radius: .5rem;
           padding: .2rem;
           margin-right: .2rem; }
-        .modal .modal-content .bodyCart .container .textContainer {
+        .modal .modal-content .bodyCart .containerModal .textContainer {
           height: 5rem; }
-          .modal .modal-content .bodyCart .container .textContainer p {
+          .modal .modal-content .bodyCart .containerModal .textContainer p {
             padding: 0;
             margin: 0; }
     .modal .modal-content .close {

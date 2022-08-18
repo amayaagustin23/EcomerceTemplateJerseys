@@ -7,14 +7,14 @@ let cantidad = localStorage.getItem('cantidad');
 if (cantidad === null) cantidad = 0;
 document.getElementById('cartcountNav').innerHTML = cantidad;
 document.getElementById('cartcount').innerHTML = cantidad;
-
+let cartList
 
 const getCarrito = list => {
-  const imagenes = list.map(
+  const cart = list.map(
     item => `
         <div class="bodyCart">
         <h4>${item.nombre}</h4>
-        <div class="container">
+        <div class="containerModal">
         <img class="imgCart" src=${item.imagenes[0]}>
         <div class="textContainer">
         <p>Talle: ${item.talle}</p>
@@ -25,17 +25,21 @@ const getCarrito = list => {
         </div>
         `
   );
-  document.getElementById('bodyModal').innerHTML = imagenes.join('');
+  console.log(cart.join())
+  return cart.join('');
 };
 
 
 document.getElementById("cartNavResponsive").onclick=()=>{
   getCarrito(listCart);
-  modal.style.display = 'block';
 }
 document.getElementById("cartNav").onclick=()=>{
-  getCarrito(listCart);
-  modal.style.display = 'block';
+  Swal.fire({
+    position:'top-end',
+    title: 'Carrito ',
+    showConfirmButton: true,
+    html:getCarrito(listCart),
+  })
 }
 var span = document.getElementsByClassName("close")[0];
 span.onclick = ()=> {
@@ -142,7 +146,6 @@ document.getElementById('carrito').onclick = () => {
   if (listCart === null) listCart = [];
   if (document.getElementById('count').value === '0'){
     Swal.fire({
-      position: 'top-end',
       icon: 'error',
       title: 'No se ingreso una cantidad!',
       confirmButtonColor: '#FF8303',
@@ -151,7 +154,6 @@ document.getElementById('carrito').onclick = () => {
   } 
   else if (productCarrito === '') {
     Swal.fire({
-      position: 'top-end',
       icon: 'error',
       title: 'No se selecciono un talle!',
       confirmButtonColor: '#FF8303',
