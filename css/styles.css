@@ -1363,7 +1363,7 @@ header .iconsNav, header .NavSearch {
   .containerProduct section .containerSection {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: flex-start; }
     .containerProduct section .containerSection .imagenProduct {
       width: 30rem; }
@@ -1392,8 +1392,8 @@ header .iconsNav, header .NavSearch {
           margin-inline: .5rem; }
     .containerProduct section .containerSection .contenedor {
       display: grid;
-      grid-template-columns: 1fr;
-      justify-content: center; }
+      justify-content: center;
+      margin: 2rem 0 2rem 7rem; }
       .containerProduct section .containerSection .contenedor .precio {
         font-size: 4rem; }
       .containerProduct section .containerSection .contenedor .talles {
