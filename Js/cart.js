@@ -16,19 +16,21 @@ let select = document.getElementById('select');
 //#endregion
 
 //#region Modal Carrito
+let total = listCart?.reduce((acum, elemento) => (acum += elemento.precio * elemento.count), 0);
+const parrafototal = `<h4>Total: $${total}</h4>`;
 const getCarrito = list => {
   const cart = list.map(
     item => `
         <div class="bodyCart">
-        <h4>${item.nombre}</h4>
-        <div class="containerModal">
-        <img class="imgCart" src=${item.imagenes[0]}>
-        <div class="textContainer">
-        <p>Talle: ${item.talle}</p>
-        <p>Cantidad: ${item.count}</p>
-        <p>Subtotal: $${item.count * item.precio}</p>
-        </div>
-        </div>
+          <h4>${item.nombre}</h4>
+          <div class="containerModal">
+            <img class="imgCart" src=${item.imagenes[0]}>
+          <div class="textContainer">
+            <p>Talle: ${item.talle}</p>
+            <p>Cantidad: ${item.count}</p>
+            <p>Subtotal: $${item.count * item.precio}</p>
+          </div>
+          </div>
         </div>
         `
   );
@@ -46,6 +48,9 @@ document.getElementById('cartNavResponsive').onclick = () => {
     customClass: 'modalAlert',
     confirmButtonColor: '#FF8303',
     confirmButtonText: 'Ver carrito',
+    cancelButtonText: '<i class="fa fa-thumbs-down"></i>',
+    cancelButtonAriaLabel: 'Thumbs down',
+    footer: parrafototal,
   }).then(result => {
     if (result.isConfirmed) {
       window.location.href = './shoppingCart.html';
@@ -63,20 +68,14 @@ document.getElementById('cartNav').onclick = () => {
     customClass: 'modalAlert',
     confirmButtonColor: '#FF8303',
     confirmButtonText: 'Ver carrito',
+    cancelButtonText: '<i class="fa fa-thumbs-down"></i>',
+    cancelButtonAriaLabel: 'Thumbs down',
+    footer: parrafototal,
   }).then(result => {
     if (result.isConfirmed) {
       window.location.href = './shoppingCart.html';
     }
   });
-};
-var span = document.getElementsByClassName('close')[0];
-span.onclick = () => {
-  modal.style.display = 'none';
-};
-window.onclick = function (event) {
-  if (event.target == modal) {
-    modal.style.display = 'none';
-  }
 };
 //#endregion
 

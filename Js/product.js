@@ -9,73 +9,66 @@ document.getElementById('cartcountNav').innerHTML = cantidad;
 document.getElementById('cartcount').innerHTML = cantidad;
 let cartList
 
+let total = listCart?.reduce((acum, elemento) => (acum += elemento.precio * elemento.count), 0);
+const parrafototal = `<h4>Total: $${total}</h4>`;
 const getCarrito = list => {
   const cart = list.map(
     item => `
         <div class="bodyCart">
-        <h4>${item.nombre}</h4>
-        <div class="containerModal">
-        <img class="imgCart" src=${item.imagenes[0]}>
-        <div class="textContainer">
-        <p>Talle: ${item.talle}</p>
-        <p>Cantidad: ${item.count}</p>
-        <p>Subtotal: $${item.count * item.precio}</p>
-        </div>
-        </div>
+          <h4>${item.nombre}</h4>
+          <div class="containerModal">
+            <img class="imgCart" src=${item.imagenes[0]}>
+          <div class="textContainer">
+            <p>Talle: ${item.talle}</p>
+            <p>Cantidad: ${item.count}</p>
+            <p>Subtotal: $${item.count * item.precio}</p>
+          </div>
+          </div>
         </div>
         `
   );
   return cart.join('');
 };
 
-
-document.getElementById("cartNavResponsive").onclick=()=>{
+document.getElementById('cartNavResponsive').onclick = () => {
   Swal.fire({
-    position:'top-end',
+    position: 'top-end',
     title: 'Carrito ',
     showConfirmButton: true,
-    html:getCarrito(listCart),
-    width:"25rem",
-    padding:"-20rem",
-    customClass:"modalAlert",
+    html: getCarrito(listCart),
+    width: '25rem',
+    padding: '-20rem',
+    customClass: 'modalAlert',
     confirmButtonColor: '#FF8303',
     confirmButtonText: 'Ver carrito',
-  }).then((result) => {
+    cancelButtonText: '<i class="fa fa-thumbs-down"></i>',
+    cancelButtonAriaLabel: 'Thumbs down',
+    footer: parrafototal,
+  }).then(result => {
     if (result.isConfirmed) {
-        window.location.href = './shoppingCart.html';
+      window.location.href = './shoppingCart.html';
     }
-  })
-}
-document.getElementById("cartNav").onclick=()=>{
-  Swal.fire({
-    position:'top-end',
-    title: 'Carrito ',
-    showConfirmButton: true,
-    html:getCarrito(listCart),
-    width:"25rem",
-    padding:"-20rem",
-    customClass:"modalAlert",
-    confirmButtonColor: '#FF8303',
-    confirmButtonText: 'Ver carrito',
-  }).then((result) => {
-    if (result.isConfirmed) {
-        window.location.href = './shoppingCart.html';
-    }
-  })
-}
-var span = document.getElementsByClassName("close")[0];
-span.onclick = ()=> {
-  modal.style.display = "none";
-}
-const modal = document.getElementById('myModal');
-const getImagenes = list => {
-  const imagenes = list.map(item => ` <img class="imagenesExtra" src="${item}">`);
-  const elementHTML = document.getElementsByClassName('imagenesAll');
-  const data = imagenes;
-  data.forEach(element => {
-    elementHTML.innerHTML += element;
   });
-  return data;
+};
+document.getElementById('cartNav').onclick = () => {
+  Swal.fire({
+    position: 'top-end',
+    title: 'Carrito ',
+    showConfirmButton: true,
+    html: getCarrito(listCart),
+    width: '25rem',
+    padding: '-20rem',
+    customClass: 'modalAlert',
+    confirmButtonColor: '#FF8303',
+    confirmButtonText: 'Ver carrito',
+    cancelButtonText: '<i class="fa fa-thumbs-down"></i>',
+    cancelButtonAriaLabel: 'Thumbs down',
+    footer: parrafototal,
+  }).then(result => {
+    if (result.isConfirmed) {
+      window.location.href = './shoppingCart.html';
+    }
+  });
 };
 
 const productoView = `<section>
