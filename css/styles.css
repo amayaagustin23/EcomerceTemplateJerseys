@@ -453,7 +453,9 @@ header .iconsNav, header .NavSearch {
     height: 18rem;
     background-color: #EEEEEE;
     color: #1B1A17;
-    padding: 0 1rem !important; } }
+    padding: 0 1rem 1rem 1rem !important; }
+  .bodyCart .containerModal .textContainer p {
+    font-size: 15px; } }
 
 .containerHome .imagenPrincipal {
   width: 100%;

@@ -571,8 +571,16 @@ header {
     height: 18rem;
     background-color: $colorBlanco;
     color: $colorNegro;
-    padding: 0 1rem !important;
+    padding: 0 1rem 1rem 1rem !important;
   }
-  
+  .bodyCart{
+    .containerModal{
+      .textContainer{
+        p{
+          font-size: 15px;
+        }
+      }
+    }
+  }
 
 }
