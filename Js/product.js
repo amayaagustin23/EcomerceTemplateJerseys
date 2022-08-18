@@ -71,7 +71,6 @@ span.onclick = ()=> {
   modal.style.display = "none";
 }
 const modal = document.getElementById('myModal');
-
 const getImagenes = list => {
   const imagenes = list.map(item => ` <img class="imagenesExtra" src="${item}">`);
   const elementHTML = document.getElementsByClassName('imagenesAll');
