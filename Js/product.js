@@ -7,9 +7,7 @@ let cantidad = localStorage.getItem('cantidad');
 if (cantidad === null) cantidad = 0;
 document.getElementById('cartcountNav').innerHTML = cantidad;
 document.getElementById('cartcount').innerHTML = cantidad;
-let cartList
-
-
+let cartList;
 
 const getImagenes = list => {
   const imagenes = list.map(item => ` <img class="imagenesExtra" src="${item}">`);
@@ -95,7 +93,6 @@ ${getImagenes(producto.imagenes).join('')}
 
 const prodview = (document.getElementById('containerProduct').innerHTML = productoView);
 
-
 const talles = document.getElementsByClassName('talle');
 for (let i = 0; i < talles.length; i++) {
   producto.tallesFaltante.map(item => {
@@ -105,26 +102,23 @@ for (let i = 0; i < talles.length; i++) {
   });
 }
 
-
 document.getElementById('carrito').onclick = () => {
   if (listCart === null) listCart = [];
-  if (document.getElementById('count').value === '0'){
+  if (document.getElementById('count').value === '0') {
     Swal.fire({
       icon: 'error',
       title: 'No se ingreso una cantidad!',
       confirmButtonColor: '#FF8303',
       confirmButtonBorder: '#FF8303',
-    })
-  } 
-  else if (productCarrito === '') {
+    });
+  } else if (productCarrito === '') {
     Swal.fire({
       icon: 'error',
       title: 'No se selecciono un talle!',
       confirmButtonColor: '#FF8303',
       confirmButtonBorder: '#FF8303',
-    })
-  }
-  else {
+    });
+  } else {
     const prodexistente = listCart.find(item => item.id === productCarrito.id && item.talle === productCarrito.talle);
     if (prodexistente !== undefined) {
       const filtered = listCart.filter(item => item.id !== productCarrito.id || item.talle !== productCarrito.talle);
@@ -145,8 +139,8 @@ document.getElementById('carrito').onclick = () => {
       icon: 'success',
       title: 'Se agrego correctamente al carrito',
       showConfirmButton: false,
-      timer: 1500
-    })
+      timer: 1500,
+    });
   }
 };
 
@@ -184,7 +178,7 @@ function zoom(e) {
 
 //#region Modal Carrito
 const removeProductToCart = item => {
-  console.log(item)
+  console.log(item);
   Swal.fire({
     title: '¿Esta seguro que quiere eliminar?',
     text: '',
@@ -199,7 +193,7 @@ const removeProductToCart = item => {
       const id = item.id;
       const talle = item.talle;
       filtered = listCart.filter(item => item.id !== id || item.talle !== talle);
-      console.log(filtered)
+      console.log(filtered);
       localStorage.setItem('listCart', JSON.stringify(filtered));
       localStorage.setItem('cantidad', filtered.length);
       document.getElementById('cartcountNav').innerHTML = filtered.length;
@@ -207,8 +201,8 @@ const removeProductToCart = item => {
     }
   });
 };
-let total = listCart?.reduce((acum, elemento) => (acum += elemento.precio * elemento.count), 0);
-const parrafototal = `<h4>Total: $${new Intl.NumberFormat('de-DE').format(total)}</h4>`;
+let total;
+let parrafototal;
 const getCarrito = list => {
   const cart = list.map(
     item => `
@@ -230,6 +224,8 @@ const getCarrito = list => {
 };
 document.getElementById('cartNavResponsive').onclick = () => {
   listCart = JSON.parse(localStorage.getItem('listCart'));
+  total = listCart?.reduce((acum, elemento) => (acum += elemento.precio * elemento.count), 0);
+  parrafototal = `<h4>Total: $${new Intl.NumberFormat('de-DE').format(total)}</h4>`;
   Swal.fire({
     position: 'top-end',
     title: 'Carrito ',
@@ -249,12 +245,14 @@ document.getElementById('cartNavResponsive').onclick = () => {
   });
   listCart.map(item => {
     document.getElementById(`remove_${item.id}_${item.talle}`).onclick = () => {
-      removeProductToCart(item)
+      removeProductToCart(item);
     };
   });
 };
 document.getElementById('cartNav').onclick = () => {
   listCart = JSON.parse(localStorage.getItem('listCart'));
+  total = listCart?.reduce((acum, elemento) => (acum += elemento.precio * elemento.count), 0);
+  parrafototal = `<h4>Total: $${new Intl.NumberFormat('de-DE').format(total)}</h4>`;
   Swal.fire({
     position: 'top-end',
     title: 'Carrito ',
@@ -274,7 +272,7 @@ document.getElementById('cartNav').onclick = () => {
   });
   listCart.map(item => {
     document.getElementById(`remove_${item.id}_${item.talle}`).onclick = () => {
-      removeProductToCart(item)
+      removeProductToCart(item);
     };
   });
 };
