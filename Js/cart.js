@@ -1,27 +1,27 @@
 //#region Variables y LocalStorage
-  const listCart = JSON.parse(localStorage.getItem('listCart'));
+const listCart = JSON.parse(localStorage.getItem('listCart'));
 const modal = document.getElementById('myModal');
 
-  let totalCompra = listCart?.reduce((acum, elemento) => (acum += elemento.precio * elemento.count), 0);
-  let compraEnvio = totalCompra;
-  if(totalCompra===undefined) totalCompra=0 
-  document.getElementById('subtotal').innerHTML = `$${totalCompra}`;
-  let cantidad = (localStorage.getItem('cantidad'));
-  if(cantidad===null) cantidad=0
-  document.getElementById('cartcountNav').innerHTML = cantidad;
-  document.getElementById('cartcount').innerHTML = cantidad;
-  document.getElementById('countProducts').innerHTML = `${cantidad} PRODUCTOS `;
-  let filtered = [];
-  let select = document.getElementById('select');
+let totalCompra = listCart?.reduce((acum, elemento) => (acum += elemento.precio * elemento.count), 0);
+let compraEnvio = totalCompra;
+if (totalCompra === undefined) totalCompra = 0;
+document.getElementById('subtotal').innerHTML = `$${totalCompra}`;
+let cantidad = localStorage.getItem('cantidad');
+if (cantidad === null) cantidad = 0;
+document.getElementById('cartcountNav').innerHTML = cantidad;
+document.getElementById('cartcount').innerHTML = cantidad;
+document.getElementById('countProducts').innerHTML = `${cantidad} PRODUCTOS `;
+let filtered = [];
+let select = document.getElementById('select');
 //#endregion
 
 //#region Modal Carrito
 const getCarrito = list => {
-  const imagenes = list.map(
+  const cart = list.map(
     item => `
         <div class="bodyCart">
         <h4>${item.nombre}</h4>
-        <div class="container">
+        <div class="containerModal">
         <img class="imgCart" src=${item.imagenes[0]}>
         <div class="textContainer">
         <p>Talle: ${item.talle}</p>
@@ -32,22 +32,50 @@ const getCarrito = list => {
         </div>
         `
   );
-  document.getElementById('bodyModal').innerHTML = imagenes.join('');
+  console.log(cart.join());
+  return cart.join('');
 };
 
-
-document.getElementById("cartNavResponsive").onclick=()=>{
-  getCarrito(listCart);
-  modal.style.display = 'block';
-}
-document.getElementById("cartNav").onclick=()=>{
-  getCarrito(listCart);
-  modal.style.display = 'block';
-}
-var span = document.getElementsByClassName("close")[0];
-span.onclick = ()=> {
-  modal.style.display = "none";
-}
+document.getElementById('cartNavResponsive').onclick = () => {
+  Swal.fire({
+    position: 'top-end',
+    title: 'Carrito ',
+    titleColor: 'black',
+    showConfirmButton: true,
+    html: getCarrito(listCart),
+    width: '25rem',
+    padding: '-20rem',
+    customClass: 'modalAlert',
+    confirmButtonColor: '#FF8303',
+    confirmButtonText: 'Ver carrito',
+  }).then(result => {
+    if (result.isConfirmed) {
+      window.location.href = './shoppingCart.html';
+    }
+  });
+};
+document.getElementById('cartNav').onclick = () => {
+  Swal.fire({
+    position: 'top-end',
+    title: 'Carrito ',
+    titleColor: 'black',
+    showConfirmButton: true,
+    html: getCarrito(listCart),
+    width: '25rem',
+    padding: '-20rem',
+    customClass: 'modalAlert',
+    confirmButtonColor: '#FF8303',
+    confirmButtonText: 'Ver carrito',
+  }).then(result => {
+    if (result.isConfirmed) {
+      window.location.href = './shoppingCart.html';
+    }
+  });
+};
+var span = document.getElementsByClassName('close')[0];
+span.onclick = () => {
+  modal.style.display = 'none';
+};
 window.onclick = function (event) {
   if (event.target == modal) {
     modal.style.display = 'none';
@@ -92,24 +120,24 @@ const getCart = list => {
 getCart(listCart);
 //#endregion
 
-//#region Funciones 
+//#region Funciones
 select.addEventListener('change', function () {
   let selectedOption = this.options[select.selectedIndex];
   totalCompra = compraEnvio + parseInt(selectedOption.value);
   document.getElementById('subtotal').innerHTML = `$${totalCompra}`;
 });
 
-const removeProductToCart=(item)=>{
+const removeProductToCart = item => {
   Swal.fire({
     title: '¿Esta seguro que quiere eliminar?',
-    text: "",
+    text: '',
     icon: 'warning',
     showCancelButton: true,
     confirmButtonColor: '#FF8303',
     cancelButtonColor: '#1B1A17',
-    cancelButtonText : 'Cancelar',
-    confirmButtonText: 'Si'
-  }).then((result) => {
+    cancelButtonText: 'Cancelar',
+    confirmButtonText: 'Si',
+  }).then(result => {
     if (result.isConfirmed) {
       const idView = document.getElementById('remove_' + item.id + '_' + item.talle).id.split('_');
       const id = parseInt(idView[1]);
@@ -122,35 +150,35 @@ const removeProductToCart=(item)=>{
       document.getElementById('countProducts').innerHTML = filtered.length;
       let totalCompraNew = filtered.reduce((acum, elemento) => (acum += elemento.precio * elemento.count), 0);
       document.getElementById('subtotal').innerHTML = `$${totalCompraNew}`;
-        window.location.href = './shoppingCart.html';
+      window.location.href = './shoppingCart.html';
+      Swal.fire('Deleted!', 'Your file has been deleted.', 'success');
     }
-  })
+  });
+};
 
-}
-
-const changeCount=(item)=>{
+const changeCount = item => {
   const dataInput = document.getElementById('count_' + item.id + '_' + item.talle).id.split('_');
-    const id = dataInput[1];
-    const talle = dataInput[2];
-    if (item => item.id === id && item.talle === talle) {
-      const newCount = parseInt(document.getElementById('count_' + item.id + '_' + item.talle).value);
-      item.count = newCount;
-      totalCompra = listCart.reduce((acum, elemento) => (acum += elemento.precio * elemento.count), 0);
-      compraEnvio = totalCompra;
-      document.getElementById('subtotal').innerHTML = `$${totalCompra}`;
-      filtered = listCart.filter(item => item.id !== id && item.talle !== talle);
-      filtered.push(item);
-      localStorage.setItem('listCart', JSON.stringify(filtered));
-    }
+  const id = dataInput[1];
+  const talle = dataInput[2];
+  if (item => item.id === id && item.talle === talle) {
+    const newCount = parseInt(document.getElementById('count_' + item.id + '_' + item.talle).value);
+    item.count = newCount;
+    totalCompra = listCart.reduce((acum, elemento) => (acum += elemento.precio * elemento.count), 0);
+    compraEnvio = totalCompra;
+    document.getElementById('subtotal').innerHTML = `$${totalCompra}`;
     filtered = listCart.filter(item => item.id !== id && item.talle !== talle);
-}
+    filtered.push(item);
+    localStorage.setItem('listCart', JSON.stringify(filtered));
+  }
+  filtered = listCart.filter(item => item.id !== id && item.talle !== talle);
+};
 
 listCart?.map(item => {
   document.getElementById('count_' + item.id + '_' + item.talle).onchange = () => {
-    changeCount(item)
+    changeCount(item);
   };
   document.getElementById('remove_' + item.id + '_' + item.talle).onclick = () => {
-    removeProductToCart(item)
+    removeProductToCart(item);
   };
 });
 //#endregion

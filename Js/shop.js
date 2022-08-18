@@ -308,25 +308,12 @@ const aplicarFiltros = () => {
 //#endregion
 
 //#region Modal Carrito
-document.getElementById('cartNavResponsive').onclick = () => {
-  getCarrito(listCart);
-  modal.style.display = 'block';
-};
-document.getElementById('cartNav').onclick = () => {
-  getCarrito(listCart);
-  modal.style.display = 'block';
-};
-var span = document.getElementsByClassName('close')[0];
-span.onclick = () => {
-  modal.style.display = 'none';
-};
-
 const getCarrito = list => {
-  const imagenes = list.map(
+  const cart = list.map(
     item => `
         <div class="bodyCart">
         <h4>${item.nombre}</h4>
-        <div class="container">
+        <div class="containerModal">
         <img class="imgCart" src=${item.imagenes[0]}>
         <div class="textContainer">
         <p>Talle: ${item.talle}</p>
@@ -337,12 +324,47 @@ const getCarrito = list => {
         </div>
         `
   );
-  document.getElementById('bodyModal').innerHTML = imagenes.join('');
+  console.log(cart.join())
+  return cart.join('');
 };
 
-window.onclick = function (event) {
-  if (event.target == modal) {
-    modal.style.display = 'none';
-  }
-};
+
+document.getElementById("cartNavResponsive").onclick=()=>{
+  Swal.fire({
+    position:'top-end',
+    title: 'Carrito ',
+    titleColor: 'black',
+    showConfirmButton: true,
+    html:getCarrito(listCart),
+    width:"25rem",
+    padding:"-20rem",
+    customClass:"modalAlert",
+    confirmButtonColor: '#FF8303',
+    confirmButtonText: 'Ver carrito',
+  }).then((result) => {
+    if (result.isConfirmed) {
+        window.location.href = './shoppingCart.html';
+    }
+  })
+}
+document.getElementById("cartNav").onclick=()=>{
+  Swal.fire({
+    position:'top-end',
+    title: 'Carrito ',
+    titleColor: 'black',
+    showConfirmButton: true,
+    html:getCarrito(listCart),
+    width:"25rem",
+    padding:"-20rem",
+    customClass:"modalAlert",
+    confirmButtonColor: '#FF8303',
+    confirmButtonText: 'Ver carrito',
+  }).then((result) => {
+    if (result.isConfirmed) {
+        window.location.href = './shoppingCart.html';
+    }
+  })
+}
+
+
 //#endregion

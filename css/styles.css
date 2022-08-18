@@ -8,20 +8,40 @@ ol {
 a {
   text-decoration: none !important; }
 
-.containerModal {
-  display: flex;
-  justify-content: center !important;
-  width: 16rem; }
-  .containerModal .imgCart {
-    width: 6rem;
-    border-radius: .5rem;
-    padding: .2rem;
-    margin-right: .2rem; }
-  .containerModal .textContainer {
-    height: 5rem; }
-    .containerModal .textContainer p {
-      padding: 0;
-      margin: 0; }
+.modalAlert {
+  margin-top: 8rem;
+  margin-right: 2rem;
+  height: 40rem;
+  background-color: #EEEEEE; }
+
+.bodyCart {
+  display: block;
+  justify-content: center;
+  align-items: center;
+  background-color: #EEEEEE;
+  border: 2px solid #403F3D;
+  border-radius: .5rem;
+  margin: .5rem 0;
+  padding: .5rem; }
+  .bodyCart h4 {
+    font-size: 20px;
+    color: #1B1A17; }
+  .bodyCart .containerModal {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 16rem; }
+    .bodyCart .containerModal .imgCart {
+      width: 6rem;
+      border-radius: .5rem;
+      padding: .2rem;
+      margin-right: .2rem; }
+    .bodyCart .containerModal .textContainer {
+      height: 5rem;
+      text-align: start; }
+      .bodyCart .containerModal .textContainer p {
+        padding: 0;
+        margin: 0; }
 
 #cartcount {
   color: #1B1A17;
@@ -206,73 +226,6 @@ header .iconsNav, header .NavSearch {
           transform: scale(1.1); }
   .footer .copy {
     margin-top: 0.5rem; }
-
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 1;
-  left: 0;
-  top: 0;
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden !important; }
-  .modal .modal-content {
-    position: absolute;
-    background-color: #EEEEEE;
-    margin: 15% auto;
-    border: 1px solid #1B1A17;
-    width: 20rem;
-    left: 80vw;
-    top: -15vh;
-    overflow: auto !important;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    animation-name: animatetop;
-    animation-duration: 0.8s; }
-    .modal .modal-content .headerModal {
-      display: flex;
-      justify-content: space-around; }
-    .modal .modal-content .bodyCart {
-      display: block;
-      justify-content: center;
-      align-items: center;
-      background-color: #EEEEEE;
-      border: 2px solid #403F3D;
-      border-radius: .5rem;
-      margin: .5rem 1rem;
-      padding: 1.5rem; }
-      .modal .modal-content .bodyCart .containerModal {
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-        width: 16rem; }
-        .modal .modal-content .bodyCart .containerModal .imgCart {
-          width: 6rem;
-          border-radius: .5rem;
-          padding: .2rem;
-          margin-right: .2rem; }
-        .modal .modal-content .bodyCart .containerModal .textContainer {
-          height: 5rem; }
-          .modal .modal-content .bodyCart .containerModal .textContainer p {
-            padding: 0;
-            margin: 0; }
-    .modal .modal-content .close {
-      color: #FF8303;
-      float: right;
-      font-size: 28px;
-      font-weight: bold; }
-      .modal .modal-content .close:hover, .modal .modal-content .close:focus {
-        color: black;
-        text-decoration: none;
-        cursor: pointer; }
-    .modal .modal-content .footerModal {
-      text-decoration: none;
-      background-color: #FF8303;
-      text-align: center;
-      font-weight: bold;
-      padding: .5rem 0; }
-      .modal .modal-content .footerModal a {
-        color: #EEEEEE;
-        font-size: 20px; }
 
 @media screen and (max-width: 1220px) {
   .socials img {

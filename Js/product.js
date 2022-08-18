@@ -31,14 +31,39 @@ const getCarrito = list => {
 
 
 document.getElementById("cartNavResponsive").onclick=()=>{
-  getCarrito(listCart);
+  Swal.fire({
+    position:'top-end',
+    title: 'Carrito ',
+    titleColor: 'black',
+    showConfirmButton: true,
+    html:getCarrito(listCart),
+    width:"25rem",
+    padding:"-20rem",
+    customClass:"modalAlert",
+    confirmButtonColor: '#FF8303',
+    confirmButtonText: 'Ver carrito',
+  }).then((result) => {
+    if (result.isConfirmed) {
+        window.location.href = './shoppingCart.html';
+    }
+  })
 }
 document.getElementById("cartNav").onclick=()=>{
   Swal.fire({
     position:'top-end',
     title: 'Carrito ',
+    titleColor: 'black',
     showConfirmButton: true,
     html:getCarrito(listCart),
+    width:"25rem",
+    padding:"-20rem",
+    customClass:"modalAlert",
+    confirmButtonColor: '#FF8303',
+    confirmButtonText: 'Ver carrito',
+  }).then((result) => {
+    if (result.isConfirmed) {
+        window.location.href = './shoppingCart.html';
+    }
   })
 }
 var span = document.getElementsByClassName("close")[0];
