@@ -437,7 +437,13 @@ header .iconsNav, header .NavSearch {
         margin: auto; }
   .footer .copy {
     display: flex;
-    justify-content: center; } }
+    justify-content: center; }
+  .modalAlert {
+    margin-top: 8rem;
+    margin-right: 0 !important;
+    height: 31rem;
+    background-color: #EEEEEE;
+    color: #1B1A17; } }
 
 .containerHome .imagenPrincipal {
   width: 100%;

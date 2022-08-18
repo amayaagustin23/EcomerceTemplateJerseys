@@ -553,5 +553,13 @@ header {
       justify-content: center;
     }
   }
+  .modalAlert{
+    margin-top: 8rem;
+    margin-right: 0 !important;
+    height: 31rem;
+    background-color: $colorBlanco;
+    color: $colorNegro;
+  }
+  
 
 }
