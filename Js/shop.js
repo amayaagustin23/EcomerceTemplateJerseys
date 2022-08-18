@@ -155,7 +155,6 @@ const modal = document.getElementById('myModal');
 //#endregion
 
 //#region Funciones de renderizados
-
 if (screen.width < 1220) {
   document.getElementById('collapseTwo').classList.add('collapse');
   document.getElementById('panelsStayOpen-collapseOne').classList.add('collapse');
@@ -181,7 +180,7 @@ const getProductTemplate = list => {
     <div class="textos">
     <h3 class="title">${item.nombre}</h3>
     <div class='precioEtiqueta'>
-    <p>$${item.precio}</p>
+    <p>$${new Intl.NumberFormat('de-DE').format(item.precio)}</p>
     <p class='etiqueta'>${item.etiqueta}</p>
     </div>
     </div>
@@ -333,7 +332,7 @@ const removeProductToCart = item => {
   });
 };
 let total = listCart?.reduce((acum, elemento) => (acum += elemento.precio * elemento.count), 0);
-const parrafototal = `<h4>Total: $${total}</h4>`;
+const parrafototal = `<h4>Total: $${new Intl.NumberFormat('de-DE').format(total)}</h4>`;
 const getCarrito = list => {
   const cart = list.map(
     item => `
@@ -344,7 +343,7 @@ const getCarrito = list => {
             <div class="textContainer">
               <p>Talle: ${item.talle}</p>
               <p>Cantidad: ${item.count}</p>
-              <p>Total: $${item.count * item.precio}</p>
+              <p>Total: $${new Intl.NumberFormat('de-DE').format(item.count * item.precio)}</p>
             </div>
             <button id="remove_${item.id}_${item.talle}" class="deleteCart"><img src="../image/icon/delete.png"></button>
           </div>

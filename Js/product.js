@@ -43,7 +43,7 @@ ${getImagenes(producto.imagenes).join('')}
 <h1>${producto.nombre}</h1>
 <p>Item No. ${producto.item}</p>
 <br>
-<h3 class="precio">$${producto.precio}</h3>
+<h3 class="precio">$${new Intl.NumberFormat('de-DE').format(producto.precio)}</h3>
 <div class="talles">
 <button class="talle" value="S">S</button>
 <button class="talle" value="M">M</button>
@@ -208,7 +208,7 @@ const removeProductToCart = item => {
   });
 };
 let total = listCart?.reduce((acum, elemento) => (acum += elemento.precio * elemento.count), 0);
-const parrafototal = `<h4>Total: $${total}</h4>`;
+const parrafototal = `<h4>Total: $${new Intl.NumberFormat('de-DE').format(total)}</h4>`;
 const getCarrito = list => {
   const cart = list.map(
     item => `
@@ -219,7 +219,7 @@ const getCarrito = list => {
             <div class="textContainer">
               <p>Talle: ${item.talle}</p>
               <p>Cantidad: ${item.count}</p>
-              <p>Total: $${item.count * item.precio}</p>
+              <p>Total: $${new Intl.NumberFormat('de-DE').format(item.count * item.precio)}</p>
             </div>
             <button id="remove_${item.id}_${item.talle}" class="deleteCart"><img src="../image/icon/delete.png"></button>
           </div>

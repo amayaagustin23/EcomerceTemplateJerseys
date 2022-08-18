@@ -5,7 +5,7 @@ const modal = document.getElementById('myModal');
 let totalCompra = listCart?.reduce((acum, elemento) => (acum += elemento.precio * elemento.count), 0);
 let compraEnvio = totalCompra;
 if (totalCompra === undefined) totalCompra = 0;
-document.getElementById('subtotal').innerHTML = `$${totalCompra}`;
+document.getElementById('subtotal').innerHTML = `$${new Intl.NumberFormat('de-DE').format(totalCompra)}`;
 let cantidad = localStorage.getItem('cantidad');
 if (cantidad === null) cantidad = 0;
 document.getElementById('cartcountNav').innerHTML = cantidad;
@@ -32,6 +32,7 @@ const removeProductToCartModal = item => {
       const id = item.id;
       const talle = item.talle;
       filtered = listCart.filter(item => item.id !== id || item.talle !== talle);
+      console.log(filtered)
       localStorage.setItem('listCart', JSON.stringify(filtered));
       localStorage.setItem('cantidad', filtered.length);
       document.getElementById('cartcountNav').innerHTML = filtered.length;
@@ -39,12 +40,12 @@ const removeProductToCartModal = item => {
       document.getElementById('countProducts').innerHTML = filtered.length;
       let totalCompraNew = filtered.reduce((acum, elemento) => (acum += elemento.precio * elemento.count), 0);
       document.getElementById('subtotal').innerHTML = `$${totalCompraNew}`;
-      window.location.href = './shoppingCart.html';
+      getCart(filtered)
     }
   });
 };
 let total = listCart?.reduce((acum, elemento) => (acum += elemento.precio * elemento.count), 0);
-const parrafototal = `<h4>Total: $${total}</h4>`;
+const parrafototal = `<h4>Total: $${new Intl.NumberFormat('de-DE').format(total)}</h4>`;
 const getCarrito = list => {
   const cart = list.map(
     item => `
@@ -55,7 +56,7 @@ const getCarrito = list => {
             <div class="textContainer">
               <p>Talle: ${item.talle}</p>
               <p>Cantidad: ${item.count}</p>
-              <p>Total: $${item.count * item.precio}</p>
+              <p>Total: $${new Intl.NumberFormat('de-DE').format(item.count * item.precio)}</p>
             </div>
             <button id="removeModal_${item.id}_${item.talle}" class="deleteCart"><img src="../image/icon/delete.png"></button>
           </div>
@@ -116,6 +117,7 @@ document.getElementById('cartNav').onclick = () => {
 };
 // #endregion
 
+
 //#region Renderizado
 const getCart = list => {
   document.getElementById('containerCart').innerHTML = '';
@@ -135,7 +137,7 @@ const getCart = list => {
 			  <input id="count_${item.id}_${item.talle}" min=0 name="quantity" value=${item.count} type="number" class="form-control form-control-sm" />
 		  </div>
 		  <div class="col-md-3 col-lg-2 col-xl-2 offset-lg-1">
-			  <h6 class="mb-0">$${item.precio}</h6>
+			  <h6 id="precio_${item.id}_${item.talle}" class="mb-0">$${new Intl.NumberFormat('de-DE').format(item.precio*item.count)}</h6>
 		  </div>
 		  <div class="col-md-1 col-lg-1 col-xl-1 text-end">
 			<a href="#!" class="text-muted"><i id="remove_${item.id}_${item.talle}" class="fas fa-times"></i></a>
@@ -155,7 +157,7 @@ getCart(listCart);
 select.addEventListener('change', function () {
   let selectedOption = this.options[select.selectedIndex];
   totalCompra = compraEnvio + parseInt(selectedOption.value);
-  document.getElementById('subtotal').innerHTML = `$${totalCompra}`;
+  document.getElementById('subtotal').innerHTML = `$${new Intl.NumberFormat('de-DE').format(totalCompra)}`;
 });
 
 const removeProductToCart = item => {
@@ -181,24 +183,27 @@ const removeProductToCart = item => {
       document.getElementById('countProducts').innerHTML = filtered.length;
       let totalCompraNew = filtered.reduce((acum, elemento) => (acum += elemento.precio * elemento.count), 0);
       document.getElementById('subtotal').innerHTML = `$${totalCompraNew}`;
-      window.location.href = './shoppingCart.html';
+      getCart(filtered)
     }
   });
 };
 
-const changeCount = item => {
-  const dataInput = document.getElementById('count_' + item.id + '_' + item.talle).id.split('_');
-  const id = dataInput[1];
-  const talle = dataInput[2];
+const changeCount = (item,cantidad) => {
+  console.log(cantidad)
+  console.log(item)
+  const id = item.id;
+  const talle = item.talle;
   if (item => item.id === id && item.talle === talle) {
     const newCount = parseInt(document.getElementById('count_' + item.id + '_' + item.talle).value);
     item.count = newCount;
     totalCompra = listCart.reduce((acum, elemento) => (acum += elemento.precio * elemento.count), 0);
     compraEnvio = totalCompra;
-    document.getElementById('subtotal').innerHTML = `$${totalCompra}`;
-    filtered = listCart.filter(item => item.id !== id && item.talle !== talle);
+    document.getElementById('subtotal').innerHTML = `$${new Intl.NumberFormat('de-DE').format(totalCompra)}`;
+    filtered = listCart.filter(item => item.id !== id || item.talle !== talle);
     filtered.push(item);
+    console.log(filtered)
     localStorage.setItem('listCart', JSON.stringify(filtered));
+    document.getElementById(`precio_${item.id}_${item.talle}`).innerHTML=`$${new Intl.NumberFormat('de-DE').format(item.precio*cantidad)}`
   }
   filtered = listCart.filter(item => item.id !== id && item.talle !== talle);
 };
@@ -209,7 +214,7 @@ const redirectProduct=(item)=>{
 
 listCart?.map(item => {
   document.getElementById('count_' + item.id + '_' + item.talle).onchange = () => {
-    changeCount(item);
+    changeCount(item,document.getElementById('count_' + item.id + '_' + item.talle).value);
   };
   document.getElementById('remove_' + item.id + '_' + item.talle).onclick = () => {
     removeProductToCart(item);
