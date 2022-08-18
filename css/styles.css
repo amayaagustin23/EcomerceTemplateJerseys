@@ -1361,18 +1361,17 @@ header .iconsNav, header .NavSearch {
       text-decoration: none;
       color: #333 !important; }
   .containerProduct section .containerSection {
-    display: grid;
-    grid-gap: 2rem;
-    grid-template-columns: repeat(auto-fill, 600px);
-    justify-content: center;
-    align-items: center; }
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: flex-start; }
     .containerProduct section .containerSection .imagenProduct {
-      width: 35rem; }
+      width: 30rem; }
       .containerProduct section .containerSection .imagenProduct figure.zoom {
         background-position: 50% 50%;
         position: relative;
         border: 5px solid #F0E3CA;
-        width: 35rem;
+        width: 30rem;
         border-radius: 1rem;
         overflow: hidden;
         cursor: zoom-in; }
@@ -1387,7 +1386,7 @@ header .iconsNav, header .NavSearch {
         display: flex;
         justify-content: center; }
         .containerProduct section .containerSection .imagenProduct .imagenesAll .imagenesExtra {
-          width: 10rem;
+          width: 8rem;
           border-radius: .5rem;
           border: 2px solid #F0E3CA;
           margin-inline: .5rem; }
@@ -1403,7 +1402,7 @@ header .iconsNav, header .NavSearch {
         grid-template-columns: 1fr 1fr 1fr 1fr;
         font-size: 13px;
         justify-content: center;
-        margin: 2rem 0; }
+        margin-top: 7rem; }
         .containerProduct section .containerSection .contenedor .talles .talle {
           border: #FF8303 1px solid;
           border-radius: 2rem;
@@ -1414,12 +1413,13 @@ header .iconsNav, header .NavSearch {
             -webkit-transform: scale(1.1);
             transform: scale(1.1); }
       .containerProduct section .containerSection .contenedor .containerAddCart {
+        margin-top: 1rem;
         display: flex;
         align-items: center; }
         .containerProduct section .containerSection .contenedor .containerAddCart input {
           border-radius: 1rem;
           border: 1px solid #FF8303;
-          padding-left: 1rem;
+          padding: 1rem;
           width: 5rem; }
       .containerProduct section .containerSection .contenedor #spanNotify {
         color: #403F3D;

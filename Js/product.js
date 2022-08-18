@@ -141,9 +141,20 @@ for (let i = 0; i < talles.length; i++) {
 document.getElementById('carrito').onclick = () => {
   if (listCart === null) listCart = [];
   if (document.getElementById('count').value === '0'){
-
+    Swal.fire({
+      icon: 'error',
+      title: 'No se ingreso una cantidad!',
+      confirmButtonColor: '#FF8303',
+      confirmButtonBorder: '#FF8303',
+    })
   } 
   else if (productCarrito === '') {
+    Swal.fire({
+      icon: 'error',
+      title: 'No se selecciono un talle!',
+      confirmButtonColor: '#FF8303',
+      confirmButtonBorder: '#FF8303',
+    })
   }
   else {
     const prodexistente = listCart.find(item => item.id === productCarrito.id && item.talle === productCarrito.talle);

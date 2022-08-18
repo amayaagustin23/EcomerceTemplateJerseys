@@ -38,18 +38,17 @@
       }
     }
     .containerSection {
-      display: grid;
-      grid-gap: 2rem;
-      grid-template-columns: repeat(auto-fill, 600px);
-      justify-content: center;
-      align-items: center;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      align-items: flex-start;
       .imagenProduct {
-        width: 35rem;
+        width: 30rem;
         figure.zoom {
           background-position: 50% 50%;
           position: relative;
           border: 5px solid $colorBeige;
-          width: 35rem;
+          width: 30rem;
           border-radius: 1rem;
           overflow: hidden;
           cursor: zoom-in;
@@ -67,7 +66,7 @@
           display: flex;
           justify-content: center;
           .imagenesExtra{
-            width: 10rem;
+            width: 8rem;
             border-radius: .5rem;
             border: 2px solid $colorBeige;
             margin-inline: .5rem;
@@ -87,7 +86,7 @@
           grid-template-columns: 1fr 1fr 1fr 1fr;
           font-size: 13px;
           justify-content: center;
-          margin: 2rem 0;
+          margin-top: 7rem;
           .talle {
             border: $colorNaranja 1px solid;
             border-radius: 2rem;
@@ -101,12 +100,13 @@
           }
         }
         .containerAddCart {
+          margin-top: 1rem;
           display: flex;
           align-items: center;
           input {
             border-radius: 1rem;
             border: 1px solid $colorNaranja;
-            padding-left: 1rem;
+            padding: 1rem;
             width: 5rem;
           }
         }
