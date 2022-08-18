@@ -16,7 +16,6 @@ const modal = document.getElementById('myModal');
 //#endregion
 
 //#region Modal Carrito
-
 const getCarrito = list => {
   const imagenes = list.map(
     item => `
@@ -49,6 +48,11 @@ var span = document.getElementsByClassName("close")[0];
 span.onclick = ()=> {
   modal.style.display = "none";
 }
+window.onclick = function (event) {
+  if (event.target == modal) {
+    modal.style.display = 'none';
+  }
+};
 //#endregion
 
 //#region Renderizado
