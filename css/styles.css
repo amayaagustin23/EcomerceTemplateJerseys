@@ -11,8 +11,9 @@ a {
 .modalAlert {
   margin-top: 8rem;
   margin-right: 2rem;
-  height: 40rem;
-  background-color: #EEEEEE; }
+  height: 38.5rem;
+  background-color: #EEEEEE;
+  padding: 0 !important; }
 
 .bodyCart {
   display: block;
@@ -441,9 +442,10 @@ header .iconsNav, header .NavSearch {
   .modalAlert {
     margin-top: 8rem;
     margin-right: 0 !important;
-    height: 31rem;
+    height: 29rem;
     background-color: #EEEEEE;
-    color: #1B1A17; } }
+    color: #1B1A17;
+    padding: 0 !important; } }
 
 .containerHome .imagenPrincipal {
   width: 100%;

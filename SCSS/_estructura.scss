@@ -11,8 +11,10 @@ a {
 .modalAlert{
   margin-top: 8rem;
   margin-right: 2rem;
-  height: 40rem;
+  height: 38.5rem;
   background-color: $colorBlanco;
+  padding: 0 !important;
+
 }
 
 .bodyCart{
@@ -556,9 +558,10 @@ header {
   .modalAlert{
     margin-top: 8rem;
     margin-right: 0 !important;
-    height: 31rem;
+    height: 29rem;
     background-color: $colorBlanco;
     color: $colorNegro;
+    padding: 0 !important;
   }
   
 

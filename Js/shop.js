@@ -332,7 +332,6 @@ document.getElementById("cartNavResponsive").onclick=()=>{
   Swal.fire({
     position:'top-end',
     title: 'Carrito ',
-    titleColor: 'black',
     showConfirmButton: true,
     html:getCarrito(listCart),
     width:"25rem",
@@ -350,7 +349,6 @@ document.getElementById("cartNav").onclick=()=>{
   Swal.fire({
     position:'top-end',
     title: 'Carrito ',
-    titleColor: 'black',
     showConfirmButton: true,
     html:getCarrito(listCart),
     width:"25rem",
