@@ -261,56 +261,7 @@ header .iconsNav, header .NavSearch {
           list-style: none; }
   .footer .copy {
     display: flex;
-    justify-content: center; }
-  .modal .modal-content {
-    width: 20rem;
-    left: 25rem !important;
-    top: -2rem  !important; }
-    .modal .modal-content .headerModal {
-      display: flex;
-      justify-content: space-around; }
-    .modal .modal-content .bodyCart {
-      display: block;
-      justify-content: center;
-      align-items: center;
-      background-color: #EEEEEE;
-      border: 2px solid #403F3D;
-      border-radius: .5rem;
-      margin: .5rem 1rem;
-      padding: 1.5rem; }
-      .modal .modal-content .bodyCart .container {
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-        width: 16rem; }
-        .modal .modal-content .bodyCart .container .imgCart {
-          width: 6rem;
-          border-radius: .5rem;
-          padding: .2rem;
-          margin-right: .2rem; }
-        .modal .modal-content .bodyCart .container .textContainer {
-          height: 5rem; }
-          .modal .modal-content .bodyCart .container .textContainer p {
-            padding: 0;
-            margin: 0; }
-    .modal .modal-content .close {
-      color: #FF8303;
-      float: right;
-      font-size: 28px;
-      font-weight: bold; }
-      .modal .modal-content .close:hover, .modal .modal-content .close:focus {
-        color: black;
-        text-decoration: none;
-        cursor: pointer; }
-    .modal .modal-content .footerModal {
-      text-decoration: none;
-      background-color: #FF8303;
-      text-align: center;
-      font-weight: bold;
-      padding: .5rem 0; }
-      .modal .modal-content .footerModal a {
-        color: #EEEEEE;
-        font-size: 20px; } }
+    justify-content: center; } }
 
 @media screen and (max-width: 576px) {
   #cartcountNav {
@@ -486,56 +437,7 @@ header .iconsNav, header .NavSearch {
         margin: auto; }
   .footer .copy {
     display: flex;
-    justify-content: center; }
-  .modal .modal-content {
-    width: 20rem;
-    left: 5rem !important;
-    top: 3rem  !important; }
-    .modal .modal-content .headerModal {
-      display: flex;
-      justify-content: space-around; }
-    .modal .modal-content .bodyCart {
-      display: block;
-      justify-content: center;
-      align-items: center;
-      background-color: #EEEEEE;
-      border: 2px solid #403F3D;
-      border-radius: .5rem;
-      margin: .5rem 1rem;
-      padding: 1.5rem; }
-      .modal .modal-content .bodyCart .container {
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-        width: 16rem; }
-        .modal .modal-content .bodyCart .container .imgCart {
-          width: 6rem;
-          border-radius: .5rem;
-          padding: .2rem;
-          margin-right: .2rem; }
-        .modal .modal-content .bodyCart .container .textContainer {
-          height: 5rem; }
-          .modal .modal-content .bodyCart .container .textContainer p {
-            padding: 0;
-            margin: 0; }
-    .modal .modal-content .close {
-      color: #FF8303;
-      float: right;
-      font-size: 28px;
-      font-weight: bold; }
-      .modal .modal-content .close:hover, .modal .modal-content .close:focus {
-        color: black;
-        text-decoration: none;
-        cursor: pointer; }
-    .modal .modal-content .footerModal {
-      text-decoration: none;
-      background-color: #FF8303;
-      text-align: center;
-      font-weight: bold;
-      padding: .5rem 0; }
-      .modal .modal-content .footerModal a {
-        color: #EEEEEE;
-        font-size: 20px; } }
+    justify-content: center; } }
 
 .containerHome .imagenPrincipal {
   width: 100%;
