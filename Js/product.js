@@ -142,6 +142,7 @@ document.getElementById('carrito').onclick = () => {
   if (listCart === null) listCart = [];
   if (document.getElementById('count').value === '0'){
     Swal.fire({
+      position: 'top-end',
       icon: 'error',
       title: 'No se ingreso una cantidad!',
       confirmButtonColor: '#FF8303',
@@ -150,6 +151,7 @@ document.getElementById('carrito').onclick = () => {
   } 
   else if (productCarrito === '') {
     Swal.fire({
+      position: 'top-end',
       icon: 'error',
       title: 'No se selecciono un talle!',
       confirmButtonColor: '#FF8303',

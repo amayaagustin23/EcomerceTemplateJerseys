@@ -122,12 +122,13 @@ const removeProductToCart=(item)=>{
       document.getElementById('countProducts').innerHTML = filtered.length;
       let totalCompraNew = filtered.reduce((acum, elemento) => (acum += elemento.precio * elemento.count), 0);
       document.getElementById('subtotal').innerHTML = `$${totalCompraNew}`;
-      window.location.href = './shoppingCart.html';
-      Swal.fire(
-        'Deleted!',
-        'Your file has been deleted.',
-        'success'
-      )
+      Swal.fire({
+        icon: 'success',
+        title: 'Se elimino correctamente el producto del carrito',
+        showConfirmButton: false,
+        timer: 1000
+      })
+        window.location.href = './shoppingCart.html';
     }
   })
 
