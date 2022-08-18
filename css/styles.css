@@ -11,7 +11,7 @@ a {
 .modalAlert {
   margin-top: 8rem;
   margin-right: 2rem;
-  height: 38.7rem;
+  height: 38.6rem;
   background-color: #EEEEEE;
   padding: 0 !important; }
 
@@ -22,7 +22,7 @@ a {
   background-color: #EEEEEE;
   border: 2px solid #403F3D;
   border-radius: .5rem;
-  margin: .5rem 0;
+  margin: 0 0 .5rem 0;
   padding: .5rem; }
   .bodyCart h4 {
     font-size: 20px;
@@ -445,7 +445,7 @@ header .iconsNav, header .NavSearch {
     height: 29rem;
     background-color: #EEEEEE;
     color: #1B1A17;
-    padding: 0 !important; } }
+    padding: 0 1rem !important; } }
 
 .containerHome .imagenPrincipal {
   width: 100%;

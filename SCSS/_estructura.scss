@@ -11,7 +11,7 @@ a {
 .modalAlert{
   margin-top: 8rem;
   margin-right: 2rem;
-  height: 38.7rem;
+  height: 38.6rem;
   background-color: $colorBlanco;
   padding: 0 !important;
 
@@ -24,7 +24,7 @@ a {
   background-color: $colorBlanco;
   border: 2px solid $colorGris;
   border-radius: .5rem;
-  margin: .5rem 0;
+  margin: 0 0 .5rem 0;
   padding: .5rem;
   h4{
     font-size: 20px;
@@ -561,7 +561,7 @@ header {
     height: 29rem;
     background-color: $colorBlanco;
     color: $colorNegro;
-    padding: 0 !important;
+    padding: 0 1rem !important;
   }
   
 
