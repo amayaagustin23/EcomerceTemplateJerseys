@@ -16,6 +16,33 @@ let select = document.getElementById('select');
 //#endregion
 
 //#region Modal Carrito
+const removeProductToCartModal = item => {
+  console.log(item)
+  Swal.fire({
+    title: '¿Esta seguro que quiere eliminar?',
+    text: '',
+    icon: 'warning',
+    showCancelButton: true,
+    confirmButtonColor: '#FF8303',
+    cancelButtonColor: '#1B1A17',
+    cancelButtonText: 'Cancelar',
+    confirmButtonText: 'Si',
+  }).then(result => {
+    if (result.isConfirmed) {
+      const id = item.id;
+      const talle = item.talle;
+      filtered = listCart.filter(item => item.id !== id || item.talle !== talle);
+      localStorage.setItem('listCart', JSON.stringify(filtered));
+      localStorage.setItem('cantidad', filtered.length);
+      document.getElementById('cartcountNav').innerHTML = filtered.length;
+      document.getElementById('cartcount').innerHTML = filtered.length;
+      document.getElementById('countProducts').innerHTML = filtered.length;
+      let totalCompraNew = filtered.reduce((acum, elemento) => (acum += elemento.precio * elemento.count), 0);
+      document.getElementById('subtotal').innerHTML = `$${totalCompraNew}`;
+      window.location.href = './shoppingCart.html';
+    }
+  });
+};
 let total = listCart?.reduce((acum, elemento) => (acum += elemento.precio * elemento.count), 0);
 const parrafototal = `<h4>Total: $${total}</h4>`;
 const getCarrito = list => {
@@ -25,26 +52,26 @@ const getCarrito = list => {
           <h4>${item.nombre}</h4>
           <div class="containerModal">
             <img class="imgCart" src=${item.imagenes[0]}>
-          <div class="textContainer">
-            <p>Talle: ${item.talle}</p>
-            <p>Cantidad: ${item.count}</p>
-            <p>Subtotal: $${item.count * item.precio}</p>
-          </div>
+            <div class="textContainer">
+              <p>Talle: ${item.talle}</p>
+              <p>Cantidad: ${item.count}</p>
+              <p>Total: $${item.count * item.precio}</p>
+            </div>
+            <button id="removeModal_${item.id}_${item.talle}" class="deleteCart"><img src="../image/icon/delete.png"></button>
           </div>
         </div>
         `
   );
   return cart.join('');
 };
-
 document.getElementById('cartNavResponsive').onclick = () => {
+  const listCart = JSON.parse(localStorage.getItem('listCart'));
   Swal.fire({
     position: 'top-end',
     title: 'Carrito ',
     showConfirmButton: true,
     html: getCarrito(listCart),
     width: '25rem',
-    padding: '-20rem',
     customClass: 'modalAlert',
     confirmButtonColor: '#FF8303',
     confirmButtonText: 'Ver carrito',
@@ -55,16 +82,21 @@ document.getElementById('cartNavResponsive').onclick = () => {
     if (result.isConfirmed) {
       window.location.href = './shoppingCart.html';
     }
+  });
+  listCart.map(item => {
+    document.getElementById(`removeModal_${item.id}_${item.talle}`).onclick = () => {
+      removeProductToCartModal(item)
+    };
   });
 };
 document.getElementById('cartNav').onclick = () => {
+  const listCart = JSON.parse(localStorage.getItem('listCart'));
   Swal.fire({
     position: 'top-end',
     title: 'Carrito ',
     showConfirmButton: true,
     html: getCarrito(listCart),
     width: '25rem',
-    padding: '-20rem',
     customClass: 'modalAlert',
     confirmButtonColor: '#FF8303',
     confirmButtonText: 'Ver carrito',
@@ -76,31 +108,34 @@ document.getElementById('cartNav').onclick = () => {
       window.location.href = './shoppingCart.html';
     }
   });
+  listCart.map(item => {
+    document.getElementById(`removeModal_${item.id}_${item.talle}`).onclick = () => {
+      removeProductToCartModal(item)
+    };
+  });
 };
-//#endregion
+// #endregion
 
 //#region Renderizado
 const getCart = list => {
   document.getElementById('containerCart').innerHTML = '';
   const carts = list?.map(
     item =>
-      `  <hr class="my-4" />
-		<div class="row mb-4 d-flex justify-content-between align-items-center">
-		  <div class="col-md-2 col-lg-2 col-xl-2">
-			<img src=${item.imagenes[0]} class="img-fluid rounded-3" />
-		  </div>
-		  <div class="col-md-3 col-lg-3 col-xl-3">
-			<h6 class="text-muted">${item.nombre} - ${item.talle}</h6>
-			<h6 class="text-black mb-0">Camiseta</h6>
-		  </div>
+      `  
+      <hr class="my-4" />
+		  <div class="row mb-4 d-flex justify-content-between align-items-center">
+        <div class="col-md-2 col-lg-2 col-xl-2">
+        <img src=${item.imagenes[0]} class="img-fluid rounded-3" />
+        </div>
+        <div class="col-md-3 col-lg-3 col-xl-3">
+          <a  href="../pages/product.html"><h6 id="view_${item.id}_${item.talle}" class="text-muted">${item.nombre} - ${item.talle}</h6></a>
+          <h6 class="text-black mb-0">Camiseta</h6>
+		    </div>
 		  <div class="col-md-3 col-lg-3 col-xl-2 d-flex">
-
-			<input id="count_${item.id}_${item.talle}" min=0 name="quantity" value=${item.count} type="number" class="form-control form-control-sm" />
-
-	
+			  <input id="count_${item.id}_${item.talle}" min=0 name="quantity" value=${item.count} type="number" class="form-control form-control-sm" />
 		  </div>
 		  <div class="col-md-3 col-lg-2 col-xl-2 offset-lg-1">
-			<h6 class="mb-0">$${item.precio}</h6>
+			  <h6 class="mb-0">$${item.precio}</h6>
 		  </div>
 		  <div class="col-md-1 col-lg-1 col-xl-1 text-end">
 			<a href="#!" class="text-muted"><i id="remove_${item.id}_${item.talle}" class="fas fa-times"></i></a>
@@ -147,7 +182,6 @@ const removeProductToCart = item => {
       let totalCompraNew = filtered.reduce((acum, elemento) => (acum += elemento.precio * elemento.count), 0);
       document.getElementById('subtotal').innerHTML = `$${totalCompraNew}`;
       window.location.href = './shoppingCart.html';
-      Swal.fire('Deleted!', 'Your file has been deleted.', 'success');
     }
   });
 };
@@ -169,12 +203,19 @@ const changeCount = item => {
   filtered = listCart.filter(item => item.id !== id && item.talle !== talle);
 };
 
+const redirectProduct=(item)=>{
+  localStorage.setItem('idProducto', item.id);
+}
+
 listCart?.map(item => {
   document.getElementById('count_' + item.id + '_' + item.talle).onchange = () => {
     changeCount(item);
   };
   document.getElementById('remove_' + item.id + '_' + item.talle).onclick = () => {
     removeProductToCart(item);
+  };
+  document.getElementById('view_' + item.id + '_' + item.talle).onclick = () => {
+    redirectProduct(item);
   };
 });
 //#endregion
