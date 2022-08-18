@@ -656,7 +656,8 @@ header .iconsNav, header .NavSearch {
     .containerHome .bestSeller .containerBestSeller {
       grid-template-columns: repeat(auto-fill, 300px); }
       .containerHome .bestSeller .containerBestSeller .article {
-        width: 300px; }
+        width: 300px;
+        padding: 1rem !important; }
         .containerHome .bestSeller .containerBestSeller .article img {
           width: 200px; }
         .containerHome .bestSeller .containerBestSeller .article .textArticle h3 {
