@@ -230,6 +230,85 @@ header {
     margin-top: 0.5rem;
   }
 }
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: hidden !important;
+  .modal-content {
+    background-color: $colorBlanco;
+    margin: 15% auto; 
+    border: 1px solid $colorNegro;
+    width: 20rem;
+    left: 45rem;
+    top:-10rem;
+    overflow: auto !important; 
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    animation-name: animatetop;
+    animation-duration: 0.8s;  
+    .headerModal{
+      display: flex;
+      justify-content: space-around;
+    }
+    .bodyCart{
+      display: block;
+      justify-content: center;
+      align-items: center;
+      background-color: $colorBlanco;
+      border: 2px solid $colorGris;
+      border-radius: .5rem;
+      margin: .5rem 1rem;
+      padding: 1.5rem;
+      .container{
+        display: flex;
+        align-items: center;
+        justify-content:space-around ;
+        width: 16rem;
+        .imgCart{
+          width: 6rem;
+          border-radius: .5rem;
+          padding: .2rem;
+          margin-right: .2rem;
+        }
+        .textContainer{
+          height: 5rem;
+          p{
+            padding: 0;
+            margin: 0;
+          }
+        }
+      }
+    }
+    .close {
+      color: $colorNaranja;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+      &:hover,
+      &:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+      }
+    }
+    .footerModal{
+      text-decoration: none; 
+      background-color: $colorNaranja;
+      text-align: center;
+      font-weight: bold;
+      padding: .5rem 0;
+      a{
+        color: $colorBlanco;
+        font-size: 20px;
+      }
+    }
+  }
+}
+
 
 @media screen and (max-width: 1220px) {
   .socials {
@@ -280,6 +359,71 @@ header {
       justify-content: center;
     }
   }
+  .modal {
+    .modal-content {
+      width: 20rem;
+      left: 25rem !important;
+      top:-2rem  !important;
+
+      .headerModal{
+        display: flex;
+        justify-content: space-around;
+      }
+      .bodyCart{
+        display: block;
+        justify-content: center;
+        align-items: center;
+        background-color: $colorBlanco;
+        border: 2px solid $colorGris;
+        border-radius: .5rem;
+        margin: .5rem 1rem;
+        padding: 1.5rem;
+        .container{
+          display: flex;
+          align-items: center;
+          justify-content:space-around ;
+          width: 16rem;
+          .imgCart{
+            width: 6rem;
+            border-radius: .5rem;
+            padding: .2rem;
+            margin-right: .2rem;
+          }
+          .textContainer{
+            height: 5rem;
+            p{
+              padding: 0;
+              margin: 0;
+            }
+          }
+        }
+      }
+      .close {
+        color: $colorNaranja;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+        &:hover,
+        &:focus {
+          color: black;
+          text-decoration: none;
+          cursor: pointer;
+        }
+      }
+      .footerModal{
+        text-decoration: none; 
+        background-color: $colorNaranja;
+        text-align: center;
+        font-weight: bold;
+        padding: .5rem 0;
+        a{
+          color: $colorBlanco;
+          font-size: 20px;
+        }
+      }
+    }
+  }
+  
 }
 @media screen and (max-width: 576px) {
   #cartcountNav{
@@ -507,6 +651,70 @@ header {
     .copy {
       display: flex;
       justify-content: center;
+    }
+  }
+  .modal {
+    .modal-content {
+      width: 20rem;
+      left: 5rem !important;
+      top:3rem  !important;
+
+      .headerModal{
+        display: flex;
+        justify-content: space-around;
+      }
+      .bodyCart{
+        display: block;
+        justify-content: center;
+        align-items: center;
+        background-color: $colorBlanco;
+        border: 2px solid $colorGris;
+        border-radius: .5rem;
+        margin: .5rem 1rem;
+        padding: 1.5rem;
+        .container{
+          display: flex;
+          align-items: center;
+          justify-content:space-around ;
+          width: 16rem;
+          .imgCart{
+            width: 6rem;
+            border-radius: .5rem;
+            padding: .2rem;
+            margin-right: .2rem;
+          }
+          .textContainer{
+            height: 5rem;
+            p{
+              padding: 0;
+              margin: 0;
+            }
+          }
+        }
+      }
+      .close {
+        color: $colorNaranja;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+        &:hover,
+        &:focus {
+          color: black;
+          text-decoration: none;
+          cursor: pointer;
+        }
+      }
+      .footerModal{
+        text-decoration: none; 
+        background-color: $colorNaranja;
+        text-align: center;
+        font-weight: bold;
+        padding: .5rem 0;
+        a{
+          color: $colorBlanco;
+          font-size: 20px;
+        }
+      }
     }
   }
 
