@@ -334,23 +334,29 @@ const removeProductToCart = item => {
 let total = listCart?.reduce((acum, elemento) => (acum += elemento.precio * elemento.count), 0);
 const parrafototal = `<h4>Total: $${new Intl.NumberFormat('de-DE').format(total)}</h4>`;
 const getCarrito = list => {
-  const cart = list.map(
-    item => `
+  console.log(list)
+  if(list!==null){
+    const cart = list.map(
+      item => `
         <div class="bodyCart">
-          <h4>${item.nombre}</h4>
-          <div class="containerModal">
-            <img class="imgCart" src=${item.imagenes[0]}>
-            <div class="textContainer">
-              <p>Talle: ${item.talle}</p>
-              <p>Cantidad: ${item.count}</p>
-              <p>Total: $${new Intl.NumberFormat('de-DE').format(item.count * item.precio)}</p>
-            </div>
-            <button id="remove_${item.id}_${item.talle}" class="deleteCart"><img src="../image/icon/delete.png"></button>
-          </div>
+        <h4>${item.nombre}</h4>
+        <div class="containerModal">
+        <img class="imgCart" src=${item.imagenes[0]}>
+        <div class="textContainer">
+        <p>Talle: ${item.talle}</p>
+        <p>Cantidad: ${item.count}</p>
+        <p>Total: $${new Intl.NumberFormat('de-DE').format(item.count * item.precio)}</p>
+        </div>
+        <button id="remove_${item.id}_${item.talle}" class="deleteCart"><img src="../image/icon/delete.png"></button>
+        </div>
         </div>
         `
-  );
-  return cart.join('');
+        );
+        return cart.join('');
+      }
+      else{
+        return "<h3>No tiene ningun producto en el carrito</h3>"
+      }
 };
 document.getElementById('cartNavResponsive').onclick = () => {
   listCart = JSON.parse(localStorage.getItem('listCart'));
