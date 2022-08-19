@@ -2,7 +2,7 @@
 const listNews = [
   {
     id: 1,
-    tituloNew: 'Tercera Camiseta adidas de Arsenal 2022-23',
+    tituloNew: 'Tercera camiseta Adidas de Arsenal 2022-23',
     tituloCarrucel: 'Tercera Arsenal 2022-23',
     imagenes: [
       'https://todosobrecamisetas.com/wp-content/uploads/arsenal-2022-23-adidas-third-kit-h.jpg',
@@ -12,14 +12,14 @@ const listNews = [
     parrafos: [
       'Esta mañana fue presentada la tercera camiseta de Arsenal FC para la temporada 2022/23 del fútbol inglés y la UEFA Europa League. Los Gunners completan su nueva colección adidas, de la que ya habíamos visto los modelos titular y suplente correspondientes.',
       'La camiseta será rosa, color que nunca se ha usado en la historia del equipo, agregando un patrón tonal de armiños heráldicos similar al que tuvo el escudo institucional entre finales de los años 40 e inicios del siglo actual. El cuello es tipo V cruzado, pintado de azul marino con un remate celeste. Las tres tiras se posicionan sobre los hombros, con el mismo color base del cuello.',
-      'El escudo se aplica en versión monocromática, haciendo juego con los logos de adidas y patrocinadores sobre el frente y manga izquierda. El patrón de armiños se repite en las mangas y espalda de la prenda.',
+      'El escudo se aplica en versión monocromática, haciendo juego con los logos de Adidas y patrocinadores sobre el frente y manga izquierda. El patrón de armiños se repite en las mangas y espalda de la prenda.',
     ],
     categorias: ['ESTRENOS', 'PREMIER LEAGUE', 'DESTACADOS'],
   },
   {
     id: 2,
-    tituloNew: 'Camiseta PUMA de Borussia Dortmund Copas 2022/23',
-    tituloCarrucel: 'Borussia Dortmund 2022/23',
+    tituloNew: 'Camiseta Puma de Borussia Dortmund copas 2022-23',
+    tituloCarrucel: 'Borussia Dortmund 2022-23',
     imagenes: [
       'https://todosobrecamisetas.com/wp-content/uploads/borussia-dortmund-2022-23-puma-cup-kit-h.jpg',
       'https://todosobrecamisetas.com/wp-content/uploads/borussia-dortmund-2022-23-puma-cup-kit-1.jpg',
@@ -28,7 +28,7 @@ const listNews = [
     parrafos: [
       'Borussia Dortmund presentó su nueva camiseta para copas de la temporada 2022/23, que verá acción en competencias como la UEFA Champions League y la DFB Pokal. Esta se suma al modelo titular para liga y la camiseta suplente que verá acción en todas las competencias.',
       'La camiseta toma inspiración en el modelo de 1989, con el que ganaron la Copa de Alemania ante Werder Bremen con Nobby Dickel como gran héroe. La base amarilla es acompañada por figuras en negro y blanco sobre los hombros, emulando el diseño de aquel entonces. El cuello redondo se pinta en negro sólido, mientras que las mangas quedan completamente blancas.',
-      'El escudo se presenta en sus colores oficiales, acompañado por los logos de PUMA y patrocinadores. El lema “Borussia Verbindet” (Borussia Se Conecta) toma posición en lo alto de la espalda, como vimos en las otras dos camisetas.',
+      'El escudo se presenta en sus colores oficiales, acompañado por los logos de Puma y patrocinadores. El lema “Borussia Verbindet” (Borussia Se Conecta) toma posición en lo alto de la espalda, como vimos en las otras dos camisetas.',
     ],
     categorias: ['ESTRENOS', 'LIGA ALEMANA', 'DESTACADOS'],
   },
@@ -50,7 +50,7 @@ const listNews = [
   },
   {
     id: 4,
-    tituloNew: 'Tercera Camiseta PUMA de Valencia CF 2022-23',
+    tituloNew: 'Tercera camiseta Puma de Valencia CF 2022-23',
     tituloCarrucel: 'Valencia CF 2022-23',
     imagenes: [
       'https://todosobrecamisetas.com/wp-content/uploads/tercera-camiseta-puma-valencia-cf-2022-23-h.jpg',
@@ -58,15 +58,15 @@ const listNews = [
       'https://todosobrecamisetas.com/wp-content/uploads/tercera-camiseta-puma-valencia-cf-2022-23-2.jpg',
     ],
     parrafos: [
-      'Entre los estrenos de estos días estuvo el de Valencia CF y su tercera equipación para la temporada 2022/23 del fútbol español. Esta se suma a los modelos titular y suplente que ya habían presentado junto a PUMA.',
-      'La camiseta ve el esperado regreso de la Senyera, que no se había visto desde que PUMA tomo el rol de sponsor técnico de los Murciélagos en 2019. Los bastones amarillos y rojos se posan sobre el frente y espalda baja de la prenda, dejando la zona dorsal en amarillo sólido. Como es habitual en Valencia, el diseño se completa con vivos azules, que esta vez se toman los hombros y mangas.',
-      'El escudo se aplica en sus colores oficiales, acompañado por los logos de PUMA y patrocinadores, destacando Cazoo dentro de una caja al frente. El sello que conmemora los 100 años del Estadio Mestalla aparece como jock tag sobre la nuca. Shorts y medias azules completan la nueva tercera equipación de Valencia CF para la próxima temporada.',
+      'Entre los estrenos de estos días estuvo el de Valencia CF y su tercera equipación para la temporada 2022/23 del fútbol español. Esta se suma a los modelos titular y suplente que ya habían presentado junto a Puma.',
+      'La camiseta ve el esperado regreso de la Senyera, que no se había visto desde que Puma tomo el rol de sponsor técnico de los Murciélagos en 2019. Los bastones amarillos y rojos se posan sobre el frente y espalda baja de la prenda, dejando la zona dorsal en amarillo sólido. Como es habitual en Valencia, el diseño se completa con vivos azules, que esta vez se toman los hombros y mangas.',
+      'El escudo se aplica en sus colores oficiales, acompañado por los logos de Puma y patrocinadores, destacando Cazoo dentro de una caja al frente. El sello que conmemora los 100 años del Estadio Mestalla aparece como jock tag sobre la nuca. Shorts y medias azules completan la nueva tercera equipación de Valencia CF para la próxima temporada.',
     ],
     categorias: ['ESTRENOS', 'LA LIGA', 'DESTACADOS'],
   },
   {
     id: 5,
-    tituloNew: 'Camiseta Suplente PUMA de AC Milan 2022-23',
+    tituloNew: 'Camiseta suplente Puma de AC Milan 2022-23',
     tituloCarrucel: 'AC Milan 2022-23',
     imagenes: [
       'https://todosobrecamisetas.com/wp-content/uploads/ac-milan-2022-23-puma-away-kit-h.jpg',
@@ -74,15 +74,15 @@ const listNews = [
       'https://todosobrecamisetas.com/wp-content/uploads/ac-milan-2022-23-puma-away-kit-4.jpg',
     ],
     parrafos: [
-      'AC Milan reveló hace algunos días su camiseta away para la temporada 2022/23 del fútbol italiano y la UEFA Champions League. Los campeones de la Serie A ya había presentado el modelo titular correspondiente hace algunas semanas junto a PUMA.',
+      'AC Milan reveló hace algunos días su camiseta away para la temporada 2022/23 del fútbol italiano y la UEFA Champions League. Los campeones de la Serie A ya había presentado el modelo titular correspondiente hace algunas semanas junto a Puma.',
       'La camiseta vuelve al tono blanco después de un año en beige, con toques rojinegros en el cuello, puños y franjas horizontales sobre el panel frontal que se cortan a los costados. Mangas y espalda, por su parte, quedan dominadas por el blanco.',
-      'El escudo se aplica en sus colores oficiales, acompañado por los logos de PUMA y patrocinadores en rojo. El lema “Sempre Milan” se aplica en dos colores sobre un sello negro en la nuca de la prenda, y el Scudetto se ubica en medio del pecho.',
+      'El escudo se aplica en sus colores oficiales, acompañado por los logos de Puma y patrocinadores en rojo. El lema “Sempre Milan” se aplica en dos colores sobre un sello negro en la nuca de la prenda, y el Scudetto se ubica en medio del pecho.',
     ],
     categorias: ['ESTRENOS', 'SERIE A', 'DESTACADOS'],
   },
   {
     id: 6,
-    tituloNew: 'Camiseta Suplente adidas de Juventus 2022-23',
+    tituloNew: 'Camiseta suplente Adidas de Juventus 2022-23',
     tituloCarrucel: 'Juventus 2022-23',
     imagenes: [
       'https://todosobrecamisetas.com/wp-content/uploads/juventus-2022-23-adidas-away-kit-h.jpg',
@@ -90,15 +90,15 @@ const listNews = [
       'https://todosobrecamisetas.com/wp-content/uploads/juventus-2022-23-adidas-away-kit-3.jpg',
     ],
     parrafos: [
-      'Juventus FC presentó hoy su nueva camiseta suplente para la temporada 2022/23 del fútbol italiano y la UEFA Champions League. La Vecchia Signora ya había revelado el modelo titular correspondiente junto a adidas en mayo pasado.',
+      'Juventus FC presentó hoy su nueva camiseta suplente para la temporada 2022/23 del fútbol italiano y la UEFA Champions League. La Vecchia Signora ya había revelado el modelo titular correspondiente junto a Adidas en mayo pasado.',
       'La camiseta alternativa de la Juve pasa a ser negra, agregando un patrón enérgico que el club ha descrito como una aplicación sutil de la estrella, símbolo asociado con Juventus. El mencionado gráfico se aplica sobre toda la superficie en forma tonal, incluyendo la zona dorsal. El cuello va con corte V cruzado, pintado de negro sólido con un borde blanco, haciendo juego con el remate de los puños. Las tres tiras de la marca alemana hacen presencia sobre los hombros en blanco.',
-      'El escudo del club aparece en blanco, acompañado por los logos de adidas y Jeep, este con su nueva aplicación con rayos adentro que ya vimos en la camiseta titular.',
+      'El escudo del club aparece en blanco, acompañado por los logos de Adidas y Jeep, este con su nueva aplicación con rayos adentro que ya vimos en la camiseta titular.',
     ],
     categorias: ['ESTRENOS', 'SERIE A', 'DESTACADOS'],
   },
   {
     id: 7,
-    tituloNew: 'Tercera Camiseta Kappa de Venezia FC 2022-23',
+    tituloNew: 'Tercera camiseta Kappa de Venezia FC 2022-23',
     tituloCarrucel: 'Tercera Venezia FC 2022-23',
     imagenes: [
       'https://todosobrecamisetas.com/wp-content/uploads/venezia-2022-23-kappa-third-kit-h.jpg',
@@ -114,23 +114,23 @@ const listNews = [
   },
   {
     id: 8,
-    tituloNew: 'Camiseta Suplente PUMA de Manchester City 2022-23',
-    tituloCarrucel: 'Suplente Manchester City 2022-23',
+    tituloNew: 'Camiseta suplente Puma de Manchester City 2022-23',
+    tituloCarrucel: 'Manchester City 2022-23',
     imagenes: [
       'https://todosobrecamisetas.com/wp-content/uploads/manchester-city-2022-23-puma-away-kit-h.jpg',
       'https://todosobrecamisetas.com/wp-content/uploads/manchester-city-2022-23-puma-away-kit-1.jpg',
       'https://todosobrecamisetas.com/wp-content/uploads/manchester-city-2022-23-puma-away-kit-3.jpg',
     ],
     parrafos: [
-      'Manchester City se suma a los estrenos de hoy con el lanzamiento oficial de su camiseta away para la temporada 2022/23 del fútbol inglés y UEFA Champions League. Los campeones de la Premier League ya habían revelado el modelo titular correspondiente junto a PUMA en mayo pasado.',
+      'Manchester City se suma a los estrenos de hoy con el lanzamiento oficial de su camiseta away para la temporada 2022/23 del fútbol inglés y UEFA Champions League. Los campeones de la Premier League ya habían revelado el modelo titular correspondiente junto a Puma en mayo pasado.',
       'La camiseta ve el regreso de los bastones rojinegros, look que el club ha usado en varias ocasiones y que ha tenido presencia en varios títulos desde la FA Cup de 1969. Para darle un giro de tuerca, esta vez han decidido aplicar las líneas de forma diagonal sobre el frente y espalda baja. El cuello V, mangas y espalda quedan en negro sólido.',
-      'El escudo se aplica en negro y amarillo, acompañado por los logos de PUMA y patrocinadores. El barco del escudo hace presencia en lo alto de la espalda junto a la palabra “City”.',
+      'El escudo se aplica en negro y amarillo, acompañado por los logos de Puma y patrocinadores. El barco del escudo hace presencia en lo alto de la espalda junto a la palabra “City”.',
     ],
     categorias: ['ESTRENOS', 'PREMIER LEAGUE', 'DESTACADOS'],
   },
   {
     id: 9,
-    tituloNew: 'Camiseta Suplente adidas de Manchester United 2022-23',
+    tituloNew: 'Camiseta suplente Adidas de Manchester United 2022-23',
     tituloCarrucel: 'Manchester United 2022-23',
     imagenes: [
       'https://todosobrecamisetas.com/wp-content/uploads/manchester-united-2022-23-adidas-away-kit-h.jpg',
@@ -138,9 +138,9 @@ const listNews = [
       'https://todosobrecamisetas.com/wp-content/uploads/manchester-united-2022-23-adidas-away-kit-1.jpg',
     ],
     parrafos: [
-      'Manchester United presentó ayer su nueva camiseta away para la temporada 2022/23 del fútbol inglés y la UEFA Europa league. Los Red Devils y adidas ya habían presentado el modelo titular correspondiente la semana pasada, y queda pendiente por verse la tercera camiseta en los próximos meses.',
+      'Manchester United presentó ayer su nueva camiseta away para la temporada 2022/23 del fútbol inglés y la UEFA Europa league. Los Red Devils y Adidas ya habían presentado el modelo titular correspondiente la semana pasada, y queda pendiente por verse la tercera camiseta en los próximos meses.',
       'La camiseta es dominada por el blanco, como muchos modelos alternativos clásicos del United. Esta vez el cuello y puños se pintan de negro y agregan un patrón de diamantes que alternan entre rojo y blanco. Un leve patrón de hélice está grabado sobre la tela, mientras que las tres tiras alternan entre rojo y negro sobre los hombros.',
-      'El escudo se presenta con el mismo envolvente noventero visto en la titular, ahora con fondo negro; acompañan los logos de adidas y patrocinadores.',
+      'El escudo se presenta con el mismo envolvente noventero visto en la titular, ahora con fondo negro; acompañan los logos de Adidas y patrocinadores.',
     ],
     categorias: ['ESTRENOS', 'PREMIER LEAGUE', 'DESTACADOS'],
   },
@@ -168,7 +168,7 @@ const listaproductos = [
     precio: 12999,
     imagen: 'https://www.dexter.com.ar/on/demandware.static/-/Sites-dabra-catalog/default/dw6bdad884/products/NI_DM1840-452/NI_DM1840-452-1.JPG',
     descripcion:
-      'La Camiseta Nike Fc Barcelona 2022/23 Stadium Home es una representación ideal de tu pasión por uno de los equipos más grandes de todos. Combina detalles de diseño basado en la camiseta que usan los profesionales en el campo dándote un look insuperable. Además te brinda comodidad absoluta gracias a su tecnología Dri-FIT para la absorción de sudor. Algo muy importante al momento de elegir esta prenda, es que está hecha en al menos un 50% de fibras recicladas. Porque sabemos que no solo pensás en elegir tu vestimenta, sino que querés hacerlo bien.',
+      'La camiseta Nike Fc Barcelona 2022/23 Stadium Home es una representación ideal de tu pasión por uno de los equipos más grandes de todos. Combina detalles de diseño basado en la camiseta que usan los profesionales en el campo dándote un look insuperable. Además te brinda comodidad absoluta gracias a su tecnología Dri-FIT para la absorción de sudor. Algo muy importante al momento de elegir esta prenda, es que está hecha en al menos un 50% de fibras recicladas. Porque sabemos que no solo pensás en elegir tu vestimenta, sino que querés hacerlo bien.',
     genero: 'Hombre',
     material: 'Poliéster',
     liga: 'España',
@@ -180,11 +180,11 @@ const listaproductos = [
   },
   {
     id: 3,
-    nombre: 'River Plate 2022',
+    nombre: 'River plate 2022',
     precio: 14999,
     imagen: 'https://www.dexter.com.ar/on/demandware.static/-/Sites-dabra-catalog/default/dw33965a81/products/AD_GU9603/AD_GU9603-1.JPG',
     descripcion:
-      'La camiseta adidas River Plate 120 Años es más que un homenaje al Millonario y su vida de grandeza. Su diseño posee la banda roja más ancha que nunca, como una alfombra de gala para las ocasiones más especiales que existen. La tecnología AEROREADY te brinda una sensación de comodidad estés donde estés, mientras que la confección con Primegreen, una serie de materiales reciclados de alta performance, le dan el toque justo. Posee el escudo y una leyenda en la zona de la nuca para que la vistas con orgullo todos tus días.',
+      'La camiseta Adidas River Plate 120 Años es más que un homenaje al Millonario y su vida de grandeza. Su diseño posee la banda roja más ancha que nunca, como una alfombra de gala para las ocasiones más especiales que existen. La tecnología AEROREADY te brinda una sensación de comodidad estés donde estés, mientras que la confección con Primegreen, una serie de materiales reciclados de alta performance, le dan el toque justo. Posee el escudo y una leyenda en la zona de la nuca para que la vistas con orgullo todos tus días.',
     genero: 'Hombre',
     material: 'Poliéster',
     liga: 'Argentina',
@@ -196,11 +196,11 @@ const listaproductos = [
   },
   {
     id: 4,
-    nombre: 'Camiseta adidas Afa',
+    nombre: 'camiseta Adidas AFA',
     precio: 14999,
     imagen: 'https://www.dexter.com.ar/on/demandware.static/-/Sites-dabra-catalog/default/dw66da801b/products/AD_HB9215/AD_HB9215-1.JPG',
     descripcion:
-      'Porque este año no podés dejar de tener la Camiseta adidas Afa, para alentar llevar con vos los colores de tu selección. Está diseñada para que portes tu pasión con toda la comodidad que esperás ya que su corte relajado te permite moverte fácilmente donde vayas. Además cuenta con tecnología AEROREADY para absorber la transpiración y se combina con sus paneles de malla laterales para mantenerte seco y fresco en todo momento. El detalle de la bandera nacional debajo del cuello en la parte de atrás, le da el toque final. Unite a la hinchada con esta increible prenda.',
+      'Porque este año no podés dejar de tener la camiseta Adidas Afa, para alentar llevar con vos los colores de tu selección. Está diseñada para que portes tu pasión con toda la comodidad que esperás ya que su corte relajado te permite moverte fácilmente donde vayas. Además cuenta con tecnología AEROREADY para absorber la transpiración y se combina con sus paneles de malla laterales para mantenerte seco y fresco en todo momento. El detalle de la bandera nacional debajo del cuello en la parte de atrás, le da el toque final. Unite a la hinchada con esta increible prenda.',
     genero: 'Hombre',
     material: 'Poliéster',
     liga: 'Argentina',
@@ -212,11 +212,11 @@ const listaproductos = [
   },
   {
     id: 5,
-    nombre: 'Camiseta C.A.T. 2022 ',
+    nombre: 'camiseta C.A.T. 2022 ',
     precio: 11949,
     imagen: 'https://www.dexter.com.ar/on/demandware.static/-/Sites-dabra-catalog/default/dw9e95136d/products/UB_U31TU01021-7267/UB_U31TU01021-7267-1.JPG',
     descripcion:
-      'La Camiseta Umbro C.A.T 2022 Titular es una prenda ideal para los que eligen llevar el amor por el celeste y blanco a sus partidos más esforzados o al asado con amigos. El cuello escote en V le da un aire futbolístico moderno ideal para lucir en la cancha. Su escudo original festoneado y el logo Umbro bordado imprimen el toque final a tu pasión.',
+      'La camiseta Umbro C.A.T 2022 Titular es una prenda ideal para los que eligen llevar el amor por el celeste y blanco a sus partidos más esforzados o al asado con amigos. El cuello escote en V le da un aire futbolístico moderno ideal para lucir en la cancha. Su escudo original festoneado y el logo Umbro bordado imprimen el toque final a tu pasión.',
     genero: 'Hombre',
     material: 'Poliéster',
     liga: 'Argentina',
