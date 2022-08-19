@@ -44,10 +44,9 @@ const removeProductToCartModal = item => {
     }
   });
 };
-let total = listCart?.reduce((acum, elemento) => (acum += elemento.precio * elemento.count), 0);
-const parrafototal = `<h4>Total: $${new Intl.NumberFormat('de-DE').format(total)}</h4>`;
+let total;
+let parrafototal;
 const getCarrito = list => {
-  console.log(list)
   if(list!==null){
     const cart = list.map(
       item => `
@@ -72,7 +71,15 @@ const getCarrito = list => {
       }
 };
 document.getElementById('cartNavResponsive').onclick = () => {
-  const listCart = JSON.parse(localStorage.getItem('listCart'));
+  const listCart = JSON.parse(localStorage.getItem("listCart"));
+  total = listCart?.reduce(
+    (acum, elemento) => (acum += elemento.precio * elemento.count),
+    0
+  );
+  if (listCart === null) total = 0;
+  parrafototal = `<h4>Total: $${new Intl.NumberFormat("de-DE").format(
+    total
+  )}</h4>`;
   Swal.fire({
     position: 'top-end',
     title: 'Carrito ',
@@ -90,14 +97,22 @@ document.getElementById('cartNavResponsive').onclick = () => {
       window.location.href = './shoppingCart.html';
     }
   });
-  listCart.map(item => {
+  listCart?.map(item => {
     document.getElementById(`removeModal_${item.id}_${item.talle}`).onclick = () => {
       removeProductToCartModal(item)
     };
   });
 };
 document.getElementById('cartNav').onclick = () => {
-  const listCart = JSON.parse(localStorage.getItem('listCart'));
+  const listCart = JSON.parse(localStorage.getItem("listCart"));
+  total = listCart?.reduce(
+    (acum, elemento) => (acum += elemento.precio * elemento.count),
+    0
+  );
+  if (listCart === null) total = 0;
+  parrafototal = `<h4>Total: $${new Intl.NumberFormat("de-DE").format(
+    total
+  )}</h4>`;
   Swal.fire({
     position: 'top-end',
     title: 'Carrito ',
@@ -115,7 +130,7 @@ document.getElementById('cartNav').onclick = () => {
       window.location.href = './shoppingCart.html';
     }
   });
-  listCart.map(item => {
+  listCart?.map(item => {
     document.getElementById(`removeModal_${item.id}_${item.talle}`).onclick = () => {
       removeProductToCartModal(item)
     };

@@ -308,7 +308,6 @@ const aplicarFiltros = () => {
 
 //#region Modal Carrito
 const removeProductToCart = item => {
-  console.log(item)
   Swal.fire({
     title: '¿Esta seguro que quiere eliminar?',
     text: '',
@@ -331,10 +330,9 @@ const removeProductToCart = item => {
     }
   });
 };
-let total = listCart?.reduce((acum, elemento) => (acum += elemento.precio * elemento.count), 0);
-const parrafototal = `<h4>Total: $${new Intl.NumberFormat('de-DE').format(total)}</h4>`;
+let total 
+let parrafototal
 const getCarrito = list => {
-  console.log(list)
   if(list!==null){
     const cart = list.map(
       item => `
@@ -360,6 +358,9 @@ const getCarrito = list => {
 };
 document.getElementById('cartNavResponsive').onclick = () => {
   listCart = JSON.parse(localStorage.getItem('listCart'));
+  total = listCart?.reduce((acum, elemento) => (acum += elemento.precio * elemento.count), 0);
+  if (listCart ===null) total=0
+  parrafototal = `<h4>Total: $${new Intl.NumberFormat('de-DE').format(total)}</h4>`
   Swal.fire({
     position: 'top-end',
     title: 'Carrito ',
@@ -377,7 +378,7 @@ document.getElementById('cartNavResponsive').onclick = () => {
       window.location.href = './shoppingCart.html';
     }
   });
-  listCart.map(item => {
+  listCart?.map(item => {
     document.getElementById(`remove_${item.id}_${item.talle}`).onclick = () => {
       removeProductToCart(item)
     };
@@ -385,6 +386,9 @@ document.getElementById('cartNavResponsive').onclick = () => {
 };
 document.getElementById('cartNav').onclick = () => {
   listCart = JSON.parse(localStorage.getItem('listCart'));
+  total = listCart?.reduce((acum, elemento) => (acum += elemento.precio * elemento.count), 0);
+  if (listCart ===null) total=0
+  parrafototal = `<h4>Total: $${new Intl.NumberFormat('de-DE').format(total)}</h4>`
   Swal.fire({
     position: 'top-end',
     title: 'Carrito ',
@@ -402,7 +406,7 @@ document.getElementById('cartNav').onclick = () => {
       window.location.href = './shoppingCart.html';
     }
   });
-  listCart.map(item => {
+  listCart?.map(item => {
     document.getElementById(`remove_${item.id}_${item.talle}`).onclick = () => {
       removeProductToCart(item)
     };
