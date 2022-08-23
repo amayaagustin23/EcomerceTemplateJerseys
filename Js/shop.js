@@ -154,6 +154,18 @@ const generos = document.getElementsByClassName("form-check-genero");
 const modal = document.getElementById("myModal");
 //#endregion
 
+//#region Funciones de Redirect
+const redirectToProduct = (list) => {
+  list.map((item) => {
+    document.getElementById("view_" + item.id).onclick = () => {
+      localStorage.setItem("productos", JSON.stringify(listaproductos));
+      localStorage.setItem("idProducto", item.id);
+    };
+  });
+};
+
+//#endregion
+
 //#region Funciones de renderizados
 if (screen.width < 1220) {
   document.getElementById("collapseTwo").classList.add("collapse");
@@ -178,6 +190,9 @@ const LabelColor = () => {
 };
 
 const getProductTemplate = (list) => {
+  document.getElementById("loader").style.display="flex"
+  setTimeout(() => {
+    document.getElementById("loader").style.display="none"
   const products = list.map(
     (item) =>
       `<div class="articulo" id=${item.nombre}>
@@ -201,27 +216,11 @@ const getProductTemplate = (list) => {
     elementHTML.innerHTML += element;
   });
   LabelColor();
+  redirectToProduct(list);
+}, 1000);
 };
 
-getProductTemplate(listaproductos);
-//#endregion
-
-//#region Funciones de Redirect
-const redirectToProduct = (item) => {
-  document.getElementById("view_" + item.id).onclick = () => {
-    const idView = document.getElementById("view_" + item.id).id.split("_");
-    const id = idView[1];
-    if (id === item.id);
-    {
-      localStorage.setItem("productos", JSON.stringify(listaproductos));
-      localStorage.setItem("idProducto", id);
-    }
-  };
-};
-
-listaproductos.map((item) => {
-  redirectToProduct(item);
-});
+getProductTemplate(listaproductos)
 //#endregion
 
 //#region Filtros
