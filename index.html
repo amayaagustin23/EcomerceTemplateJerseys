@@ -73,12 +73,17 @@
   <div class="containerHome">
     <section class="imagenPrincipal">
     </section>
+    <div class="d-flex justify-content-center">
+      <div class="spinner-grow" style="width: 5rem; height: 5rem" role="status" id="loaderNews"></div>
+    </div>
     <section class="listarImagenes" id="listarImagenes">
     </section>
     <section class="bestSeller">
       <h2>Los más vendidos</h2>
+      <div class="d-flex justify-content-center">
+        <div class="spinner-grow" style="width: 5rem; height: 5rem" role="status" id="loaderBestSeller"></div>
+      </div>
       <div class="containerBestSeller"  id="containerBestSeller">
-
       </div>
     </section>
     <section class="containerVideos">
@@ -106,12 +111,12 @@
     </section>
   </div>
   <footer class="footer">
-    <div class="contenedor" data-aos="zoom-in" data-aos-duration="1500">
+    <div class="contenedor" data-aos="zoom-in" data-aos-easing="linear" data-aos-duration="1500">
       <div class="logoFooter">
-        <a href="./index.html" title="Home"><img src="./image/logo.png" alt="Logo" width="100" /></a>
+        <a href="../index.html" title="Home"><img src="../image/logo.png" alt="Logo" width="100" /></a>
       </div>
       <div class="categorias">
-        <h3>Legal</h3>
+        <h2>Legal</h2>
         <div class="redirecCat">
           <a class="footerOp" href="./index.html">Inicio</a>
           <a class="footerOp" href="./pages/contact.html">Contactanos</a>
@@ -119,14 +124,10 @@
         </div>
       </div>
       <div class="socials">
-        <a target="_blank" href="https://www.facebook.com/search/top?q=style%20pics%20sports"><img
-            src="./image/socials/facebook.png" alt="facebook" width="32" /></a>
-        <a target="_blank" href="https://www.instagram.com/stylepics.sports/"><img src="./image/socials/instagram.png"
-            alt="instagram" width="32" /></a>
-        <a target="_blank" href="https://twitter.com/home"><img src="./image/socials/twitter.png" alt="twitter"
-            width="32" /></a>
-        <a target="_blank" href="https://www.youtube.com/"><img src="./image/socials/youtube.png" alt="youtube"
-            width="32" /></a>
+        <a target="_blank" href="https://www.facebook.com/search/top?q=style%20pics%20sports"><img src="../image/socials/facebook.png" alt="facebook" width="32" /></a>
+        <a target="_blank" href="https://www.instagram.com/stylepics.sports/"><img src="../image/socials/instagram.png" alt="instagram" width="32" /></a>
+        <a target="_blank" href="https://twitter.com/home"><img src="../image/socials/twitter.png" alt="twitter" width="32" /></a>
+        <a target="_blank" href="https://www.youtube.com/"><img src="../image/socials/youtube.png" alt="youtube" width="32" /></a>
       </div>
     </div>
     <div class="copy">
@@ -140,14 +141,8 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
     integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
   </script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
-  </script>
-  <script>
-    $('.carousel').carousel({
-      interval: 4000
-    })
-  </script>
+
+
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init();
