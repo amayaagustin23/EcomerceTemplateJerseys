@@ -190,10 +190,9 @@ const getCarrito = (list) => {
         </div>
         `
 		)
+		if (list.length === 0) return '<h3>No tiene ningun producto en el carrito</h3>'
 		return cart.join('')
-	} else {
-		return '<h3>No tiene ningun producto en el carrito</h3>'
-	}
+	} else return '<h3>No tiene ningun producto en el carrito</h3>'
 }
 const eventRemove = () => {
 	listCart?.map((item) => {

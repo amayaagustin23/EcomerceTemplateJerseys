@@ -41,7 +41,7 @@ const removeProductToCartModal = (item) => {
 		}
 	})
 }
- const getCarrito = (list) => {
+const getCarrito = (list) => {
 	if (list !== null) {
 		const cart = list.map(
 			(item) => `
@@ -54,15 +54,14 @@ const removeProductToCartModal = (item) => {
         <p>Cantidad: ${item.count}</p>
         <p>Total: $${new Intl.NumberFormat('de-DE').format(item.count * item.precio)}</p>
         </div>
-        <button id="removeModal_${item.id}_${item.talle}" class="deleteCart"><img src="../image/icon/delete.png"></button>
+        <button id="remove_${item.id}_${item.talle}" class="deleteCart"><img src="../image/icon/delete.png"></button>
         </div>
         </div>
         `
 		)
+		if (list.length === 0) return '<h3>No tiene ningun producto en el carrito</h3>'
 		return cart.join('')
-	} else {
-		return '<h3>No tiene ningun producto en el carrito</h3>'
-	}
+	} else return '<h3>No tiene ningun producto en el carrito</h3>'
 }
 const eventRemove=()=>{
 	listCart?.map((item) => {
