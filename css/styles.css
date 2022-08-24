@@ -663,17 +663,17 @@ header .iconsNav, header .NavSearch {
         .containerHome .bestSeller .containerBestSeller .article img {
           width: 200px; }
         .containerHome .bestSeller .containerBestSeller .article .textArticle h3 {
-          font-size: 20px;
+          font-size: 14px;
           font-weight: bold; }
         .containerHome .bestSeller .containerBestSeller .article .textArticle p {
-          font-size: 14px;
+          font-size: 24px;
           font-weight: bold; }
         .containerHome .bestSeller .containerBestSeller .article .overlay {
           margin: 0.5rem auto; }
         .containerHome .bestSeller .containerBestSeller .article:hover {
           -webkit-transform: scale(1.1);
           transform: scale(1.1);
-          height: 350px; }
+          height: 380px; }
   .containerHome .containerVideos h2 {
     color: #1B1A17;
     text-align: center;
