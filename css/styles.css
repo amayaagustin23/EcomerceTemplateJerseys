@@ -780,6 +780,16 @@ header .iconsNav, header .NavSearch {
   background-color: #EEEEEE;
   padding: 2rem;
   border-radius: 1rem; }
+  .containerNew nav {
+    display: block; }
+    .containerNew nav .breadcrumb-item {
+      list-style: none !important;
+      text-decoration: none;
+      color: #333 !important; }
+      .containerNew nav .breadcrumb-item a {
+        list-style: none !important;
+        text-decoration: none;
+        color: #333 !important; }
   .containerNew .titleContainer {
     position: relative;
     margin: auto;

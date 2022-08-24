@@ -1,8 +1,22 @@
+
 .containerNew {
   margin: 2rem 1rem;
   background-color: $colorBlanco;
   padding: 2rem;
   border-radius: 1rem;
+  nav {
+  display: block;
+    .breadcrumb-item {
+      list-style: none !important;
+      text-decoration: none;
+      color: #333 !important;
+      a {
+        list-style: none !important;
+        text-decoration: none;
+        color: #333 !important;
+      }
+    }
+  }
   .titleContainer {
     position: relative;
     margin: auto;

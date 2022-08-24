@@ -1,5 +1,4 @@
-//#region Listas
-const listNews = [
+export const listNews = [
 	{
 		id: 1,
 		tituloNew: 'Tercera camiseta Adidas de Arsenal 2022-23',
@@ -161,7 +160,7 @@ const listNews = [
 		categorias: ['ESTRENOS', 'SERIE A', 'DESTACADOS'],
 	},
 ]
-const listaproductos = [
+export const listaproductos = [
 	{
 		id: 1,
 		nombre: 'Barcelona 2022/23',
@@ -245,60 +244,3 @@ const listaproductos = [
 		etiqueta: 'NUEVO',
 	},
 ]
-
-const containerBestSeller = document.getElementById('containerBestSeller')
-const containerImagenes = document.getElementById('listarImagenes')
-//#endregion
-
-//#region Funciones de renderizado
-const redirectProduct = (list) => {
-	list.map((item) => (document.getElementById(`prod_${item.id}`).onclick = () => localStorage.setItem('producto', JSON.stringify(item))))
-}
-
-const redirectNews = (list) => {
-	list.map((item) => (document.getElementById(`news_${item.id}`).onclick = () => localStorage.setItem('new', JSON.stringify(item))))
-}
-
-const getProduct = (list) => {
-	const products = list.map(
-		(item) =>
-			`<div class="article">
-        <img src=${item.imagenes[0]} alt="">
-        <div class="textArticle">
-          <h3>${item.nombre}</h3>
-          <p>$${item.precio}</p>
-          <div class="overlay">
-            <div class="text" ><a id="prod_${item.id}" href="./pages/product.html">Comprar</a></div>
-          </div>
-        </div>
-    </div>`
-	)
-	containerBestSeller.innerHTML = products.join('')
-	redirectProduct(list)
-}
-
-const getNews = (list) => {
-	const news = list.map(
-		(item) =>
-			`<div class="containerItem">
-          <img src=${item.imagenes[0]} alt="Avatar" class="image">
-          <div class="overlay">
-            <a class="text" id="news_${item.id}"  href="./pages/newView.html" >${item.tituloCarrucel}</a>
-          </div>
-      </div>`
-	)
-	containerImagenes.innerHTML = news.join('')
-	redirectNews(list)
-}
-
-const renderizadoHome = () => {
-	setTimeout(() => {
-		document.getElementById('loaderBestSeller').style.display = 'none'
-		document.getElementById('loaderNews').style.display = 'none'
-		getProduct(listaproductos)
-		getNews(listNews)
-	}, 1000)
-}
-
-renderizadoHome()
-//#endregion
