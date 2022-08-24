@@ -245,7 +245,6 @@ const listaproductos = [
 		etiqueta: 'NUEVO',
 	},
 ]
-
 const containerBestSeller = document.getElementById('containerBestSeller')
 const containerImagenes = document.getElementById('listarImagenes')
 //#endregion

@@ -69,7 +69,9 @@ const cardNews = document.getElementById('cardsNews')
 //#endregion
 
 //#region funcion de Renderizado
-const redirectNew = (list) => list.map((item) => (document.getElementById(`new_${item.id}`).onclick = () => localStorage.setItem('new', JSON.stringify(item))))
+const redirectNew = (list) => {
+  list.map((item) => (document.getElementById(`new_${item.id}`).onclick = () => localStorage.setItem('new', JSON.stringify(item))))
+}
 
 const getNewsTemplate = (list) => {
 	const news = list.map(
