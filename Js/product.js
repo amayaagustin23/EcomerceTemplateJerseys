@@ -1,8 +1,6 @@
-const list = JSON.parse(localStorage.getItem("productos"));
-const id = parseInt(localStorage.getItem("idProducto"));
 let productCarrito = "";
 let listCart = JSON.parse(localStorage.getItem("listCart"));
-const producto = list.find((item) => item.id === id);
+const producto = JSON.parse(localStorage.getItem("producto"));
 let cantidad = localStorage.getItem("cantidad");
 if (cantidad === null) cantidad = 0;
 document.getElementById("cartcountNav").innerHTML = cantidad;
