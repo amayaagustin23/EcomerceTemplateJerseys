@@ -4,6 +4,7 @@
 let productCarrito = ''
 let listCart = JSON.parse(localStorage.getItem('listCart'))
 const producto = JSON.parse(localStorage.getItem('producto'))
+
 let cantidad = localStorage.getItem('cantidad')
 if (cantidad === null) cantidad = 0
 document.getElementById('cartcountNav').innerHTML = cantidad
@@ -217,6 +218,7 @@ const renderizarProduct = () => {
   </div>
   </div>
   <div class="contenedor">
+  <img src="${producto.logoMarca}" alt="${producto.nombre}" title="${producto.nombre}"/>
   <h1>${producto.nombre}</h1>
   <p>Item No. ${producto.item}</p>
   <br>

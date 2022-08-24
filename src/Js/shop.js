@@ -26,7 +26,7 @@ const listaproductos = [
 		tallesDisponibles: ['M', 'XL'],
 		tallesFaltante: ['S', 'L'],
 		etiqueta: 'OFERTA',
-		logoMarca: 'http://www.brandemia.org/wp-content/uploads/2011/09/logo_nike_principal.jpg',
+		logoMarca: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Logo_NIKE.svg/1024px-Logo_NIKE.svg.png',
 	},
 	{
 		id: 2,
@@ -46,7 +46,7 @@ const listaproductos = [
 		tallesDisponibles: ['S', 'L', 'XL'],
 		tallesFaltante: ['M'],
 		etiqueta: '',
-		logoMarca: 'https://www.ondasports.com.ar/img/m/38.jpg',
+		logoMarca: 'https://i.pinimg.com/originals/ef/ae/8b/efae8ba996429a8f08003b5e2409672b.png',
 	},
 	{
 		id: 3,
@@ -112,7 +112,7 @@ const listaproductos = [
 		tallesDisponibles: ['L', 'XL'],
 		tallesFaltante: ['S', 'M'],
 		etiqueta: '',
-		logoMarca: 'https://upload.wikimedia.org/wikipedia/commons/2/22/Umbro_logo_%28current%29.svg',
+		logoMarca: 'https://logodownload.org/wp-content/uploads/2014/10/umbro-logo-1.png',
 	},
 	{
 		id: 6,
@@ -136,7 +136,7 @@ const listaproductos = [
 		tallesDisponibles: ['S', 'L', 'XL'],
 		tallesFaltante: ['M'],
 		etiqueta: 'OFERTA',
-		logoMarca: 'http://www.brandemia.org/wp-content/uploads/2011/09/logo_nike_principal.jpg',
+		logoMarca: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Logo_NIKE.svg/1024px-Logo_NIKE.svg.png',
 	},
 ]
 let productosFiltrados = []
