@@ -459,7 +459,7 @@ header .iconsNav, header .NavSearch {
 
 .containerHome .imagenPrincipal {
   width: 100%;
-  height: 800px;
+  height: 750px;
   background-size: cover;
   background-repeat: no-repeat;
   background-image: linear-gradient(transparent, #403F3D 90%), url("../image/home/fc-barcelona-2022-23-nike-home-kit-h.jpg"); }
@@ -656,8 +656,10 @@ header .iconsNav, header .NavSearch {
     .containerHome .bestSeller .containerBestSeller {
       grid-template-columns: repeat(auto-fill, 300px); }
       .containerHome .bestSeller .containerBestSeller .article {
-        width: 300px;
-        padding: 1rem !important; }
+        width: 220px;
+        padding: 1rem !important;
+        display: grid;
+        justify-content: center; }
         .containerHome .bestSeller .containerBestSeller .article img {
           width: 200px; }
         .containerHome .bestSeller .containerBestSeller .article .textArticle h3 {
