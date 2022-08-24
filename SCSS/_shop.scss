@@ -228,21 +228,22 @@
     }
     .containerArticulos {
       display: grid;
-      grid-template-columns: repeat(1, 1fr);
+      grid-template-columns: repeat(2, 1fr);
       margin: auto;
       .articulo {
-        width: 16rem;
-        height: 21.5rem;
+        width: 10rem;
+        height: 15.5rem;
         margin: auto;
 
         .imagen {
           display: flex;
           justify-content: center;
           img {
-            width: 15rem;
+            width: 9rem;
           }
         }
         .textos {
+          height: auto;
           .title{
             font-size: 18px;
           }
@@ -250,15 +251,15 @@
     
             p {
               text-decoration: none !important;
-              font-size: 26px;
+              font-size: 16px;
               font-weight: bold;
             }
             .etiqueta{
-              font-size: 16px;
+              font-size: 12px;
               font-weight: bold;
               color: $colorBlanco;
               border-radius: .5rem;
-              padding: .4rem;
+              padding: .1rem;
               margin-right: 1rem;
             }
           }

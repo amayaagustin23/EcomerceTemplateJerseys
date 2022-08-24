@@ -1167,30 +1167,32 @@ header .iconsNav, header .NavSearch {
         max-width: 70%; }
   .bodyContainerShop .containerArticulos {
     display: grid;
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     margin: auto; }
     .bodyContainerShop .containerArticulos .articulo {
-      width: 16rem;
-      height: 21.5rem;
+      width: 10rem;
+      height: 15.5rem;
       margin: auto; }
       .bodyContainerShop .containerArticulos .articulo .imagen {
         display: flex;
         justify-content: center; }
         .bodyContainerShop .containerArticulos .articulo .imagen img {
-          width: 15rem; }
-      .bodyContainerShop .containerArticulos .articulo .textos .title {
-        font-size: 18px; }
-      .bodyContainerShop .containerArticulos .articulo .textos .precioEtiqueta p {
-        text-decoration: none !important;
-        font-size: 26px;
-        font-weight: bold; }
-      .bodyContainerShop .containerArticulos .articulo .textos .precioEtiqueta .etiqueta {
-        font-size: 16px;
-        font-weight: bold;
-        color: #EEEEEE;
-        border-radius: .5rem;
-        padding: .4rem;
-        margin-right: 1rem; }
+          width: 9rem; }
+      .bodyContainerShop .containerArticulos .articulo .textos {
+        height: auto; }
+        .bodyContainerShop .containerArticulos .articulo .textos .title {
+          font-size: 18px; }
+        .bodyContainerShop .containerArticulos .articulo .textos .precioEtiqueta p {
+          text-decoration: none !important;
+          font-size: 16px;
+          font-weight: bold; }
+        .bodyContainerShop .containerArticulos .articulo .textos .precioEtiqueta .etiqueta {
+          font-size: 12px;
+          font-weight: bold;
+          color: #EEEEEE;
+          border-radius: .5rem;
+          padding: .1rem;
+          margin-right: 1rem; }
       .bodyContainerShop .containerArticulos .articulo .containerButton {
         margin-top: 1rem;
         display: flex;

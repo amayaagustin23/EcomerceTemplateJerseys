@@ -51,12 +51,12 @@ const listaproductos = [
 	},
 	{
 		id: 3,
-		nombre: 'River plate 2022',
+		nombre: 'River plate 2022/23',
 		item: 'AD_GU9603',
-		precio: 14999,
+		precio: 16999,
 		imagenes: [
-			'https://pacogarcia.vtexassets.com/arquivos/ids/170630-1200-auto?v=637578022186100000&width=1200&height=auto&aspect=true',
-			'https://pacogarcia.vtexassets.com/arquivos/ids/170631-1200-auto?v=637578022274630000&width=1200&height=auto&aspect=true',
+			'https://www.dexter.com.ar/on/demandware.static/-/Sites-dabra-catalog/default/dwd75c1b90/products/AD_GB7592/AD_GB7592-1.JPG',
+			'https://www.dexter.com.ar/on/demandware.static/-/Sites-dabra-catalog/default/dwd75c1b90/products/AD_GB7592/AD_GB7592-2.JPG',
 		],
 		descripcion:
 			'La camiseta Adidas River plate 120 años es más que un homenaje al millonario y su vida de grandeza. Su diseño posee la banda roja más ancha que nunca, como una alfombra de gala para las ocasiones más especiales que existen. La tecnología AEROREADY te brinda una sensación de comodidad estés donde estés, mientras que la confección con Primegreen, una serie de materiales reciclados de alta performance, le dan el toque justo. Posee el escudo y una leyenda en la zona de la nuca para que la vistas con orgullo todos tus días.',
