@@ -1060,6 +1060,7 @@ header .iconsNav, header .NavSearch {
       padding: 0.2rem;
       border-radius: 1rem;
       border: 5px solid #F0E3CA;
+      background-color: white;
       grid-column: span 1;
       grid-row: span 1;
       opacity: 1;
@@ -1089,6 +1090,10 @@ header .iconsNav, header .NavSearch {
       margin-top: 0.4rem;
       height: 6rem;
       padding-left: 0.2rem; }
+      .bodyContainerShop .containerArticulos .textos img {
+        position: absolute;
+        width: 3rem;
+        top: 14rem; }
       .bodyContainerShop .containerArticulos .textos .title {
         font-size: 18px; }
       .bodyContainerShop .containerArticulos .textos .precioEtiqueta {
@@ -1099,12 +1104,13 @@ header .iconsNav, header .NavSearch {
           font-size: 26px;
           font-weight: bold; }
         .bodyContainerShop .containerArticulos .textos .precioEtiqueta .etiqueta {
+          position: absolute;
           font-size: 16px;
           font-weight: bold;
           color: #EEEEEE;
           border-radius: .5rem;
           padding: .4rem;
-          margin-right: 1rem; }
+          top: 1rem; }
     .bodyContainerShop .containerArticulos .containerButton {
       margin-top: -5px;
       display: flex;
@@ -1148,6 +1154,8 @@ header .iconsNav, header .NavSearch {
           width: 14rem; }
         .bodyContainerShop .containerArticulos .articulo .textos {
           font-size: small; }
+          .bodyContainerShop .containerArticulos .articulo .textos img {
+            top: 12rem; }
         .bodyContainerShop .containerArticulos .articulo .containerButton {
           margin-top: 1.5rem;
           display: flex;
@@ -1180,6 +1188,9 @@ header .iconsNav, header .NavSearch {
           width: 9rem; }
       .bodyContainerShop .containerArticulos .articulo .textos {
         height: auto; }
+        .bodyContainerShop .containerArticulos .articulo .textos img {
+          width: 2rem;
+          top: 8rem; }
         .bodyContainerShop .containerArticulos .articulo .textos .title {
           font-size: 18px; }
         .bodyContainerShop .containerArticulos .articulo .textos .precioEtiqueta p {

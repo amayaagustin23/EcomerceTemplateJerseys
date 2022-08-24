@@ -13,10 +13,7 @@ const listaproductos = [
 		nombre: 'Barcelona 2022/23',
 		item: 'AD_GU9601',
 		precio: 12999,
-		imagenes: [
-			'https://www.dexter.com.ar/on/demandware.static/-/Sites-dabra-catalog/default/dw6bdad884/products/NI_DM1840-452/NI_DM1840-452-1.JPG',
-			'https://essential.vtexassets.com/arquivos/ids/593398-1200-auto?v=637939395993430000&width=1200&height=auto&aspect=true',
-		],
+		imagenes: ['https://images.media-arocam.com/M7LOmXwFHJRdS_2Z8CzNMEqCsNc=/fit-in/450x450/W28897/OBS/xRbNlad1_OBS.png', 'https://images.media-arocam.com/uegll2-m9pOoXaN11SliRQGQZBo=/fit-in/1000x1000/W28897/OBS/jT1HKRtx_OBS2.png'],
 		descripcion:
 			'La Camiseta Nike Fc Barcelona 2022/23 stadium home es una representación ideal de tu pasión por uno de los equipos más grandes de todos. Combina detalles de diseño basado en la camiseta que usan los profesionales en el campo dándote un look insuperable. Además te brinda comodidad absoluta gracias a su tecnología Dri-FIT para la absorción de sudor. Algo muy importante al momento de elegir esta prenda, es que está hecha en al menos un 50% de fibras recicladas. Porque sabemos que no solo pensás en elegir tu vestimenta, sino que querés hacerlo bien.',
 		genero: 'Hombre',
@@ -29,6 +26,7 @@ const listaproductos = [
 		tallesDisponibles: ['M', 'XL'],
 		tallesFaltante: ['S', 'L'],
 		etiqueta: 'OFERTA',
+		logoMarca: 'http://www.brandemia.org/wp-content/uploads/2011/09/logo_nike_principal.jpg',
 	},
 	{
 		id: 2,
@@ -48,6 +46,7 @@ const listaproductos = [
 		tallesDisponibles: ['S', 'L', 'XL'],
 		tallesFaltante: ['M'],
 		etiqueta: '',
+		logoMarca: 'https://www.ondasports.com.ar/img/m/38.jpg',
 	},
 	{
 		id: 3,
@@ -70,6 +69,7 @@ const listaproductos = [
 		tallesDisponibles: ['M', 'L'],
 		tallesFaltante: ['S', 'XL'],
 		etiqueta: 'OFERTA',
+		logoMarca: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Adidas_Logo.svg/2560px-Adidas_Logo.svg.png',
 	},
 	{
 		id: 4,
@@ -89,6 +89,7 @@ const listaproductos = [
 		tallesDisponibles: ['S', 'XL'],
 		tallesFaltante: ['M', 'L'],
 		etiqueta: 'NUEVO',
+		logoMarca: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Adidas_Logo.svg/2560px-Adidas_Logo.svg.png',
 	},
 	{
 		id: 5,
@@ -111,6 +112,7 @@ const listaproductos = [
 		tallesDisponibles: ['L', 'XL'],
 		tallesFaltante: ['S', 'M'],
 		etiqueta: '',
+		logoMarca: 'https://upload.wikimedia.org/wikipedia/commons/2/22/Umbro_logo_%28current%29.svg',
 	},
 	{
 		id: 6,
@@ -134,6 +136,7 @@ const listaproductos = [
 		tallesDisponibles: ['S', 'L', 'XL'],
 		tallesFaltante: ['M'],
 		etiqueta: 'OFERTA',
+		logoMarca: 'http://www.brandemia.org/wp-content/uploads/2011/09/logo_nike_principal.jpg',
 	},
 ]
 let productosFiltrados = []
@@ -290,8 +293,9 @@ const getProductTemplate = (list) => {
                   <a id="prod_${item.id}" href="../pages/product.html">
                     <div class="imagen">
                       <img src="${item.imagenes[0]}" alt="${item.nombre}" title="${item.nombre}"/>
-                    </div>
-                    <div class="textos">
+					  </div>
+					  <div class="textos">
+                      <img src="${item.logoMarca}" alt="${item.nombre}" title="${item.nombre}"/>
                       <h3 class="title">${item.nombre}</h3>
                       <div class='precioEtiqueta'>
                         <p>$${new Intl.NumberFormat('de-DE').format(item.precio)}</p>

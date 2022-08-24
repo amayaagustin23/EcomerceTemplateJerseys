@@ -72,6 +72,7 @@
       padding: 0.2rem;
       border-radius: 1rem;
       border: 5px solid $colorBeige;
+      background-color: white;
       grid-column: span 1;
       grid-row: span 1;
       opacity: 1;
@@ -92,7 +93,7 @@
       img {
         display: flex;
         justify-content: center;
-        width: 16rem;
+        width: 16rem ;
         border-radius: 0.5rem;
       }
       &:hover {
@@ -106,6 +107,11 @@
       margin-top: 0.4rem;
       height: 6rem;
       padding-left: 0.2rem;
+      img{
+        position: absolute;
+        width: 3rem;
+        top:14rem;
+      }
       .title{
         font-size: 18px;
       }
@@ -118,12 +124,13 @@
           font-weight: bold;
         }
         .etiqueta{
+          position: absolute;
           font-size: 16px;
           font-weight: bold;
           color: $colorBlanco;
           border-radius: .5rem;
           padding: .4rem;
-          margin-right: 1rem;
+          top: 1rem;
         }
       }
     }
@@ -190,6 +197,9 @@
         }
         .textos {
           font-size: small;
+          img{
+            top:12rem;
+          }
         }
         .containerButton {
           margin-top: 1.5rem;
@@ -244,6 +254,10 @@
         }
         .textos {
           height: auto;
+          img{
+            width: 2rem;
+            top:8rem
+          }
           .title{
             font-size: 18px;
           }

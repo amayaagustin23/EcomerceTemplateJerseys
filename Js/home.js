@@ -1,3 +1,5 @@
+/** @format */
+
 //#region Listas
 const listNews = [
 	{
@@ -167,10 +169,7 @@ const listaproductos = [
 		nombre: 'Barcelona 2022/23',
 		item: 'AD_GU9601',
 		precio: 12999,
-		imagenes: [
-			'https://www.dexter.com.ar/on/demandware.static/-/Sites-dabra-catalog/default/dw6bdad884/products/NI_DM1840-452/NI_DM1840-452-1.JPG',
-			'https://essential.vtexassets.com/arquivos/ids/593398-1200-auto?v=637939395993430000&width=1200&height=auto&aspect=true',
-		],
+		imagenes: ['https://images.media-arocam.com/M7LOmXwFHJRdS_2Z8CzNMEqCsNc=/fit-in/450x450/W28897/OBS/xRbNlad1_OBS.png', 'https://images.media-arocam.com/uegll2-m9pOoXaN11SliRQGQZBo=/fit-in/1000x1000/W28897/OBS/jT1HKRtx_OBS2.png'],
 		descripcion:
 			'La Camiseta Nike Fc Barcelona 2022/23 stadium home es una representación ideal de tu pasión por uno de los equipos más grandes de todos. Combina detalles de diseño basado en la camiseta que usan los profesionales en el campo dándote un look insuperable. Además te brinda comodidad absoluta gracias a su tecnología Dri-FIT para la absorción de sudor. Algo muy importante al momento de elegir esta prenda, es que está hecha en al menos un 50% de fibras recicladas. Porque sabemos que no solo pensás en elegir tu vestimenta, sino que querés hacerlo bien.',
 		genero: 'Hombre',
@@ -183,6 +182,7 @@ const listaproductos = [
 		tallesDisponibles: ['M', 'XL'],
 		tallesFaltante: ['S', 'L'],
 		etiqueta: 'OFERTA',
+		logoMarca: '',
 	},
 	{
 		id: 2,
