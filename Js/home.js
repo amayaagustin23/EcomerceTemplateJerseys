@@ -261,7 +261,7 @@ const redirectNews = (list) => {
 const getProduct = (list) => {
 	const products = list.map(
 		(item) =>
-			`<div class="article">
+			`<div class="article" data-aos="zoom-in">
         <img src=${item.imagenes[0]} alt="">
         <div class="textArticle">
           <h3>${item.nombre}</h3>
@@ -279,7 +279,7 @@ const getProduct = (list) => {
 const getNews = (list) => {
 	const news = list.map(
 		(item) =>
-			`<div class="containerItem">
+			`<div class="containerItem" data-aos="zoom-in">
           <img src=${item.imagenes[0]} alt="Avatar" class="image">
           <div class="overlay">
             <a class="text" id="news_${item.id}"  href="./pages/newView.html" >${item.tituloCarrucel}</a>

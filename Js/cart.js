@@ -215,7 +215,7 @@ const getCart = (list) => {
 	document.getElementById('loader').style.display = 'flex'
 	const carts = list?.map(
 		(item) =>
-			`  
+			`  <div data-aos="zoom-in">
       <hr class="my-4" />
 		  <div class="row mb-4 d-flex justify-content-between align-items-center">
         <div class="col-md-2 col-lg-2 col-xl-2">
@@ -234,7 +234,9 @@ const getCart = (list) => {
 		  <div class="col-md-1 col-lg-1 col-xl-1 text-end">
 			<a href="#!" class="text-muted"><i id="remove_${item.id}_${item.talle}" class="fas fa-times"></i></a>
 		  </div>
-		</div>`
+		</div>
+		</div>
+		`
 	)
 	setTimeout(() => {
 		document.getElementById('loader').style.display = 'none'

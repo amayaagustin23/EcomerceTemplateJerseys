@@ -286,7 +286,7 @@ const getProductTemplate = (list) => {
 		document.getElementById('loader').style.display = 'none'
 		const products = list.map(
 			(item) =>
-				`<div class="articulo" id=${item.nombre}>
+				`<div data-aos="zoom-in" class="articulo" id=${item.nombre}>
                   <a id="prod_${item.id}" href="../pages/product.html">
                     <div class="imagen">
                       <img src="${item.imagenes[0]}" alt="${item.nombre}" title="${item.nombre}"/>
