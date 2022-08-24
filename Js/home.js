@@ -227,13 +227,15 @@ const listaproductos = [
     tallesDisponibles: 'L,XL',
   },
 ];
+const containerBestSeller= document.getElementById('containerBestSeller')
+const containerImagenes=document.getElementById('listarImagenes');
 //#endregion
 
 //#region Funciones de renderizado
 const getProductTemplate = list => {
   const products = list.map(
     item =>
-      `<div class="article">
+    `<div class="article">
       <img src=${item.imagen} alt="">
       <div class="textArticle">
         <h3>${item.nombre}</h3>
@@ -244,11 +246,7 @@ const getProductTemplate = list => {
       </div>
     </div>`
   );
-  const elementHTML = document.getElementById('containerBestSeller');
-  const data = products;
-  data.forEach(element => {
-    elementHTML.innerHTML += element;
-  });
+  containerBestSeller.innerHTML=products.join("")
 };
 
 const getNewsTemplate = list => {
@@ -261,20 +259,23 @@ const getNewsTemplate = list => {
         </div>
       </div>`
   );
-  const elementHTML = document.getElementById('listarImagenes');
-  const data = news;
-  data.forEach(element => {
-    elementHTML.innerHTML += element;
-  });
+  containerImagenes.innerHTML=news.join("")
 };
 
-getNewsTemplate(listNews);
-getProductTemplate(listaproductos);
+const renderizadoHome=()=>{
+  setTimeout(() => {
+    document.getElementById("loaderBestSeller").style.display="none"
+    document.getElementById("loaderNews").style.display="none"
+    getNewsTemplate(listNews);
+    getProductTemplate(listaproductos);
+  }, 1000);
+}
+
+renderizadoHome()
 //#endregion
 
 //#region Funciones de Redirect
 const redirectToProduct = (event, item) => {
-  console.log(event.srcElement.id);
   const idView = event.srcElement.id.split('_');
   const id = idView[1];
   console.log(id);
