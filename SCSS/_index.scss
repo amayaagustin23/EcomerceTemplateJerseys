@@ -245,33 +245,35 @@
         color: $colorBlanco;
       }
       .containerBestSeller {
-        grid-template-columns: repeat(auto-fill, 300px);
 
         .article {
-          width: 220px;
-          padding: 1rem !important;
-          display: grid;
-          justify-content: center;
+          padding: 1rem;
+          height: 330px;
+          &:hover {
+            -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+          }
           img {
-            width: 200px;
+            width: 15rem;
           }
           .textArticle {
-            h3 {
-              font-size: 14px;
-              font-weight: bold;
+            width: 15rem;
+            h3{
+              font-size: 20px;
             }
             p {
-              font-size: 24px;
-              font-weight: bold;
+              font-size: 28px;
             }
           }
           .overlay {
-            margin: 0.5rem auto;
+            bottom: .5rem;
+            height: 12%;
           }
           &:hover {
             -webkit-transform: scale(1.1);
             transform: scale(1.1);
             height: 380px;
+            
           }
         }
       }
