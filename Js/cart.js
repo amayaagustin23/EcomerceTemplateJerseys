@@ -1,7 +1,6 @@
 //#region Variables y LocalStorage
 const listCart = JSON.parse(localStorage.getItem('listCart'));
 const modal = document.getElementById('myModal');
-
 let totalCompra = listCart?.reduce((acum, elemento) => (acum += elemento.precio * elemento.count), 0);
 let compraEnvio = totalCompra;
 if (totalCompra === undefined) totalCompra = 0;
@@ -13,6 +12,8 @@ document.getElementById('cartcount').innerHTML = cantidad;
 document.getElementById('countProducts').innerHTML = `${cantidad} PRODUCTOS `;
 let filtered = [];
 let select = document.getElementById('select');
+let total;
+let parrafototal;
 //#endregion
 
 //#region Modal Carrito
@@ -44,8 +45,7 @@ const removeProductToCartModal = item => {
     }
   });
 };
-let total;
-let parrafototal;
+
 const getCarrito = list => {
   if(list!==null){
     const cart = list.map(
@@ -210,8 +210,6 @@ const removeProductToCart = item => {
 };
 
 const changeCount = (item,cantidad) => {
-  console.log(cantidad)
-  console.log(item)
   const id = item.id;
   const talle = item.talle;
   if (item => item.id === id && item.talle === talle) {
