@@ -12,7 +12,7 @@ const imagenes = document.getElementsByClassName('imagenesExtra')
 //#endregion
 
 //#region Modal Carrito
-const removeProductToCart = (item) => {
+const removeProductToCartModal = (item) => {
 	Swal.fire({
 		title: '¿Esta seguro que quiere eliminar?',
 		text: '',
@@ -83,7 +83,7 @@ const eventModalCarrito = () => {
 		})
 		listCart?.map((item) => {
 			document.getElementById(`remove_${item.id}_${item.talle}`).onclick = () => {
-				removeProductToCart(item)
+				removeProductToCartModal(item)
 			}
 		})
 	}
@@ -112,7 +112,7 @@ const eventModalCarrito = () => {
 		})
 		listCart?.map((item) => {
 			document.getElementById(`remove_${item.id}_${item.talle}`).onclick = () => {
-				removeProductToCart(item)
+				removeProductToCartModal(item)
 			}
 		})
 	}
