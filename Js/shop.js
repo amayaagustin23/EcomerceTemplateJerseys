@@ -1,3 +1,5 @@
+/** @format */
+
 //#region Variables yLocalStorage
 let cantidad = localStorage.getItem('cantidad')
 if (cantidad === null) cantidad = 0
@@ -163,7 +165,6 @@ const removeProductToCartModal = (item) => {
 			const id = item.id
 			const talle = item.talle
 			filtered = listCart.filter((item) => item.id !== id || item.talle !== talle)
-			console.log(filtered)
 			localStorage.setItem('listCart', JSON.stringify(filtered))
 			localStorage.setItem('cantidad', filtered.length)
 			document.getElementById('cartcountNav').innerHTML = filtered.length
@@ -171,7 +172,7 @@ const removeProductToCartModal = (item) => {
 		}
 	})
 }
- const getCarrito = (list) => {
+const getCarrito = (list) => {
 	if (list !== null) {
 		const cart = list.map(
 			(item) => `
@@ -194,63 +195,43 @@ const removeProductToCartModal = (item) => {
 		return '<h3>No tiene ningun producto en el carrito</h3>'
 	}
 }
+const eventRemove = () => {
+	listCart?.map((item) => {
+		document.getElementById(`remove_${item.id}_${item.talle}`).onclick = () => {
+			removeProductToCartModal(item)
+		}
+	})
+}
+const openModal = () => {
+	listCart = JSON.parse(localStorage.getItem('listCart'))
+	const total = listCart?.reduce((acum, elemento) => (acum += elemento.precio * elemento.count), 0)
+	if (listCart === null) total = 0
+	const parrafototal = `<h4>Total: $${new Intl.NumberFormat('de-DE').format(total)}</h4>`
+	Swal.fire({
+		position: 'top-end',
+		title: 'Carrito ',
+		showConfirmButton: true,
+		html: getCarrito(listCart),
+		width: '25rem',
+		customClass: 'modalAlert',
+		confirmButtonColor: '#FF8303',
+		confirmButtonText: 'Ver carrito',
+		cancelButtonText: '<i class="fa fa-thumbs-down"></i>',
+		cancelButtonAriaLabel: 'Thumbs down',
+		footer: parrafototal,
+	}).then((result) => {
+		if (result.isConfirmed) {
+			window.location.href = './shoppingCart.html'
+		}
+	})
+	eventRemove()
+}
 const eventCarrito = () => {
 	document.getElementById('cartNavResponsive').onclick = () => {
-		listCart = JSON.parse(localStorage.getItem('listCart'))
-		total = listCart?.reduce((acum, elemento) => (acum += elemento.precio * elemento.count), 0)
-		if (listCart === null) total = 0
-		parrafototal = `<h4>Total: $${new Intl.NumberFormat('de-DE').format(total)}</h4>`
-		Swal.fire({
-			position: 'top-end',
-			title: 'Carrito ',
-			showConfirmButton: true,
-			html: getCarrito(listCart),
-			width: '25rem',
-			customClass: 'modalAlert',
-			confirmButtonColor: '#FF8303',
-			confirmButtonText: 'Ver carrito',
-			cancelButtonText: '<i class="fa fa-thumbs-down"></i>',
-			cancelButtonAriaLabel: 'Thumbs down',
-			footer: parrafototal,
-		}).then((result) => {
-			if (result.isConfirmed) {
-				window.location.href = './shoppingCart.html'
-			}
-		})
-		listCart?.map((item) => {
-			document.getElementById(`remove_${item.id}_${item.talle}`).onclick = () => {
-				removeProductToCartModal(item)
-			}
-		})
+		openModal()
 	}
-
 	document.getElementById('cartNav').onclick = () => {
-		listCart = JSON.parse(localStorage.getItem('listCart'))
-		total = listCart?.reduce((acum, elemento) => (acum += elemento.precio * elemento.count), 0)
-		if (listCart === null) total = 0
-		parrafototal = `<h4>Total: $${new Intl.NumberFormat('de-DE').format(total)}</h4>`
-		Swal.fire({
-			position: 'top-end',
-			title: 'Carrito ',
-			showConfirmButton: true,
-			html: getCarrito(listCart),
-			width: '25rem',
-			customClass: 'modalAlert',
-			confirmButtonColor: '#FF8303',
-			confirmButtonText: 'Ver carrito',
-			cancelButtonText: '<i class="fa fa-thumbs-down"></i>',
-			cancelButtonAriaLabel: 'Thumbs down',
-			footer: parrafototal,
-		}).then((result) => {
-			if (result.isConfirmed) {
-				window.location.href = './shoppingCart.html'
-			}
-		})
-		listCart?.map((item) => {
-			document.getElementById(`remove_${item.id}_${item.talle}`).onclick = () => {
-				removeProductToCartModal(item)
-			}
-		})
+		openModal()
 	}
 }
 // #endregion
