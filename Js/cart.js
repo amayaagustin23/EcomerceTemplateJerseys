@@ -185,27 +185,38 @@ const redirectProduct = (item) => {
 	localStorage.setItem('idProducto', item.id)
 }
 
-const eventCarts = () => {
-	listCart?.map((item) => {
+const eventCarts = (list) => {
+	list?.map((item) => {
 		document.getElementById('count_' + item.id + '_' + item.talle).onchange = () => {
 			changeCount(item, document.getElementById('count_' + item.id + '_' + item.talle).value)
 		}
+	})
+	list?.map((item) => {
 		document.getElementById('remove_' + item.id + '_' + item.talle).onclick = () => {
 			removeProductToCart(item)
 		}
-		document.getElementById('view_' + item.id + '_' + item.talle).onclick = () => {
-			redirectProduct(item)
-		}
-		document.getElementById('viewImg_' + item.id + '_' + item.talle).onclick = () => {
-			redirectProduct(item)
-		}
 	})
+	list.map(
+		(item) =>
+			(document.getElementById(`viewImg_${item.id}_${item.talle}`).onclick = () => {
+				delete item.talle
+				localStorage.setItem('producto', JSON.stringify(item))
+			})
+	)
+	list.map(
+		(item) =>
+			(document.getElementById(`view_${item.id}_${item.talle}`).onclick = () => {
+				delete item.talle
+				localStorage.setItem('producto', JSON.stringify(item))
+			})
+	)
 }
 //#endregion
 
 //#region Renderizado
 const getCart = (list) => {
 	document.getElementById('containerCart').innerHTML = ''
+	document.getElementById('loader').style.display = 'flex'
 	const carts = list?.map(
 		(item) =>
 			`  
@@ -232,7 +243,7 @@ const getCart = (list) => {
 	setTimeout(() => {
 		document.getElementById('loader').style.display = 'none'
 		document.getElementById('containerCart').innerHTML = carts.join('')
-		eventCarts()
+		eventCarts(list)
 		eventSelect()
 	}, 1000)
 }
