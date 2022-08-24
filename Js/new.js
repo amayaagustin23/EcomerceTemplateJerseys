@@ -1,7 +1,5 @@
 //#region Variables y LocalStorage
-const list = JSON.parse(localStorage.getItem('news'));
-const id = parseInt(localStorage.getItem('idNew'));
-const news = list.find(item => item.id === id);
+const news = JSON.parse(localStorage.getItem("new"));
 //#endregion
 
 //#region Renderizado
