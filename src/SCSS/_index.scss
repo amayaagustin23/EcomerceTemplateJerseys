@@ -1,3 +1,13 @@
+@keyframes carouselAnim {
+  from {
+    transform: translate(0, 0);
+  }
+  to {
+    transform: translate(calc(-40% + (2 * 300px)));
+  }
+}
+
+
 .containerHome {
   .imagenPrincipal {
     width: 100%;
@@ -8,25 +18,10 @@
       url("../image/home/fc-barcelona-2022-23-nike-home-kit-h.jpg");
   }
   .listarImagenes {
-    margin-top: -50px;
     display: flex;
-    padding: 10px 0;
-    overflow: auto;
-    &::-webkit-scrollbar {
-      width: 2px;
-      height: 8px;
-    }
-    &::-webkit-scrollbar-thumb {
-      background: rgba(255, 68, 0, 0.066);
-      border-radius: 10px;
-      background-clip: padding-box;
-    }
-    &::-webkit-scrollbar-thumb:hover {
-      border: 0;
-    }
-    &::-webkit-scrollbar-track {
-      background: transparent;
-    }
+    align-items: center;
+    width: fit-content;
+    animation: carouselAnim 10s infinite alternate;
     .containerItem {
       position: relative;
       width: 200px;
@@ -211,6 +206,15 @@
 }
 
 @media screen and (max-width: 576px) {
+  @keyframes carouselAnim {
+    from {
+      transform: translate(0, 0);
+    }
+    to {
+      transform: translate(calc(-110% + (2 * 300px)));
+    }
+  }
+  
   .containerHome {
     .imagenPrincipal {
       width: 100%;
@@ -222,6 +226,7 @@
     }
     .listarImagenes {
       padding: 5px 0;
+      animation: carouselAnim 25s infinite alternate;
       .containerItem {
         width: 150px;
         height: 100px;

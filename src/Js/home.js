@@ -73,5 +73,7 @@ const renderizadoHome = () => {
 		getNews(listNews)
 	}, 1000)
 }
+
+
 renderizadoHome()
 //#endregion
