@@ -459,6 +459,7 @@ header .iconsNav, header .NavSearch {
   .bodyCart .containerModal .textContainer p {
     font-size: 15px; } }
 
+/** @format */
 .containerHome .imagenPrincipal {
   width: 100%;
   height: 750px;
@@ -466,80 +467,91 @@ header .iconsNav, header .NavSearch {
   background-repeat: no-repeat;
   background-image: linear-gradient(transparent, #403F3D 90%), url("../image/home/fc-barcelona-2022-23-nike-home-kit-h.jpg"); }
 
-.containerHome .listarImagenes {
-  margin-top: -50px;
+.containerHome .center {
+  margin-top: -8rem;
+  align-items: center;
   display: flex;
-  padding: 10px 0;
-  overflow: auto; }
-  .containerHome .listarImagenes::-webkit-scrollbar {
-    width: 2px;
-    height: 8px; }
-  .containerHome .listarImagenes::-webkit-scrollbar-thumb {
-    background: rgba(255, 68, 0, 0.066);
-    border-radius: 10px;
-    background-clip: padding-box; }
-  .containerHome .listarImagenes::-webkit-scrollbar-thumb:hover {
-    border: 0; }
-  .containerHome .listarImagenes::-webkit-scrollbar-track {
-    background: transparent; }
-  .containerHome .listarImagenes .containerItem {
-    position: relative;
-    width: 200px;
-    height: 120px;
-    margin-inline: 10px;
-    -webkit-transition: 0.3s ease-in-out;
-    transition: 0.3s ease-in-out;
-    transition: 0.3s ease-in-out; }
-    .containerHome .listarImagenes .containerItem .image {
-      display: block;
-      width: 200px;
-      height: 120px;
-      border-radius: 1rem; }
-      .containerHome .listarImagenes .containerItem .image:hover {
-        -webkit-transform: scale(1.02);
-        transform: scale(1.02); }
-    .containerHome .listarImagenes .containerItem .overlay {
-      object-fit: cover;
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      width: 100%;
-      height: 100%;
-      opacity: 0;
-      transition: 0.5s ease;
-      background-color: #1B1A17;
-      border-radius: 1rem;
-      font-weight: bold; }
-      .containerHome .listarImagenes .containerItem .overlay .text {
-        color: white;
-        font-size: 20px;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        -webkit-transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-        transform: translate(-50%, -50%);
-        text-align: center; }
-    .containerHome .listarImagenes .containerItem:hover {
-      -webkit-transform: scale(1.1);
-      transform: scale(1.1);
+  flex-direction: column;
+  height: 100%;
+  justify-content: center; }
+  .containerHome .center .wrapper {
+    display: flex;
+    grid-gap: 1em;
+    overflow: hidden;
+    width: 87%; }
+    .containerHome .center .wrapper > .listarImagenes {
+      display: flex;
+      grid-gap: 1em;
+      transition: all 1s ease-in-out; }
+      .containerHome .center .wrapper > .listarImagenes .containerItem {
+        position: relative;
+        width: 200px;
+        height: 120px;
+        margin-inline: 10px;
+        -webkit-transition: 0.3s ease-in-out;
+        transition: 0.3s ease-in-out;
+        transition: 0.3s ease-in-out; }
+        .containerHome .center .wrapper > .listarImagenes .containerItem .image {
+          display: block;
+          width: 200px;
+          height: 120px;
+          border-radius: 1rem; }
+          .containerHome .center .wrapper > .listarImagenes .containerItem .image:hover {
+            -webkit-transform: scale(1.02);
+            transform: scale(1.02); }
+        .containerHome .center .wrapper > .listarImagenes .containerItem .overlay {
+          object-fit: cover;
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          width: 100%;
+          height: 100%;
+          opacity: 0;
+          transition: 0.5s ease;
+          background-color: #1B1A17;
+          border-radius: 1rem;
+          font-weight: bold; }
+          .containerHome .center .wrapper > .listarImagenes .containerItem .overlay .text {
+            color: white;
+            font-size: 20px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            text-align: center; }
+        .containerHome .center .wrapper > .listarImagenes .containerItem:hover {
+          -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+          cursor: pointer;
+          text-decoration: none; }
+        .containerHome .center .wrapper > .listarImagenes .containerItem:hover .overlay {
+          opacity: 0.85; }
+  .containerHome .center .map {
+    margin-top: 1em; }
+    .containerHome .center .map > button {
+      all: unset;
+      background: #FF8303;
       cursor: pointer;
-      text-decoration: none; }
-    .containerHome .listarImagenes .containerItem:hover .overlay {
-      opacity: 0.85; }
-  .containerHome .listarImagenes::-webkit-scrollbar {
-    width: 2px;
-    height: 8px; }
-  .containerHome .listarImagenes::-webkit-scrollbar-thumb {
-    background: rgba(33, 33, 33, 0.066);
-    border-radius: 10px;
-    background-clip: padding-box; }
-  .containerHome .listarImagenes::-webkit-scrollbar-thumb:hover {
-    border: 0; }
-  .containerHome .listarImagenes::-webkit-scrollbar-track {
-    background: transparent; }
+      margin: 0 0.125em;
+      position: relative;
+      user-select: none;
+      border-radius: 100%;
+      height: 1em;
+      width: 1em; }
+      .containerHome .center .map > button.active:after {
+        background: #1B1A17;
+        content: '';
+        left: 50%;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        border-radius: 100%;
+        height: 1em;
+        width: 1em; }
 
 .containerHome .bestSeller {
   background-color: #1B1A17;
@@ -658,7 +670,7 @@ header .iconsNav, header .NavSearch {
     .containerHome .bestSeller .containerBestSeller {
       grid-template-columns: repeat(auto-fill, 10rem); }
       .containerHome .bestSeller .containerBestSeller .article {
-        padding: .5rem;
+        padding: 0.5rem;
         height: 16rem; }
         .containerHome .bestSeller .containerBestSeller .article:hover {
           -webkit-transform: scale(1.1);
@@ -677,10 +689,10 @@ header .iconsNav, header .NavSearch {
         .containerHome .bestSeller .containerBestSeller .article .overlay {
           object-fit: cover;
           position: absolute;
-          bottom: .5rem;
+          bottom: 0.5 rem;
           width: 90%;
           height: 12%;
-          left: .5rem; }
+          left: 0.5rem; }
           .containerHome .bestSeller .containerBestSeller .article .overlay .text {
             color: white;
             font-size: 20px;

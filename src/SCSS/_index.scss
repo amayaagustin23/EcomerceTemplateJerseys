@@ -1,337 +1,346 @@
+/** @format */
+@mixin circle($i) {
+  border-radius: 100%;
+  height: $i;
+  width: $i;
+}
+
 .containerHome {
-  .imagenPrincipal {
-    width: 100%;
-    height: 750px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-image: linear-gradient(transparent, $colorGris 90%),
-      url("../image/home/fc-barcelona-2022-23-nike-home-kit-h.jpg");
-  }
-  .listarImagenes {
-    margin-top: -50px;
-    display: flex;
-    padding: 10px 0;
-    overflow: auto;
-    &::-webkit-scrollbar {
-      width: 2px;
-      height: 8px;
-    }
-    &::-webkit-scrollbar-thumb {
-      background: rgba(255, 68, 0, 0.066);
-      border-radius: 10px;
-      background-clip: padding-box;
-    }
-    &::-webkit-scrollbar-thumb:hover {
-      border: 0;
-    }
-    &::-webkit-scrollbar-track {
-      background: transparent;
-    }
-    .containerItem {
-      position: relative;
-      width: 200px;
-      height: 120px;
-      margin-inline: 10px;
-      -webkit-transition: 0.3s ease-in-out;
-      transition: 0.3s ease-in-out;
-      transition: 0.3s ease-in-out;
-      .image {
-        display: block;
-        width: 200px;
-        height: 120px;
-        border-radius: 1rem;
-        &:hover {
-          -webkit-transform: scale(1.02);
-          transform: scale(1.02);
-        }
-      }
-      .overlay {
-        object-fit: cover;
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        width: 100%;
-        height: 100%;
-        opacity: 0;
-        transition: 0.5s ease;
-        background-color: $colorNegro;
-        border-radius: 1rem;
-        font-weight: bold;
+	.imagenPrincipal {
+		width: 100%;
+		height: 750px;
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-image: linear-gradient(transparent, $colorGris 90%), url('../image/home/fc-barcelona-2022-23-nike-home-kit-h.jpg');
+	}
+	.center {
+    margin-top:-8rem;
+		align-items: center;
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+		justify-content: center;
+		.wrapper {
+			display: flex;
+			grid-gap: 1em;
+			overflow: hidden;
+			width: 87%;
+			& > .listarImagenes {
+				display: flex;
+				grid-gap: 1em;
+				transition: all 1s ease-in-out;
+				.containerItem {
+					position: relative;
+					width: 200px;
+					height: 120px;
+					margin-inline: 10px;
+					-webkit-transition: 0.3s ease-in-out;
+					transition: 0.3s ease-in-out;
+					transition: 0.3s ease-in-out;
+					.image {
+						display: block;
+						width: 200px;
+						height: 120px;
+						border-radius: 1rem;
+						&:hover {
+							-webkit-transform: scale(1.02);
+							transform: scale(1.02);
+						}
+					}
+					.overlay {
+						object-fit: cover;
+						position: absolute;
+						top: 0;
+						bottom: 0;
+						left: 0;
+						right: 0;
+						width: 100%;
+						height: 100%;
+						opacity: 0;
+						transition: 0.5s ease;
+						background-color: $colorNegro;
+						border-radius: 1rem;
+						font-weight: bold;
+						.text {
+							color: white;
+							font-size: 20px;
+							position: absolute;
+							top: 50%;
+							left: 50%;
+							-webkit-transform: translate(-50%, -50%);
+							-ms-transform: translate(-50%, -50%);
+							transform: translate(-50%, -50%);
+							text-align: center;
+						}
+					}
+					&:hover {
+						-webkit-transform: scale(1.1);
+						transform: scale(1.1);
+						cursor: pointer;
+						text-decoration: none;
+					}
+					&:hover .overlay {
+						opacity: 0.85;
+					}
+				}
+			}
+		}
 
-        .text {
-          color: white;
-          font-size: 20px;
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          -webkit-transform: translate(-50%, -50%);
-          -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-          text-align: center;
-        }
-      }
-      &:hover {
-        -webkit-transform: scale(1.1);
-        transform: scale(1.1);
-        cursor: pointer;
-        text-decoration: none;
-      }
-      &:hover .overlay {
-        opacity: 0.85;
-      }
-    }
-    &::-webkit-scrollbar {
-      width: 2px;
-      height: 8px;
-    }
-    &::-webkit-scrollbar-thumb {
-      background: rgba(33, 33, 33, 0.066);
-      border-radius: 10px;
-      background-clip: padding-box;
-    }
-    &::-webkit-scrollbar-thumb:hover {
-      border: 0;
-    }
-    &::-webkit-scrollbar-track {
-      background: transparent;
-    }
-  }
-  .bestSeller {
-    background-color: $colorNegro;
-    margin: auto;
-    text-align: center;
-    padding: 2rem 0;
-    h2 {
-      color: $colorBlanco;
-    }
-    .containerBestSeller {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, 400px);
-      grid-gap: 1rem;
-      justify-content: center;
-      .article {
-        margin: 1rem auto;
-        padding: 20px;
-        background-color: $colorBlanco;
-        border-radius: 0.5rem;
-        -webkit-transition: 0.3s ease-in-out;
-        transition: 0.3s ease-in-out;
-        transition: 0.3s ease-in-out;
-        position: relative;
-        &:hover {
-          -webkit-transform: scale(1.1);
-          transform: scale(1.1);
-        }
-        img {
-          width: 280px;
-          border-radius: 0.5rem;
-          background-color: white;
-        }
-        .textArticle {
-          p {
-            font-size: 24px;
-            font-weight: bold;
-          }
-        }
-        .overlay {
-          object-fit: cover;
-          position: absolute;
-          bottom: 5px;
-          left: 10px;
-          right: 10px;
-          width: 94%;
-          height: 15%;
-          opacity: 0;
-          transition: 0.5s ease;
-          background-color: $colorNegro;
-          border-radius: 1rem;
-          font-weight: bold;
+		.map {
+			margin-top: 1em;
+			& > button {
+				all: unset;
+				background: $colorNaranja;
+				cursor: pointer;
+				margin: 0 0.125em;
+				position: relative;
+				user-select: none;
+        @include circle(1em);
+				&.active {
+					&:after {
+						background: $colorNegro;
+						content: '';
+						left: 50%;
+						position: absolute;
+						transform: translate(-50%, -50%);
+						top: 50%;
+            @include circle(1em);
 
-          .text {
-            color: white;
-            font-size: 20px;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            -webkit-transform: translate(-50%, -50%);
-            -ms-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-            text-align: center;
-            a {
-              text-decoration: none;
-              color: $colorBlanco;
-              cursor: pointer;
-            }
-          }
-        }
-        &:hover {
-          -webkit-transform: scale(1.1);
-          transform: scale(1.1);
-          height: 450px;
-          
-        }
-        &:hover .overlay {
-          opacity: 1;
-          cursor: pointer;
-        }
-      }
-    }
-  }
-  .containerVideos {
-    margin: auto;
-    background-color: $colorBlanco;
-    padding: 1rem 0;
-    h2 {
-      color: $colorNegro;
-      text-align: center;
-      margin-bottom: 2rem;
-    }
-    .videos {
-      display: grid;
-      .video {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-        margin: 0.5rem 0;
-        align-items: center;
-        iframe {
-          width: 400px;
-          height: 200px;
-          border-radius: 0.5rem;
-        }
-        .description {
-          color: $colorNegro;
-          width: 400px;
-        }
-      }
-    }
-  }
+					}
+				}
+			}
+		}
+	}
+
+	.bestSeller {
+		background-color: $colorNegro;
+		margin: auto;
+		text-align: center;
+		padding: 2rem 0;
+		h2 {
+			color: $colorBlanco;
+		}
+		.containerBestSeller {
+			display: grid;
+			grid-template-columns: repeat(auto-fill, 400px);
+			grid-gap: 1rem;
+			justify-content: center;
+			.article {
+				margin: 1rem auto;
+				padding: 20px;
+				background-color: $colorBlanco;
+				border-radius: 0.5rem;
+				-webkit-transition: 0.3s ease-in-out;
+				transition: 0.3s ease-in-out;
+				transition: 0.3s ease-in-out;
+				position: relative;
+				&:hover {
+					-webkit-transform: scale(1.1);
+					transform: scale(1.1);
+				}
+				img {
+					width: 280px;
+					border-radius: 0.5rem;
+					background-color: white;
+				}
+				.textArticle {
+					p {
+						font-size: 24px;
+						font-weight: bold;
+					}
+				}
+				.overlay {
+					object-fit: cover;
+					position: absolute;
+					bottom: 5px;
+					left: 10px;
+					right: 10px;
+					width: 94%;
+					height: 15%;
+					opacity: 0;
+					transition: 0.5s ease;
+					background-color: $colorNegro;
+					border-radius: 1rem;
+					font-weight: bold;
+
+					.text {
+						color: white;
+						font-size: 20px;
+						position: absolute;
+						top: 50%;
+						left: 50%;
+						-webkit-transform: translate(-50%, -50%);
+						-ms-transform: translate(-50%, -50%);
+						transform: translate(-50%, -50%);
+						text-align: center;
+						a {
+							text-decoration: none;
+							color: $colorBlanco;
+							cursor: pointer;
+						}
+					}
+				}
+				&:hover {
+					-webkit-transform: scale(1.1);
+					transform: scale(1.1);
+					height: 450px;
+				}
+				&:hover .overlay {
+					opacity: 1;
+					cursor: pointer;
+				}
+			}
+		}
+	}
+	.containerVideos {
+		margin: auto;
+		background-color: $colorBlanco;
+		padding: 1rem 0;
+		h2 {
+			color: $colorNegro;
+			text-align: center;
+			margin-bottom: 2rem;
+		}
+		.videos {
+			display: grid;
+			.video {
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: space-evenly;
+				margin: 0.5rem 0;
+				align-items: center;
+				iframe {
+					width: 400px;
+					height: 200px;
+					border-radius: 0.5rem;
+				}
+				.description {
+					color: $colorNegro;
+					width: 400px;
+				}
+			}
+		}
+	}
 }
 
 @media screen and (max-width: 576px) {
-  .containerHome {
-    .imagenPrincipal {
-      width: 100%;
-      height: 280px;
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-image: linear-gradient(transparent, $colorGris 80%),
-        url("../image/home/fc-barcelona-2022-23-nike-home-kit-h.jpg");
-    }
-    .listarImagenes {
-      padding: 5px 0;
-      .containerItem {
-        width: 150px;
-        height: 100px;
-        .image {
-          width: 150px;
-          height: 100px;
-        }
-        .overlay{
-          .text {
-            font-size: 14px;
-          }
-        }
-      }
-    }
-    .bestSeller {
-      background-color: $colorNegro;
-      margin: auto;
-      text-align: center;
-      padding: 2rem 0;
-      h2 {
-        color: $colorBlanco;
-      }
-      .containerBestSeller {
-        grid-template-columns: repeat(auto-fill, 10rem);
-        .article {
-          padding: .5rem;
-          height: 16rem;
-          &:hover {
-            -webkit-transform: scale(1.1);
-            transform: scale(1.1);
-          }
-          img {
-            width: 9rem;
-            border-radius: 0.5rem;
-            background-color: white;
-          }
-          .textArticle {
-            width: 9rem;
-            h3{
-              font-size: 20px;
-            }
-            p {
-              font-size: 24px;
-              font-weight: bold;
-            }
-          }
-          .overlay {
-            object-fit: cover;
-            position: absolute;
-            bottom: .5rem;
-            width: 90%;
-            height: 12%;
-            left: .5rem;
-            .text {
-              color: white;
-              font-size: 20px;
-              position: absolute;
-              top: 50%;
-              left: 50%;
-              -webkit-transform: translate(-50%, -50%);
-              -ms-transform: translate(-50%, -50%);
-              transform: translate(-50%, -50%);
-              text-align: center;
-              a {
-                text-decoration: none;
-                color: $colorBlanco;
-                cursor: pointer;
-              }
-            }
-          }
-          &:hover {
-            -webkit-transform: scale(1.1);
-            transform: scale(1.1);
-            height: 18rem;
-            
-          }
-          &:hover .overlay {
-            opacity: 1;
-            cursor: pointer;
-          }
-        }
-      }
-    }
-    .containerVideos {
-
-      h2 {
-        color: $colorNegro;
-        text-align: center;
-        margin-bottom: 2rem;
-      }
-      .videos {
-        .video {
-
-          iframe {
-            width: 300px;
-            height: 180px;
-          }
-          .description {
-            color: $colorNegro;
-            width: 280px;
-            h3{
-              font-size: 20px;
-              text-align: center;
-            }
-            p{
-              font-size: 14px;
-            }
-          }
-        }
-      }
-    }
-  }
+	.containerHome {
+		.imagenPrincipal {
+			width: 100%;
+			height: 280px;
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-image: linear-gradient(transparent, $colorGris 80%), url('../image/home/fc-barcelona-2022-23-nike-home-kit-h.jpg');
+		}
+		.listarImagenes {
+			padding: 5px 0;
+			.containerItem {
+				width: 150px;
+				height: 100px;
+				.image {
+					width: 150px;
+					height: 100px;
+				}
+				.overlay {
+					.text {
+						font-size: 14px;
+					}
+				}
+			}
+		}
+		.bestSeller {
+			background-color: $colorNegro;
+			margin: auto;
+			text-align: center;
+			padding: 2rem 0;
+			h2 {
+				color: $colorBlanco;
+			}
+			.containerBestSeller {
+				grid-template-columns: repeat(auto-fill, 10rem);
+				.article {
+					padding: 0.5rem;
+					height: 16rem;
+					&:hover {
+						-webkit-transform: scale(1.1);
+						transform: scale(1.1);
+					}
+					img {
+						width: 9rem;
+						border-radius: 0.5rem;
+						background-color: white;
+					}
+					.textArticle {
+						width: 9rem;
+						h3 {
+							font-size: 20px;
+						}
+						p {
+							font-size: 24px;
+							font-weight: bold;
+						}
+					}
+					.overlay {
+						object-fit: cover;
+						position: absolute;
+						bottom: 0.5 rem;
+						width: 90%;
+						height: 12%;
+						left: 0.5rem;
+						.text {
+							color: white;
+							font-size: 20px;
+							position: absolute;
+							top: 50%;
+							left: 50%;
+							-webkit-transform: translate(-50%, -50%);
+							-ms-transform: translate(-50%, -50%);
+							transform: translate(-50%, -50%);
+							text-align: center;
+							a {
+								text-decoration: none;
+								color: $colorBlanco;
+								cursor: pointer;
+							}
+						}
+					}
+					&:hover {
+						-webkit-transform: scale(1.1);
+						transform: scale(1.1);
+						height: 18rem;
+					}
+					&:hover .overlay {
+						opacity: 1;
+						cursor: pointer;
+					}
+				}
+			}
+		}
+		.containerVideos {
+			h2 {
+				color: $colorNegro;
+				text-align: center;
+				margin-bottom: 2rem;
+			}
+			.videos {
+				.video {
+					iframe {
+						width: 300px;
+						height: 180px;
+					}
+					.description {
+						color: $colorNegro;
+						width: 280px;
+						h3 {
+							font-size: 20px;
+							text-align: center;
+						}
+						p {
+							font-size: 14px;
+						}
+					}
+				}
+			}
+		}
+	}
 }
