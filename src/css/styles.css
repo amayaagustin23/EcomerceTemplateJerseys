@@ -1324,7 +1324,7 @@ header .iconsNav, header .NavSearch {
         grid-template-columns: 1fr 1fr 1fr 1fr;
         font-size: 13px;
         justify-content: center;
-        margin-top: 7rem; }
+        margin-top: 4rem; }
         .containerProduct section .containerSection .contenedor .talles .talle {
           border: #FF8303 1px solid;
           border-radius: 2rem;
