@@ -22,7 +22,9 @@
     align-items: center;
     width: fit-content;
     animation: carouselAnim 10s infinite alternate;
+    position: absolute;
     .containerItem {
+      margin-top: -2rem;
       position: relative;
       width: 200px;
       height: 120px;
@@ -77,27 +79,13 @@
         opacity: 0.85;
       }
     }
-    &::-webkit-scrollbar {
-      width: 2px;
-      height: 8px;
-    }
-    &::-webkit-scrollbar-thumb {
-      background: rgba(33, 33, 33, 0.066);
-      border-radius: 10px;
-      background-clip: padding-box;
-    }
-    &::-webkit-scrollbar-thumb:hover {
-      border: 0;
-    }
-    &::-webkit-scrollbar-track {
-      background: transparent;
-    }
   }
   .bestSeller {
     background-color: $colorNegro;
     margin: auto;
     text-align: center;
     padding: 2rem 0;
+    margin-top: 5rem;
     h2 {
       color: $colorBlanco;
     }
@@ -246,6 +234,7 @@
       margin: auto;
       text-align: center;
       padding: 2rem 0;
+      margin-top: 3rem;
       h2 {
         color: $colorBlanco;
       }
