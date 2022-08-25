@@ -1,13 +1,3 @@
-@keyframes carouselAnim {
-  from {
-    transform: translate(0, 0);
-  }
-  to {
-    transform: translate(calc(-40% + (2 * 300px)));
-  }
-}
-
-
 .containerHome {
   .imagenPrincipal {
     width: 100%;
@@ -18,13 +8,26 @@
       url("../image/home/fc-barcelona-2022-23-nike-home-kit-h.jpg");
   }
   .listarImagenes {
+    margin-top: -50px;
     display: flex;
-    align-items: center;
-    width: fit-content;
-    animation: carouselAnim 10s infinite alternate;
-    position: absolute;
+    padding: 10px 0;
+    overflow: auto;
+    &::-webkit-scrollbar {
+      width: 2px;
+      height: 8px;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: rgba(255, 68, 0, 0.066);
+      border-radius: 10px;
+      background-clip: padding-box;
+    }
+    &::-webkit-scrollbar-thumb:hover {
+      border: 0;
+    }
+    &::-webkit-scrollbar-track {
+      background: transparent;
+    }
     .containerItem {
-      margin-top: -2rem;
       position: relative;
       width: 200px;
       height: 120px;
@@ -79,13 +82,27 @@
         opacity: 0.85;
       }
     }
+    &::-webkit-scrollbar {
+      width: 2px;
+      height: 8px;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: rgba(33, 33, 33, 0.066);
+      border-radius: 10px;
+      background-clip: padding-box;
+    }
+    &::-webkit-scrollbar-thumb:hover {
+      border: 0;
+    }
+    &::-webkit-scrollbar-track {
+      background: transparent;
+    }
   }
   .bestSeller {
     background-color: $colorNegro;
     margin: auto;
     text-align: center;
     padding: 2rem 0;
-    margin-top: 6rem;
     h2 {
       color: $colorBlanco;
     }
@@ -194,14 +211,7 @@
 }
 
 @media screen and (max-width: 576px) {
-  @keyframes carouselAnim {
-    from {
-      transform: translate(0, 0);
-    }
-    to {
-      transform: translate(calc(-110% + (2 * 300px)));
-    }
-  }
+
   
   .containerHome {
     .imagenPrincipal {
@@ -214,7 +224,6 @@
     }
     .listarImagenes {
       padding: 5px 0;
-      animation: carouselAnim 25s infinite alternate;
       .containerItem {
         width: 150px;
         height: 100px;
@@ -234,7 +243,6 @@
       margin: auto;
       text-align: center;
       padding: 2rem 0;
-      margin-top: 5rem;
       h2 {
         color: $colorBlanco;
       }

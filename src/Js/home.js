@@ -41,7 +41,7 @@ const getProduct = (list) => {
         <img src=${item.imagenes[0]} alt="">
         <div class="textArticle">
           <h3>${item.nombre}</h3>
-          <p>$${item.precio}</p>
+          <p>$${new Intl.NumberFormat('de-DE').format(item.precio)}</p>
           <div class="overlay">
             <div class="text" ><a id="prod_${item.id}" href="./pages/product.html">Comprar</a></div>
           </div>
