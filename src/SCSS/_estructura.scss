@@ -229,6 +229,9 @@ header {
           }
         }
       }
+      &:hover{
+        cursor: pointer;
+      }
     }
     label {
       display: none;

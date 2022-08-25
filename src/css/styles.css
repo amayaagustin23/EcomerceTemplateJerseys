@@ -194,6 +194,8 @@ header .cont-menu {
         header .cont-menu .icons .icon .groupIcon:hover {
           -webkit-transform: scale(1.1);
           transform: scale(1.1); }
+    header .cont-menu .icons:hover {
+      cursor: pointer; }
   header .cont-menu label {
     display: none; }
 
