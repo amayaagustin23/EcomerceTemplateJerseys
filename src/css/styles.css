@@ -655,27 +655,53 @@ header .iconsNav, header .NavSearch {
     padding: 2rem 0; }
     .containerHome .bestSeller h2 {
       color: #EEEEEE; }
-    .containerHome .bestSeller .containerBestSeller .article {
-      padding: 1rem;
-      height: 330px; }
-      .containerHome .bestSeller .containerBestSeller .article:hover {
-        -webkit-transform: scale(1.1);
-        transform: scale(1.1); }
-      .containerHome .bestSeller .containerBestSeller .article img {
-        width: 15rem; }
-      .containerHome .bestSeller .containerBestSeller .article .textArticle {
-        width: 15rem; }
-        .containerHome .bestSeller .containerBestSeller .article .textArticle h3 {
-          font-size: 20px; }
-        .containerHome .bestSeller .containerBestSeller .article .textArticle p {
-          font-size: 28px; }
-      .containerHome .bestSeller .containerBestSeller .article .overlay {
-        bottom: .5rem;
-        height: 12%; }
-      .containerHome .bestSeller .containerBestSeller .article:hover {
-        -webkit-transform: scale(1.1);
-        transform: scale(1.1);
-        height: 380px; }
+    .containerHome .bestSeller .containerBestSeller {
+      grid-template-columns: repeat(auto-fill, 10rem); }
+      .containerHome .bestSeller .containerBestSeller .article {
+        padding: .5rem;
+        height: 16rem; }
+        .containerHome .bestSeller .containerBestSeller .article:hover {
+          -webkit-transform: scale(1.1);
+          transform: scale(1.1); }
+        .containerHome .bestSeller .containerBestSeller .article img {
+          width: 9rem;
+          border-radius: 0.5rem;
+          background-color: white; }
+        .containerHome .bestSeller .containerBestSeller .article .textArticle {
+          width: 9rem; }
+          .containerHome .bestSeller .containerBestSeller .article .textArticle h3 {
+            font-size: 20px; }
+          .containerHome .bestSeller .containerBestSeller .article .textArticle p {
+            font-size: 24px;
+            font-weight: bold; }
+        .containerHome .bestSeller .containerBestSeller .article .overlay {
+          object-fit: cover;
+          position: absolute;
+          bottom: .5rem;
+          width: 90%;
+          height: 12%;
+          left: .5rem; }
+          .containerHome .bestSeller .containerBestSeller .article .overlay .text {
+            color: white;
+            font-size: 20px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            text-align: center; }
+            .containerHome .bestSeller .containerBestSeller .article .overlay .text a {
+              text-decoration: none;
+              color: #EEEEEE;
+              cursor: pointer; }
+        .containerHome .bestSeller .containerBestSeller .article:hover {
+          -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+          height: 18rem; }
+        .containerHome .bestSeller .containerBestSeller .article:hover .overlay {
+          opacity: 1;
+          cursor: pointer; }
   .containerHome .containerVideos h2 {
     color: #1B1A17;
     text-align: center;

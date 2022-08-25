@@ -245,35 +245,62 @@
         color: $colorBlanco;
       }
       .containerBestSeller {
-
+        grid-template-columns: repeat(auto-fill, 10rem);
         .article {
-          padding: 1rem;
-          height: 330px;
+          padding: .5rem;
+          height: 16rem;
           &:hover {
             -webkit-transform: scale(1.1);
             transform: scale(1.1);
           }
           img {
-            width: 15rem;
+            width: 9rem;
+            border-radius: 0.5rem;
+            background-color: white;
           }
           .textArticle {
-            width: 15rem;
+            width: 9rem;
             h3{
               font-size: 20px;
             }
             p {
-              font-size: 28px;
+              font-size: 24px;
+              font-weight: bold;
             }
           }
           .overlay {
+            object-fit: cover;
+            position: absolute;
             bottom: .5rem;
+            width: 90%;
             height: 12%;
+            left: .5rem;
+            .text {
+              color: white;
+              font-size: 20px;
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              -webkit-transform: translate(-50%, -50%);
+              -ms-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%);
+              text-align: center;
+              a {
+                text-decoration: none;
+                color: $colorBlanco;
+                cursor: pointer;
+              }
+            }
           }
           &:hover {
             -webkit-transform: scale(1.1);
             transform: scale(1.1);
-            height: 380px;
+            height: 18rem;
             
+          }
+          &:hover .overlay {
+            opacity: 1;
+            cursor: pointer;
           }
         }
       }
