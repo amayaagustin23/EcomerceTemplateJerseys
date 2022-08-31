@@ -168,7 +168,6 @@ const changeCount = (item, cantidad) => {
 		filtered = listCart.filter((item) => item.id !== id || item.talle !== talle)
 		filtered.push(item)
 		totalCompra = filtered.reduce((acum, elemento) => (acum += elemento.precio * elemento.count), 0)
-		console.log(totalCompra)
 		compraEnvio = totalCompra
 		localStorage.setItem('listCart', JSON.stringify(filtered))
 		document.getElementById('subtotal').innerHTML = `$${new Intl.NumberFormat('de-DE').format(totalCompra)}`
