@@ -165,13 +165,13 @@ const changeCount = (item, cantidad) => {
 	if ((item) => item.id === id && item.talle === talle) {
 		const newCount = parseInt(document.getElementById('count_' + item.id + '_' + item.talle).value)
 		item.count = newCount
-		totalCompra = listCart.reduce((acum, elemento) => (acum += elemento.precio * elemento.count), 0)
-		compraEnvio = totalCompra
-		document.getElementById('subtotal').innerHTML = `$${new Intl.NumberFormat('de-DE').format(totalCompra)}`
 		filtered = listCart.filter((item) => item.id !== id || item.talle !== talle)
 		filtered.push(item)
-		console.log(filtered)
+		totalCompra = filtered.reduce((acum, elemento) => (acum += elemento.precio * elemento.count), 0)
+		console.log(totalCompra)
+		compraEnvio = totalCompra
 		localStorage.setItem('listCart', JSON.stringify(filtered))
+		document.getElementById('subtotal').innerHTML = `$${new Intl.NumberFormat('de-DE').format(totalCompra)}`
 		document.getElementById(`precio_${item.id}_${item.talle}`).innerHTML = `$${new Intl.NumberFormat('de-DE').format(item.precio * cantidad)}`
 	}
 	filtered = listCart.filter((item) => item.id !== id && item.talle !== talle)
