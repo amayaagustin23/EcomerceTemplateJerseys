@@ -32,6 +32,7 @@ const removeProductToCartModal = (item) => {
 			const id = item.id
 			const talle = item.talle
 			filtered = listCart.filter((item) => item.id !== id || item.talle !== talle)
+
 			localStorage.setItem('listCart', JSON.stringify(filtered))
 			localStorage.setItem('cantidad', filtered.length)
 			document.getElementById('cartcountNav').innerHTML = filtered.length
@@ -54,7 +55,7 @@ const getCarrito = (list) => {
         <p>Cantidad: ${item.count}</p>
         <p>Total: $${new Intl.NumberFormat('de-DE').format(item.count * item.precio)}</p>
         </div>
-        <button id="remove_${item.id}_${item.talle}" class="deleteCart"><img src="../image/icon/delete.png"></button>
+        <button id="removeModal_${item.id}_${item.talle}" class="deleteCart"><img src="../image/icon/delete.png"></button>
         </div>
         </div>
         `
