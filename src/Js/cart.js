@@ -32,12 +32,13 @@ const removeProductToCartModal = (item) => {
 			const id = item.id
 			const talle = item.talle
 			filtered = listCart.filter((item) => item.id !== id || item.talle !== talle)
-
 			localStorage.setItem('listCart', JSON.stringify(filtered))
 			localStorage.setItem('cantidad', filtered.length)
 			document.getElementById('cartcountNav').innerHTML = filtered.length
 			document.getElementById('cartcount').innerHTML = filtered.length
 			document.getElementById('countProducts').innerHTML = `${filtered.length} PRODUCTOS `
+			let totalCompraNew = filtered.reduce((acum, elemento) => (acum += elemento.precio * elemento.count), 0)
+			document.getElementById('subtotal').innerHTML = `$${new Intl.NumberFormat('de-DE').format(totalCompraNew)}`
 			getCart(filtered)
 		}
 	})
@@ -135,8 +136,8 @@ const postRemove = (list) => {
 	document.getElementById('cartcountNav').innerHTML = list.length
 	document.getElementById('cartcount').innerHTML = list.length
 	document.getElementById('countProducts').innerHTML = `${list.length} PRODUCTOS `
-	let totalCompraNew = list.reduce((acum, elemento) => (acum += elemento.precio * elemento.count), 0)
-	document.getElementById('subtotal').innerHTML = `$${totalCompraNew}`
+	let totalCompraNew = filtered.reduce((acum, elemento) => (acum += elemento.precio * elemento.count), 0)
+	document.getElementById('subtotal').innerHTML = `$${new Intl.NumberFormat('de-DE').format(totalCompraNew)}`
 	getCart(list)
 }
 const removeProductToCart = (item) => {
