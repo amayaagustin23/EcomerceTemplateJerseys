@@ -1,5 +1,3 @@
-/** @format */
-
 //#region Variables
 const containerBestSeller = document.getElementById('containerBestSeller')
 const containerImagenes = document.getElementById('listarImagenes')
@@ -8,6 +6,8 @@ const listNews = []
 //#endregion
 
 //#region Funciones de renderizado
+
+//FUNCION PARA TRAER TODOS LOS DATOS DESDE LOS JOINS
 const getData = () => {
 	fetch('./json/products.json')
 		.then((response) => {
@@ -28,12 +28,15 @@ const getData = () => {
 			})
 		})
 }
+//FUNCION PARA REDIRECCIONAR A UN PRODUCTO
 const redirectProduct = (list) => {
 	list.map((item) => (document.getElementById(`prod_${item.id}`).onclick = () => localStorage.setItem('producto', JSON.stringify(item))))
 }
+//FUNCION PARA REDIRECCIONAR A UNA NOTICIA
 const redirectNews = (list) => {
 	list.map((item) => (document.getElementById(`news_${item.id}`).onclick = () => localStorage.setItem('new', JSON.stringify(item))))
 }
+//FUNCION PARA RENDERIZAR LOS PRODUCTOS
 const getProduct = (list) => {
 	const products = list.map(
 		(item) =>
@@ -51,6 +54,7 @@ const getProduct = (list) => {
 	containerBestSeller.innerHTML = products.join('')
 	redirectProduct(list)
 }
+//FUNCION PARA RENDERIZAR LAS NOTICIAS
 const getNews = (list) => {
 	const news = list.map(
 		(item) =>
@@ -64,6 +68,7 @@ const getNews = (list) => {
 	containerImagenes.innerHTML = news.join('')
 	redirectNews(list)
 }
+//FUNCION PARA LOADING Y RENDERIZADO COMPLETO
 const renderizadoHome = () => {
 	getData()
 	setTimeout(() => {
@@ -73,7 +78,5 @@ const renderizadoHome = () => {
 		getNews(listNews)
 	}, 1000)
 }
-
-
 renderizadoHome()
 //#endregion

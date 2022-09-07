@@ -15,6 +15,7 @@ const imagenes = document.getElementsByClassName('imagenesExtra')
 //#endregion
 
 //#region Modal Carrito
+//FUNCION PARA ELIMINAR UN PRODUCTO DEL CARRITO
 const removeProductToCartModal = (item) => {
 	Swal.fire({
 		title: '¿Esta seguro que quiere eliminar?',
@@ -37,6 +38,8 @@ const removeProductToCartModal = (item) => {
 		}
 	})
 }
+
+//FUNCION PARA GENERAR EL CUERPO DEL CARRITO
 const getCarrito = (list) => {
 	if (list !== null) {
 		const cart = list.map(
@@ -59,6 +62,7 @@ const getCarrito = (list) => {
 		return cart.join('')
 	} else return '<h3>No tiene ningun producto en el carrito</h3>'
 }
+//FUNCION PARA EL EVENTO DE ELIMINAR PRODUCTO DEL CARRITO
 const eventRemove = () => {
 	listCart?.map((item) => {
 		document.getElementById(`remove_${item.id}_${item.talle}`).onclick = () => {
@@ -66,6 +70,7 @@ const eventRemove = () => {
 		}
 	})
 }
+//FUNCION PARA CREAR EL MODAL DEL CARRITO
 const openModal = () => {
 	listCart = JSON.parse(localStorage.getItem('listCart'))
 	const total = listCart?.reduce((acum, elemento) => (acum += elemento.precio * elemento.count), 0)
@@ -90,6 +95,7 @@ const openModal = () => {
 	})
 	eventRemove()
 }
+//FUNCION PARA EL EVENTO DE ABRIR EL MODAL DEL CARRITO
 const eventCarrito = () => {
 	document.getElementById('cartNavResponsive').onclick = () => {
 		openModal()
@@ -101,6 +107,8 @@ const eventCarrito = () => {
 // #endregion
 
 //#region Renderizado
+
+//FUNCION PARA EL ZOOM DE LAS IMAGENES (ENCONTRADA EN INTERNET)
 const zoom = (e) => {
 	var zoomer = e.currentTarget
 	e.offsetX ? (offsetX = e.offsetX) : (offsetX = e.touches[0].pageX)
@@ -109,6 +117,7 @@ const zoom = (e) => {
 	y = (offsetY / zoomer.offsetHeight) * 100
 	zoomer.style.backgroundPosition = x + '% ' + y + '%'
 }
+//FUNCION PARA CREAR LAS IMAGENES 
 const getImagenes = (list) => {
 	const imagenes = list.map((item) => ` <img class="imagenesExtra" src="${item}">`)
 	const elementHTML = document.getElementsByClassName('imagenesAll')
@@ -118,6 +127,7 @@ const getImagenes = (list) => {
 	})
 	return data
 }
+//FUNCION PARA EL EVENTO DEL BOTON AGREGAR AL CARRITO
 const eventBtnCarrito = () => {
 	document.getElementById('carrito').onclick = () => {
 		if (listCart === null) listCart = []
@@ -164,6 +174,7 @@ const eventBtnCarrito = () => {
 		}
 	}
 }
+//FUNCION PARA MANEJAR LOS ESTILOS DE LOS BOTONES DE LOS TALLES
 const styleTalles = () => {
 	for (let i = 0; i < talles.length; i++) {
 		producto.tallesFaltante.map((item) => {
@@ -182,6 +193,7 @@ const styleTalles = () => {
 		})
 	}
 }
+//FUNCION PARA EL EVENTO DEL BOTON TALLE
 const eventTalles = () => {
 	for (let i = 0; i < talles.length; i++) {
 		talles[i].onclick = () => {
@@ -190,6 +202,7 @@ const eventTalles = () => {
 		}
 	}
 }
+//FUNCION PARA EL EVENTO DE INTERCAMBIAR LAS IMAGENES
 const eventImages = () => {
 	for (let i = 0; i < imagenes.length; i++) {
 		imagenes[i].onclick = () => {
@@ -198,6 +211,7 @@ const eventImages = () => {
 		}
 	}
 }
+//FUNCION PARA RENDERIZAR PRODUCTO Y LOS EVENTOS
 const renderizarProduct = () => {
 	const productoView = `<section data-aos="zoom-in">
   <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);"

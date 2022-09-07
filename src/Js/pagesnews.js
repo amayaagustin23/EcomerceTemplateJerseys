@@ -17,10 +17,11 @@ const cardNews = document.getElementById('cardsNews')
 //#endregion
 
 //#region funcion de Renderizado
+//FUNCION PARA REDIRECCIONAR A UNA NOTICIA
 const redirectNew = (list) => {
   list.map((item) => (document.getElementById(`new_${item.id}`).onclick = () => localStorage.setItem('new', JSON.stringify(item))))
 }
-
+//FUNCION PARA CREAR EL CUERPO DE LAS NOTICIAS
 const getNewsTemplate = (list) => {
 	const news = list.map(
 		(item) =>
@@ -46,7 +47,7 @@ const getNewsTemplate = (list) => {
 	cardNews.innerHTML = news.join('')
 	redirectNew(list)
 }
-
+//FUNCION PARA RENDERIZAR LAS NOTICIAS
 const renderizadoNews = () => {
 	setTimeout(() => {
 		document.getElementById('loader').style.display = 'none'

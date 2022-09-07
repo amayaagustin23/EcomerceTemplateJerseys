@@ -17,6 +17,7 @@ let select = document.getElementById('select')
 //#endregion
 
 //#region Modal Carrito
+//FUNCION PARA ELIMINAR UN PRODUCTO DEL CARRITO
 const removeProductToCartModal = (item) => {
 	Swal.fire({
 		title: '¿Esta seguro que quiere eliminar?',
@@ -43,6 +44,7 @@ const removeProductToCartModal = (item) => {
 		}
 	})
 }
+//FUNCION PARA GENERAR EL CUERPO DEL CARRITO
 const getCarrito = (list) => {
 	if (list !== null) {
 		const cart = list.map(
@@ -65,6 +67,7 @@ const getCarrito = (list) => {
 		return cart.join('')
 	} else return '<h3>No tiene ningun producto en el carrito</h3>'
 }
+//FUNCION PARA EL EVENTO DE ELIMINAR PRODUCTO DEL CARRITO
 const eventRemove=()=>{
 	listCart?.map((item) => {
 		document.getElementById(`removeModal_${item.id}_${item.talle}`).onclick = () => {
@@ -73,6 +76,7 @@ const eventRemove=()=>{
 	})
 
 }
+//FUNCION PARA CREAR EL MODAL DEL CARRITO
 const eventModalCarrito = () => {
 	listCart = JSON.parse(localStorage.getItem('listCart'))
 	total = listCart?.reduce((acum, elemento) => (acum += elemento.precio * elemento.count), 0)
@@ -122,6 +126,7 @@ const eventModalCarrito = () => {
 // #endregion
 
 //#region Funciones
+//FUNCION PARA EL EVENTO DEL SELECT(DROPBOX)
 const eventSelect = () => {
 	select.addEventListener('change', () => {
 		let selectedOption = this.options[select.selectedIndex]
@@ -129,7 +134,7 @@ const eventSelect = () => {
 		document.getElementById('subtotal').innerHTML = `$${new Intl.NumberFormat('de-DE').format(totalCompra)}`
 	})
 }
-
+//FUNCION PARA ELIMINAR UN PRODUCTO DESDE LA PANTALLA
 const postRemove = (list) => {
 	localStorage.setItem('listCart', JSON.stringify(list))
 	localStorage.setItem('cantidad', list.length)
@@ -140,6 +145,7 @@ const postRemove = (list) => {
 	document.getElementById('subtotal').innerHTML = `$${new Intl.NumberFormat('de-DE').format(totalCompraNew)}`
 	getCart(list)
 }
+//FUNCION PARA EL EVENTO DE ELIMINAR
 const removeProductToCart = (item) => {
 	const listCart = JSON.parse(localStorage.getItem('listCart'))
 	Swal.fire({
@@ -160,7 +166,7 @@ const removeProductToCart = (item) => {
 		}
 	})
 }
-
+//FUNCION PARA CAMBIAR LA CANTIDAD DEL CARRITO 
 const changeCount = (item, cantidad) => {
 	const id = item.id
 	const talle = item.talle
@@ -177,11 +183,11 @@ const changeCount = (item, cantidad) => {
 	}
 	filtered = listCart.filter((item) => item.id !== id && item.talle !== talle)
 }
-
+//FUNCION PARA REDIRECCIONAR A UN PRODUCTO
 const redirectProduct = (item) => {
 	localStorage.setItem('idProducto', item.id)
 }
-
+//FUNCION PARA TODOS LOS EVENTOS DE LA PANTALLA PRINCIPAL
 const eventCarts = (list) => {
 	list?.map((item) => {
 		document.getElementById('count_' + item.id + '_' + item.talle).onchange = () => {
@@ -211,6 +217,7 @@ const eventCarts = (list) => {
 //#endregion
 
 //#region Renderizado
+//FUNCION PARA EL RENDERIZADO DE LA PAGINA
 const getCart = (list) => {
 	document.getElementById('containerCart').innerHTML = ''
 	document.getElementById('loader').style.display = 'flex'

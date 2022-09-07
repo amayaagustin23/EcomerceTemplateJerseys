@@ -21,6 +21,7 @@ let parrafototal
 //#endregion
 
 //#region Modal Carrito
+//FUNCION PARA ELIMINAR UN PRODUCTO DEL CARRITO
 const removeProductToCartModal = (item) => {
 	Swal.fire({
 		title: '¿Esta seguro que quiere eliminar?',
@@ -43,6 +44,8 @@ const removeProductToCartModal = (item) => {
 		}
 	})
 }
+
+//FUNCION PARA GENERAR EL CUERPO DEL CARRITO
 const getCarrito = (list) => {
 	if (list !== null) {
 		const cart = list.map(
@@ -65,6 +68,7 @@ const getCarrito = (list) => {
 		return cart.join('')
 	} else return '<h3>No tiene ningun producto en el carrito</h3>'
 }
+//FUNCION PARA EL EVENTO DE ELIMINAR PRODUCTO DEL CARRITO
 const eventRemove = () => {
 	listCart?.map((item) => {
 		document.getElementById(`remove_${item.id}_${item.talle}`).onclick = () => {
@@ -72,6 +76,7 @@ const eventRemove = () => {
 		}
 	})
 }
+//FUNCION PARA CREAR EL MODAL DEL CARRITO
 const openModal = () => {
 	listCart = JSON.parse(localStorage.getItem('listCart'))
 	const total = listCart?.reduce((acum, elemento) => (acum += elemento.precio * elemento.count), 0)
@@ -96,6 +101,7 @@ const openModal = () => {
 	})
 	eventRemove()
 }
+//FUNCION PARA EL EVENTO DE ABRIR EL MODAL DEL CARRITO
 const eventCarrito = () => {
 	document.getElementById('cartNavResponsive').onclick = () => {
 		openModal()
@@ -107,6 +113,8 @@ const eventCarrito = () => {
 // #endregion
 
 //#region Funciones de renderizados
+
+//FUNCION PARA TRAER LOS DATOS DEL JOIN PRODUCTS.JSON
 const getData = () => {
 	fetch('../json/products.json')
 		.then((response) => {
@@ -119,9 +127,11 @@ const getData = () => {
 		})
 }
 getData()
+//FUNCION PARA EL EVENTO DE REDIRECCIONAR UN PRODUCTO
 const redirectToProduct = (list) => {
 	list.map((item) => (document.getElementById(`prod_${item.id}`).onclick = () => localStorage.setItem('producto', JSON.stringify(item))))
 }
+//FUNCION PARA CREAR LOS EVENTOS DE LOS FILTROS
 const eventFilters = () => {
 	document.getElementById('buttonSearch').onclick = () => {
 		FiltrosSearch()
@@ -147,6 +157,7 @@ const eventFilters = () => {
 		})
 	}
 }
+//FUNCION PARA COLAPSAR EL ACCORDION DE LOS FILTROS
 const collapsedFilter = () => {
 	if (screen.width < 1220) {
 		document.getElementById('collapseTwo').classList.add('collapse')
@@ -155,6 +166,7 @@ const collapsedFilter = () => {
 		document.getElementById('panelsStayOpen-collapseThree').classList.add('collapse')
 	}
 }
+//FUNCION PARA CREAR LAS ETIQUETAS EN LOS PRODUCTOS(USO LABEL PORQUE ASI ME ACOSTUMBRE EN EL TRABAJO ...LABEL A LAS ETIQUETAS DE IMPORTACION)
 const LabelColor = () => {
 	let etiquetas = document.getElementsByClassName('etiqueta')
 	for (let index = 0; index < etiquetas.length; index++) {
@@ -162,6 +174,7 @@ const LabelColor = () => {
 		if (etiquetas[index].innerHTML === 'NUEVO') etiquetas[index].style.backgroundColor = 'orange'
 	}
 }
+//FUNCION PARA EL RENDERIZADO PRINCIPAL
 const getProductTemplate = (list) => {
 	collapsedFilter()
 	document.getElementById('loader').style.display = 'block'
