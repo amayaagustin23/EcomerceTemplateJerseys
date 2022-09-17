@@ -1,5 +1,3 @@
-/** @format */
-
 //#region Variables
 let productCarrito = ''
 let listCart = JSON.parse(localStorage.getItem('listCart'))
@@ -15,6 +13,7 @@ const imagenes = document.getElementsByClassName('imagenesExtra')
 //#endregion
 
 //#region Modal Carrito
+
 //FUNCION PARA ELIMINAR UN PRODUCTO DEL CARRITO
 const removeProductToCartModal = (item) => {
 	Swal.fire({
@@ -38,7 +37,6 @@ const removeProductToCartModal = (item) => {
 		}
 	})
 }
-
 //FUNCION PARA GENERAR EL CUERPO DEL CARRITO
 const getCarrito = (list) => {
 	if (list !== null) {
